@@ -330,6 +330,11 @@
       </action>
     </keybind>
     <!-- LAUNCHERS -->
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>thunderbird</command>
+      </action>
+    </keybind>
     <keybind key="W-s">
       <action name="Execute">
         <command>shortcuts</command>
@@ -697,7 +702,7 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      <mousebind button="Up" action="Click">
+      <!-- <mousebind button="Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
         </action>
@@ -706,7 +711,7 @@
         <action name="GoToDesktop">
           <to>next</to>
         </action>
-      </mousebind>
+      </mousebind> -->
       <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
@@ -899,12 +904,12 @@
         <y>center</y>
       </position>
     </application>
-    <!-- <application class="Pcmanfm" type="normal">
+    <application class="Pcmanfm" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
-    </application> -->
+    </application>
     <application class="Leafpad" type="normal">
       <position force="yes">
         <x>center</x>

@@ -22,4 +22,4 @@ compton -b
 (sleep 1s && guake) &
 (sleep 1s && lxpanel) &
 numlockx &
-/home/dava/.arch-configs/homepc/home/zother/setlayout 0 3 2 0 &
+/home/dava/.1homepc-config/home/zother/setlayout 0 3 2 0 &

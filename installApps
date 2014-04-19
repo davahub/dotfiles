@@ -7,26 +7,32 @@ fontpath='/home/dava/installs/main/fonts/winfonts/'
 # MAIN -----------------------------------------------------------------------
 main='
 	dropbox 
- 	hunspell
- 	hunspell-en
+ 	hunspell hunspell-en
  	mlocate
  	yaourt
- 	lxpanel
  	chromium
  	firefox
 	gvim
 	git
- 	obconf oblogout lxappearance
+ 	obconf oblogout
  	xdg-user-dirs
  	multilib-devel
  	thunderbird
  	gimp
- 	file-roller
- 	lxterminal
+ 	file-roller lrzip unace
  	unace gnome-calculator dosfstools ntfs-3g xorg-xprop xorg-xwininfo xorg-xkill lm_sensors rrdtool
  	cups ghostscript
  	skype
  	htop'
+
+
+# LXDE -----------------------------------------------------------------------
+lxde='
+	lxpanel
+	lxappearance-obconf
+	lxinput
+	lxrandr
+	lxterminal'
  	# xarchiver zip unzip p7zip arj lzop cpio unrar
 
 
@@ -68,7 +74,8 @@ echo "----> 24 en-GB phonon-vlc"
 printf ""
 
 sudo $pm -S --needed libreoffice
-sudo $pm -S --needed $main 
+sudo $pm -S --needed $main
+sudo $pm -S --needed $lxde
 sudo $pm -S --needed $audio
 sudo $pm -S --needed $theme
 sudo $pm -S --needed $font

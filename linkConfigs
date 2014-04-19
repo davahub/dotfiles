@@ -1,9 +1,9 @@
 #!/bin/sh
 
-home='/home/dava/.arch-configs/homepc/home'
-homeConfig='/home/dava/.arch-configs/homepc/home/config'
-rootConfig='/home/dava/.arch-configs/homepc/root'
-shortcut='/home/dava/.arch-configs/homepc/shortcuts'
+home='/home/dava/.1homepc-config/home'
+homeConfig='/home/dava/.1homepc-config/home/config'
+rootConfig='/home/dava/.1homepc-config/root'
+shortcut='/home/dava/.1homepc-config/shortcuts'
 
 
 # HOME LINKS -----------------------------------------------------------------
