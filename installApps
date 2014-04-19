@@ -1,0 +1,143 @@
+#!/bin/sh
+
+pm='pacman'
+fontpath='/home/dava/installs/main/fonts/winfonts/'
+
+
+# MAIN -----------------------------------------------------------------------
+main='
+	dropbox 
+ 	hunspell
+ 	hunspell-en
+ 	mlocate
+ 	yaourt
+ 	lxpanel
+ 	chromium
+ 	firefox
+	gvim
+	git
+ 	obconf oblogout lxappearance
+ 	xdg-user-dirs
+ 	multilib-devel
+ 	thunderbird
+ 	gimp
+ 	file-roller
+ 	lxterminal
+ 	unace gnome-calculator dosfstools ntfs-3g xorg-xprop xorg-xwininfo xorg-xkill lm_sensors rrdtool
+ 	cups ghostscript
+ 	skype
+ 	htop'
+ 	# xarchiver zip unzip p7zip arj lzop cpio unrar
+
+
+# AUDIO -----------------------------------------------------------------------
+audio='
+ 	alsa-utils alsa-plugins lib32-alsa-plugins
+ 	pulseaudio pulseaudio-alsa lib32-libpulse lib32-jack lib32-libsamplerate lib32-speex pavucontrol
+ 	audacious  unzip
+ 	clementine
+ 	gstreamer0.10-base-plugins gstreamer0.10-good-plugins gstreamer0.10-bad-plugins gstreamer0.10-ugly-plugins
+ 	audacity swh-plugins'
+
+
+# LOOK & FEEL -----------------------------------------------------------------
+theme=' 	
+ 	gnome-themes-standard gtk-engine-murrine gtk-engines libgnomeui
+ 	numix-themes
+ 	gnome-icon-theme faenza-icon-theme faience-icon-theme
+ 	xcursor-themes xorg-xcursorgen xcursor-bluecurve xcursor-flatbed xcursor-neutral 
+ 	xcursor-pinux xcursor-premium xcursor-simpleandsoft xcursor-vanilla-dmz xcursor-vanilla-dmz-aa'
+
+
+# FONTS ------------------------------------------------------------------------
+font='
+	ttf-droid 
+	terminus-font'
+
+
+# GAMES ------------------------------------------------------------------------
+games='
+	lib32-nvidia-libgl
+ 	steam'	
+#lib32-flashplugin
+
+# INSTALLATION -------------------------------------------
+printf ""
+echo "----> LIBREOFFICE "
+echo "----> 24 en-GB phonon-vlc" 
+printf ""
+
+sudo $pm -S --needed libreoffice
+sudo $pm -S --needed $main 
+sudo $pm -S --needed $audio
+sudo $pm -S --needed $theme
+sudo $pm -S --needed $font
+sudo $pm -S --needed $games
+#sudo $pm -U --needed $fontpath/ttf-win7-fonts-7.1-8-any.pkg.tar.xz
+
+
+# REFERENCE ------------------------------------------------------
+
+green='\n\e[0;32m'
+endColor='\e[0m\n'
+
+# ALSA 
+printf "${green}# SETUP ALSA    ${endColor}"
+echo "amixer sset Master unmute"
+echo "speaker-test -c2" 
+
+# THUNDERBIRD
+printf "${green}# SETUP THUNDERBIRD   ${endColor}"
+echo "preference/ advanced/ config editor/ mailnews.message_display.disable_remote_image = false"
+
+# CHROMIUM
+printf "${green}# SETUP CHROMIUM     ${endColor}"
+echo "go to chrome://plugins click details and disable mozilla/plugins/libflashplayer.so"
+echo "restart and enable pepper flash player"
+
+# CHANGE KEYBOARD UK
+printf "${green}# CHANGE KEYBOARD UK    ${endColor}"
+echo "sudo leafpad /etc/X11/xorg.conf.d/10-evdev.conf	# just before EndSection everything"
+echo "Option \"XkbLayout\" \"gb\""
+
+# THEME
+printf "${green}# CONFIGURE THEME ${endColor}"
+echo "set numix theme in obconfig and zukitwo in lxappearance"
+
+# FONT
+printf "${green}# CONFIGURE FONT ${endColor}"
+echo "yaourt freetype2-infinality-git lib32-freetype2-infinality-git fontconfig-infinality-git"
+echo "infctl setstyle"
+
+# ENVIRONMENT
+printf "${green}# SETUP ENVIRONMENT VAR ${endColor}"
+echo "sudo leafpad /etc/profile	# append    :/home/dava/.2shortcuts/"
+
+# PRINTER
+printf "${green}# SETUP PRINTER DRIVER ${endColor}"
+echo "sudo systemctl start cups"
+echo "sudo systemctl enable cups"
+echo "http://localhost:631/ 			# add printer using the rsp1100s.ppd user name = root"
+
+# HIDE BOOT MENU
+printf "${green}# HIDE BOOT MENU ${endColor}"
+echo "hide grub menu"
+echo "sudo gedit /etc/default/grub"
+echo "grub-timeout = 0"
+echo "grub-hidden-timeout=1"			
+echo "grub_hidden_timeout_QUIET=false		# false show count down"
+printf "\n"
+echo "hide syslinux menu"
+echo "sudo leafpad /boot/syslinux/syslinux.cfg"
+
+# CONFIGURE lXPANEL
+printf "${green}# CONFIGURE lXPANEL ${endColor}"
+echo "panel settings/ advanced/ logout command = oblogout"
+
+# CONFIGURE SENSORS FANCONTROL
+printf "${green}# START FANCONTROL ${endColor}"
+echo "sudo sensors-detect"
+echo "sudo systemctl start fancontrol"
+echo "sudo systemctl enable fancontrol"
+
+printf "\n"

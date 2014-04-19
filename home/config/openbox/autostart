@@ -1,0 +1,25 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+xrdb -merge ~/.Xresources &
+compton -b
+(sleep 1s &pcmanfm --desktop) &
+(sleep 2s && pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/03535_delicatearches_1920x1080.jpg) &
+(sleep 1s && guake) &
+(sleep 1s && lxpanel) &
+numlockx &
+/home/dava/.arch-configs/homepc/home/zother/setlayout 0 3 2 0 &
