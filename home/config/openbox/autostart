@@ -19,8 +19,13 @@
 # STARTUP --------------------------------------------------------
 
 wpName='03535_delicatearches_1920x1080.jpg'
+/home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
+numlockx &
 
 compton -b
+
+sleep 1s
+lxpanel -p mylxpanel &
 
 sleep 1s
 pcmanfm --desktop &
@@ -30,9 +35,10 @@ pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wpName &
 
 guake &
 
-sleep 1s
-lxpanel -p mylxpanel &
+volumeicon &
 
-numlockx &
 
-/home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
+
+
+
+

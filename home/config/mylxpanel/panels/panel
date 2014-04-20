@@ -78,10 +78,6 @@ Plugin {
 }
 
 Plugin {
-    type = volumealsa
-}
-
-Plugin {
     type = space
     Config {
         Size=6
@@ -89,9 +85,13 @@ Plugin {
 }
 
 Plugin {
+    type = tray
+}
+
+Plugin {
     type = space
     Config {
-        Size=6
+        Size=2
     }
 }
 

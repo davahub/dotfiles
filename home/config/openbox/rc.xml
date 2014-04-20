@@ -314,6 +314,26 @@
     </keybind>
     <!-- SHORTCUTS -->
     <!-- AUDIO -->
+    <keybind key="W-Right">
+      <action name="Execute">
+        <command>clementine --next</command>
+      </action>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="Execute">
+        <command>clementine --previous</command>
+      </action>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="Execute">
+        <command>vol up -i 20 -m Master</command>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Execute">
+        <command>vol down -i 20 -m Master</command>
+      </action>
+    </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>vol up -i 20 -m Master</command>
@@ -362,7 +382,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>gnome-terminal --hide-menubar</command>
+        <command>lxterminal --geometry=75x30</command>
       </action>
     </keybind>
     <keybind key="W-c">
