@@ -10,7 +10,7 @@ Global {
     height=26
     transparent=1
     tintcolor=#212121
-    alpha=140
+    alpha=186
     autohide=0
     heightwhenhidden=2
     setdocktype=1
@@ -68,12 +68,43 @@ Plugin {
 }
 
 Plugin {
-    type = monitors
+    type = sensors
     Config {
-        DisplayCPU=1
-        DisplayRAM=1
-        CPUColor=#0000FF
-        RAMColor=#008F1D
+        ChipNr=0
+        FeatureNr=0
+        Fahrenheit=0
+        HideUnit=0
+        FormatNormal=<span color="#FFFFFF">%s</span>
+        FormatWarning=<span color="#FFFF00"><b>%s</b></span>
+        FormatCritical=<span color="#FF0000"><b><big>%s</big></b></span>
+        DelayInMs=1000
+    }
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=6
+    }
+}
+
+Plugin {
+    type = cpuda
+    Config {
+        CPUNum=0
+        Action=lxtask
+        Color=blue
+        WidgetWidth=40
+    }
+}
+
+Plugin {
+    type = cpuda
+    Config {
+        CPUNum=5
+        Action=lxtask
+        Color=green
+        WidgetWidth=40
     }
 }
 

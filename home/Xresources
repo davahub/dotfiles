@@ -1,41 +1,37 @@
 
-
 ! GENERAL ----------------------------------------
 
-URxvt*loginShell: 	true
-URxvt*termName: 	urxvt
-URxvt*geometry: 	80X40
+URxvt*loginShell: 			true
+URxvt*termName: 				urxvt
+URxvt*geometry: 				80X40
 !transparency		
-!URxvt.depth: 		32
-!URxvt.background: 	rgba:1111/1111/1111/dddd
-URxvt.scrollBar: 	false
-!disable annoying 	iso yellow box when ctrl+shift
-URxvt.iso14755 : 	false
+!URxvt.depth: 					32
+!URxvt.background: 			rgba:1111/1111/1111/dddd
+URxvt.scrollBar: 				false
+!disable annoying 			iso yellow box when ctrl+shift
+URxvt.iso14755 : 				false
 
 
 ! FONTS ----------------------------------------
 
-Xft.dpi:        	96
-Xft.antialias:  	true
-Xft.rgba:       	rgb
-Xft.hinting:    	true
-Xft.hintstyle:  	hintfull
+Xft.dpi:        				96
+Xft.antialias:  				true
+Xft.rgba:       				rgb
+Xft.hinting:    				true
+Xft.hintstyle:  				hintslight
 
-URxvt*font: 		xft:terminus:size=15
-URxvt*boldFont: 	xft:terminus-bold:size=15
-URxvt*italicFont: 	xft:terminus-italic:size=15
+URxvt*font: 						xft:terminus:size=15
+URxvt*boldFont: 				xft:terminus-bold:size=15
+URxvt*italicFont: 			xft:terminus-italic:size=15
 URxvt*boldItalicFont: 	xft:terminus-bold-italic:size=15
 
 
 ! EXTENSION ----------------------------------------
 
 URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
-
-!enable ctrl+shift copy paste
-URxvt.keysym.C-C:   	perl:clipboard:copy
-URxvt.keysym.C-V:   	perl:clipboard:paste
-URxvt.keysym.C-A-V: 	perl:clipboard:paste_escaped
-
+URxvt.keysym.C-C:   		perl:clipboard:copy
+URxvt.keysym.C-V:   		perl:clipboard:paste
+URxvt.keysym.C-A-V: 		perl:clipboard:paste_escaped
 
 
 ! COMMENTED CONFIGS ----------------------------------------
@@ -107,7 +103,6 @@ URxvt.keysym.C-A-V: 	perl:clipboard:paste_escaped
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
 ! URxvt*iconFile:                       file
-
 ! URxvt*intensityStyles:                boolean
 ! URxvt*inputMethod:                    name
 ! URxvt*preeditType:                    style

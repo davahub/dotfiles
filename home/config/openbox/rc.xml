@@ -313,6 +313,12 @@
       </action>
     </keybind>
     <!-- SHORTCUTS -->
+    <!-- EXECUTE -->
+    <keybind key="W-F12">
+      <action name="Execute">
+        <command>toggleKeyboard</command>
+      </action>
+    </keybind>
     <!-- AUDIO -->
     <keybind key="W-Right">
       <action name="Execute">
@@ -973,6 +979,12 @@
       </position>
     </application>
     <application class="Lxappearance" type="normal">
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="Deluge" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>

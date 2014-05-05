@@ -6,9 +6,18 @@
 <!-- ACCESSORIES MENU -->
 <menu id="apps-accessories-menu" label="Accessories">
   
+  <item label="LX Terminal">
+    <action name="Execute">
+      <command>lxterminal</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
   <item label="Calculator">
     <action name="Execute">
-      <command>gnome-calculator</command>
+      <command>galculator</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -213,28 +222,33 @@
 </menu>
 
 
-<!-- SYSTEM MENU -->
-<menu id="system-menu" label="System">
+<!-- CONfIG MENU -->
+<menu id="config-menu" label="Config">
 
-  <item label="Openbox Configuration Manager">
+  <item label="obconf">
     <action name="Execute">
       <command>obconf</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
 
-  <item label="LXDE Configuration Manager">
+  <item label="lxappearance">
     <action name="Execute">
       <command>lxappearance</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
 
-  <item label="Reconfigure Openbox">
-    <action name="Reconfigure" />
+  <item label="pavucontrol">
+    <action name="Execute">
+      <command>pavucontrol</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
   </item>
 
-  <item label="Manage Cups Printers">
+  <item label="manage printers">
     <action name="Execute">
       <command>xdg-open http://localhost:631/</command>
       <startupnotify>
@@ -244,16 +258,11 @@
     </action>
   </item>
 
-  <item label="Gnome Terminal">
-    <action name="Execute">
-      <command>gnome-terminal</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
+  <item label="ob reconfigure">
+    <action name="Reconfigure" />
   </item>
 
-  <item label="Notify-osd Configuration">
+  <item label="notifyconf">
     <action name="Execute">
       <command>notifyconf</command>
       <startupnotify>
@@ -262,25 +271,13 @@
     </action>
   </item>
 
-  <item label="Pulse Audio Volume Control">
-    <action name="Execute">
-      <command>pavucontrol</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
+</menu>
 
-  <item label="PCMan File Manager">
-    <action name="Execute">
-      <command>pcmanfm</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
 
-  <item label="Lightweight Task Manager">
+<!-- SYSTEM MENU -->
+<menu id="system-menu" label="System">
+
+  <item label="Task Manager">
     <action name="Execute">
       <command>lxtask</command>
       <startupnotify>
@@ -326,6 +323,7 @@
   <menu id="apps-net-menu"/>
   <menu id="apps-office-menu"/>
   <menu id="apps-multimedia-menu"/>
+  <menu id="config-menu"/>
   <menu id="system-menu"/>
   <menu id="exit-menu"/>
 </menu>

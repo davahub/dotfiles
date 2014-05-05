@@ -18,8 +18,10 @@
 
 # STARTUP --------------------------------------------------------
 
-wpName='03535_delicatearches_1920x1080.jpg'
+wallpaper='03529_marronbells_1920x1080.jpg'
+
 /home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
+
 numlockx &
 
 compton -b
@@ -31,10 +33,12 @@ sleep 1s
 pcmanfm --desktop &
 
 sleep 2s 
-pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wpName &
+pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
 
+sleep 1s
 guake &
 
+sleep 1s
 volumeicon &
 
 
