@@ -89,22 +89,12 @@ Plugin {
 }
 
 Plugin {
-    type = cpuda
+    type = monitors
     Config {
-        CPUNum=0
-        Action=lxtask
-        Color=blue
-        WidgetWidth=40
-    }
-}
-
-Plugin {
-    type = cpuda
-    Config {
-        CPUNum=5
-        Action=lxtask
-        Color=green
-        WidgetWidth=40
+        DisplayCPU=1
+        DisplayRAM=1
+        CPUColor=#0000FF
+        RAMColor=#199100
     }
 }
 

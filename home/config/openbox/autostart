@@ -18,28 +18,28 @@
 
 # STARTUP --------------------------------------------------------
 
-wallpaper='03529_marronbells_1920x1080.jpg'
-
-/home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
-
-numlockx &
+wallpaper='03514_duskatlakezurich_1920x1080.jpg'
 
 compton -b
 
 sleep 1s
-lxpanel -p mylxpanel &
-
-sleep 1s
 pcmanfm --desktop &
 
-sleep 2s 
-pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
+sleep 1s
+lxpanel -p mylxpanel &
 
 sleep 1s
 guake &
 
 sleep 1s
 volumeicon &
+
+/home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
+
+numlockx &
+
+sleep 1s 
+pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
 
 
 

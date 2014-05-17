@@ -319,6 +319,11 @@
         <command>toggleKeyboard</command>
       </action>
     </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <command>import -window -root screenshot.jpg</command>
+      </action>
+    </keybind>
     <!-- AUDIO -->
     <keybind key="W-Right">
       <action name="Execute">
