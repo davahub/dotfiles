@@ -31,9 +31,6 @@ lxpanel -p mylxpanel &
 sleep 1s
 guake &
 
-sleep 1s
-volumeicon &
-
 /home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
 
 numlockx &

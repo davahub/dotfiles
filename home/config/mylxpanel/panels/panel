@@ -68,20 +68,6 @@ Plugin {
 }
 
 Plugin {
-    type = sensors
-    Config {
-        ChipNr=0
-        FeatureNr=0
-        Fahrenheit=0
-        HideUnit=0
-        FormatNormal=<span color="#FFFFFF">%s</span>
-        FormatWarning=<span color="#FFFF00"><b>%s</b></span>
-        FormatCritical=<span color="#FF0000"><b><big>%s</big></b></span>
-        DelayInMs=1000
-    }
-}
-
-Plugin {
     type = space
     Config {
         Size=6
@@ -102,6 +88,17 @@ Plugin {
     type = space
     Config {
         Size=6
+    }
+}
+
+Plugin {
+    type = volumealsa
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=2
     }
 }
 
