@@ -8,7 +8,7 @@
   
   <item label="LX Terminal">
     <action name="Execute">
-      <command>lxterminal</command>
+      <command>lxterminal --geometry=75x30</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

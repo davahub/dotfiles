@@ -79,6 +79,7 @@ Plugin {
     Config {
         DisplayCPU=1
         DisplayRAM=1
+        Action=lxtask
         CPUColor=#0000FF
         RAMColor=#199100
     }
