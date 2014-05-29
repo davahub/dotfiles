@@ -361,6 +361,11 @@
       </action>
     </keybind>
     <!-- LAUNCHERS -->
+    <keybind key="C-A-Delete">
+      <action name="Execute">
+        <command>lxtask</command>
+      </action>
+    </keybind>
     <keybind key="W-m">
       <action name="Execute">
         <command>thunderbird</command>
@@ -978,9 +983,12 @@
       </position>
     </application>
     <application class="Lxtask" type="normal">
-      <position force="yes">
+    	<size>
+    	  <height>600</height>
+    	</size>
+      <position>
         <x>center</x>
-        <y>center</y>
+        <y>200</y>
       </position>
     </application>
     <application class="Lxappearance" type="normal">
