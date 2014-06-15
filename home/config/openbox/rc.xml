@@ -319,6 +319,11 @@
         <command>toggleKeyboard</command>
       </action>
     </keybind>
+    <keybind key="W-F11">
+      <action name="Execute">
+        <command>toggleVideo</command>
+      </action>
+    </keybind>
     <keybind key="Print">
       <action name="Execute">
         <command>import -window -root screenshot.jpg</command>
@@ -425,7 +430,7 @@
       </action>
     </keybind>
     <!-- ACTION -->
-    <keybind key="W-q">
+    <keybind key="W-v">
       <action name="Iconify"/>
     </keybind>
     <keybind key="W-w">
