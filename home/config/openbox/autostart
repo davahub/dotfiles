@@ -38,6 +38,10 @@ numlockx &
 sleep 1s 
 pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
 
+xset -dpms; xset s off &
+
+
+
 
 
 
