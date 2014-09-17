@@ -988,9 +988,9 @@
       </position>
     </application>
     <application class="Lxtask" type="normal">
-    	<size>
-    	  <height>600</height>
-    	</size>
+      <size>
+        <height>600</height>
+      </size>
       <position>
         <x>center</x>
         <y>200</y>

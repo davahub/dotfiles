@@ -2,133 +2,138 @@
 # Use preference dialog in lxpanel to adjust config when you can.
 
 Global {
-    edge=bottom
-    allign=center
-    margin=0
-    widthtype=percent
-    width=100
-    height=26
-    transparent=1
-    tintcolor=#212121
-    alpha=186
-    autohide=0
-    heightwhenhidden=2
-    setdocktype=1
-    setpartialstrut=1
-    usefontcolor=0
-    fontsize=10
-    fontcolor=#000000
-    usefontsize=0
-    background=0
-    iconsize=26
-    loglevel=2
+  edge=top
+  allign=center
+  margin=0
+  widthtype=percent
+  width=100
+  height=26
+  transparent=1
+  alpha=186
+  autohide=0
+  heightwhenhidden=2
+  setdocktype=1
+  setpartialstrut=1
+  usefontcolor=0
+  fontsize=10
+  fontcolor=#000000
+  usefontsize=0
+  background=0
+  iconsize=26
+  loglevel=2
+  tintcolor=0
+  backgroundfile=/home/dava/pictures/wallpapers/Old Interface Wallpapers/1/Prettiest.jpg
 }
-
 Plugin {
-    type = menu
-    Config {
-        image=/home/dava/installs/main/look-feel/menu-icon/start-here monochrome light.png
-        system {
-        }
-        separator {
-        }
-        item {
-            command=run
-        }
-        separator {
-        }
-        item {
-            image=gnome-logout
-            command=logout
-        }
+  type=menu
+  Config {
+    image=/home/dava/installs/main/look-feel/menu-icon/start-here monochrome light.png
+    system {
     }
-}
-
-Plugin {
-    type = space
-    Config {
-        Size=28
+    separator {
     }
-}
-
-Plugin {
-    type = taskbar
-    expand=1
-    Config {
-        tooltips=1
-        IconsOnly=0
-        ShowAllDesks=0
-        UseMouseWheel=1
-        UseUrgencyHint=1
-        FlatButton=0
-        MaxTaskWidth=200
-        spacing=1
-        GroupedTasks=0
+    item {
+      command=run
     }
-}
-
-Plugin {
-    type = space
-    Config {
-        Size=6
+    separator {
     }
-}
-
-Plugin {
-    type = monitors
-    Config {
-        DisplayCPU=1
-        DisplayRAM=1
-        Action=lxtask
-        CPUColor=#0000FF
-        RAMColor=#199100
+    item {
+      image=gnome-logout
+      command=logout
     }
+  }
 }
-
 Plugin {
-    type = space
-    Config {
-        Size=6
-    }
+  type=space
+  Config {
+    Size=28
+  }
 }
-
 Plugin {
-    type = volumealsa
+  type=taskbar
+  expand=1
+  Config {
+    tooltips=1
+    IconsOnly=0
+    ShowAllDesks=0
+    UseMouseWheel=1
+    UseUrgencyHint=1
+    FlatButton=0
+    MaxTaskWidth=200
+    spacing=1
+    GroupedTasks=0
+  }
 }
-
 Plugin {
-    type = space
-    Config {
-        Size=2
-    }
+  type=sensors
+  Config {
+    ChipNr=0
+    FeatureNr=0
+    Fahrenheit=0
+    HideUnit=0
+    FormatNormal=<span color="#FFFFFF">%s</span>
+    FormatWarning=<span color="#FFFF00"><b>%s</b></span>
+    FormatCritical=<span color="#FF0000"><b><big>%s</big></b></span>
+    DelayInMs=1000
+  }
 }
-
 Plugin {
-    type = tray
+  type=space
+  Config {
+    Size=6
+  }
 }
-
 Plugin {
-    type = space
-    Config {
-        Size=2
-    }
+  type=monitors
+  Config {
+    DisplayCPU=1
+    DisplayRAM=1
+    Action=lxtask
+    CPUColor=#0000FF
+    RAMColor=#199100
+  }
 }
-
 Plugin {
-    type = dclock
-    Config {
-        ClockFmt=%R
-        TooltipFmt=%A %x
-        BoldFont=0
-        IconOnly=0
-        CenterText=0
-    }
+  type=space
+  Config {
+    Size=6
+  }
 }
-
 Plugin {
-    type = space
-    Config {
-        Size=6
-    }
+  type=volumealsa
+  Config {
+  }
 }
-
+Plugin {
+  type=space
+  Config {
+    Size=2
+  }
+}
+Plugin {
+  type=tray
+  Config {
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=2
+  }
+}
+Plugin {
+  type=dclock
+  Config {
+    ClockFmt=%R  %d. %m. %y
+    TooltipFmt=%A %x
+    BoldFont=0
+    IconOnly=0
+    CenterText=0
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=6
+  }
+}
