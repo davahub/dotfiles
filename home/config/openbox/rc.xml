@@ -418,7 +418,7 @@
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>pcmanfm</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="W-F11">
@@ -938,7 +938,7 @@
 
   # end of the example
 -->
-    <!-- CENTER WINDOWS-->
+    <!-- CENTER WINDOWS USE *****OBXPROP*****-->
     <application title="bashrun" type="normal">
       <position force="yes">
         <x>center</x>
@@ -946,6 +946,12 @@
       </position>
     </application>
     <application class="Pcmanfm" type="normal">
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="Thunar" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>

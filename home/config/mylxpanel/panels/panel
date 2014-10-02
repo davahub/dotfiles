@@ -21,8 +21,8 @@ Global {
   background=0
   iconsize=26
   loglevel=2
-  tintcolor=0
   backgroundfile=/home/dava/pictures/wallpapers/Old Interface Wallpapers/1/Prettiest.jpg
+  tintcolor=#434343
 }
 Plugin {
   type=menu
