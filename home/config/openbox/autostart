@@ -18,7 +18,7 @@
 
 # STARTUP --------------------------------------------------------
 
-wallpaper='03514_duskatlakezurich_1920x1080.jpg'
+#wallpaper='03541_lassenvolcanic_1920x1080.jpg'
 
 compton -b
 
@@ -36,7 +36,7 @@ guake &
 numlockx &
 
 sleep 1s 
-pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
+#pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
 
 xset -dpms; xset s off &
 

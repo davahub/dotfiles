@@ -122,9 +122,9 @@
 <!-- INTERNET MENU -->
 <menu id="apps-net-menu" label="Internet">
 
-  <item label="Chromium">
+  <item label="Chrome">
     <action name="Execute">
-      <command>chromium</command>
+      <command>google-chrome-stable</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

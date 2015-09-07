@@ -381,14 +381,14 @@
         <command>shortcuts</command>
       </action>
     </keybind>
-    <keybind key="C-A-End">
+    <keybind key="W-End">
       <action name="Execute">
         <command>oblogout</command>
       </action>
     </keybind>
     <keybind key="A-F1">
       <action name="Execute">
-        <command>chromium</command>
+        <command>google-chrome-stable</command>
       </action>
     </keybind>
     <keybind key="W-n">
@@ -418,7 +418,7 @@
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>thunar</command>
+        <command>pcmanfm</command>
       </action>
     </keybind>
     <keybind key="W-F11">
@@ -476,8 +476,8 @@
       <action name="MoveResizeTo">
         <x>center</x>
         <y>center</y>
-        <width>700</width>
-        <height>600</height>
+        <width>800</width>
+        <height>700</height>
       </action>
     </keybind>
     <keybind key="C-W-KP_0">
@@ -951,7 +951,7 @@
         <y>center</y>
       </position>
     </application>
-    <application class="Thunar" type="normal">
+    <application class="Nemo" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
@@ -1014,5 +1014,12 @@
         <y>center</y>
       </position>
     </application>
+    <application class="vlc" type="normal">
+    	<position force="yes">
+      	<x>center</x>
+      	<y>center</y>
+      </position>
+    </application>
   </applications>
+ 
 </openbox_config>
