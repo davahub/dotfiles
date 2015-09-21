@@ -1015,11 +1015,17 @@
       </position>
     </application>
     <application class="vlc" type="normal">
-    	<position force="yes">
-      	<x>center</x>
-      	<y>center</y>
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="Spotify" type="normal">
+      <maximized>Vertical</maximized>
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
       </position>
     </application>
   </applications>
- 
 </openbox_config>
