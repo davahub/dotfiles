@@ -18,7 +18,7 @@ Xft.dpi:        				96
 Xft.antialias:  				true
 Xft.rgba:       				rgb
 Xft.hinting:    				true
-Xft.hintstyle:  				hintfull
+Xft.hintstyle:  				hintslight
 
 URxvt*font: 						xft:terminus:size=15
 URxvt*boldFont: 				xft:terminus-bold:size=15
