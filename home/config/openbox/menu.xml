@@ -6,7 +6,7 @@
 <!-- ACCESSORIES MENU -->
 <menu id="apps-accessories-menu" label="Accessories">
   
-  <item label="LX Terminal">
+  <item label="Terminal">
     <action name="Execute">
       <command>lxterminal --geometry=75x30</command>
       <startupnotify>
@@ -23,16 +23,7 @@
       </startupnotify>
     </action>
   </item>
-  
-  <item label="Character Map">
-    <action name="Execute">
-      <command>gnome-character-map</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  
+   
 </menu>
 
 
@@ -91,15 +82,6 @@
       </startupnotify>
     </action>
   </item>
-
-  <item label="Inkscape">
-    <action name="Execute">
-      <command>inkscape</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   
 </menu>
 
@@ -141,18 +123,9 @@
     </action>
   </item> -->
 
-  <item label="Pidgin">
+  <item label="Skype">
     <action name="Execute">
-      <command>pidgin</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-
-  <item label="XChat">
-    <action name="Execute">
-      <command>xchat</command>
+      <command>skype</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -225,21 +198,21 @@
 <!-- CONfIG MENU -->
 <menu id="config-menu" label="Config">
 
-  <item label="obconf">
+  <item label="Openbox Configuration Manager">
     <action name="Execute">
       <command>obconf</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
 
-  <item label="lxappearance">
+  <item label="Customise Look and Feel">
     <action name="Execute">
       <command>lxappearance</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
 
-  <item label="pavucontrol">
+  <item label="PulseAudio Volume Control">
     <action name="Execute">
       <command>pavucontrol</command>
       <startupnotify>
@@ -248,27 +221,8 @@
     </action>
   </item>
 
-  <item label="manage printers">
-    <action name="Execute">
-      <command>xdg-open http://localhost:631/</command>
-      <startupnotify>
-        <enabled>no</enabled>
-        <icon>cups</icon>
-      </startupnotify>
-    </action>
-  </item>
-
-  <item label="ob reconfigure">
+  <item label="Openbox Reconfigure">
     <action name="Reconfigure" />
-  </item>
-
-  <item label="notifyconf">
-    <action name="Execute">
-      <command>notifyconf</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
   </item>
 
 </menu>
