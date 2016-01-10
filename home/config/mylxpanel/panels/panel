@@ -44,25 +44,24 @@ Plugin {
   }
 }
 Plugin {
+  type=taskbar
+  Config {
+    ShowAllDesks=0
+    FlatButton=0
+    IconsOnly=0
+    SameMonitorOnly=0
+    GroupedTasks=0
+    DisableUpscale=0
+    spacing=1
+  }
+  expand=0
+}
+Plugin {
   type=space
   Config {
     Size=10
   }
-}
-Plugin {
-  type=taskbar
   expand=1
-  Config {
-    tooltips=1
-    IconsOnly=0
-    ShowAllDesks=0
-    UseMouseWheel=1
-    UseUrgencyHint=1
-    FlatButton=0
-    MaxTaskWidth=200
-    spacing=1
-    GroupedTasks=0
-  }
 }
 Plugin {
   type=sensors
@@ -82,6 +81,7 @@ Plugin {
   Config {
     Size=6
   }
+  expand=0
 }
 Plugin {
   type=monitors
@@ -98,6 +98,27 @@ Plugin {
   Config {
     Size=6
   }
+  expand=0
+}
+Plugin {
+  type=weather
+  Config {
+    alias=london
+    city=London
+    state=England
+    country=United Kingdom
+    woeid="44418"
+    units=c
+    interval=1
+    enabled=1
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=2
+  }
+  expand=0
 }
 Plugin {
   type=volumealsa
@@ -109,6 +130,7 @@ Plugin {
   Config {
     Size=2
   }
+  expand=0
 }
 Plugin {
   type=tray
@@ -120,6 +142,7 @@ Plugin {
   Config {
     Size=2
   }
+  expand=0
 }
 Plugin {
   type=dclock
@@ -136,4 +159,5 @@ Plugin {
   Config {
     Size=6
   }
+  expand=0
 }

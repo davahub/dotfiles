@@ -18,15 +18,14 @@
 
 # STARTUP --------------------------------------------------------
 
-#wallpaper='03541_lassenvolcanic_1920x1080.jpg'
+#wallpaper='03972_paulinalakefromabove_1920x1080.jpg'
+
+lxpanel -p mylxpanel &
 
 compton -b
 
 sleep 1s
 pcmanfm --desktop &
-
-sleep 1s
-lxpanel -p mylxpanel &
 
 sleep 1s
 guake &

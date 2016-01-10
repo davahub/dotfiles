@@ -247,7 +247,8 @@
 <menu id="exit-menu" label="Exit">
   
   <item label="Log Out">
-    <action name="Execute"><command>openbox --exit</command></action>
+    <!-- <action name="Execute"><command>openbox --exit</command></action> -->
+    <action name="Exit"><prompt>no</prompt></action>
   </item>
   
   <item label="Shutdown">
