@@ -20,8 +20,6 @@
 
 #wallpaper='03972_paulinalakefromabove_1920x1080.jpg'
 
-lxpanel -p mylxpanel &
-
 compton -b
 
 sleep 1s
@@ -32,12 +30,19 @@ guake &
 
 /home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
 
-numlockx &
-
-sleep 1s 
 #pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
 
+numlockx &
+
 xset -dpms; xset s off &
+
+tint2 &
+
+sleep 1s
+conky &
+
+sleep 2s
+conky -c "/home/dava/.conky/Gotham/Gotham" &
 
 
 

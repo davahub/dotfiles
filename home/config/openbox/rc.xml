@@ -150,20 +150,20 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
+    <top>22</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>Top</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
     <noStrut>no</noStrut>
     <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
-    <direction>Vertical</direction>
+    <direction>Horizontal</direction>
     <!-- 'Vertical' or 'Horizontal' -->
     <autoHide>no</autoHide>
     <hideDelay>300</hideDelay>
@@ -314,6 +314,11 @@
     </keybind>
     <!-- SHORTCUTS -->
     <!-- EXECUTE -->
+    <keybind key="W-r">
+      <action name="Execute">
+        <command>gmrun</command>
+      </action>
+    </keybind>
     <keybind key="W-F12">
       <action name="Execute">
         <command>toggleKeyboard</command>
@@ -426,7 +431,7 @@
     </keybind>
     <keybind key="W-o">
       <action name="Execute">
-        <command>openbox --restart</command>
+        <command>restartOpenbox</command>
       </action>
     </keybind>
     <!-- ACTION -->
@@ -1022,6 +1027,12 @@
     </application>
     <application class="Spotify" type="normal">
       <maximized>Vertical</maximized>
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="Gmrun" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
