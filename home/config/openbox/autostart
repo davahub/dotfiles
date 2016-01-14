@@ -41,8 +41,9 @@ tint2 &
 sleep 1s
 conky &
 
-sleep 2s
-conky -c "/home/dava/.conky/Gotham/Gotham" &
+sleep 1s
+volumeicon
+
 
 
 
