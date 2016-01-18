@@ -26,11 +26,12 @@ sleep 1s
 pcmanfm --desktop &
 
 sleep 1s
+#pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
+
+sleep 1s
 guake &
 
 /home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
-
-#pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
 
 numlockx &
 
@@ -42,7 +43,11 @@ sleep 1s
 conky &
 
 sleep 1s
-volumeicon
+volumeicon &
+
+gmrun &
+sleep 2s
+killall gmrun
 
 
 
