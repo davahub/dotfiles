@@ -150,7 +150,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>23</top>
+    <top>22</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -314,6 +314,11 @@
     </keybind>
     <!-- SHORTCUTS -->
     <!-- EXECUTE -->
+    <keybind key="W-F9">
+      <action name="Execute">
+        <command>gen-tex</command>
+      </action>
+    </keybind>
     <keybind key="W-r">
       <action name="Execute">
         <command>gmrun</command>

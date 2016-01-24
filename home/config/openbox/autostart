@@ -18,18 +18,14 @@
 
 # STARTUP --------------------------------------------------------
 
-#wallpaper='03972_paulinalakefromabove_1920x1080.jpg'
+wallpaper='03972_paulinalakefromabove_1920x1080.jpg'
 
 compton -b
 
 sleep 1s
-pcmanfm --desktop &
-
-sleep 1s
-#pcmanfm --set-wallpaper=/home/dava/pictures/wallpapers/new/$wallpaper &
-
-sleep 1s
 guake &
+
+feh --bg-scale /home/dava/pictures/wallpapers/new/$wallpaper &
 
 /home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
 
