@@ -391,6 +391,11 @@
       </action>
     </keybind>
     <!-- LAUNCHERS -->
+    <keybind key="XF86Calculator">
+      <action name="Execute">
+        <command>galculator</command>
+      </action>
+    </keybind>
     <keybind key="C-A-Delete">
       <action name="Execute">
         <command>lxtask</command>
