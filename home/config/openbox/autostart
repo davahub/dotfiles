@@ -20,6 +20,13 @@
 
 wallpaper='03972_paulinalakefromabove_1920x1080.jpg'
 
+homeConfig="/home/dava/.1homepc-config/home/config"
+
+if ls /home/dava/.config/compton.conf &> /dev/null; then
+	rm /home/dava/.config/compton.conf
+fi
+ln -s $homeConfig/compton.conf /home/dava/.config/compton.conf
+
 compton -b
 
 sleep 1s
