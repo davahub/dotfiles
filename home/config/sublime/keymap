@@ -2,5 +2,7 @@
 	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 	{ "keys": ["alt+q"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
-	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} }
+	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	{ "keys": ["ctrl+shift+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+alt+m"], "command": "toggle_menu"}
 ]

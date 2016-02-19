@@ -342,12 +342,12 @@
     <!-- AUDIO -->
     <keybind key="W-Right">
       <action name="Execute">
-        <command>clementine --next</command>
+        <command>playerctl next</command>
       </action>
     </keybind>
     <keybind key="W-Left">
       <action name="Execute">
-        <command>clementine --previous</command>
+        <command>playerctl previous</command>
       </action>
     </keybind>
     <keybind key="W-Up">
