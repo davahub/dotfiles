@@ -314,6 +314,11 @@
     </keybind>
     <!-- SHORTCUTS -->
     <!-- EXECUTE -->
+    <keybind key="W-x">
+      <action name="Execute">
+        <command>xkill</command>
+      </action>
+    </keybind>
     <keybind key="W-F9">
       <action name="Execute">
         <command>gen-tex</command>
@@ -460,6 +465,9 @@
       </action>
     </keybind>
     <!-- ACTION -->
+    <keybind key="A-r">
+      <action name="Resize"/>
+    </keybind>
     <keybind key="W-v">
       <action name="Iconify"/>
     </keybind>
