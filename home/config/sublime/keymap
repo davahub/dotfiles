@@ -4,5 +4,6 @@
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 	{ "keys": ["ctrl+shift+d"], "command": "duplicate_line" },
-	{ "keys": ["ctrl+alt+m"], "command": "toggle_menu"}
+	{ "keys": ["ctrl+alt+m"], "command": "toggle_menu"},
+	{ "keys": ["ctrl+1"], "command": "reveal_in_side_bar"}
 ]
