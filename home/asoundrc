@@ -1,9 +1,21 @@
 
 # SET DEFAULT SOUNDCARD ###############################
 
+
+pcm.usb
+{
+    type hw
+    card U0x46d0x804
+}
+
 pcm.!default {
 	type hw
 	card D2X
+	capture.pcm
+	{
+		type plug
+	  slave.pcm "usb"
+	}
 }
 ctl.!default {
 	type hw           

@@ -52,6 +52,9 @@ gmrun &
 sleep 2s
 killall gmrun
 
+#sleep 2s
+#deluge &
+
 
 
 
