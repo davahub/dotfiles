@@ -150,7 +150,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>22</top>
+    <top>34</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -314,11 +314,11 @@
     </keybind>
     <!-- SHORTCUTS -->
     <!-- EXECUTE -->
-    <keybind key="W-g">
+    <!-- <keybind key="W-g">
       <action name="Execute">
         <command>pcmanfm -f</command>
       </action>
-    </keybind>
+    </keybind> -->
     <keybind key="W-x">
       <action name="Execute">
         <command>xkill</command>
@@ -386,9 +386,9 @@
       </action>
     </keybind>
     <keybind key="XF86AudioNext">
-	   <action name="Execute">
+      <action name="Execute">
         <command>playerctl next</command>
-			</action>
+      </action>
     </keybind>
     <keybind key="XF86AudioPrev">
       <action name="Execute">
