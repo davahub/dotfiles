@@ -401,6 +401,11 @@
       </action>
     </keybind>
     <!-- LAUNCHERS -->
+    <keybind key="W-A">
+      <action name="Execute">
+        <command>allconfig</command>
+      </action>
+    </keybind>
     <keybind key="XF86Calculator">
       <action name="Execute">
         <command>galculator</command>

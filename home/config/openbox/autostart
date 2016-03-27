@@ -27,7 +27,7 @@ if ls /home/dava/.config/compton.conf &> /dev/null; then
 fi
 ln -s $homeConfig/compton.conf /home/dava/.config/compton.conf
 
-compton -b
+compton -b 
 
 sleep 1s
 guake &
@@ -48,12 +48,20 @@ conky &
 sleep 1s
 volumeicon &
 
+sleep 1s
+opensnap -d &
+
+sleep 1s
 gmrun &
-sleep 2s
+
+sleep 1s
 killall gmrun
 
-#sleep 2s
-#deluge &
+sleep 2s
+deluge &
+
+sleep 1s
+start-break-timer &
 
 
 
