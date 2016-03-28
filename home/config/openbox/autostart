@@ -27,7 +27,7 @@ if ls /home/dava/.config/compton.conf &> /dev/null; then
 fi
 ln -s $homeConfig/compton.conf /home/dava/.config/compton.conf
 
-compton -b 
+compton &
 
 sleep 1s
 guake &
