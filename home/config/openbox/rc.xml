@@ -1081,5 +1081,8 @@
         <y>center</y>
       </position>
     </application>
+    <application class="Clementine" type="normal">
+          <desktop>6</desktop>
+    </application>
   </applications>
 </openbox_config>

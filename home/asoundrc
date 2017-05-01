@@ -1,7 +1,5 @@
 
 # SET DEFAULT SOUNDCARD ###############################
-
-
 pcm.usb
 {
     type hw
@@ -10,7 +8,7 @@ pcm.usb
 
 pcm.!default {
 	type hw
-	card D2X
+	card PCH
 	capture.pcm
 	{
 		type plug
@@ -19,5 +17,5 @@ pcm.!default {
 }
 ctl.!default {
 	type hw           
-	card D2X
+	card PCH
 }

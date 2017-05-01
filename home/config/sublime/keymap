@@ -3,7 +3,7 @@
 	{ "keys": ["alt+q"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
-	{ "keys": ["ctrl+shift+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
 	{ "keys": ["ctrl+alt+m"], "command": "toggle_menu"},
 	{ "keys": ["ctrl+1"], "command": "reveal_in_side_bar"},
 	{ "keys": ["ctrl+2"], "command": "toggle_side_bar" }

@@ -18,7 +18,7 @@
 
 # STARTUP --------------------------------------------------------
 
-wallpaper='03972_paulinalakefromabove_1920x1080.jpg'
+wallpaper='w.jpg'
 
 homeConfig="/home/dava/.1homepc-config/home/config"
 
@@ -27,12 +27,13 @@ if ls /home/dava/.config/compton.conf &> /dev/null; then
 fi
 ln -s $homeConfig/compton.conf /home/dava/.config/compton.conf &
 
+sleep 1s
 compton &
 
-sleep 1s
+sleep 2s
 guake &
 
-feh --bg-scale /home/dava/pictures/wallpapers/new/$wallpaper &
+feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
 
 /home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
 
@@ -57,6 +58,8 @@ killall gmrun
 
 sleep 2s
 deluge &
+
+
 
 
 
