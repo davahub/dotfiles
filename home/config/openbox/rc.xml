@@ -1084,5 +1084,8 @@
     <application class="Clementine" type="normal">
           <desktop>6</desktop>
     </application>
+    <application class="Google-chrome" type="normal">
+          <desktop>1</desktop>
+    </application>
   </applications>
 </openbox_config>

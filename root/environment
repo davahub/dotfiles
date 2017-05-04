@@ -1,0 +1,7 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+G_FILENAME_ENCODING=@locale
+PULSE_LATENCY_MSEC=60

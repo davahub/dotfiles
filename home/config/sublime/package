@@ -1,0 +1,17 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"BeautifyRuby",
+		"Emmet",
+		"Git",
+		"HTML-CSS-JS Prettify",
+		"Minify",
+		"Package Control",
+		"Pretty JSON",
+		"Sass"
+	]
+}

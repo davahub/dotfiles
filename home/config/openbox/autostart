@@ -22,15 +22,9 @@ wallpaper='w.jpg'
 
 homeConfig="/home/dava/.1homepc-config/home/config"
 
-if ls /home/dava/.config/compton.conf &> /dev/null; then
-	rm /home/dava/.config/compton.conf
-fi
-ln -s $homeConfig/compton.conf /home/dava/.config/compton.conf &
-
-sleep 1s
 compton &
 
-sleep 2s
+sleep 1s
 guake &
 
 feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
@@ -39,25 +33,26 @@ feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
 
 volumeicon &
 
+google-chrome-stable &
+
 numlockx &
 
 opensnap -d &
 
-xset -dpms; xset s off &
+xset -dpms; xset s off; xset -b &
 
 tint2 &
 
-sleep 1s
 conky &
 
-sleep 1s
 gmrun &
 
 sleep 1s
 killall gmrun
 
-sleep 2s
 deluge &
+
+
 
 
 
