@@ -1007,7 +1007,7 @@
     </application>
     <application class="Leafpad" type="normal">
       <position force="yes">
-        <x>center</x>
+        <x>-1</x>
         <y>center</y>
       </position>
     </application>

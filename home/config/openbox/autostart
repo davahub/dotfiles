@@ -24,16 +24,11 @@ homeConfig="/home/dava/.1homepc-config/home/config"
 
 compton &
 
-sleep 1s
-guake &
-
 feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
 
 /home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
 
 volumeicon &
-
-google-chrome-stable &
 
 numlockx &
 
@@ -45,11 +40,16 @@ tint2 &
 
 conky &
 
+guake &
+
 gmrun &
 
 sleep 1s
 killall gmrun
 
+google-chrome-stable &
+
+sleep 1s
 deluge &
 
 
