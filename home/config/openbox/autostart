@@ -18,11 +18,10 @@
 
 # STARTUP --------------------------------------------------------
 
-wallpaper='w.jpg'
-
-homeConfig="/home/dava/.1homepc-config/home/config"
-
 compton &
+sleep 1s
+
+wallpaper='w.jpg'
 
 feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
 

@@ -1006,6 +1006,7 @@
       </position>
     </application>
     <application class="Leafpad" type="normal">
+    	<maximized>Vertical</maximized>
       <position force="yes">
         <x>-1</x>
         <y>center</y>
