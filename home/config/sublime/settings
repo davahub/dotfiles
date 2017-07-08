@@ -10,5 +10,6 @@
 	"remember_open_files": false,
 	"scroll_speed": 0,
 	"tab_size": 4,
-	"update_check": false
+	"update_check": false,
+	"spell_check":true
 }
