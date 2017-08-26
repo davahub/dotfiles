@@ -1,8 +1,9 @@
 [Default Applications]
 text/plain=sublime_text_3.desktop
 application/xml=sublime_text_3.desktop
-image/png=viewnior.desktop
+image/jpg=viewnior.desktop;feh.desktop;darktable.desktop;pinta.desktop;
 image/jpeg=viewnior.desktop
+image/png=viewnior.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-DVPCGX.desktop
 message/rfc822=userapp-Thunderbird-DVPCGX.desktop
 inode/directory=pcmanfm.desktop
@@ -10,12 +11,16 @@ application/x-shellscript=sublime_text_3.desktop
 text/x-java=sublime_text_3.desktop
 x-scheme-handler/https=google-chrome.desktop
 application/pdf=evince.desktop;mupdf.desktop;gimp.desktop;masterpdfeditor.desktop;libreoffice-draw.desktop;
+application/vnd.ms-word=libreoffice-writer.desktop;openoffice4-writer.desktop;
+application/vnd.ms-word.document.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
+application/vnd.ms-word.template.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
 
 [Added Associations]
 text/plain=sublime_text_3.desktop;
 inode/directory=xarchiver.desktop;pcmanfm.desktop;vlc.desktop;
-image/jpeg=evince.desktop;viewnior.desktop;
 application/xml=sublime_text_3.desktop;
+image/jpg=viewnior.desktop;feh.desktop;darktable.desktop;pinta.desktop;
+image/jpeg=viewnior.desktop
 image/png=viewnior.desktop;
 application/x-executable=sublime_text_3.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-DVPCGX.desktop;
@@ -25,3 +30,6 @@ text/x-java=sublime_text_3.desktop;
 application/x-php=google-chrome.desktop;
 x-scheme-handler/http=google-chrome.desktop;
 x-scheme-handler/https=google-chrome.desktop;
+application/vnd.ms-word=libreoffice-writer.desktop;openoffice4-writer.desktop;
+application/vnd.ms-word.document.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
+application/vnd.ms-word.template.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
