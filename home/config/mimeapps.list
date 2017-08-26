@@ -9,6 +9,7 @@ inode/directory=pcmanfm.desktop
 application/x-shellscript=sublime_text_3.desktop
 text/x-java=sublime_text_3.desktop
 x-scheme-handler/https=google-chrome.desktop
+application/pdf=evince.desktop;mupdf.desktop;gimp.desktop;masterpdfeditor.desktop;libreoffice-draw.desktop;
 
 [Added Associations]
 text/plain=sublime_text_3.desktop;
