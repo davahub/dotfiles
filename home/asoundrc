@@ -12,7 +12,7 @@ pcm.!default {
 	capture.pcm
 	{
 		type plug
-	  slave.pcm "usb"
+	  	slave.pcm "usb"
 	}
 }
 ctl.!default {

@@ -334,7 +334,7 @@
         <command>gmrun</command>
       </action>
     </keybind>
-    <keybind key="W-F12">
+    <keybind key="C-space">
       <action name="Execute">
         <command>toggleKeyboard</command>
       </action>

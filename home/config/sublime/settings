@@ -9,7 +9,7 @@
 	],
 	"remember_open_files": false,
 	"scroll_speed": 0,
+	"spell_check": true,
 	"tab_size": 4,
-	"update_check": false,
-	"spell_check":true
+	"update_check": false
 }
