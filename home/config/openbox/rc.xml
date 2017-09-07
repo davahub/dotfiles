@@ -346,7 +346,7 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>import -window -root screenshot.jpg</command>
+        <command>xfce4-screenshooter -r</command>
       </action>
     </keybind>
     <!-- AUDIO -->
