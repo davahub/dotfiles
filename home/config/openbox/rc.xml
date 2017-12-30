@@ -319,6 +319,11 @@
         <command>pcmanfm -f</command>
       </action>
     </keybind> -->
+    <keybind key="W-Pause">
+      <action name="Execute">
+        <command>systemctl suspend</command>
+      </action>
+    </keybind>
     <keybind key="W-x">
       <action name="Execute">
         <command>xkill</command>
@@ -334,7 +339,7 @@
         <command>gmrun</command>
       </action>
     </keybind>
-    <keybind key="C-space">
+    <keybind key="W-space">
       <action name="Execute">
         <command>toggleKeyboard</command>
       </action>

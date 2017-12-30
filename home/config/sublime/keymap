@@ -8,7 +8,19 @@
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
 	{ "keys": ["alt+down"], "command": "duplicate_line" },
+	// emmet html tag matching goto
+	{ "keys": ["ctrl+alt+j"], "args": { "action": "matching_pair"}, "command": "run_emmet_action", "context": 
+			  [ {"key": "emmet_action_enabled.matching_pair"}] }, 
 
+	{
+	    "keys": ["ctrl+shift+g"],
+	    "command": "git_raw",
+	    "args": {
+	        "command": "git difftool",
+	        "append_current_file": true,
+	        "may_change_files": false
+	    }
+	},
 
 	// ---------------------------- 
 	// -- NAVIGATION MOVEMENT

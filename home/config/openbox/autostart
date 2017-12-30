@@ -28,25 +28,30 @@ feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
 /home/dava/.1homepc-config/home/setlayout 0 3 2 0 &
 
 volumeicon &
+sleep 1s
 
 numlockx &
+sleep 1s
 
 opensnap -d &
+sleep 1s
 
 xset -dpms; xset s off; xset -b &
 
 tint2 &
+sleep 1s
 
 conky &
+sleep 1s
 
 guake &
+sleep 1s
 
 gmrun &
+sleep 1s
 
 sleep 1s
 killall gmrun
-
-google-chrome-stable &
 
 sleep 1s
 deluge &
