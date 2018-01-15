@@ -9,6 +9,8 @@ rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails"
 
+export mywiki="/home/dava/.3installed/mywiki"
+
 # START SSH AGENT 
 if ! pgrep -u $USER ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing

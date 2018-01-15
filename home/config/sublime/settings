@@ -15,5 +15,6 @@
 	"scroll_speed": 0,
 	"spell_check": true,
 	"tab_size": 4,
+	"theme": "Default.sublime-theme",
 	"update_check": false
 }
