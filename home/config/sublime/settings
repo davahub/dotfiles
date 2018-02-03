@@ -1,9 +1,13 @@
 {
 	"added_words":
 	[
-		"ger"
+		"ger",
+		"Cryptocurrencies",
+		"cryptocurrencies",
+		"blockchain",
+		"Pacman"
 	],
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.tmTheme",
 	"font_face": "inconsolata",
 	"font_size": 15,
 	"hot_exit": false,
