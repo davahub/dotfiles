@@ -5,7 +5,8 @@
 		"Cryptocurrencies",
 		"cryptocurrencies",
 		"blockchain",
-		"Pacman"
+		"Pacman",
+		"bootloader"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Mariana.tmTheme",
 	"font_face": "inconsolata",
