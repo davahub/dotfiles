@@ -5,10 +5,12 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
 		"BeautifyRuby",
 		"Emmet",
 		"Git",
 		"HTML-CSS-JS Prettify",
+		"JsPrettier",
 		"Minify",
 		"Package Control",
 		"Pretty JSON",
