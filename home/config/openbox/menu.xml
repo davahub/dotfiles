@@ -23,12 +23,21 @@
       </startupnotify>
     </action>
   </item>
+
+  <item label="PCManFM">
+    <action name="Execute">
+      <command>pcmanfm</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
    
 </menu>
 
 
 <!-- TEXT EDITOR MENU -->
-<menu id="apps-editors-menu" label="Editors">
+<menu id="apps-editors-menu" label="Programming">
   
   <item label="Sublime3">
     <action name="Execute">

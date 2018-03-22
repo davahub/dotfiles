@@ -365,6 +365,16 @@
         <command>playerctl previous</command>
       </action>
     </keybind>
+    <keybind key="C-F12">
+      <action name="Execute">
+        <command>vol up -i 20 -m Master</command>
+      </action>
+    </keybind>
+    <keybind key="C-F11">
+      <action name="Execute">
+        <command>vol down -i 20 -m Master</command>
+      </action>
+    </keybind>
     <keybind key="W-Up">
       <action name="Execute">
         <command>vol up -i 20 -m Master</command>
@@ -453,7 +463,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>lxterminal --geometry=75x30</command>
+        <command>lxterminal --geometry=85x30</command>
       </action>
     </keybind>
     <keybind key="W-c">
@@ -1010,6 +1020,13 @@
         <y>center</y>
       </position>
     </application>
+    <application class="Lxterminal" type="normal">
+      <maximized>Vertical</maximized>
+      <position force="yes">
+        <x>-1</x>
+        <y>center</y>
+      </position>
+    </application>
     <application class="Leafpad" type="normal">
     	<maximized>Vertical</maximized>
       <position force="yes">
@@ -1090,8 +1107,13 @@
     <application class="Clementine" type="normal">
           <desktop>6</desktop>
     </application>
-    <application class="Google-chrome" type="normal">
-          <desktop>1</desktop>
+    <application class="Subl3" type="normal">
+      <desktop>all</desktop>
+      <skip_taskbar>yes</skip_taskbar>
     </application>
+    <!-- <application class="Google-chrome" type="normal">
+          <desktop>1</desktop>
+    </application> -->
+    
   </applications>
 </openbox_config>
