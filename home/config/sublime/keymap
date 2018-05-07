@@ -17,6 +17,8 @@
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
 	{ "keys": ["alt+down"], "command": "duplicate_line" },
+	{ "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true } },
+	{ "keys": ["alt+x"], "command": "right_delete" },
 	// emmet html tag matching goto
 	{ "keys": ["ctrl+alt+j"], "args": { "action": "matching_pair"}, "command": "run_emmet_action", "context": 
 			  [ {"key": "emmet_action_enabled.matching_pair"}] }, 
@@ -38,13 +40,26 @@
 	{ "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
 	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
 	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true} },
-	{ "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false} },
-	{ "keys": ["ctrl+l"], "command": "move", "args": {"by": "characters", "forward": true} },
+	{ "keys": ["alt+h"], "command": "move", "args": {"by": "characters", "forward": false} },
+	{ "keys": ["alt+l"], "command": "move", "args": {"by": "characters", "forward": true} },
 	{ "keys": ["alt+2"], "command": "next_view" },
 	{ "keys": ["alt+1"], "command": "prev_view" },
-	//{ "keys": ["alt+right"], "command": "next_view_in_stack" },
-	//{ "keys": ["alt+left"], "command": "prev_view_in_stack" },
+	// { "keys": ["alt+l"], "command": "show_at_center" },
+	{ "keys": ["ctrl+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 6.0 } },
+	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
 
+
+	// ---------------------------- 
+	// -- MACROS
+	// ---------------------------- 
+	{"keys": ["alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
+	{"keys": ["alt+u"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
+
+
+	// ---------------------------- 
+	// -- OTHERS
+	// ---------------------------- 
 	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 	{ "keys": ["alt+shift+r"], "command": "reindent", "args": {"single_line": false} },
 	{ "keys": ["f8"], "command": "toggle_side_bar" }
