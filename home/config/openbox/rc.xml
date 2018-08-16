@@ -349,11 +349,11 @@
         <command>toggleVideo</command>
       </action>
     </keybind>
-    <keybind key="Print">
+    <!-- <keybind key="Print">
       <action name="Execute">
         <command>xfce4-screenshooter -r</command>
       </action>
-    </keybind>
+    </keybind> -->
     <!-- AUDIO -->
     <keybind key="W-Right">
       <action name="Execute">
