@@ -1104,6 +1104,12 @@
         <y>center</y>
       </position>
     </application>
+    <application class="Emacs" type="normal">
+      <position force="yes">
+        <x>-1</x>
+        <y>center</y>
+      </position>
+    </application>
     <application class="Clementine" type="normal">
           <desktop>6</desktop>
     </application>
