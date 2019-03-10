@@ -1114,7 +1114,7 @@
           <desktop>6</desktop>
     </application>
     <application class="Subl3" type="normal">
-      <desktop>all</desktop>
+      <!-- <desktop>all</desktop> -->
       <!-- <skip_taskbar>yes</skip_taskbar> -->
     </application>
     <!-- <application class="Google-chrome" type="normal">

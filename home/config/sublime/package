@@ -5,16 +5,25 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
+		"ayu",
 		"Babel",
 		"BeautifyRuby",
 		"Emmet",
+		"ESLint",
 		"Git",
 		"HTML-CSS-JS Prettify",
-		"JsPrettier",
+		"JsFormat",
+		"MarkdownEditing",
+		"MarkdownTOC",
+		"Material Theme",
 		"Minify",
 		"Package Control",
-		"Pretty JSON",
 		"Sass",
-		"SML (Standard ML)"
+		"Seti_UI",
+		"SideBarEnhancements",
+		"SML (Standard ML)",
+		"SublimeLinter",
+		"Theme - Spacegray"
 	]
 }

@@ -7,13 +7,17 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (sml-mode))))
+ '(package-selected-packages (quote (company sml-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; SET REPOs
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 
 
 ;; --------------------------------------
@@ -35,10 +39,20 @@
 ;; enable re-open previous files
 (desktop-save-mode 1)
 
+;; show file path in the frame
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+            '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 
 ;; --------------------------------------
 ;; -- Configurations
 ;; --------------------------------------
+
+;; auto-complete config
+(ac-config-default) ;; enable
+;;(global-auto-complete-mode t)
+(add-to-list 'ac-modes 'sml)
+
 
 ;; stop creating backup file~
 (setq make-backup-files nil)
@@ -51,11 +65,26 @@
 ;; show parenthesis
 (show-paren-mode 1)
 
-(global-set-key (kbd "C-c v") (kbd "C-u - 2 C-x ^")) ;; decrease buffer size
 
-(global-set-key (kbd "C-c V") (kbd "C-u 2 C-x ^")) ;; decrease buffer size
+;; --------------------------------------
+;; -- SHORTCUTS
+;; --------------------------------------
+
+;; disable minimize emacs
+(global-unset-key (kbd "C-z"))
+
+;; decrease buffer size
+(global-set-key (kbd "C-c v") (kbd "C-u - 2 C-x ^")) 
+
+;; increase buffer size
+(global-set-key (kbd "C-c V") (kbd "C-u 2 C-x ^")) 
+
+
 
 ;; --------------------------------------
 ;; -- OTHERS
 ;; --------------------------------------
+
+
+
 
