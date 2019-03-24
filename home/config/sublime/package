@@ -9,6 +9,7 @@
 		"ayu",
 		"Babel",
 		"BeautifyRuby",
+		"Dockerfile Syntax Highlighting",
 		"Emmet",
 		"ESLint",
 		"Git",
@@ -24,6 +25,7 @@
 		"SideBarEnhancements",
 		"SML (Standard ML)",
 		"SublimeLinter",
-		"Theme - Spacegray"
+		"Theme - Spacegray",
+		"XQuery"
 	]
 }

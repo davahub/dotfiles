@@ -14,3 +14,6 @@ launcher='/home/dava/.2shortcuts/launcher'
 rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails"
+
+# MY ENVIRONMENT VARIABLE (must give absolute path)
+export myworkspace="/home/dava/workspace"
