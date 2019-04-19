@@ -5,27 +5,15 @@
 	],
 	"installed_packages":
 	[
-		"A File Icon",
-		"ayu",
 		"Babel",
 		"BeautifyRuby",
 		"Dockerfile Syntax Highlighting",
-		"Emmet",
-		"ESLint",
-		"Git",
 		"HTML-CSS-JS Prettify",
-		"JsFormat",
 		"MarkdownEditing",
 		"MarkdownTOC",
-		"Material Theme",
-		"Minify",
 		"Package Control",
 		"Sass",
-		"Seti_UI",
-		"SideBarEnhancements",
 		"SML (Standard ML)",
-		"SublimeLinter",
-		"Theme - Spacegray",
 		"XQuery"
 	]
 }

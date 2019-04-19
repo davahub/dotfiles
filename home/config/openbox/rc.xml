@@ -224,6 +224,38 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+    <!-- MY CUSTOM DESKTOP SWITCH HOTKEY -->
+    <keybind key="W-KP_1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-KP_2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-KP_3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-KP_4">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="W-KP_5">
+      <action name="GoToDesktop">
+        <to>5</to>
+      </action>
+    </keybind>
+    <keybind key="W-KP_6">
+      <action name="GoToDesktop">
+        <to>6</to>
+      </action>
+    </keybind>
+    <!-- MY CUSTOM END -->
     <keybind key="W-F1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -1028,7 +1060,7 @@
       </position>
     </application>
     <application class="Leafpad" type="normal">
-    	<maximized>Vertical</maximized>
+      <maximized>Vertical</maximized>
       <position force="yes">
         <x>-1</x>
         <y>center</y>
@@ -1111,7 +1143,7 @@
       </position>
     </application>
     <application class="Clementine" type="normal">
-          <desktop>6</desktop>
+      <desktop>6</desktop>
     </application>
     <application class="Subl3" type="normal">
       <!-- <desktop>all</desktop> -->
@@ -1120,6 +1152,5 @@
     <!-- <application class="Google-chrome" type="normal">
           <desktop>1</desktop>
     </application> -->
-    
   </applications>
 </openbox_config>
