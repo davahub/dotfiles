@@ -227,32 +227,32 @@
     <!-- MY CUSTOM DESKTOP SWITCH HOTKEY -->
     <keybind key="W-KP_1">
       <action name="GoToDesktop">
-        <to>1</to>
+        <to>4</to>
       </action>
     </keybind>
     <keybind key="W-KP_2">
       <action name="GoToDesktop">
-        <to>2</to>
+        <to>5</to>
       </action>
     </keybind>
     <keybind key="W-KP_3">
       <action name="GoToDesktop">
-        <to>3</to>
+        <to>6</to>
       </action>
     </keybind>
     <keybind key="W-KP_4">
       <action name="GoToDesktop">
-        <to>4</to>
+        <to>1</to>
       </action>
     </keybind>
     <keybind key="W-KP_5">
       <action name="GoToDesktop">
-        <to>5</to>
+        <to>2</to>
       </action>
     </keybind>
     <keybind key="W-KP_6">
       <action name="GoToDesktop">
-        <to>6</to>
+        <to>3</to>
       </action>
     </keybind>
     <!-- MY CUSTOM END -->

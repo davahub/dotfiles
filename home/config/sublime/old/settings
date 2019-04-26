@@ -1,0 +1,56 @@
+{
+	"added_words":
+	[
+		"ger",
+		"Cryptocurrencies",
+		"cryptocurrencies",
+		"blockchain",
+		"Pacman",
+		"bootloader",
+		"inode",
+		"symlink",
+		"online",
+		"linkedin",
+		"codebase",
+		"learnt",
+		"seemsless",
+		"Netbeans",
+		"Intellij",
+		"Servlet",
+		"servlets",
+		"servlet",
+		"df",
+		"blogs",
+		"Amphetadesk",
+		"dockerfile",
+		"Dockerize",
+		"xquery",
+		"Openbox",
+		"lxappearance",
+		"openbox",
+		"ebay",
+		"App",
+		"Sapiens",
+		"Syed"
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_face": "inconsolata",
+	"font_size": 16,
+	"hot_exit": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"ignored_words":
+	[
+		"Servlets"
+	],
+	"remember_open_files": true,
+	"save_on_focus_lost": true,
+	"scroll_speed": 0,
+	"spell_check": true,
+	"tab_size": 4,
+	"theme": "Default.sublime-theme",
+	"update_check": false
+}

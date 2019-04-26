@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+<pre>
+# $1
+</pre>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+	<tabTrigger>sh</tabTrigger>
+	<scope>text.html</scope>
+</snippet>
+<snippet>
+	<content><![CDATA[
+{| class="wikitable"
+|+ 
+! $1
+! 
+|-
+| 
+| 
+|-
+| 
+| 
+|-
+| 
+| 
+|-
+| 
+| 
+|}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+	<tabTrigger>wikitable</tabTrigger>
+	<scope>text.html</scope>
+</snippet>

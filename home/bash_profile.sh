@@ -17,6 +17,6 @@ export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$ru
 
 # MY ENVIRONMENT VARIABLE (must give absolute path)
 export myworkspace="/home/dava/workspace"
-export myhomepcconf="/home/dava/.1homepc-config"
+export myhomeconfig="/home/dava/.1homepc-config"
 export myworkconfig="/home/dava/workspace/.work/winconfig"
 export mywiki="/home/dava/.3installed/mywiki"
