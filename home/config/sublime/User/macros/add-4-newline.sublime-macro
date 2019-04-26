@@ -2,7 +2,7 @@
 	{
 		"args":
 		{
-			"characters": "\n\n\n\n"
+			"characters": "\n\n\n\n\n"
 		},
 		"command": "insert"
 	},
@@ -37,5 +37,21 @@
 			"forward": false
 		},
 		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "lines",
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "eol"
+		},
+		"command": "move_to"
 	}
 ]
