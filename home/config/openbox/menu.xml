@@ -3,7 +3,9 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
 
-<!-- ACCESSORIES MENU -->
+<!-- ############################################ -->
+<!-- ## ACCESSORIES MENU -->
+<!-- ############################################ -->
 <menu id="apps-accessories-menu" label="Accessories">
   
   <item label="Terminal">
@@ -36,7 +38,9 @@
 </menu>
 
 
-<!-- TEXT EDITOR MENU -->
+<!-- ############################################ -->
+<!-- ## PROGRAMMING MENU -->
+<!-- ############################################ -->
 <menu id="apps-editors-menu" label="Programming">
   
   <item label="Sublime3">
@@ -71,7 +75,9 @@
 </menu>
 
 
-<!-- GRAPHICS MENU -->
+<!-- ############################################ -->
+<!-- ## GRAPHICS MENU -->
+<!-- ############################################ -->
 <menu id="apps-graphics-menu" label="Graphics">
 
   <item label="Gimp">
@@ -95,7 +101,9 @@
 </menu>
 
 
-<!-- GAMES MENU -->
+<!-- ############################################ -->
+<!-- ## GAMES MENU -->
+<!-- ############################################ -->
 <menu id="apps-games-menu" label="Games">
 
   <item label="Steam">
@@ -110,7 +118,9 @@
 </menu> 
 
 
-<!-- INTERNET MENU -->
+<!-- ############################################ -->
+<!-- ## INTERNET MENU -->
+<!-- ############################################ -->
 <menu id="apps-net-menu" label="Internet">
 
   <item label="Chrome">
@@ -144,7 +154,9 @@
 </menu>
 
 
-<!-- OFFICE MENU -->
+<!-- ############################################ -->
+<!-- ## OFFICE MENU -->
+<!-- ############################################ -->
 <menu id="apps-office-menu" label="Office">
 
   <item label="LibreOffice Writer">
@@ -180,8 +192,28 @@
 </menu>
 
 
-<!-- MULTIMEDIA MENU -->
-<menu id="apps-multimedia-menu" label="Multimedia">
+<!-- ############################################ -->
+<!-- ## SOUND VIDEO MENU -->
+<!-- ############################################ -->
+<menu id="apps-sound-video-menu" label="Sound Video">
+
+	<item label="Audacious">
+	  <action name="Execute">
+	    <command>audacious</command>
+	    <startupnotify>
+	      <enabled>yes</enabled>
+	    </startupnotify>
+	  </action>
+	</item>
+
+	<item label="Picard">
+	  <action name="Execute">
+	    <command>picard</command>
+	    <startupnotify>
+	      <enabled>yes</enabled>
+	    </startupnotify>
+	  </action>
+	</item>
 
   <item label="Clementine">
     <action name="Execute">
@@ -204,7 +236,9 @@
 </menu>
 
 
-<!-- CONfIG MENU -->
+<!-- ############################################ -->
+<!-- ## CONfIG MENU -->
+<!-- ############################################ -->
 <menu id="config-menu" label="Config">
 	<item label="Input Device Preference">
 	  <action name="Execute">
@@ -243,8 +277,19 @@
 </menu>
 
 
-<!-- SYSTEM MENU -->
+<!-- ############################################ -->
+<!-- ## SYSTEM MENU -->
+<!-- ############################################ -->
 <menu id="system-menu" label="System">
+
+  <item label="Hard Info">
+    <action name="Execute">
+      <command>hardinfo</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 
   <item label="Task Manager">
     <action name="Execute">
@@ -258,7 +303,9 @@
 </menu>
 
 
-<!-- EXIT MENU -->
+<!-- ############################################ -->
+<!-- ## EXIT MENU -->
+<!-- ############################################ -->
 <menu id="exit-menu" label="Exit">
   
   <item label="Log Out">
@@ -292,6 +339,9 @@
 </menu>
 
 
+<!-- ############################################ -->
+<!-- ## SETUP ALL MENUS -->
+<!-- ############################################ -->
 <menu id="root-menu" label="Openbox 3">
   <menu id="apps-accessories-menu"/>
   <menu id="apps-editors-menu"/>
@@ -299,10 +349,9 @@
   <menu id="apps-games-menu"/>
   <menu id="apps-net-menu"/>
   <menu id="apps-office-menu"/>
-  <menu id="apps-multimedia-menu"/>
+  <menu id="apps-sound-video-menu"/>
   <menu id="config-menu"/>
   <menu id="system-menu"/>
   <menu id="exit-menu"/>
 </menu>
-
 </openbox_menu>

@@ -31,7 +31,12 @@
 		"ebay",
 		"App",
 		"Sapiens",
-		"Syed"
+		"Syed",
+		"apps",
+		"freenode",
+		"nickserv",
+		"pacman",
+		"filesystem"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",

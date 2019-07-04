@@ -8,7 +8,7 @@
 	<!-- <tabTrigger>hello</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
-	<tabTrigger>mdt</tabTrigger>
+	<tabTrigger>mdtable</tabTrigger>
 	<scope>text.html.markdown</scope>
 	<scope>text.html.markdown.multimarkdo</scope>
 </snippet>
