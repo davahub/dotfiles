@@ -353,6 +353,11 @@
     </keybind> -->
     <keybind key="W-Pause">
       <action name="Execute">
+      	<command>playerctl play-pause</command>
+      </action>
+    </keybind>
+    <keybind key="W-Delete">
+      <action name="Execute">
         <command>systemctl suspend</command>
       </action>
     </keybind>

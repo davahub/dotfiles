@@ -282,7 +282,16 @@
 <!-- ############################################ -->
 <menu id="system-menu" label="System">
 
-  <item label="Hard Info">
+	<item label="LXRandR Resolution &amp; Monitors">
+	  <action name="Execute">
+	    <command>lxrandr</command>
+	    <startupnotify>
+	      <enabled>yes</enabled>
+	    </startupnotify>
+	  </action>
+	</item>
+
+  <item label="Hardware Info">
     <action name="Execute">
       <command>hardinfo</command>
       <startupnotify>
