@@ -344,13 +344,14 @@
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- SHORTCUTS -->
-    <!-- EXECUTE -->
-    <!-- <keybind key="W-g">
+    <!-- ##################################### -->
+    <!-- ## EXECUTE -->
+    <!-- ##################################### -->
+    <keybind key="Scroll_Lock">
       <action name="Execute">
-        <command>pcmanfm -f</command>
+      	<command>redshift-switch</command>
       </action>
-    </keybind> -->
+    </keybind>
     <keybind key="W-Pause">
       <action name="Execute">
       	<command>playerctl play-pause</command>
@@ -500,7 +501,7 @@
     </keybind>
     <keybind key="W-b">
       <action name="Execute">
-        <command>web</command>
+        <command>oweb</command>
       </action>
     </keybind>
     <keybind key="W-t">
