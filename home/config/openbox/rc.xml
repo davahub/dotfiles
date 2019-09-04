@@ -367,6 +367,11 @@
         <command>lock-suspend</command>
       </action>
     </keybind>
+    <keybind key="W-L">
+      <action name="Execute">
+        <command>lock-suspend</command>
+      </action>
+    </keybind>
     <keybind key="W-x">
       <action name="Execute">
         <command>xkill</command>
