@@ -56,6 +56,9 @@ killall gmrun
 sleep 1s
 deluge &
 
+sleep 1s
+xscreensaver -no-splash &
+
 
 
 

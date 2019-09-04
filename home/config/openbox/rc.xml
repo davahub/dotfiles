@@ -364,7 +364,7 @@
     </keybind>
     <keybind key="W-Delete">
       <action name="Execute">
-        <command>systemctl suspend</command>
+        <command>lock-suspend</command>
       </action>
     </keybind>
     <keybind key="W-x">
