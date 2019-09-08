@@ -36,7 +36,8 @@
 		"freenode",
 		"nickserv",
 		"pacman",
-		"filesystem"
+		"filesystem",
+		"bluetooth"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",

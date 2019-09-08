@@ -5,12 +5,13 @@
 
 - [E](#e)
 - [H](#h)
+- [P](#p)
 
 <!-- /MarkdownTOC -->
 
 ## E ##
 
-Equilibrium
+Equilibrium (e qu librium)
 * тэнцвэр, тогтвортой байдал, a state where opposing forces or influences are balanced
 * calm mental state
 
@@ -20,3 +21,18 @@ Equilibrium
 Hollow
 * хөндий хоосон, having hole or empty space inside 
 * example: a hollow tube, hollow block because they are lighter
+
+
+## P ##
+
+Pain Au Raisin (pa u i-gisan)
+* raisin bread
+
+
+
+
+
+
+
+
+
