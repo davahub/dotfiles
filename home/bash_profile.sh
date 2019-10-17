@@ -9,6 +9,7 @@
 #--------------------------------------------------------
 alias p="pacman"
 alias sp="sudo pacman"
+alias g="git"
 
 
 #--------------------------------------------------------
@@ -17,7 +18,8 @@ alias sp="sudo pacman"
 export myworkspace="/home/dava/workspace"
 export myconfig="/home/dava/.1homepc-config"
 export myworkconfig="/home/dava/workspace/.work/winconfig"
-
+export mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
+export mywebpack="/home/dava/workspace/.work/pluralsight-courses/JavaScript/javascript-fundamentals/webpack-starter"
 
 #--------------------------------------------------------
 # PATH

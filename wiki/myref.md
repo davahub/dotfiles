@@ -54,6 +54,24 @@
     - silver plated monogram strainer (e.g. Antique Vintage Tea Strainer Silver Tray for Loose Tea)
     - womens slippers, sandals
 
+* games
+    - angry bird like pull and release concept
+    - going up game balloon or ship screen touch simple control
+    - arrow game
+    - ninja game
+    - running game
+    - radio chat/ component chat
+    - rpg game
+    - sudoku solver
+    - game music minii eej soundtrack on
+    - game shoot heart to heal dogs
+    - clash royale
+    - pretty gun ih buu tsereg or zombie forward nice buu deisn and bullets,
+    - and zombie haaya buudna
+    - nice gol dur buu solih agi str int medieval enviroment?
+    - nice story? boss or different designed enemy make it more
+    - interesting 
+    - football game
 
 * Funding
     - Whycombinator, or ycombinator sillicon valley investment

@@ -1,24 +1,37 @@
 [	
+
 	
 	// --------------------------------------------------------------------------  
 	// -- ACTION
 	// -------------------------------------------------------------------------- 
-	// jump back fort
-	{ "keys": ["alt+left"], "command": "jump_back" },
-	{ "keys": ["alt+right"], "command": "jump_forward" },
+	
+	//-- deletion
+	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true } },
+	{ "keys": ["alt+x"], "command": "right_delete" },
+	{ "keys": ["ctrl+;"], "command": "delete_word", "args": { "forward": false } },
+
 	// bookmark
-	{ "keys": ["ctrl+2"], "command": "next_bookmark" },
-	{ "keys": ["ctrl+1"], "command": "prev_bookmark" },
+	{ "keys": ["alt+2"], "command": "next_bookmark" },
+	{ "keys": ["alt+1"], "command": "prev_bookmark" },
 	{ "keys": ["ctrl+b"], "command": "toggle_bookmark" },
 	{ "keys": ["ctrl+0"], "command": "clear_bookmarks" },
-	// general
-	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	// ctrl+w as escape
+	{ "keys": ["ctlr+w"], "command": "single_selection", "context":[{ "key": "num_selections", "operator": "not_equal", "operand": 1 }]	},
+	{ "keys": ["ctrl+w"], "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]},
+	{ "keys": ["ctrl+w"], "command": "clear_fields", "context":[{ "key": "has_prev_field", "operator": "equal", "operand": true }]},
+	{ "keys": ["ctrl+w"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
+	{ "keys": ["ctrl+w"], "command": "hide_overlay", "context":[{ "key": "overlay_visible", "operator": "equal", "operand": true }]},
+	{ "keys": ["ctrl+w"], "command": "hide_popup", "context":[{ "key": "popup_visible", "operator": "equal", "operand": true }]},
+	{ "keys": ["ctrl+w"], "command": "hide_auto_complete", "context":[{ "key": "auto_complete_visible", "operator": "equal", "operand": true }]},
+
+	// others
 	{ "keys": ["alt+q"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
 	{ "keys": ["alt+down"], "command": "duplicate_line" },
-	{ "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true } },
-	{ "keys": ["alt+x"], "command": "right_delete" },
+	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 
 
 	// --------------------------------------------------------------------------
@@ -29,38 +42,46 @@
 	{ "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
 	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
 	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true} },
-	{ "keys": ["alt+h"], "command": "move", "args": {"by": "characters", "forward": false} },
-	{ "keys": ["alt+l"], "command": "move", "args": {"by": "characters", "forward": true} },
-	{ "keys": ["alt+2"], "command": "next_view" },
-	{ "keys": ["alt+1"], "command": "prev_view" },
+	{ "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false} },
+	{ "keys": ["ctrl+l"], "command": "move", "args": {"by": "characters", "forward": true} },
 	{ "keys": ["ctrl+alt+l"], "command": "show_at_center" },
-	{ "keys": ["ctrl+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["alt+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
 	{ "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 6.0 } },
 	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
 	{ "keys": ["ctrl+,"], "command": "move_to", "args": {"to": "bof", "extend": false} },
 	{ "keys": ["ctrl+."], "command": "move_to", "args": {"to": "eof", "extend": false} },
+	{ "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
+	//-- switch tabs
+	{ "keys": ["ctrl+2"], "command": "next_view" },	
+	{ "keys": ["ctrl+1"], "command": "prev_view" },
+	//-- next and previous action
+	{ "keys": ["alt+left"], "command": "jump_back" },
+	{ "keys": ["alt+right"], "command": "jump_forward" },
+	//-- highlight selection
+	{ "keys": ["ctrl+shift+h"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
+	{ "keys": ["ctrl+shift+l"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
+	{ "keys": ["alt+shift+h"], "command": "move", "args": {"by": "words", "forward": false, "extend": true} },
+	{ "keys": ["alt+shift+l"], "command": "move", "args": {"by": "word_ends", "forward": true, "extend": true} },
+
+
+	// --------------------------------------------------------------------------
+	// -- WINDOWS
+	// -------------------------------------------------------------------------- 
+	{ "keys": ["f8"], "command": "toggle_side_bar" },
+	// focus file in sidebar
+	{ "keys": ["f4"], "command": "focus_file_on_sidebar" },
 
 
 	// --------------------------------------------------------------------------
 	// -- MACROS
 	// -------------------------------------------------------------------------- 
-	{"keys": ["alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
-	{"keys": ["alt+u"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
+	{"keys": ["alt+n"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
+	{"keys": ["alt+p"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
 	{"keys": ["ctrl+alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}},
-
+	// {"keys": ["alt+`"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/grave-accent2.sublime-macro"}},
 
 	// --------------------------------------------------------------------------
 	// -- OTHERS
 	// --------------------------------------------------------------------------
-	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
-	{ "keys": ["alt+shift+r"], "command": "reindent", "args": {"single_line": false} },
-	{ "keys": ["f8"], "command": "toggle_side_bar" },
-	// ctrl+w same as escape key
-	{ "keys": ["ctlr+w"], "command": "single_selection", "context":[{ "key": "num_selections", "operator": "not_equal", "operand": 1 }]	},
-	{ "keys": ["ctrl+w"], "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]},
-	{ "keys": ["ctrl+w"], "command": "clear_fields", "context":[{ "key": "has_prev_field", "operator": "equal", "operand": true }]},
-	{ "keys": ["ctrl+w"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
-	{ "keys": ["ctrl+w"], "command": "hide_overlay", "context":[{ "key": "overlay_visible", "operator": "equal", "operand": true }]},
-	{ "keys": ["ctrl+w"], "command": "hide_popup", "context":[{ "key": "popup_visible", "operator": "equal", "operand": true }]},
-	{ "keys": ["ctrl+w"], "command": "hide_auto_complete", "context":[{ "key": "auto_complete_visible", "operator": "equal", "operand": true }]}
+	{ "keys": ["alt+shift+r"], "command": "reindent", "args": {"single_line": false} }
 ]

@@ -347,6 +347,11 @@
     <!-- ##################################### -->
     <!-- ## EXECUTE -->
     <!-- ##################################### -->
+    <keybind key="W-`"> 
+      <action name="Execute">
+        <command>xdotool key grave</command>
+      </action>
+    </keybind>
     <keybind key="Scroll_Lock">
       <action name="Execute">
       	<command>redshift-switch</command>
@@ -369,7 +374,7 @@
     </keybind>
     <keybind key="W-L">
       <action name="Execute">
-        <command>lock-suspend</command>
+        <command>xscreensaver-command -lock</command>
       </action>
     </keybind>
     <keybind key="W-x">
@@ -506,7 +511,7 @@
     </keybind>
     <keybind key="W-b">
       <action name="Execute">
-        <command>oweb</command>
+        <command>web</command>
       </action>
     </keybind>
     <keybind key="W-t">
