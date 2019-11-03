@@ -1,0 +1,9 @@
+{
+   "scope": "text.html.markdown.gfm meta.paragraph.markdown",
+
+   "completions":
+   [
+      { "trigger": "ec", "contents": "EC2" },
+      { "trigger": "aws", "contents": "AWS" }
+   ]
+}

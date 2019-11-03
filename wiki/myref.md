@@ -6,7 +6,10 @@
 - [Ideas](#ideas)
 - [Things to send](#things-to-send)
 - [Books to read](#books-to-read)
+    - [Business](#business)
+    - [Others](#others)
 - [Movies](#movies)
+- [Thing to buy](#thing-to-buy)
 - [Music](#music)
     - [Listen later](#listen-later)
     - [Rock](#rock)
@@ -28,7 +31,7 @@
         - [Poems](#poems)
             - [Wise words](#wise-words)
             - [Other poems](#other-poems)
-- [Others](#others)
+- [Others](#others-1)
     - [Travel Ideas](#travel-ideas)
     - [Birthdays](#birthdays)
 
@@ -43,6 +46,7 @@
     - advert on hotukdeals
     - k-ring competitor using starling like app
     _ youtube chillhop like app that has nice music remixes and background pictures set for nice mood coz most of the youtube videos background ads are rubbish, for example one for la noire main theme remix
+    - better reading ui for all the websites, new paper aggregate
 
 * Selling on Ebay
     - sewing box, sewing storage
@@ -76,6 +80,12 @@
 * Funding
     - Whycombinator, or ycombinator sillicon valley investment
 
+* Adverts
+    - use twitter to make advertising, pdude shig site hiih
+
+* Other
+    - arrivedhomes.com, https://news.ycombinator.com/item?id=21332072
+
 
 ## Things to send ##
 
@@ -103,8 +113,16 @@
 
 ## Books to read ##
 
+
+### Business ###
+
+* Rework by basecamp
+* This is marketing from Seth Godin
+
+
+### Others ###
+
 * The Mythical Man-Month transfer to kindle
-* Sapiens a brief history of mankind
 * Black box thinking Matthew Syed
 * Why we sleep
 * The Psychopath test
@@ -114,26 +132,25 @@
 * Travel different places to get know area and people
 
 
-
-
-
-
 ## Movies ##
 
+* gone in 60 sec
 * side effect
 * west side story musical
 * bbc Japan: Earth's Enchanted Islands
+* big lebowski
 
 
+## Thing to buy ##
 
-
+* Room lamp for night
 
 
 ## Music ##
 
 ### Listen later ###
 
-alligator band, jack savoretti
+alligator band, jack savoretti, carpenter bru disco zombi italia,
 
 
 ### Rock ###

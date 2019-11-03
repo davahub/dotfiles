@@ -5,7 +5,10 @@
 
 - [E](#e)
 - [H](#h)
+- [N](#n)
+- [R](#r)
 - [P](#p)
+- [V](#v)
 
 <!-- /MarkdownTOC -->
 
@@ -23,11 +26,23 @@ Hollow
 * example: a hollow tube, hollow block because they are lighter
 
 
+## N ##
+
+Narcissist
+
+
+## R ##
+
+Rumbling
+
 ## P ##
 
 Pain Au Raisin (pa u i-gisan)
 * raisin bread
 
+## V ##
+
+Vulnerability
 
 
 

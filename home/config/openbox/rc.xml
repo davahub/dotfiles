@@ -362,11 +362,11 @@
       	<command>playerctl play-pause</command>
       </action>
     </keybind>
-    <keybind key="C-space">
+    <!-- <keybind key="C-space">
       <action name="Execute">
         <command>playerctl play-pause</command>
       </action>
-    </keybind>
+    </keybind> -->
     <keybind key="W-Delete">
       <action name="Execute">
         <command>lock-suspend</command>
