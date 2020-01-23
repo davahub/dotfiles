@@ -1,0 +1,34 @@
+
+#--------------------------------------------------------------
+# INFO:
+# * /etc/fstab: static file system information
+# * lsblk -f   to see list of UUIDs MBR
+# * sudo blkid to list of UUIDs for GPT
+# * <file system> <dir> <type> <options> <dump> <pass>
+#--------------------------------------------------------------
+
+
+#--------------------------------------------------------------
+#-- MOUNT LINUX PARTITIONS 500GB
+#--------------------------------------------------------------
+
+# ROOT /dev/sdc3
+PARTUUID=6e19f012-9707-4521-8ba6-979a23de5ae0      /         	ext4      	rw,noatime,data=ordered	0 1
+
+# BOOT /dev/sdc2
+PARTUUID=19c820a4-f5df-490e-9aa0-ef9449cc00f0      /boot     	ext4      	rw,noatime,data=ordered	0 2
+
+# HOME /dev/sdc5
+PARTUUID="3dbf446a-7f9f-43c2-b375-6577a731cd4c"    /home     	ext4      	rw,noatime,data=ordered	0 2
+
+# SWAP /dev/sdc4
+PARTUUID=c878223e-aed1-472f-8938-879f1fcc34b5      none      	swap      	defaults 0 0
+
+
+#--------------------------------------------------------------
+#-- MOUNT STORAGE PARTITIONS
+#--------------------------------------------------------------
+
+# STORAGE (2TB) /dev/sda2
+PARTUUID=902058c5-02  		/storage 	ntfs-3g 	uid=dava,gid=users,dmask=022,fmask=133 0 0
+

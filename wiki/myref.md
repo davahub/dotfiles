@@ -4,7 +4,10 @@
 <!-- MarkdownTOC autolink="true" -->
 
 - [Ideas](#ideas)
-- [Things to send](#things-to-send)
+- [Family](#family)
+    - [Things to send](#things-to-send)
+        - [Collection](#collection)
+        - [Old](#old)
 - [Books to read](#books-to-read)
     - [Business](#business)
     - [Others](#others)
@@ -87,8 +90,20 @@
     - arrivedhomes.com, https://news.ycombinator.com/item?id=21332072
 
 
-## Things to send ##
+## Family ##
 
+* Ochko centre for translation
+
+
+### Things to send ###
+
+
+#### Collection ####
+
+* Haliuna diatomaceous earth
+
+
+#### Old ####
 
 * Dad
     - whiskey, wallet, watch, belt, socks
@@ -144,6 +159,7 @@
 ## Thing to buy ##
 
 * Room lamp for night
+* polo shirt, 
 
 
 ## Music ##
@@ -328,13 +344,33 @@ You're beautiful💓
     - Shakespeare ai 
 
 
-
-
-
-
-
 Funding 
 * funding circle for funding 
 * alpha works pitch public fund
+
+
+
+The place is great, and host can speak English have everything you need separate bathroom, cutely decorated much better than our first place, warm using the electric heather, has smart TV however we couldn't get it work, 
+
+
+
+We had great 12 days of staying at Yue's place. Host is very nice and quick to respond. The place is clean, warm(using electric heather), spacious, and has bathtub. So overall:
+
+Pros: Clean, warm, spacious, bathtub, host is very caring and quick to respond.
+
+Cons: Only thing we could think of is the whole apartment wall is quite thin and could hear neighbors making noise in the morning on couple occasions. 
+
+
+
+
+
+
+, during night you could definitely hear neighbors even going to the bathroom. 
+
+
+
+
+
+
 
 
