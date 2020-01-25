@@ -93,7 +93,12 @@
 		"spam",
 		"Timestamp",
 		"Udemy",
-		"recaptcha"
+		"recaptcha",
+		"Systemctl",
+		"systemctl",
+		"Samsung",
+		"S9",
+		"url"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",

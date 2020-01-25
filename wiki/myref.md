@@ -3,6 +3,7 @@
 
 <!-- MarkdownTOC autolink="true" -->
 
+- [Job](#job)
 - [Ideas](#ideas)
 - [Family](#family)
     - [Things to send](#things-to-send)
@@ -39,6 +40,16 @@
     - [Birthdays](#birthdays)
 
 <!-- /MarkdownTOC -->
+
+## Job ##
+
+* Hire
+* Amazon
+* Goldman Sach
+
+
+
+
 
 ## Ideas ##
 

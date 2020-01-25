@@ -14,12 +14,12 @@ alias ll="ls -la"
 alias src="source ~/.bashrc"
 
 # -- PACMAN
-alias pcs="sudo pacman -S"
-alias pcss="pacman -Ss"
-alias pcqs="pacman -Qs"
-alias pcy="sudo pacman -Sy"
-alias pcu="sudo pacman -Syu"
-alias pcr="sudo pacman -Rs"
+alias sps="sudo pacman -S"
+alias pss="pacman -Ss"
+alias pqs="pacman -Qs"
+alias spy="sudo pacman -Sy"
+alias spyu="sudo pacman -Syu"
+alias sprs="sudo pacman -Rs"
 
 # -- GIT
 alias g="git"
@@ -39,6 +39,7 @@ alias gsh="git stash push -u -m"
 alias gpop="git stash pop stash@{0}"
 alias gun="git reset HEAD --"
 alias glast="git log -1 HEAD"
+alias grevert="git checkout --"
 
 
 #------------------------------------------------------
