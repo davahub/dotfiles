@@ -59,7 +59,8 @@ deluge &
 sleep 1s
 xscreensaver -no-splash &
 
-
+sleep 1s
+#amor &
 
 
 

@@ -357,16 +357,6 @@
       	<command>redshift-switch</command>
       </action>
     </keybind>
-    <keybind key="W-Pause">
-      <action name="Execute">
-      	<command>playerctl play-pause</command>
-      </action>
-    </keybind>
-    <!-- <keybind key="C-space">
-      <action name="Execute">
-        <command>playerctl play-pause</command>
-      </action>
-    </keybind> -->
     <keybind key="W-Delete">
       <action name="Execute">
         <command>lock-suspend</command>
@@ -461,6 +451,11 @@
     <keybind key="XF86AudioPrev">
       <action name="Execute">
         <command>playerctl previous</command>
+      </action>
+    </keybind>
+    <keybind key="W-Pause">
+      <action name="Execute">
+        <command>playerctl play-pause</command>
       </action>
     </keybind>
     <keybind key="XF86AudioPlay">

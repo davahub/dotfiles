@@ -33,6 +33,14 @@
 	{ "keys": ["alt+down"], "command": "duplicate_line" },
 	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 
+	// change increase and decrease font size
+	{ "keys": ["ctrl++"], "command": "" },
+	{ "keys": ["ctrl+="], "command": "" },
+	{ "keys": ["ctrl+alt+-"], "command": "decrease_font_size" },
+	{ "keys": ["ctrl+alt++"], "command": "increase_font_size" },
+	{ "keys": ["ctrl+alt+="], "command": "increase_font_size" },
+	{ "keys": ["ctrl+alt+-"], "command": "decrease_font_size" },
+
 
 	// --------------------------------------------------------------------------
 	// -- NAVIGATION MOVEMENT
