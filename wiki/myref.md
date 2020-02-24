@@ -1,56 +1,100 @@
 
-# My Reference
+<!-- MarkdownTOC -->
 
-<!-- MarkdownTOC autolink="true" -->
-
-- [Company](#company)
-    - [Registration Overview](#registration-overview)
-    - [Setup complete](#setup-complete)
-- [Job](#job)
-    - [Contracting](#contracting)
-        - [Dividend](#dividend)
-    - [IR35](#ir35)
-- [Ideas](#ideas)
-- [Family](#family)
-    - [Things to send](#things-to-send)
-        - [Collection](#collection)
-        - [Old](#old)
-- [Books](#books)
-    - [You're Hired! CV \(Corrinne Mills\)](#youre-hired-cv-corrinne-mills)
-        - [Achievement Example](#achievement-example)
-    - [Business](#business)
-    - [Others](#others)
-- [Movies](#movies)
-- [Thing to buy](#thing-to-buy)
-- [Music](#music)
-    - [Listen later](#listen-later)
-    - [Rock](#rock)
-        - [Eric Clapton](#eric-clapton)
-        - [David Gilmour](#david-gilmour)
-        - [Kings of Leon](#kings-of-leon)
-    - [R&B](#rb)
-        - [Rick James](#rick-james)
-    - [Hip Hop](#hip-hop)
-        - [2Pac](#2pac)
-    - [Korean](#korean)
-        - [Park Hyo Shin](#park-hyo-shin)
-    - [Heavy Metal](#heavy-metal)
-        - [Judas Priest](#judas-priest)
-    - [Soundtrack](#soundtrack)
-- [Information](#information)
-    - [History](#history)
-        - [Jan Baalsrud](#jan-baalsrud)
-        - [Poems](#poems)
-            - [Wise words](#wise-words)
-            - [Other poems](#other-poems)
-- [Others](#others-1)
-    - [People to meet](#people-to-meet)
-    - [Travel Ideas](#travel-ideas)
-    - [Birthdays](#birthdays)
+- [My Reference](#my-reference)
+    - [Company](#company)
+        - [Moo](#moo)
+            - [Info](#info)
+        - [Amazon](#amazon)
+            - [Alexa](#alexa)
+        - [Registration Overview](#registration-overview)
+        - [Setup complete](#setup-complete)
+    - [Job](#job)
+        - [Contracting](#contracting)
+            - [Dividend](#dividend)
+        - [IR35](#ir35)
+    - [Ideas](#ideas)
+    - [Family](#family)
+        - [Things to send](#things-to-send)
+            - [Collection](#collection)
+            - [Old](#old)
+    - [Books](#books)
+        - [You're Hired! CV \(Corrinne Mills\)](#youre-hired-cv-corrinne-mills)
+            - [Achievement Example](#achievement-example)
+        - [Business](#business)
+        - [Others](#others)
+    - [Movies](#movies)
+    - [Thing to buy](#thing-to-buy)
+    - [Music](#music)
+        - [Listen later](#listen-later)
+        - [Rock](#rock)
+            - [Eric Clapton](#eric-clapton)
+            - [David Gilmour](#david-gilmour)
+            - [Kings of Leon](#kings-of-leon)
+        - [R&B](#rb)
+            - [Rick James](#rick-james)
+        - [Hip Hop](#hip-hop)
+            - [2Pac](#2pac)
+        - [Korean](#korean)
+            - [Park Hyo Shin](#park-hyo-shin)
+        - [Heavy Metal](#heavy-metal)
+            - [Judas Priest](#judas-priest)
+        - [Soundtrack](#soundtrack)
+    - [Information](#information)
+        - [History](#history)
+            - [Jan Baalsrud](#jan-baalsrud)
+            - [Poems](#poems)
+                - [Wise words](#wise-words)
+                - [Other poems](#other-poems)
+    - [Others](#others-1)
+        - [People to meet](#people-to-meet)
+        - [Travel Ideas](#travel-ideas)
+        - [Birthdays](#birthdays)
 
 <!-- /MarkdownTOC -->
 
+
+
+
+# My Reference
+
+
+
+
+
 ## Company ##
+
+
+### Moo ###
+
+Moo makes print products, like business cards, post cards, stickers, also do ecommerce manufacturing and logistics customer service, and center of all it is tech, at Moo make real thing you can touch and hold which means software they make have tangible effect in a physical world, and everything is customizable range of engineering challenges and opportunities is huge, if you are expecting any software factoring doing exactly as you told it is not Moo ways, Moo respects crafts of engineering and respect their people so if you try something new they would love to hear your ideas within reason. Today their technology team are over 100 people strong pretty much all of them based in London HQ, because they are all together they can work in a way that properly cross functional meaning people form long lasting friendships, but at Moo you will get all the support and mentoring you need to get you where you want to be wherever that maybe.
+
+
+#### Info ####
+
+* 570 employees and 2 offices in the UK and 4 in the US
+
+
+### Amazon ###
+
+Amazon SageMaker enable quickly build, train and deploy machine learning models at any scale. It makes very simple to successfully implement machine learning across complex use cases, from fraud detection, to virtually analyzing biological impacts of potential drugs etc. It is a complete machine learning(ML) workflow service for developing training, and deploying models, lowering the cost of building solutions, and increasing the productivity of data scientists.
+
+
+#### Alexa ####
+
+Is a virtual assistant AI technology developed by Amazon and capable of voice interaction, music playback, making to-do lists, setting alarms, streaming pod-casts, playing audio-books, and providing weather, traffic, sports and other real-time information such as news. It can also control several smart devices using itself as a home automation system. Users able to extend the Alexa capabilities by installing "skills" which is additional plugins developed by third-party vendors. As of 2018 Amazon had more than 10,000 employees working on Alexa and related products and sold over 100 millions alexa-enabled devices Jan 2019.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

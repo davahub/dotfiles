@@ -80,6 +80,8 @@ launcher='/home/dava/.2shortcuts/launcher'
 rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails"
 
+# prevent at-spi2-registryd starting when launching gtk3 apps
+export NO_AT_BRIDGE=1
 
 #------------------------------------------------------
 #-- WELCOME MESSAGE
