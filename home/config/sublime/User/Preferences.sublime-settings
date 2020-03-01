@@ -114,7 +114,10 @@
 		"Davaasuren",
 		"Dorjdagva",
 		"ecommerce",
-		"archlinux"
+		"archlinux",
+		"asoundrc",
+		"conky",
+		"config"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
