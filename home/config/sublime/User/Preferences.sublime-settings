@@ -117,7 +117,8 @@
 		"archlinux",
 		"asoundrc",
 		"conky",
-		"config"
+		"config",
+		"conf"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
