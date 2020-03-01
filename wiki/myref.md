@@ -2,14 +2,16 @@
 <!-- MarkdownTOC -->
 
 - [My Reference](#my-reference)
-    - [Company](#company)
-        - [Moo](#moo)
-            - [Info](#info)
-        - [Amazon](#amazon)
-            - [Alexa](#alexa)
+    - [Interview](#interview)
+        - [Companies](#companies)
+            - [Amazon](#amazon)
+                - [Alexa](#alexa)
+            - [Moo](#moo)
+                - [Info](#info)
+    - [Job](#job)
+        - [DAVATECH Ltd](#davatech-ltd)
         - [Registration Overview](#registration-overview)
         - [Setup complete](#setup-complete)
-    - [Job](#job)
         - [Contracting](#contracting)
             - [Dividend](#dividend)
         - [IR35](#ir35)
@@ -53,38 +55,33 @@
 
 <!-- /MarkdownTOC -->
 
-
-
-
 # My Reference
 
 
+## Interview ##
 
 
-
-## Company ##
-
-
-### Moo ###
-
-Moo makes print products, like business cards, post cards, stickers, also do ecommerce manufacturing and logistics customer service, and center of all it is tech, at Moo make real thing you can touch and hold which means software they make have tangible effect in a physical world, and everything is customizable range of engineering challenges and opportunities is huge, if you are expecting any software factoring doing exactly as you told it is not Moo ways, Moo respects crafts of engineering and respect their people so if you try something new they would love to hear your ideas within reason. Today their technology team are over 100 people strong pretty much all of them based in London HQ, because they are all together they can work in a way that properly cross functional meaning people form long lasting friendships, but at Moo you will get all the support and mentoring you need to get you where you want to be wherever that maybe.
+### Companies ###
 
 
-#### Info ####
-
-* 570 employees and 2 offices in the UK and 4 in the US
-
-
-### Amazon ###
+#### Amazon ####
 
 Amazon SageMaker enable quickly build, train and deploy machine learning models at any scale. It makes very simple to successfully implement machine learning across complex use cases, from fraud detection, to virtually analyzing biological impacts of potential drugs etc. It is a complete machine learning(ML) workflow service for developing training, and deploying models, lowering the cost of building solutions, and increasing the productivity of data scientists.
 
 
-#### Alexa ####
+##### Alexa #####
 
 Is a virtual assistant AI technology developed by Amazon and capable of voice interaction, music playback, making to-do lists, setting alarms, streaming pod-casts, playing audio-books, and providing weather, traffic, sports and other real-time information such as news. It can also control several smart devices using itself as a home automation system. Users able to extend the Alexa capabilities by installing "skills" which is additional plugins developed by third-party vendors. As of 2018 Amazon had more than 10,000 employees working on Alexa and related products and sold over 100 millions alexa-enabled devices Jan 2019.
 
 
+#### Moo ####
+
+Moo makes print products, like business cards, post cards, stickers, also do ecommerce manufacturing and logistics customer service, and center of all it is tech, at Moo make real thing you can touch and hold which means software they make have tangible effect in a physical world, and everything is customizable range of engineering challenges and opportunities is huge, if you are expecting any software factoring doing exactly as you told it is not Moo ways, Moo respects crafts of engineering and respect their people so if you try something new they would love to hear your ideas within reason. Today their technology team are over 100 people strong pretty much all of them based in London HQ, because they are all together they can work in a way that properly cross functional meaning people form long lasting friendships, but at Moo you will get all the support and mentoring you need to get you where you want to be wherever that maybe.
+
+
+##### Info #####
+
+* 570 employees and 2 offices in the UK and 4 in the US
 
 
 
@@ -97,6 +94,33 @@ Is a virtual assistant AI technology developed by Amazon and capable of voice in
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Job ##
+
+* Hire
+* Amazon
+* Goldman Sach
+
+
+### DAVATECH Ltd ###
 
 ### Registration Overview ###
 
@@ -134,24 +158,6 @@ We will email these to you. What happens next if your application is successful,
 * another letter within 15 working days with the company's Unique Taxpayer Reference (UTR) Keep the company's UTR safe, you'll need it to file Company Tax Returns.
 
 
-
-
-
-
-
-
-
-
-
-
-
-## Job ##
-
-* Hire
-* Amazon
-* Goldman Sach
-
-
 ### Contracting ###
 
 
@@ -162,15 +168,6 @@ If your company has made a profit (the amount left after business expenses, liab
 Each your you get a dividend allowance which means you can only take up to this amount. Some limited company shareholder receive a salary they draw from the company, with the remaining profits taken as a dividend payment as this does not attract National Insurance contributions. Company owners don't need to take all available fund from their company - they can leave the money within the company and make use of tax planning (we would advise speaking to an accountant about this).
 
 Most contractors find paying themselves through a combination of salary, directors loans and dividends is the most tax-efficient way of drawing money from their limited company. Through this will vary depending on your unique circumstances, it's worth investigating the possibilities to find a combination which works for you.
-
-
-
-
-
-
-
-
-
 
 
 
@@ -235,6 +232,7 @@ Where an Agency is involved in the labour supply chain and is the **fee-payer**,
     - k-ring competitor using starling like app
     _ youtube chillhop like app that has nice music remixes and background pictures set for nice mood coz most of the youtube videos background ads are rubbish, for example one for la noire main theme remix
     - better reading ui for all the websites, new paper aggregate
+    - huzuunii zuuld hureheer vibrate boldog
 
 * Selling on Ebay
     - sewing box, sewing storage
@@ -281,6 +279,9 @@ Where an Agency is involved in the labour supply chain and is the **fee-payer**,
 
 
 ### Things to send ###
+
+* sumiya - boor vitamins, bowl, friends movie, vibrating
+
 
 * https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=book+fold&_sacat=0
 
