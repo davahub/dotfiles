@@ -37,7 +37,7 @@ alias gpl="git pull --rebase --autostash"
 alias gdt="git difftool -y"
 alias gsh="git stash push -u -m"
 alias gpop="git stash pop stash@{0}"
-alias gun="git reset HEAD --"
+alias gunstage="git reset HEAD --"
 alias glast="git log -1 HEAD"
 alias grevert="git checkout --"
 
