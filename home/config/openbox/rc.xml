@@ -175,55 +175,125 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <!-- Keybindings for desktop switching -->
+
+
+    <!-- ==================================================== -->
+    <!-- SWITCH DESKTOP -->
+    <!-- ==================================================== -->
+
+    <!-- left -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="C-A-j">
+      <action name="GoToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <!-- right -->
     <keybind key="C-A-Right">
       <action name="GoToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="C-A-l">
+      <action name="GoToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <!-- up -->
     <keybind key="C-A-Up">
       <action name="GoToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="C-A-i">
+      <action name="GoToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <!-- down -->
     <keybind key="C-A-Down">
       <action name="GoToDesktop">
         <to>down</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="C-A-k">
+      <action name="GoToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <!-- send left -->
     <keybind key="C-S-A-Left">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="C-S-A-j">
+      <action name="SendToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <!-- send right -->
     <keybind key="C-S-A-Right">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="C-S-A-l">
+      <action name="SendToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <!-- send up -->
     <keybind key="C-S-A-Up">
       <action name="SendToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="C-S-A-i">
+      <action name="SendToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <!-- send down -->
     <keybind key="C-S-A-Down">
       <action name="SendToDesktop">
         <to>down</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="C-S-A-k">
+      <action name="SendToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+
     <!-- MY CUSTOM DESKTOP SWITCH HOTKEY -->
     <keybind key="W-KP_1">
       <action name="GoToDesktop">
@@ -377,9 +447,19 @@
         <command>gen-tex</command>
       </action>
     </keybind>
+    <keybind key="F1">
+      <action name="Execute">
+        <command>mydmenu</command>
+      </action>
+    </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>gmrun</command>
+        <command>mydmenu</command>
+      </action>
+    </keybind>
+    <keybind key="W-j">
+      <action name="Execute">
+        <command>mydmenu</command>
       </action>
     </keybind>
     <keybind key="W-space">
