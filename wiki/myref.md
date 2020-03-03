@@ -1,9 +1,8 @@
 
 <!-- MarkdownTOC -->
 
-- [My Reference](#my-reference)
-    - [Interview](#interview)
-        - [Companies](#companies)
+- [Interview](#interview)
+    - [Companies](#companies)
             - [Amazon](#amazon)
                 - [Alexa](#alexa)
             - [Moo](#moo)
@@ -21,6 +20,7 @@
             - [Collection](#collection)
             - [Old](#old)
     - [Books](#books)
+        - [Advanced Techniques in Daily Trading](#advanced-techniques-in-daily-trading)
         - [You're Hired! CV \(Corrinne Mills\)](#youre-hired-cv-corrinne-mills)
             - [Achievement Example](#achievement-example)
         - [Business](#business)
@@ -55,13 +55,27 @@
 
 <!-- /MarkdownTOC -->
 
-# My Reference
 
 
-## Interview ##
 
 
-### Companies ###
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Interview #
+
+
+## Companies ##
 
 
 #### Amazon ####
@@ -315,6 +329,51 @@ Where an Agency is involved in the labour supply chain and is the **fee-payer**,
 
 
 ## Books ##
+
+
+
+### Advanced Techniques in Daily Trading ###
+
+* There are two trading styles, discretionary and mechanical systems based.
+    - Discretionary traders evaluate potential trades based on their trading plan, although discretionary trader's rules are known, the trader decides to take or pass on trades based on their experience and doesn't follow a firm algorithm of entries and exits instead weigh all available information and then make a call.
+    - Mechanical systems, on the other hand are strategies a computer program can execute, computer software using historical market data to determine positive expectancy. Institutional trading, high frequency trading and algorithms are all examples of mechanical systems based trading.
+* In trading, you accept a loss, without questioning your strategy, you make another trade and you accept another loss, and in the third trade, when it works in your favor, you make sufficient money to cover your previous losses, if you are using a risk/reward ratio higher than 1:3 in the execution of your strategy.
+* Mechanical aspect of trading - tools of the trade including scanners, software, hot-keys, brokers and chat-rooms news feeds and journaling. You platform (DAS Trader is one) is one of the most important tools in trading.
+* Technical aspect - how to do trading and can be learned quickly. Some of the skills to be learned include building a watch-list, finding the Stocks in Play (finding the correct stocks to trade), identifying and practicing strategies, finding patterns, and learning about positions. 
+* Psychological Aspect of Trading - is a secret to the nature of trading and most challenging aspect of trading. Some of the psychological pitfalls that beginners and even experienced traders can encounter include emotional trading, fear, greed, revenge trading, not knowing how to manage losses, and not being in an appropriate mindset. Many famous traders say it is 80% psychology and 20% technical knowledge because success of trading is based on psychology. There are number of psychology snares awaiting unwary trader. To be successful trader you must be self-disciplined and have excellent money management skill. As Dr. Alexander Elder mentioned everyday trader must treat this as important as scuba divers watch their supply of air.
+* In financial market, simply better than average is not good enough, you have to be significantly above the crowd to win in day trading, trading is minus-sum game, just by entering into the market you start losing.
+* You bank charges you a fee for wiring out to fund your trading account, your broker will charge you an incoming wiring fee for funding the account and then start charging you for their market data, the use of their platform and a commission on each trade that you make. If you do not make enough monthly commissions for them, they will then charge you an inactivity fee. Regulators such as the Financial Industry Regulatory Authority (FINRA) and the U.S. Securities and Exchange Commission (SEC), as well as the actual exchanges, also live off of the markets by charging fees.
+* Day trading often appeals to impulsive people, gamblers and those who feel that the world owes them a living, **you cannot be one of them** and you should not act like them. Winners feels and act differently than losers, and this will reflect in all aspects of your life. You must look within yourself and your life, discard your illusions, and change your old ways of being, thinking and acting. Change is hard but it has to happen to become a successful trader. Day trading is not a hobby or weekend pursuit, once you start trading with real money, you need to treat it as your job, as your career and as your profession. You must start developing the discipline of a winner and can't be casual about it. A significant part of success is how to control your emotions.
+* Fear is nature's way of responding to a threat and in trading it can undo the best of intentions. It is an emotion that can affect not only beginners, but veteran traders as well, at one extreme it can result in paralysis inability to make decisions. While risk-taking in trading needs to be carefully and rationally managed, an excessive avoidance of risk can be a major roadblock to success.
+* Full-service brokers are usually well-suited for investors and retail swing traders, but due to lack of speed execution, they are not a good choice for day traders. **Direct-access** brokers are the answer to trading get in and out of trades in a matter of a few seconds.
+* Inexperienced traders may find it difficult to become familiar with direct-access trading. Knowledge is required when dealing with processes and procedures such as making trade decisions and order routing. That is why I always recommend traders practice in their broker's simulator platform and ensure they are very familiar with the platform before opening real account. Direct access trading you are one one click away from making dangerous mistake and blowing up your account, while if you are full-service brokerage, the agent may catch your mistake or advice you before executing your order. Note that recently many brokerage firms have begun to offer both direct-access and full-service services (such as advice and research), so it is best to check their websites and inquire about their services.
+* Electronic online trading platform is a computer software program that is used to place orders for day trading. Trading platform is different from the direct-access brokers themselves. However, I see of ten that traders confuse these two as one. Trading platform sends and places your order at the exchange so your direct-access broker can clear the order for you. Usually, direct-access brokers offer their own proprietary trading platform to their clients. The quality, charting, capability, speed of the software and many other features regarding the software, varies significantly, which also of course affects their pricing.
+* Interactive Brokers offers a trading platform called Trader Workstation (TWS), but it also allows you to use the DAS Trader platform. Lightspeed Trading also offers its own platform called Lightspeed Trader. TD Ameritrade's own software is called thinkorswim. CenterPoint Securities uses DAS Trader as its platform. Table below summarizes some of the well-known direct-access brokers for day trading. Prefers CenterPoint Securities
+
+| Broker | Trading Platform | PDT | Based In |
+|--------|--------|--------|--------|
+| Interactive Brokers | TWS or DAS Pro | Yes | USA |
+| CenterPoint Securities | DAS Pro | Yes | USA |
+| Lightspeed | Lightspeed Trader | Yes | USA |
+| TD Ameritrade | thinkorswi | Yes | USA |
+| Scottrade | ScottradeELITE | Yes | USA |
+| E*Trade | OptionsHouse | Yes | USA |
+| Alliance Trader | DAS Pro | No | Jamaica |
+| CMEG | DAS Pro | No | Trinidad and Tobaga |
+| SureTrader | DAS Pro | No | Bahamas |
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### You're Hired! CV (Corrinne Mills) ###
