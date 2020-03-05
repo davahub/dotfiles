@@ -188,21 +188,9 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-j">
-      <action name="GoToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
 
     <!-- right -->
     <keybind key="C-A-Right">
-      <action name="GoToDesktop">
-        <to>right</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-l">
       <action name="GoToDesktop">
         <to>right</to>
         <wrap>no</wrap>
@@ -216,21 +204,9 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-i">
-      <action name="GoToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
 
     <!-- down -->
     <keybind key="C-A-Down">
-      <action name="GoToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-k">
       <action name="GoToDesktop">
         <to>down</to>
         <wrap>no</wrap>
@@ -244,21 +220,9 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-S-A-j">
-      <action name="SendToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
 
     <!-- send right -->
     <keybind key="C-S-A-Right">
-      <action name="SendToDesktop">
-        <to>right</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-S-A-l">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
@@ -272,12 +236,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-S-A-i">
-      <action name="SendToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
 
     <!-- send down -->
     <keybind key="C-S-A-Down">
@@ -286,13 +244,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-S-A-k">
-      <action name="SendToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-
 
     <!-- MY CUSTOM DESKTOP SWITCH HOTKEY -->
     <keybind key="W-KP_1">
@@ -447,7 +398,7 @@
         <command>gen-tex</command>
       </action>
     </keybind>
-    <keybind key="A-F2">
+    <keybind key="F1">
       <action name="Execute">
         <command>mydmenu</command>
       </action>

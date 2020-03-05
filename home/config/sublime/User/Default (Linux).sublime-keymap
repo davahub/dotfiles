@@ -32,6 +32,7 @@
 	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
 	{ "keys": ["alt+down"], "command": "duplicate_line" },
 	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["ctrl+t"], "command": "new_file" },
 
 	// change increase and decrease font size
 	{ "keys": ["ctrl++"], "command": "" },
