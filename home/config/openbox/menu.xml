@@ -8,6 +8,15 @@
 <!-- ############################################ -->
 <menu id="apps-accessories-menu" label="Accessories">
   
+  <item label="App Finder">
+    <action name="Execute">
+      <command>xfce4-appfinder</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
   <item label="Terminal">
     <action name="Execute">
       <command>lxterminal --geometry=75x30</command>
