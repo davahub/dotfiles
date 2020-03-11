@@ -121,7 +121,17 @@
 		"conf",
 		"dmenu",
 		"regex",
-		"wildcard"
+		"wildcard",
+		"Goland",
+		"Todo",
+		"untick",
+		"Inconsolata",
+		"Centrica",
+		"plc",
+		"Structs",
+		"structs",
+		"goroutines",
+		"goroutine"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
@@ -137,7 +147,7 @@
 		"Servlets"
 	],
 	"remember_open_files": true,
-	"save_on_focus_lost": true,
+	"save_on_focus_lost": false,
 	"scroll_speed": 0,
 	"spell_check": true,
 	"tab_completion": true,

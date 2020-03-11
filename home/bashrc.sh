@@ -36,17 +36,21 @@ alias gcm="git commit"
 alias gst="git status"
 alias gpl="git pull --rebase --autostash"
 alias gdt="git difftool -y"
+alias gmt="git mergetool -y"
 alias gsh="git stash push -u -m"
 alias gpop="git stash pop stash@{0}"
 alias gunstage="git reset HEAD --"
 alias glast="git log -1 HEAD"
 alias grevert="git checkout --"
+alias guntrackfile="git rm --cached"
+alias guntrackfolder="git rm -r --cached"
+
 
 
 #------------------------------------------------------
 #-- GENERAL
 #------------------------------------------------------
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="/home/dava/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # SET HISTORY
 export HISTSIZE=10000
@@ -64,16 +68,15 @@ fi
 
 
 #--------------------------------------------------------
-# MY ENVIRONMENT VARIABLE (must give absolute path)
+# MY ENVIRONMENT VARIABLE (give absolute path, no $HOME or else shortcuts need sh to run)
 #--------------------------------------------------------
 export myworkspace="/home/dava/workspace"
-export myconfig="/home/dava/.1homepc-config"
+export myconfig="/home/dava/.1pc-config"
 export myworkconfig="/home/dava/workspace/.work/winconfig"
 export mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
 export mywebpack="/home/dava/workspace/.work/pluralsight-courses/JavaScript/javascript-fundamentals/webpack-starter"
-export mywiki="/home/dava/.3installed/mywiki"
 
-# SET PATHS
+# SET PATHS 
 directory='/home/dava/.2shortcuts/directory'
 myfile='/home/dava/.2shortcuts/file'
 execute='/home/dava/.2shortcuts/execute'
@@ -84,6 +87,7 @@ export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$ru
 
 # CONFIG
 export NO_AT_BRIDGE=1 # prevent at-spi2-registryd starting when launching gtk3 apps
+export GOPATH=/home/dava/workspace/go
 
 
 #------------------------------------------------------

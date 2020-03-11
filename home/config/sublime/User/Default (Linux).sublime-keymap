@@ -33,6 +33,9 @@
 	{ "keys": ["alt+down"], "command": "duplicate_line" },
 	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 	{ "keys": ["ctrl+t"], "command": "new_file" },
+	{ "keys": ["ctrl+alt+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	{ "keys": ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["ctrl+r"], "command": "build" },
 
 	// change increase and decrease font size
 	{ "keys": ["ctrl++"], "command": "" },

@@ -22,7 +22,12 @@
 #--------------------------------------------------------
 
 picom -b
+
 sleep 1s
+guake &
+
+sleep 1s
+conky &
 
 wallpaper='w.jpg'
 
@@ -40,13 +45,13 @@ xset -dpms; xset s off; xset -b &
 
 tint2 &
 
-conky &
-
+sleep 1s
 deluge &
 
+sleep 1s
 xscreensaver -no-splash &
 
-guake &
+
 
 
 #--------------------------------------------------------

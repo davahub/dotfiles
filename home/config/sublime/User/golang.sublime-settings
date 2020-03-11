@@ -1,0 +1,20 @@
+{
+    "folders": 
+    [
+        {
+            "path": "/home/dava/workspace/.work/pluralsight-courses/Go/go-fundamentals/hello-world/src/Pluralsight"
+        }
+    ],
+    "settings": {
+        "golang": {
+            "osx": {
+                "PATH": "/Users/jsmith/projects/myproj/env/bin",
+                "GOPATH": "/Users/jsmith/projects/myproj/env"
+            },
+            "linux": {
+                "PATH": "/home/dava/workspace/go/bin",
+                "GOPATH": "/home/dava/workspace/go"
+            }
+        }
+    }
+}

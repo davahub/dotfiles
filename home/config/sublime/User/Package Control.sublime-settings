@@ -9,6 +9,8 @@
 		"BeautifyRuby",
 		"Dockerfile Syntax Highlighting",
 		"Generic Config",
+		"Gofmt",
+		"Golang Build",
 		"HTML-CSS-JS Prettify",
 		"Log Highlight",
 		"MarkdownEditing",
