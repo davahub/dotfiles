@@ -9,16 +9,12 @@ message/rfc822=userapp-Thunderbird-DVPCGX.desktop
 inode/directory=pcmanfm.desktop
 application/x-shellscript=sublime_text_3.desktop
 text/x-java=sublime_text_3.desktop
-x-scheme-handler/https=google-chrome-beta.desktop
+x-scheme-handler/https=google-chrome.desktop
 application/pdf=evince.desktop;mupdf.desktop;gimp.desktop;masterpdfeditor.desktop;libreoffice-draw.desktop;
 application/vnd.ms-word=libreoffice-writer.desktop;openoffice4-writer.desktop;
 application/vnd.ms-word.document.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
 application/vnd.ms-word.template.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
 video/x-matroska=vlc.desktop
-text/html=google-chrome-beta.desktop
-x-scheme-handler/http=google-chrome-beta.desktop
-x-scheme-handler/about=google-chrome-beta.desktop
-x-scheme-handler/unknown=google-chrome-beta.desktop
 
 [Added Associations]
 text/plain=sublime_text_3.desktop;

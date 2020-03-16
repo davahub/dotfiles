@@ -51,7 +51,10 @@ deluge &
 sleep 1s
 xscreensaver -no-splash &
 
+mydmenu
 
+sleep 0.1s
+killall dmenu
 
 
 #--------------------------------------------------------
