@@ -132,7 +132,8 @@
 		"structs",
 		"goroutines",
 		"goroutine",
-		"js"
+		"js",
+		"promisify"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
