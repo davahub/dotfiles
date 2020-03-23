@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-```sh
+```shell
 $1
 ```
 ]]></content>
