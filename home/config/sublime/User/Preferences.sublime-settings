@@ -149,7 +149,7 @@
 		"Servlets"
 	],
 	"remember_open_files": true,
-	"save_on_focus_lost": false,
+	"save_on_focus_lost": true,
 	"scroll_speed": 0,
 	"spell_check": true,
 	"tab_completion": true,
