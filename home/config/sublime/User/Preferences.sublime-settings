@@ -136,7 +136,10 @@
 		"promisify",
 		"Forex",
 		"forex",
-		"Euro"
+		"Euro",
+		"euro",
+		"euros",
+		"pippettes"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
