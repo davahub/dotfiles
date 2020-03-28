@@ -1,15 +1,15 @@
+#----------------------------------------------------
+#-- IGNORE
+#----------------------------------------------------
 
+.idea
 
-#=========================
-#== SUBLIME
-#=========================
-
+# sublime
 Package\ Control.user-ca-bundle
 Package\ Control.merged-ca-bundle
 Package\ Control.last-run
 Package\ Control.cache
 
+# others
 xsystems/dell-config/home/config/openbox/environment
 xsystems/dell-config/home/config/openbox/menu.xml
-
-
