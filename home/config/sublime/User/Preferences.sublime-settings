@@ -144,7 +144,12 @@
 		"chatroom",
 		"chatrooms",
 		"Facebook",
-		"watchlist"
+		"watchlist",
+		"Alibaba",
+		"intraday",
+		"guerilla",
+		"screenshot",
+		"hotkey"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
