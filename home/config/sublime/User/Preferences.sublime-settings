@@ -149,7 +149,11 @@
 		"intraday",
 		"guerilla",
 		"screenshot",
-		"hotkey"
+		"hotkey",
+		"Dojis",
+		"Doji",
+		"doji",
+		"dojis"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
