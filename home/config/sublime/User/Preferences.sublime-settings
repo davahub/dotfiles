@@ -167,7 +167,9 @@
 		"iso",
 		"sps",
 		"sudo",
-		"yaml"
+		"yaml",
+		"Retracements",
+		"retracements"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
