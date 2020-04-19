@@ -15,6 +15,7 @@ application/vnd.ms-word=libreoffice-writer.desktop;openoffice4-writer.desktop;
 application/vnd.ms-word.document.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
 application/vnd.ms-word.template.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
 video/x-matroska=vlc.desktop
+video/mp4=vlc.desktop
 
 [Added Associations]
 text/plain=sublime_text_3.desktop;
@@ -36,3 +37,4 @@ application/vnd.ms-word.document.macroenabled.12=libreoffice-writer.desktop;open
 application/vnd.ms-word.template.macroenabled.12=libreoffice-writer.desktop;openoffice4-writer.desktop;
 video/x-matroska=vlc.desktop;
 application/pdf=org.gnome.Evince.desktop;
+video/mp4=vlc.desktop;
