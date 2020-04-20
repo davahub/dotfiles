@@ -169,7 +169,10 @@
 		"sudo",
 		"yaml",
 		"Retracements",
-		"retracements"
+		"retracements",
+		"sl",
+		"tp",
+		"Pepperstone"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",

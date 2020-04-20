@@ -52,7 +52,7 @@ sleep 1s
 xscreensaver -no-splash &
 
 mydmenu
-sleep 0.1s
+sleep 1s
 killall dmenu
 
 
