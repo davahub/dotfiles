@@ -172,7 +172,10 @@
 		"retracements",
 		"sl",
 		"tp",
-		"Pepperstone"
+		"Pepperstone",
+		"fx",
+		"pinbar",
+		"ema"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",

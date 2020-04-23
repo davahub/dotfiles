@@ -368,6 +368,11 @@
     <!-- ##################################### -->
     <!-- ## EXECUTE -->
     <!-- ##################################### -->
+    <keybind key="W-g">
+      <action name="Execute">
+        <command>gal</command>
+      </action>
+    </keybind>
     <keybind key="W-`"> 
       <action name="Execute">
         <command>xdotool key grave</command>
