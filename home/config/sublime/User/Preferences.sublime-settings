@@ -175,7 +175,8 @@
 		"Pepperstone",
 		"fx",
 		"pinbar",
-		"ema"
+		"ema",
+		"pullbar"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
