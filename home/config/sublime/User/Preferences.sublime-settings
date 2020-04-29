@@ -176,7 +176,8 @@
 		"fx",
 		"pinbar",
 		"ema",
-		"pullbar"
+		"pullbar",
+		"h1"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
