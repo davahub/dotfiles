@@ -12,6 +12,8 @@ PS1='[\u@\h \W]\$ '
 alias ls='ls --color=auto'
 alias ll="ls -la"
 alias src="source ~/.bashrc"
+alias sudb="sudo updatedb"
+
 
 # -- PACMAN
 alias sps="sudo pacman -S"

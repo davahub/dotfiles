@@ -46,9 +46,6 @@ xset -dpms; xset s off; xset -b &
 tint2 &
 
 sleep 1s
-deluge &
-
-sleep 1s
 xscreensaver -no-splash &
 
 mydmenu
@@ -59,4 +56,7 @@ killall dmenu
 #--------------------------------------------------------
 #-- NOT ENABLED
 #--------------------------------------------------------
+sleep 1s
+deluge &
+
 #amor &
