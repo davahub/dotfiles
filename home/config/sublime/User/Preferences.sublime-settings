@@ -188,7 +188,8 @@
 		"wammies",
 		"Moolahs",
 		"Moolah",
-		"wammie"
+		"wammie",
+		"grep"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
