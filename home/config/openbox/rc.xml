@@ -25,13 +25,14 @@
        mouse into it, also raise the window -->
   </focus>
   <placement>
-    <policy>UnderMouse</policy>
+    <policy>Smart</policy>
     <!-- 'Smart' or 'UnderMouse' -->
-    <monitor>Mouse</monitor>
+    <monitor>Active</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
-    <primaryMonitor>1</primaryMonitor>
+    <!-- <primaryMonitor>0</primaryMonitor> -->
+    <primaryMonitor>Active</primaryMonitor>
     <!-- The monitor where Openbox should place popup dialogs such as the
        focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
@@ -1205,9 +1206,9 @@
         <y>center</y>
       </position>
     </application>
-    <application class="Clementine" type="normal">
+    <!-- <application class="Clementine" type="normal">
       <desktop>6</desktop>
-    </application>
+    </application> -->
     <application class="Subl3" type="normal">
       <!-- <desktop>all</desktop> -->
       <!-- <skip_taskbar>yes</skip_taskbar> -->

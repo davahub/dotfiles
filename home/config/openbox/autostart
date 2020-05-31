@@ -20,6 +20,7 @@
 #--------------------------------------------------------
 #-- STARTUP PROGRAMS 
 #--------------------------------------------------------
+xrandr --output HDMI-0 --auto --output DVI-I-1 --auto --right-of HDMI-0 &
 
 picom -b
 
@@ -28,6 +29,9 @@ guake &
 
 sleep 0.1s
 conky &
+
+sleep 0.1s
+conky -m 1 &
 
 wallpaper='w.jpg'
 
@@ -38,8 +42,6 @@ $MYCONFIG_DIR/home/setlayout 0 3 2 0 &
 volumeicon &
 
 numlockx &
-
-opensnap -d &
 
 xset -dpms; xset s off; xset -b &
 
@@ -56,6 +58,8 @@ killall dmenu
 #--------------------------------------------------------
 #-- NOT ENABLED
 #--------------------------------------------------------
+#opensnap -d &
+
 #sleep 1s
 #deluge &
 
