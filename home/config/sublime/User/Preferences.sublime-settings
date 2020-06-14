@@ -195,7 +195,9 @@
 		"trendlines",
 		"11b",
 		"11a",
-		"Gann"
+		"Gann",
+		"speedlines",
+		"speedline"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "inconsolata",
