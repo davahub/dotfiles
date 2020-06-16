@@ -54,13 +54,14 @@ mydmenu
 sleep 1s
 killall dmenu
 
+sleep 1s
+deluge &
 
 #--------------------------------------------------------
 #-- NOT ENABLED
 #--------------------------------------------------------
 #opensnap -d &
 
-#sleep 1s
-#deluge &
+
 
 #amor &

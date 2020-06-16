@@ -13,6 +13,8 @@ alias ls='ls --color=auto'
 alias ll="ls -la"
 alias src="source ~/.bashrc"
 alias sudb="sudo updatedb"
+alias supd="sudo updatedb"
+alias lo="sudo updatedb && locate"
 
 
 # -- PACMAN
