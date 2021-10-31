@@ -30,9 +30,6 @@ guake &
 sleep 0.1s
 conky &
 
-sleep 0.1s
-conky -m 1 &
-
 wallpaper='w.jpg'
 
 feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
@@ -56,6 +53,9 @@ killall dmenu
 
 sleep 1s
 deluge &
+
+#sleep 1s
+#conky -m 1 &
 
 #--------------------------------------------------------
 #-- NOT ENABLED
