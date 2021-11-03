@@ -19,6 +19,13 @@
 		"Package Control",
 		"Sass",
 		"SML (Standard ML)",
-		"XQuery"
-	]
+		"XQuery",
+		"ClearConsole",
+		"Compare Side-By-Side",
+		"FileIcons",
+		"Indent XML",
+		"Material Theme",
+		"SideBarEnhancements",
+		"Theme - Spacegray"
+	],
 }

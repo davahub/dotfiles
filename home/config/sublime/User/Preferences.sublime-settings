@@ -199,14 +199,14 @@
 		"speedlines",
 		"speedline"
 	],
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"font_face": "inconsolata",
 	"font_size": 16,
 	"hot_exit": true,
 	"ignored_packages":
 	[
 		"Markdown",
-		"Vintage"
+		"Vintage",
 	],
 	"ignored_words":
 	[
@@ -218,6 +218,6 @@
 	"spell_check": true,
 	"tab_completion": true,
 	"tab_size": 4,
-	"theme": "Default.sublime-theme",
-	"update_check": false
+	"theme": "Default Dark.sublime-theme",
+	"update_check": false,
 }

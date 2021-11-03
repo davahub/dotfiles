@@ -26,28 +26,107 @@ alias spy="sudo pacman -Sy"
 alias spyu="sudo pacman -Syu"
 alias sprs="sudo pacman -Rs"
 
-# -- GIT
+
+
+#----------------------------------------
+#--  GIT
+#----------------------------------------
 alias g="git"
-alias gco="git checkout"
-alias gcl="git clone"
-alias glog="git log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
-alias gadd="git add"
+alias gst="git-id && git branch"
+alias gs="git-id"
+alias gcm="git commit -m"
+alias gcma="git commit -am"
+# LOG
+alias glog="git log -n 8 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+alias glog15="git log -n 15 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+alias glogall="git log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+ghis() { gitk "$(git-list "$1")";  }
+# STAGING
 alias gadd.="git add ."
-alias gph="git push"
-alias gps="git push"
-alias gbr="git branch"
-alias gcm="git commit"
-alias gst="git status"
-alias gpl="git pull --rebase --autostash"
-alias gdt="git difftool -y"
-alias gmt="git mergetool -y"
-alias gsh="git stash push -u -m"
-alias gpop="git stash pop stash@{0}"
-alias gunstage="git reset HEAD --"
+gadd() {
+    git-list "$1" 2> /dev/null
+    fpath=$(git rev-parse --git-dir)
+    filename="$fpath/gitlistfiles.txt"
+    n=1
+    while read line; do
+    # reading each line
+    echo "File $n : $line"
+    git add "$line"
+    n=$((n+1))
+    done < $filename
+}
+gunstage() {
+    git-list "$1" 2> /dev/null
+    fpath=$(git rev-parse --git-dir)
+    filename="$fpath/gitlistfiles.txt"
+    n=1
+    while read line; do
+    # reading each line
+    echo "File $n : $line"
+    git reset HEAD -- "$line"
+    n=$((n+1))
+    done < $filename
+}
+grevert() {
+    git-list "$1" 2> /dev/null
+    fpath=$(git rev-parse --git-dir)
+    filename="$fpath/gitlistfiles.txt"
+    n=1
+    while read line; do
+    # reading each line
+    echo "File $n : $line"
+    git checkout -- "$line"
+    n=$((n+1))
+    done < $filename
+}
 alias glast="git log -1 HEAD"
-alias grevert="git checkout --"
-alias guntrackfile="git rm --cached"
-alias guntrackfolder="git rm -r --cached"
+alias gpl="git pull --rebase --autostash"
+alias gplps="git pull --rebase --autostash && git push"
+# BRANCH
+alias gcl="git clone"
+alias gbr="git branch"
+alias gbrd="git branch -d"
+alias gbrr="git branch -r"
+alias gco="git checkout"
+alias greb="git rebase"
+alias grebcon="git rebase --continue"
+gcobr() { git checkout "$1" && git branch; }
+# DIFF
+gdt() { 
+    git-list "$1" 2> /dev/null
+    fpath=$(git rev-parse --git-dir)
+    filename="$fpath/gitlistfiles.txt"
+    n=1
+    while read line; do
+    echo "File $n : $line"
+    git difftool -y "$line"
+    n=$((n+1))
+    done < $filename
+}
+gdtc() { 
+    git-list "$1" 2> /dev/null
+    fpath=$(git rev-parse --git-dir)
+    filename="$fpath/gitlistfiles.txt"
+    n=1
+    while read line; do
+    echo "File $n : $line"
+    git difftool -y --cached "$line"
+    n=$((n+1))
+    done < $filename
+}
+# merge
+alias gmerge="git merge"
+alias gmt="git mergetool -y"
+# stash
+alias gstash="git stash push -u -m"
+alias gstashls="git stash list"
+alias gstashapply="git stash apply "
+alias gstashdrop="git stash drop "
+alias gstashrm="git stash drop "
+# push
+alias gps="git push"
+alias gph="git push"
+alias gpsbr="git push --set-upstream origin "
 
 
 
@@ -74,6 +153,7 @@ fi
 #--------------------------------------------------------
 # MY ENVIRONMENT VARIABLE (give absolute path, no $HOME or else shortcuts need sh to run)
 #--------------------------------------------------------
+export MYCONFIG_DIR="/home/dava/.1homepc"
 export myworkspace="/home/dava/workspace"
 export myconfig="/home/dava/.1pc-config"
 export myworkconfig="/home/dava/workspace/.work/winconfig"

@@ -47,15 +47,10 @@ tint2 &
 sleep 1s
 xscreensaver -no-splash &
 
-mydmenu
-sleep 1s
-killall dmenu
-
 sleep 1s
 deluge &
 
-#sleep 1s
-#conky -m 1 &
+
 
 #--------------------------------------------------------
 #-- NOT ENABLED

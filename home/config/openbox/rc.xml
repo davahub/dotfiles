@@ -176,12 +176,9 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-
-
     <!-- ==================================================== -->
     <!-- SWITCH DESKTOP -->
     <!-- ==================================================== -->
-
     <!-- left -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
@@ -189,7 +186,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
     <!-- right -->
     <keybind key="C-A-Right">
       <action name="GoToDesktop">
@@ -197,7 +193,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
     <!-- up -->
     <keybind key="C-A-Up">
       <action name="GoToDesktop">
@@ -205,7 +200,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
     <!-- down -->
     <keybind key="C-A-Down">
       <action name="GoToDesktop">
@@ -213,7 +207,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
     <!-- send left -->
     <keybind key="C-S-A-Left">
       <action name="SendToDesktop">
@@ -221,7 +214,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
     <!-- send right -->
     <keybind key="C-S-A-Right">
       <action name="SendToDesktop">
@@ -229,7 +221,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
     <!-- send up -->
     <keybind key="C-S-A-Up">
       <action name="SendToDesktop">
@@ -237,7 +228,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
     <!-- send down -->
     <keybind key="C-S-A-Down">
       <action name="SendToDesktop">
@@ -245,7 +235,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
     <!-- MY CUSTOM DESKTOP SWITCH HOTKEY -->
     <keybind key="W-KP_1">
       <action name="GoToDesktop">
@@ -374,14 +363,14 @@
         <command>gal</command>
       </action>
     </keybind>
-    <keybind key="W-`"> 
+    <keybind key="W-`">
       <action name="Execute">
         <command>xdotool key grave</command>
       </action>
     </keybind>
     <keybind key="Scroll_Lock">
       <action name="Execute">
-      	<command>redshift-switch</command>
+        <command>redshift-switch</command>
       </action>
     </keybind>
     <keybind key="W-Delete">
@@ -569,7 +558,7 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>lxpanelctl run</command>
+        <command>gmrun</command>
       </action>
     </keybind>
     <keybind key="W-e">
@@ -1189,6 +1178,13 @@
     </application>
     <application class="Spotify" type="normal">
       <maximized>Vertical</maximized>
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="Diffmerge" type="normal">
+      <maximized>true</maximized>
       <position force="yes">
         <x>center</x>
         <y>center</y>
