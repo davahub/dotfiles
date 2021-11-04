@@ -7,6 +7,27 @@ PS1='[\u@\h \W]\$ '
 
 
 #--------------------------------------------------------
+# SYSTEM
+#--------------------------------------------------------
+#-- SET HISTORY
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTCONTROL=ignoredups   # Don't store duplicates
+export PROMPT_COMMAND='history -a'
+shopt -s histappend
+
+#-- SSH AGENT
+if ! pgrep -u $USER ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval $(<~/.ssh-agent-thing) > /dev/null;
+fi
+
+
+
+
+#--------------------------------------------------------
 # ALIAS
 #--------------------------------------------------------
 alias ls='ls --color=auto'
@@ -17,7 +38,10 @@ alias supd="sudo updatedb"
 alias lo="sudo updatedb && locate"
 
 
-# -- PACMAN
+
+#--------------------------------------------------------
+# PACMAN
+#--------------------------------------------------------
 alias sps="sudo pacman -S"
 alias pss="pacman -Ss"
 alias pqs="pacman -Qs"
@@ -25,6 +49,10 @@ alias pqi="pacman -Qi"
 alias spy="sudo pacman -Sy"
 alias spyu="sudo pacman -Syu"
 alias sprs="sudo pacman -Rs"
+
+#-- YAY
+alias yss="yay -Ss"
+alias ys="yay -S"
 
 
 
@@ -93,6 +121,9 @@ alias grebcon="git rebase --continue"
 gcobr() { git checkout "$1" && git branch; }
 # DIFF
 gdt() { 
+    if [ -z "$1" ]; then
+      git difftool -y
+    fi
     git-list "$1" 2> /dev/null
     fpath=$(git rev-parse --git-dir)
     filename="$fpath/gitlistfiles.txt"
@@ -104,6 +135,9 @@ gdt() {
     done < $filename
 }
 gdtc() { 
+    if [ -z "$1" ]; then
+      git difftool -y --cached
+    fi
     git-list "$1" 2> /dev/null
     fpath=$(git rev-parse --git-dir)
     filename="$fpath/gitlistfiles.txt"
@@ -131,36 +165,33 @@ alias gpsbr="git push --set-upstream origin "
 
 
 #------------------------------------------------------
-#-- GENERAL
+#-- APPLICATION
 #------------------------------------------------------
+
+#-- NODE
 export NVM_DIR="/home/dava/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# SET HISTORY
-export HISTSIZE=10000
-export HISTFILESIZE=20000
-export HISTCONTROL=ignoredups	# Don't store duplicates
-export PROMPT_COMMAND='history -a'
-shopt -s histappend
-# SSH AGENT
-if ! pgrep -u $USER ssh-agent > /dev/null; then
-    ssh-agent > ~/.ssh-agent-thing
-fi
-if [[ "$SSH_AGENT_PID" == "" ]]; then
-    eval $(<~/.ssh-agent-thing) > /dev/null;
-fi
+
+#-- GO
+export GOPATH=/home/dava/workspace/go
+
 
 
 #--------------------------------------------------------
-# MY ENVIRONMENT VARIABLE (give absolute path, no $HOME or else shortcuts need sh to run)
+# DIRECTORIES
 #--------------------------------------------------------
 export MYCONFIG_DIR="/home/dava/.1homepc"
 export myworkspace="/home/dava/workspace"
-export myconfig="/home/dava/.1pc-config"
-export myworkconfig="/home/dava/workspace/.work/winconfig"
+export myhomepc="/home/dava/.1homepc"
+export mywinconfig="/home/dava/workspace/.work/winconfig"
 export mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
-export mywebpack="/home/dava/workspace/.work/pluralsight-courses/JavaScript/javascript-fundamentals/webpack-starter"
 
-# SET PATHS 
+
+
+#--------------------------------------------------------
+# PATHS
+#--------------------------------------------------------
+# give absolute path, no $HOME or else shortcuts need sh to run
 directory='/home/dava/.2shortcuts/directory'
 myfile='/home/dava/.2shortcuts/file'
 execute='/home/dava/.2shortcuts/execute'
@@ -169,12 +200,12 @@ launcher='/home/dava/.2shortcuts/launcher'
 rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails"
 
-# CONFIG
-export NO_AT_BRIDGE=1 # prevent at-spi2-registryd starting when launching gtk3 apps
-export GOPATH=/home/dava/workspace/go
 
 
 #------------------------------------------------------
-#-- WELCOME MESSAGE
+#-- OTHERS
 #------------------------------------------------------
 cat ~/.welcome-msg
+# prevent at-spi2-registryd starting when launching gtk3 apps
+export NO_AT_BRIDGE=1 
+

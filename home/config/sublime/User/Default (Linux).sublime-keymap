@@ -10,6 +10,7 @@
 	{ "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true } },
 	{ "keys": ["alt+x"], "command": "right_delete" },
 	{ "keys": ["ctrl+;"], "command": "delete_word", "args": { "forward": false } },
+	{ "keys": ["alt+;"], "command": "left_delete" },
 
 	// bookmark
 	{ "keys": ["alt+2"], "command": "next_bookmark" },
