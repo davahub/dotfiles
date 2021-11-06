@@ -35,7 +35,10 @@ alias ll="ls -la"
 alias src="source ~/.bashrc"
 alias sudb="sudo updatedb"
 alias supd="sudo updatedb"
-alias lo="sudo updatedb && locate"
+alias loc="sudo updatedb && locate"
+alias sctl="systemctl"
+alias ssctl="sudo systemctl"
+alias sleaf="sudo leafpad"
 
 
 

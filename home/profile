@@ -1,8 +1,7 @@
-
 #--------------------------------------------------------
 # MY ENVIRONMENT VARIABLE (must give absolute path)
 #--------------------------------------------------------
-export MYCONFIG_DIR="/home/dava/.1pc-config"
+export MYCONFIG_DIR="/home/dava/.1homepc"
 
 
 #--------------------------------------------------------

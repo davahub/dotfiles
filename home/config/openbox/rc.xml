@@ -575,7 +575,7 @@
       </action>
     </keybind>
     <!-- ACTION -->
-    <keybind key="A-r">
+    <keybind key="C-A-r">
       <action name="Resize"/>
     </keybind>
     <keybind key="W-v">

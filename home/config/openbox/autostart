@@ -50,7 +50,8 @@ xscreensaver -no-splash &
 sleep 1s
 deluge &
 
-
+sleep 1s
+cd $HOME/documents/google-drive && grive &
 
 #--------------------------------------------------------
 #-- NOT ENABLED
