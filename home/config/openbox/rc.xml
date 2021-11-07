@@ -74,7 +74,7 @@
     </font>
     <font place="MenuHeader">
       <name>Noto Sans UI</name>
-      <size>10</size>
+      <size>13</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -83,7 +83,7 @@
     </font>
     <font place="MenuItem">
       <name>Noto Sans UI</name>
-      <size>10</size>
+      <size>13</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -151,7 +151,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>34</top>
+    <top>36</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>

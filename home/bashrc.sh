@@ -39,6 +39,7 @@ alias loc="sudo updatedb && locate"
 alias sctl="systemctl"
 alias ssctl="sudo systemctl"
 alias sleaf="sudo leafpad"
+alias wifi="iwctl"
 
 
 
