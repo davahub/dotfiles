@@ -8,14 +8,15 @@
 !! # Xft.rgba:                   rgb
 !! # Xft.hinting:                true
 !! # Xft.hintstyle:              hintfull
-Xft.antialias: 1
-Xft.hinting: 1
-Xft.autohint: 0
+
+
+!! Xft.dpi: 96
+Xft.antialias: true
 Xft.rgba: rgb
+Xft.hinting: true
+Xft.autohint: 0
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-
-
 
 !! #################################
 !! # Color settings (Solarized dark)
