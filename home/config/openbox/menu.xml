@@ -328,7 +328,7 @@
   
   <item label="Log Out">
     <action name="Execute">
-      <command>openbox-logout</command>
+      <command>logout</command>
     </action>
   </item>
   
