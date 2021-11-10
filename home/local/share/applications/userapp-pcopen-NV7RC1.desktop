@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Open folder
+Exec=pcman-open-dir %u
+Categories=Other;
+NoDisplay=true
+MimeType=audio/mpeg
+Terminal=false
+Icon=folder-open
