@@ -18,6 +18,8 @@ video/x-matroska=vlc.desktop
 video/mp4=vlc.desktop
 text/html=google-chrome-beta.desktop
 x-scheme-handler/mid=userapp-Thunderbird-8Y1NC1.desktop
+video/mpeg=vlc.desktop
+video/quicktime=vlc.desktop
 
 [Added Associations]
 text/plain=sublime_text_3.desktop;
@@ -44,5 +46,7 @@ text/html=google-chrome-beta.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-8Y1NC1.desktop;
 audio/mpeg=userapp-pcopen-NV7RC1.desktop;
 audio/flac=userapp-pcopen-NV7RC1.desktop;
+video/mpeg=vlc.desktop;
+video/quicktime=vlc.desktop;
 
 [Removed Associations]
