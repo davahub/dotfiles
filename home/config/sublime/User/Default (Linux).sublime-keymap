@@ -46,6 +46,8 @@
 	//-- switch tabs
 	{ "keys": ["alt+2"], "command": "next_view" },	
 	{ "keys": ["alt+1"], "command": "prev_view" },
+	{ "keys": ["ctrl+up"], "command": "next_view" },	
+	{ "keys": ["ctrl+down"], "command": "prev_view" },
 	//-- next and previous action
 	{ "keys": ["alt+left"], "command": "jump_back" },
 	{ "keys": ["alt+right"], "command": "jump_forward" },

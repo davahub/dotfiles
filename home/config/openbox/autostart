@@ -20,11 +20,11 @@
 #--------------------------------------------------------
 #-- STARTUP PROGRAMS 
 #--------------------------------------------------------
-xrandr --output HDMI-0 --auto --output DVI-I-1 --auto --right-of HDMI-0 &
+#xrandr --output HDMI-0 --auto --output DVI-I-1 --auto --right-of HDMI-0 &
 
-picom -b
+picom -b 
 
-sleep 0.1s
+sleep 1s
 conky &
 
 wallpaper='w.jpg'
@@ -50,8 +50,6 @@ guake &
 sleep 1s
 deluge &
 
-sleep 1s
-gsync &
 
 #--------------------------------------------------------
 #-- NOT ENABLED

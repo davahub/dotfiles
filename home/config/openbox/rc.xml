@@ -151,7 +151,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>39</top>
+    <top>43</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -267,7 +267,7 @@
       </action>
     </keybind>
     <!-- MY CUSTOM END -->
-    <keybind key="W-F1">
+    <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
@@ -282,7 +282,7 @@
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="W-2">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
