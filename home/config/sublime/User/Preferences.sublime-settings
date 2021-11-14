@@ -200,6 +200,7 @@
 		"speedline",
 		"Destructuring",
 		"destructure",
+		"unlink",
 	],
 	"color_scheme": "Mariana.sublime-color-scheme",
 	"font_face": "inconsolata",
