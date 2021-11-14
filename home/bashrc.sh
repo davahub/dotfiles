@@ -73,7 +73,8 @@ alias gcma="git commit -am"
 alias glog="git log -n 8 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
 alias glog15="git log -n 15 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
 alias glogall="git log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
-ghis() { smerge log "$(git-list "$1")";  }
+ghismerge() { smerge log "$(git-list "$1")";  }
+ghis() { gitk "$(git-list "$1")";  }
 # STAGING
 alias gadd.="git add ."
 gadd() {

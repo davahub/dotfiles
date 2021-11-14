@@ -267,7 +267,7 @@
       </action>
     </keybind>
     <!-- MY CUSTOM END -->
-    <keybind key="W-1">
+    <keybind key="A-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
@@ -282,7 +282,7 @@
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-2">
+    <keybind key="A-2">
       <action name="GoToDesktop">
         <to>4</to>
       </action>

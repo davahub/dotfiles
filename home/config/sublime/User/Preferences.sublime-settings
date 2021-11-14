@@ -197,7 +197,9 @@
 		"11a",
 		"Gann",
 		"speedlines",
-		"speedline"
+		"speedline",
+		"Destructuring",
+		"destructure",
 	],
 	"color_scheme": "Mariana.sublime-color-scheme",
 	"font_face": "inconsolata",
