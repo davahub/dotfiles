@@ -201,6 +201,10 @@
 		"Destructuring",
 		"destructure",
 		"unlink",
+		"ex1",
+		"ex2",
+		"fn",
+		"polyfills",
 	],
 	"color_scheme": "Mariana.sublime-color-scheme",
 	"font_face": "inconsolata",
@@ -222,5 +226,6 @@
 	"tab_completion": true,
 	"tab_size": 4,
 	"theme": "Default Dark.sublime-theme",
+	"rulers": [100],
 	"update_check": false,
 }

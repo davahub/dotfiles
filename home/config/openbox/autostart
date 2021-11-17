@@ -22,7 +22,7 @@
 #--------------------------------------------------------
 #xrandr --output HDMI-0 --auto --output DVI-I-1 --auto --right-of HDMI-0 &
 
-picom -b 
+xcompmgr -C -t-5 -l-5 -r4.2 -o.55 &
 
 sleep 1s
 conky &
@@ -50,6 +50,9 @@ guake &
 sleep 1s
 deluge &
 
+sleep 1s
+amor &
+
 
 #--------------------------------------------------------
 #-- NOT ENABLED
@@ -58,4 +61,4 @@ deluge &
 
 
 
-#amor &
+

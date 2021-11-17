@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-```js
+```javascript
 $1
 ```
 ]]></content>

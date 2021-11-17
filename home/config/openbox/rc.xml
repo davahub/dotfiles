@@ -479,6 +479,11 @@
         <command>playerctl previous</command>
       </action>
     </keybind>
+    <keybind key="Pause">
+      <action name="Execute">
+        <command>playerctl stop</command>
+      </action>
+    </keybind>
     <keybind key="W-Pause">
       <action name="Execute">
         <command>playerctl play-pause</command>
