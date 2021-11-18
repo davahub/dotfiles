@@ -25,8 +25,6 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
 fi
 
 
-
-
 #--------------------------------------------------------
 # ALIAS
 #--------------------------------------------------------
@@ -70,8 +68,8 @@ alias gs="git-id"
 alias gcm="git commit -m"
 alias gcma="git commit -am"
 # LOG
-alias glog="git log -n 8 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
-alias glog15="git log -n 15 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+alias glog="git log -n 10 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+alias glog20="git log -n 20 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
 alias glogall="git log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
 ghismerge() { smerge log "$(git-list "$1")";  }
 ghis() { gitk "$(git-list "$1")";  }
