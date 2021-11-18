@@ -174,39 +174,71 @@
     <moveButton>Middle</moveButton>
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
+
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <!-- ==================================================== -->
-    <!-- SWITCH DESKTOP -->
-    <!-- ==================================================== -->
-    <!-- left -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~ GO-TO DESKTOP -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <keybind key="A-1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="A-3">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-F3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="A-2">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="W-F5">
+      <action name="GoToDesktop">
+        <to>5</to>
+      </action>
+    </keybind>
+    <keybind key="A-4">
+      <action name="GoToDesktop">
+        <to>6</to>
+      </action>
+    </keybind>
+
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <!-- right -->
+
     <keybind key="C-A-Right">
       <action name="GoToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <!-- up -->
+
     <keybind key="C-A-Up">
       <action name="GoToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <!-- down -->
+
     <keybind key="C-A-Down">
       <action name="GoToDesktop">
         <to>down</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+
     <!-- send left -->
     <keybind key="C-S-A-Left">
       <action name="SendToDesktop">
@@ -235,7 +267,7 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <!-- MY CUSTOM DESKTOP SWITCH HOTKEY -->
+
     <keybind key="W-KP_1">
       <action name="GoToDesktop">
         <to>4</to>
@@ -266,45 +298,98 @@
         <to>3</to>
       </action>
     </keybind>
-    <!-- MY CUSTOM END -->
-    <keybind key="A-1">
-      <action name="GoToDesktop">
-        <to>1</to>
-      </action>
-    </keybind>
-    <keybind key="W-F2">
-      <action name="GoToDesktop">
-        <to>2</to>
-      </action>
-    </keybind>
-    <keybind key="W-F3">
-      <action name="GoToDesktop">
-        <to>3</to>
-      </action>
-    </keybind>
-    <keybind key="A-2">
-      <action name="GoToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~ ACTION -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-    <!-- Keybindings for windows -->
+
     <keybind key="A-F4">
       <action name="Close"/>
     </keybind>
+
     <keybind key="A-Escape">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
+
     <keybind key="A-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <!-- Keybindings for window switching -->
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~ WINDOW -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <keybind key="C-A-r">
+      <action name="Resize"/>
+    </keybind>
+
+    <keybind key="W-v">
+      <action name="Iconify"/>
+    </keybind>
+
+    <keybind key="W-w">
+      <action name="Close"/>
+    </keybind>
+
+    <keybind key="C-W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>960</width>
+        <height>100%</height>
+      </action>
+      <action name="MoveToEdge">
+        <direction>west</direction>
+      </action>
+    </keybind>
+
+    <keybind key="C-W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>960</x>
+        <y>0</y>
+        <width>960</width>
+        <height>100%</height>
+      </action>
+      <action name="MoveToEdgeEast"/>
+    </keybind>
+
+    <keybind key="C-W-Up">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <!-- <width>1280</width> -->
+        <height>100%</height>
+      </action>
+    </keybind>
+
+    <keybind key="C-W-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>800</width>
+        <height>700</height>
+      </action>
+    </keybind>
+
+    <keybind key="C-W-KP_0">
+      <action name="ToggleMaximize"/>
+    </keybind>
+
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>
@@ -314,6 +399,7 @@
         </finalactions>
       </action>
     </keybind>
+
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
         <finalactions>
@@ -323,6 +409,7 @@
         </finalactions>
       </action>
     </keybind>
+
     <keybind key="C-A-Tab">
       <action name="NextWindow">
         <panels>yes</panels>
@@ -334,6 +421,7 @@
         </finalactions>
       </action>
     </keybind>
+
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="A-S-Right">
       <action name="DirectionalCycleWindows">
@@ -355,74 +443,59 @@
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- ##################################### -->
-    <!-- ## EXECUTE -->
-    <!-- ##################################### -->
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~ EXECUTE -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <keybind key="W-g">
       <action name="Execute">
         <command>gal</command>
       </action>
     </keybind>
+
     <keybind key="W-`">
       <action name="Execute">
         <command>xdotool key grave</command>
       </action>
     </keybind>
+
     <keybind key="Scroll_Lock">
       <action name="Execute">
         <command>redshift-switch</command>
       </action>
     </keybind>
+
     <keybind key="W-Delete">
       <action name="Execute">
         <command>lock-suspend</command>
       </action>
     </keybind>
+
     <keybind key="W-L">
       <action name="Execute">
         <command>xscreensaver-command -lock</command>
       </action>
     </keybind>
+
     <keybind key="W-x">
       <action name="Execute">
         <command>xkill</command>
       </action>
     </keybind>
-    <keybind key="W-F9">
-      <action name="Execute">
-        <command>gen-tex</command>
-      </action>
-    </keybind>
-    <keybind key="F1">
-      <action name="Execute">
-        <command>mydmenu</command>
-      </action>
-    </keybind>
-    <keybind key="W-r">
-      <action name="Execute">
-        <command>mydmenu</command>
-      </action>
-    </keybind>
-    <keybind key="W-j">
-      <action name="Execute">
-        <command>mydmenu</command>
-      </action>
-    </keybind>
+
     <keybind key="W-space">
       <action name="Execute">
         <command>toggleKeyboard</command>
       </action>
     </keybind>
+
     <keybind key="W-F11">
       <action name="Execute">
         <command>toggleVideo</command>
       </action>
     </keybind>
-    <!-- <keybind key="Print">
-      <action name="Execute">
-        <command>xfce4-screenshooter -r</command>
-      </action>
-    </keybind> -->
+
     <!-- AUDIO -->
     <keybind key="W-Right">
       <action name="Execute">
@@ -494,6 +567,7 @@
         <command>playerctl play-pause</command>
       </action>
     </keybind>
+
     <!-- BRIGHTNESS -->
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
@@ -505,6 +579,7 @@
         <command>xbacklight -dec 10</command>
       </action>
     </keybind>
+
     <!-- LAUNCHERS -->
     <keybind key="W-A">
       <action name="Execute">
@@ -579,64 +654,9 @@
         <command>restartOpenbox</command>
       </action>
     </keybind>
-    <!-- ACTION -->
-    <keybind key="C-A-r">
-      <action name="Resize"/>
-    </keybind>
-    <keybind key="W-v">
-      <action name="Iconify"/>
-    </keybind>
-    <keybind key="W-w">
-      <action name="Close"/>
-    </keybind>
-    <!-- WORKSPACE WINDOW -->
-    <keybind key="C-W-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>960</width>
-        <height>100%</height>
-      </action>
-      <action name="MoveToEdge">
-        <direction>west</direction>
-      </action>
-    </keybind>
-    <keybind key="C-W-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>960</x>
-        <y>0</y>
-        <width>960</width>
-        <height>100%</height>
-      </action>
-      <action name="MoveToEdgeEast"/>
-    </keybind>
-    <keybind key="C-W-Up">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>center</x>
-        <y>center</y>
-        <!-- <width>1280</width> -->
-        <height>100%</height>
-      </action>
-    </keybind>
-    <keybind key="C-W-Down">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>center</x>
-        <y>center</y>
-        <width>800</width>
-        <height>700</height>
-      </action>
-    </keybind>
-    <keybind key="C-W-KP_0">
-      <action name="ToggleMaximize"/>
-    </keybind>
+
   </keyboard>
+
   <mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
@@ -1091,25 +1111,31 @@
 
   # end of the example
 -->
-    <!-- CENTER WINDOWS USE *****OBXPROP*****-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~ APP LAUNCH BEHAVIOUR use(obxprop) -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <application title="bashrun" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="Pcmanfm" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="Nemo" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="Lxterminal" type="normal">
       <maximized>Vertical</maximized>
       <position force="yes">
@@ -1117,6 +1143,7 @@
         <y>center</y>
       </position>
     </application>
+
     <application class="Leafpad" type="normal">
       <maximized>Vertical</maximized>
       <position force="yes">
@@ -1124,23 +1151,27 @@
         <y>center</y>
       </position>
     </application>
+
     <application class="Chromium" type="normal">
       <position force="yes">
         <y>center</y>
       </position>
     </application>
+
     <application class="XTerm" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application title="Terminal" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="Chromium" type="normal">
       <position force="yes">
         <x>center</x>
@@ -1148,12 +1179,14 @@
       </position>
       <maximized>Vertical</maximized>
     </application>
+
     <application title="Notify OSD Configuration" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="Lxtask" type="normal">
       <size>
         <height>600</height>
@@ -1163,24 +1196,28 @@
         <y>200</y>
       </position>
     </application>
+
     <application class="Lxappearance" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="Deluge" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="vlc" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="Spotify" type="normal">
       <maximized>Vertical</maximized>
       <position force="yes">
@@ -1188,6 +1225,7 @@
         <y>center</y>
       </position>
     </application>
+
     <application class="Diffmerge" type="normal">
       <maximized>true</maximized>
       <position force="yes">
@@ -1195,26 +1233,20 @@
         <y>center</y>
       </position>
     </application>
+
     <application class="Gmrun" type="normal">
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
     </application>
+
     <application class="Emacs" type="normal">
       <position force="yes">
         <x>-1</x>
         <y>center</y>
       </position>
     </application>
-    <!-- <application class="Clementine" type="normal">
-      <desktop>6</desktop>
-    </application> -->
-    <application class="Subl3" type="normal">
-      <!-- <desktop>all</desktop> -->
-      <!-- <skip_taskbar>yes</skip_taskbar> -->
-    </application>
-    <application class="Google-chrome-beta" type="normal">
-    </application>
+
   </applications>
 </openbox_config>
