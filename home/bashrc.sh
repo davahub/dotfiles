@@ -6,9 +6,9 @@
 PS1='[\u@\h \W]\$ '
 
 
-#--------------------------------------------------------
-# SYSTEM
-#--------------------------------------------------------
+#---------------------------------------------
+#-- SYSTEM
+#---------------------------------------------
 #-- SET HISTORY
 export HISTSIZE=10000
 export HISTFILESIZE=20000
@@ -25,9 +25,9 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
 fi
 
 
-#--------------------------------------------------------
-# ALIAS
-#--------------------------------------------------------
+#---------------------------------------------
+#-- ALIAS
+#---------------------------------------------
 alias ls='ls --color=auto'
 alias ll="ls -la"
 alias src="source ~/.bashrc"
@@ -41,10 +41,9 @@ alias sleaf="sudo leafpad"
 alias wifi="iwctl"
 
 
-
-#--------------------------------------------------------
-# PACMAN
-#--------------------------------------------------------
+#---------------------------------------------
+#-- PACMAN
+#---------------------------------------------
 alias sps="sudo pacman -S"
 alias pss="pacman -Ss"
 alias pqs="pacman -Qs"
@@ -58,63 +57,32 @@ alias yss="yay -Ss"
 alias ys="yay -S"
 
 
-
-#----------------------------------------
-#--  GIT
-#----------------------------------------
+#---------------------------------------------
+#-- GIT
+#---------------------------------------------
 alias g="git"
-alias gst="git-id && git branch"
-alias gs="git-id"
+alias gst="git-number && git branch"
+alias gs="git-number"
 alias gcm="git commit -m"
 alias gcma="git commit -am"
-# LOG
+
+#-- LOG
 alias glog="git log -n 10 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
 alias glog20="git log -n 20 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
 alias glogall="git log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
-ghismerge() { smerge log "$(git-list "$1")";  }
 ghis() { gitk "$(git-list "$1")";  }
-# STAGING
+ghismerge() { smerge log "$(git-list "$1")";  }
+
+#-- STAGING
 alias gadd.="git add ."
-gadd() {
-    git-list "$1" 2> /dev/null
-    fpath=$(git rev-parse --git-dir)
-    filename="$fpath/gitlistfiles.txt"
-    n=1
-    while read line; do
-    # reading each line
-    echo "File $n : $line"
-    git add "$line"
-    n=$((n+1))
-    done < $filename
-}
-gunstage() {
-    git-list "$1" 2> /dev/null
-    fpath=$(git rev-parse --git-dir)
-    filename="$fpath/gitlistfiles.txt"
-    n=1
-    while read line; do
-    # reading each line
-    echo "File $n : $line"
-    git reset HEAD -- "$line"
-    n=$((n+1))
-    done < $filename
-}
-grevert() {
-    git-list "$1" 2> /dev/null
-    fpath=$(git rev-parse --git-dir)
-    filename="$fpath/gitlistfiles.txt"
-    n=1
-    while read line; do
-    # reading each line
-    echo "File $n : $line"
-    git checkout -- "$line"
-    n=$((n+1))
-    done < $filename
-}
+gadd() { git-number add "$1";}
+gunstage() { git-number reset HEAD "$1"; }
+grevert() { git-number checkout -- "$1"; }
 alias glast="git log -1 HEAD"
 alias gpl="git pull --rebase --autostash"
 alias gplps="git pull --rebase --autostash && git push"
-# BRANCH
+
+#-- BRANCH
 alias gcl="git clone"
 alias gbr="git branch"
 alias gbrd="git branch -d"
@@ -123,55 +91,31 @@ alias gco="git checkout"
 alias greb="git rebase"
 alias grebcon="git rebase --continue"
 gcobr() { git checkout "$1" && git branch; }
-# DIFF
-gdt() { 
-    if [ -z "$1" ]; then
-      git difftool -y
-    fi
-    git-list "$1" 2> /dev/null
-    fpath=$(git rev-parse --git-dir)
-    filename="$fpath/gitlistfiles.txt"
-    n=1
-    while read line; do
-    echo "File $n : $line"
-    git difftool -y "$line"
-    n=$((n+1))
-    done < $filename
-}
-gdtc() { 
-    if [ -z "$1" ]; then
-      git difftool -y --cached
-    fi
-    git-list "$1" 2> /dev/null
-    fpath=$(git rev-parse --git-dir)
-    filename="$fpath/gitlistfiles.txt"
-    n=1
-    while read line; do
-    echo "File $n : $line"
-    git difftool -y --cached "$line"
-    n=$((n+1))
-    done < $filename
-}
-# merge
+
+#-- DIFF
+gdt() { git-number difftool -y "$1"; }
+gdtc() { git-number difftool -y --cached "$1"; }
+
+#-- MERGE
 alias gmerge="git merge"
 alias gmt="git mergetool -y"
-# stash
+
+#-- STASH
 alias gstash="git stash push -u -m"
 alias gstashls="git stash list"
 alias gstashapply="git stash apply "
 alias gstashdrop="git stash drop "
 alias gstashrm="git stash drop "
-# push
+
+#-- PUSH
 alias gps="git push"
 alias gph="git push"
 alias gpsbr="git push --set-upstream origin "
 
 
-
-#------------------------------------------------------
+#---------------------------------------------
 #-- APPLICATION
-#------------------------------------------------------
-
+#---------------------------------------------
 #-- NODE
 export NVM_DIR="/home/dava/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -180,10 +124,9 @@ export NVM_DIR="/home/dava/.nvm"
 export GOPATH=/home/dava/workspace/go
 
 
-
-#--------------------------------------------------------
-# DIRECTORIES
-#--------------------------------------------------------
+#---------------------------------------------
+#-- DIRECTORIES
+#---------------------------------------------
 export MYCONFIG_DIR="/home/dava/.1homepc"
 export myworkspace="/home/dava/workspace"
 export myhomepc="/home/dava/.1homepc"
@@ -191,10 +134,9 @@ export mywinconfig="/home/dava/workspace/.work/winconfig"
 export mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
 
 
-
-#--------------------------------------------------------
-# PATHS
-#--------------------------------------------------------
+#---------------------------------------------
+#-- PATHS
+#---------------------------------------------
 # give absolute path, no $HOME or else shortcuts need sh to run
 directory='/home/dava/.2shortcuts/directory'
 myfile='/home/dava/.2shortcuts/file'
@@ -205,10 +147,9 @@ rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails"
 
 
-
-#------------------------------------------------------
+#---------------------------------------------
 #-- OTHERS
-#------------------------------------------------------
+#---------------------------------------------
 cat ~/.welcome-msg
 # prevent at-spi2-registryd starting when launching gtk3 apps
 export NO_AT_BRIDGE=1 

@@ -11,7 +11,7 @@
 	{ "keys": ["ctrl+t"], "command": "new_file" },
 	{ "keys": ["ctrl+alt+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 	{ "keys": ["ctrl+alt+h"], "command": "htmlprettify" },
-	{ "keys": ["alt+shift+r"], "command": "reindent", "args": {"single_line": false} }
+	{ "keys": ["alt+shift+r"], "command": "reindent", "args": {"single_line": false} },
 	// multi-line select shift+(right-mouse)
 	// { "keys": ["ctrl+r"], "command": "build" },
 
@@ -98,5 +98,5 @@
 	//---------------------------------------------
 	{"keys": ["alt+n"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
 	{"keys": ["alt+p"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
-	{"keys": ["ctrl+alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}},
+	{"keys": ["ctrl+alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}}
 ]

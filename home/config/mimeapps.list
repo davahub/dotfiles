@@ -21,6 +21,7 @@ x-scheme-handler/mid=userapp-Thunderbird-8Y1NC1.desktop
 video/mpeg=vlc.desktop
 video/quicktime=vlc.desktop
 audio/mpeg=audacious.desktop
+audio/mp4=audacious.desktop
 
 [Added Associations]
 text/plain=sublime_text_3.desktop;
@@ -49,5 +50,7 @@ audio/mpeg=audacious.desktop;userapp-pcopen-NV7RC1.desktop;
 audio/flac=userapp-pcopen-NV7RC1.desktop;
 video/mpeg=vlc.desktop;
 video/quicktime=vlc.desktop;
+audio/mp4=audacious.desktop;
+text/markdown=google-chrome-beta.desktop;
 
 [Removed Associations]
