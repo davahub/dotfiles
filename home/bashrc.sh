@@ -38,6 +38,7 @@ alias sys="systemctl"
 alias ssys="sudo systemctl"
 alias ssctl="sudo systemctl"
 alias sleaf="sudo leafpad"
+alias leaf="leafpad"
 alias wifi="iwctl"
 
 
@@ -154,3 +155,4 @@ cat ~/.welcome-msg
 # prevent at-spi2-registryd starting when launching gtk3 apps
 export NO_AT_BRIDGE=1 
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -208,7 +208,10 @@
 		"ex3",
 	],
 	"color_scheme": "Mariana.sublime-color-scheme",
-	"font_face": "inconsolata",
+	"font_face": "robocode",
+	"font_face": "Inconsolata-g",
+	"font_face": "Inconsolata",
+	// "font_face": "Input",
 	"font_size": 16,
 	"hot_exit": true,
 	"ignored_packages":
