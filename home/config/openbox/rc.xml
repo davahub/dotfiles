@@ -432,7 +432,7 @@
     </keybind>
     <keybind key="W-L">
       <action name="Execute">
-        <command>xscreensaver-command -lock</command>
+        <command>lock-desktop</command>
       </action>
     </keybind>
     <keybind key="W-x">

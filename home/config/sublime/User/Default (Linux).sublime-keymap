@@ -79,8 +79,8 @@
 	{ "keys": ["ctrl+alt+1"], "command": "prev_view" },
 	{ "keys": ["alt+up"], "command": "next_view" },	
 	{ "keys": ["alt+down"], "command": "prev_view" },
-	{ "keys": ["ctrl+up"], "command": "next_view" },	
-	{ "keys": ["ctrl+down"], "command": "prev_view" },
+	// { "keys": ["ctrl+up"], "command": "next_view" },	
+	// { "keys": ["ctrl+down"], "command": "prev_view" },
 	
 	//-- Next and previous action
 	{ "keys": ["alt+left"], "command": "jump_back" },

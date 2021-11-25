@@ -78,7 +78,7 @@ ghismerge() { smerge log "$(git-list "$1")";  }
 alias gadd.="git add ."
 gadd() { git-number add "$1";}
 gunstage() { git-number reset HEAD "$1"; }
-grevert() { git-number checkout -- "$1"; }
+grevert() { git-number checkout "$1"; }
 alias glast="git log -1 HEAD"
 alias gpl="git pull --rebase --autostash"
 alias gplps="git pull --rebase --autostash && git push"

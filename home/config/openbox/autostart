@@ -53,6 +53,8 @@ deluge &
 sleep 1s
 amor &
 
+keyboard-reset &
+
 
 #--------------------------------------------------------
 #-- NOT ENABLED
