@@ -2,12 +2,15 @@
 [urgency_low]
     background = "#222222"  # colors have to be defined in quotation marks
     foreground = "#888888"
-    timeout = 10
+    timeout = 4
 [urgency_normal]
     # background = "#285577"
-    background = "#999999"
+    # background = "#484848"
+    # foreground = "#ffffff"
+    background = "#2e2e38"
     foreground = "#ffffff"
-    timeout = 10
+    frame_color = "#2e2e38"     # Defines color of the frame around the notification window.
+    timeout = 8
 [urgency_critical]
     background = "#900000"
     foreground = "#ffffff"
@@ -19,6 +22,8 @@
     #---------------------------------------------
     #-- Display
     #---------------------------------------------
+    transparency = 15            # transparency of the window.  Range: [0; 100]. 
+
     monitor = 0                 # Which monitor should the notifications be displayed on
     follow = mouse              # otification on focused monitor, mouse, keyboard, none
         
@@ -40,12 +45,7 @@
     scale = 0                   # scale factor,  auto-detected if value is 0
     notification_limit = 0      # Maximum number of notification (0 means no limit)
     indicate_hidden = yes       # Show how many messages are currently hidden (because of notification_limit).
-
-    transparency = 0            # transparency of the window.  Range: [0; 100]. 
-
-
-    # Sort messages by urgency.
-    sort = yes
+    sort = yes                  # Sort messages by urgency.
 
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
@@ -65,7 +65,7 @@
     progress_bar_frame_width = 1    # Set the frame width of the progress bar
 
     progress_bar_min_width = 150    # Set the minimum width for the progress bar
-    progress_bar_max_width = 300    # Set the maximum width for the progress bar
+    progress_bar_max_width = 400    # Set the maximum width for the progress bar
 
 
     #---------------------------------------------
@@ -73,7 +73,7 @@
     #---------------------------------------------
     # font = Tamsyn 14
     # font = Monospace 20
-    font = Terminus 14
+    font = Terminus 16
     line_height = 0             # spacing between lines
 
     # full: allow html markup in notifications <b>bold</b>, <i>italic</i>, <s>strikethrough</s>, <u>underline</u>
@@ -108,14 +108,17 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /usr/share/icons/gnome/48x48/status/:/usr/share/icons/gnome/48x48/devices/
+    # icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
+    # icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/
 
 
     #---------------------------------------------
     #-- Colors
     #---------------------------------------------
 
-    frame_color = "#aaaaaa"     # Defines color of the frame around the notification window.
+    # frame_color = "#aaaaaa"     # Defines color of the frame around the notification window.
+    # frame_color = "#484848"     # Defines color of the frame around the notification window.
     separator_color = frame     # color for the separator, auto, foreground, frame, anything else
 
 
@@ -159,6 +162,7 @@
     # parameter, an application may close the notification sent before the
     # user defined timeout.
     ignore_dbusclose = false
+
 
     #---------------------------------------------
     #-- Others
