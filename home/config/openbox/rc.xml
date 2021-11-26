@@ -53,7 +53,7 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>Noto Sans UI</name>
-      <size>10</size>
+      <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -62,7 +62,7 @@
     </font>
     <font place="InactiveWindow">
       <name>Noto Sans UI</name>
-      <size>10</size>
+      <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -140,7 +140,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>43</top>
+    <top>41</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -423,11 +423,6 @@
     <keybind key="Scroll_Lock">
       <action name="Execute">
         <command>redshift-switch</command>
-      </action>
-    </keybind>
-    <keybind key="W-Delete">
-      <action name="Execute">
-        <command>lock-suspend</command>
       </action>
     </keybind>
     <keybind key="W-L">
