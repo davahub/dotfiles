@@ -66,7 +66,7 @@
 
     progress_bar_min_width = 150    # Set the minimum width for the progress bar
     progress_bar_max_width = 400    # Set the maximum width for the progress bar
-
+    highlight = "#888888"           # color of progress bar
 
     #---------------------------------------------
     #-- Text
