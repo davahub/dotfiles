@@ -37,11 +37,10 @@
 		]
 	},
 
-	// Font size
-	{ "keys": ["ctrl+alt+-"], "command": "decrease_font_size" },
-	{ "keys": ["ctrl+alt++"], "command": "increase_font_size" },
-	{ "keys": ["ctrl+alt+="], "command": "increase_font_size" },
-	{ "keys": ["ctrl+alt+-"], "command": "decrease_font_size" },	
+	// Font size disable
+	{ "keys": ["ctrl++"], "command": "" },
+	{ "keys": ["ctrl+="], "command": "" },
+	{ "keys": ["ctrl+-"], "command": "" },
 
 	//-- Deletion
 	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },

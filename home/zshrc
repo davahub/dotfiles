@@ -1,0 +1,281 @@
+
+#  _____    _     
+# |__  /___| |__  
+#   / // __| '_ \ 
+#  / /_\__ \ | | |
+# /____|___/_| |_|
+#--------------------------------------------------------------  
+
+fpath=("$HOME/.zprompts" "$fpath[@]")
+
+autoload -Uz compinit promptinit add-zsh-hook vcs_info 
+
+add-zsh-hook precmd custom_func
+
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:git*' formats ":(%b)"
+precmd() {
+    vcs_info
+}
+
+# white → Not a git repository
+# green ▶ Clean git repository
+# red ▶ Staged changes in git repository
+# yellow ▶ Unstaged changes in git repository
+
+function custom_func() {
+    if [[ -z "${vcs_info_msg_0_}" ]]; then
+        dir_status="%F{2}>%f"
+    elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]]; then
+        dir_status="%F{1}▶%f"
+    elif [[ -n "$(git diff --name-status 2>/dev/null )" ]]; then
+        dir_status="%F{3}▶%f"
+    else
+        dir_status="%F{2}▶%f"
+    fi
+}
+
+# if [[ $VAR -gt 10 ]]; then
+#   echo "The variable is greater than 10."
+# elif [[ $VAR -eq 10 ]]; then
+#   echo "The variable is equal to 10."
+# else
+#   echo "The variable is less than 10."
+# fi
+
+setopt prompt_subst
+
+
+PS1='%B%(?..[%?] )%F{green}%b%n@%F{white}%U%m%u${vcs_info_msg_0_}$dir_status '
+RPS1="%F{${1:-green}}%~%f"
+
+# promptinit
+# prompt dava                                # enable walters theme
+# prompt mybart                                # enable walters theme
+
+
+
+# PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# '
+
+# Config for the prompt. PS1 synonym.
+# prompt='%2/ ${vcs_info_msg_0_}> '
+
+
+#---------------------------------------------
+#-- Auto completion
+#---------------------------------------------
+compinit
+zstyle ':completion:*' menu select          # enable auto completion menu
+setopt COMPLETE_ALIASES                     # enable auto completion aliases
+zstyle ':completion:*' rehash true          # rehash automatically 
+# auto completion for sudo commands, not enable this if you use untrusted autocompletion scripts
+zstyle ':completion::complete:*' gain-privileges 1  
+
+
+#---------------------------------------------
+#-- Setup key bindings
+#---------------------------------------------
+typeset -g -A key
+key[Home]="${terminfo[khome]}"
+key[End]="${terminfo[kend]}"
+key[Insert]="${terminfo[kich1]}"
+key[Backspace]="${terminfo[kbs]}"
+key[Delete]="${terminfo[kdch1]}"
+key[Up]="${terminfo[kcuu1]}"
+key[Down]="${terminfo[kcud1]}"
+key[Left]="${terminfo[kcub1]}"
+key[Right]="${terminfo[kcuf1]}"
+key[PageUp]="${terminfo[kpp]}"
+key[PageDown]="${terminfo[knp]}"
+key[Shift-Tab]="${terminfo[kcbt]}"
+key[Control-Left]="${terminfo[kLFT5]}"
+key[Control-Right]="${terminfo[kRIT5]}"
+
+# setup key accordingly
+[[ -n "${key[Home]}"      ]] && bindkey -- "${key[Home]}"       beginning-of-line
+[[ -n "${key[End]}"       ]] && bindkey -- "${key[End]}"        end-of-line
+[[ -n "${key[Insert]}"    ]] && bindkey -- "${key[Insert]}"     overwrite-mode
+[[ -n "${key[Backspace]}" ]] && bindkey -- "${key[Backspace]}"  backward-delete-char
+[[ -n "${key[Delete]}"    ]] && bindkey -- "${key[Delete]}"     delete-char
+[[ -n "${key[Up]}"        ]] && bindkey -- "${key[Up]}"         up-line-or-history
+[[ -n "${key[Down]}"      ]] && bindkey -- "${key[Down]}"       down-line-or-history
+[[ -n "${key[Left]}"      ]] && bindkey -- "${key[Left]}"       backward-char
+[[ -n "${key[Right]}"     ]] && bindkey -- "${key[Right]}"      forward-char
+[[ -n "${key[PageUp]}"    ]] && bindkey -- "${key[PageUp]}"     beginning-of-buffer-or-history
+[[ -n "${key[PageDown]}"  ]] && bindkey -- "${key[PageDown]}"   end-of-buffer-or-history
+[[ -n "${key[Shift-Tab]}" ]] && bindkey -- "${key[Shift-Tab]}"  reverse-menu-complete
+[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
+[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
+[[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
+[[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
+
+# Finally, make sure the terminal is in application mode, when zle is
+# active. Only then are the values from $terminfo valid.
+if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
+    autoload -Uz add-zle-hook-widget
+    function zle_application_mode_start { echoti smkx }
+    function zle_application_mode_stop { echoti rmkx }
+    add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
+    add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
+
+    autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+    zle -N up-line-or-beginning-search
+    zle -N down-line-or-beginning-search
+fi
+
+
+#  ____            _                 
+# / ___| _   _ ___| |_ ___ _ __ ___  
+# \___ \| | | / __| __/ _ \ '_ ` _ \ 
+#  ___) | |_| \__ \ ||  __/ | | | | |
+# |____/ \__, |___/\__\___|_| |_| |_|
+#        |___/                       
+#-------------------------------------
+
+#-- SET HISTORY
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTCONTROL=ignoredups   # Don't store duplicates
+export PROMPT_COMMAND='history -a'
+# shopt -s histappend
+
+#-- SSH AGENT
+if ! pgrep -u $USER ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval $(<~/.ssh-agent-thing) > /dev/null;
+fi
+
+
+#---------------------------------------------
+#-- ALIAS
+#---------------------------------------------
+alias ls='ls --color=auto'
+alias ll="ls -la"
+alias src="source ~/.zshrc"
+alias sudb="sudo updatedb"
+alias supd="sudo updatedb"
+alias loc="sudo updatedb && locate"
+alias sys="systemctl"
+alias ssys="sudo systemctl"
+alias ssctl="sudo systemctl"
+alias sleaf="sudo leafpad"
+alias leaf="leafpad"
+alias wifi="iwctl"
+
+
+#---------------------------------------------
+#-- PACMAN
+#---------------------------------------------
+alias sps="sudo pacman -S"
+alias pss="pacman -Ss"
+alias pqs="pacman -Qs"
+alias pqi="pacman -Qi"
+alias spy="sudo pacman -Sy"
+alias spyu="sudo pacman -Syu"
+alias sprs="sudo pacman -Rs"
+
+#-- YAY
+alias yss="yay -Ss"
+alias ys="yay -S"
+
+
+#---------------------------------------------
+#-- GIT
+#---------------------------------------------
+alias g="git"
+alias gst="git-number && git branch"
+alias gs="git-number"
+alias gcm="git commit -m"
+alias gcma="git commit -am"
+
+#-- LOG
+alias glog="git log -n 10 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+alias glog20="git log -n 20 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+alias glogall="git log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+ghis() { gitk "$(git-list "$1")";  }
+ghismerge() { smerge log "$(git-list "$1")";  }
+
+#-- STAGING
+alias gadd.="git add ."
+gadd() { git-number add "$1";}
+gunstage() { git-number reset HEAD "$1"; }
+grevert() { git-number checkout "$1"; }
+alias glast="git log -1 HEAD"
+alias gpl="git pull --rebase --autostash"
+alias gplps="git pull --rebase --autostash && git push"
+
+#-- BRANCH
+alias gcl="git clone"
+alias gbr="git branch"
+alias gbrd="git branch -d"
+alias gbrr="git branch -r"
+alias gco="git checkout"
+alias greb="git rebase"
+alias grebcon="git rebase --continue"
+gcobr() { git checkout "$1" && git branch; }
+
+#-- DIFF
+gdt() { git-number difftool -y "$1"; }
+gdtc() { git-number difftool -y --cached "$1"; }
+
+#-- MERGE
+alias gmerge="git merge"
+alias gmt="git mergetool -y"
+
+#-- STASH
+alias gstash="git stash push -u -m"
+alias gstashls="git stash list"
+alias gstashapply="git stash apply "
+alias gstashdrop="git stash drop "
+alias gstashrm="git stash drop "
+
+#-- PUSH
+alias gps="git push"
+alias gph="git push"
+alias gpsbr="git push --set-upstream origin "
+
+
+#---------------------------------------------
+#-- APPLICATION
+#---------------------------------------------
+#-- NODE
+export NVM_DIR="/home/dava/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#-- GO
+export GOPATH=/home/dava/workspace/go
+
+
+#---------------------------------------------
+#-- DIRECTORIES
+#---------------------------------------------
+export MYCONFIG_DIR="/home/dava/.1homepc"
+export myworkspace="/home/dava/workspace"
+export myhomepc="/home/dava/.1homepc"
+export mywinconfig="/home/dava/workspace/.work/winconfig"
+export mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
+
+
+#---------------------------------------------
+#-- PATHS
+#---------------------------------------------
+# give absolute path, no $HOME or else shortcuts need sh to run
+directory='/home/dava/.2shortcuts/directory'
+myfile='/home/dava/.2shortcuts/file'
+execute='/home/dava/.2shortcuts/execute'
+system='/home/dava/.2shortcuts/system'
+launcher='/home/dava/.2shortcuts/launcher'
+rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
+export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails"
+
+
+#---------------------------------------------
+#-- OTHERS
+#---------------------------------------------
+cat ~/.welcome-msg
+export NO_AT_BRIDGE=1       # prevent at-spi2-registryd starting when launching gtk3 apps
+
+
