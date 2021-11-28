@@ -5,24 +5,21 @@
 #  / /_\__ \ | | |
 # /____|___/_| |_|
 #--------------------------------------------------------------  
-
-fpath=("$HOME/.zprompts" "$fpath[@]")
-
+# Initialize
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
 
-add-zsh-hook precmd custom_func
 
+#---------------------------------------------
+#-- Git setup
+#---------------------------------------------
+add-zsh-hook precmd custom_func
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git*' formats ":(%b)"
 precmd() {
     vcs_info
 }
-
-# white → Not a git repository
-# green ▶ Clean git repository
-# red ▶ Staged changes in git repository
+# white → > Not a git repository, green ▶ Clean git repository, red ▶ Staged changes in git repository
 # yellow ▶ Unstaged changes in git repository
-
 function custom_func() {
     if [[ -z "${vcs_info_msg_0_}" ]]; then
         dir_status="%F{2}>%f"
@@ -35,30 +32,14 @@ function custom_func() {
     fi
 }
 
-# if [[ $VAR -gt 10 ]]; then
-#   echo "The variable is greater than 10."
-# elif [[ $VAR -eq 10 ]]; then
-#   echo "The variable is equal to 10."
-# else
-#   echo "The variable is less than 10."
-# fi
 
+#---------------------------------------------
+#-- Prompt
+#---------------------------------------------
 setopt prompt_subst
-
 
 PS1='%B%(?..[%?] )%F{green}%b%n@%F{white}%U%m%u${vcs_info_msg_0_}$dir_status '
 RPS1="%F{${1:-green}}%~%f"
-
-# promptinit
-# prompt dava                                # enable walters theme
-# prompt mybart                                # enable walters theme
-
-
-
-# PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# '
-
-# Config for the prompt. PS1 synonym.
-# prompt='%2/ ${vcs_info_msg_0_}> '
 
 
 #---------------------------------------------
@@ -73,7 +54,7 @@ zstyle ':completion::complete:*' gain-privileges 1
 
 
 #---------------------------------------------
-#-- Setup key bindings
+#-- Key bindings
 #---------------------------------------------
 typeset -g -A key
 key[Home]="${terminfo[khome]}"
