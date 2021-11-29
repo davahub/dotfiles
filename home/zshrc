@@ -144,6 +144,10 @@ alias ssctl="sudo systemctl"
 alias sleaf="sudo leafpad"
 alias leaf="leafpad"
 alias wifi="iwctl"
+alias wifiscan="iwctl station wlan0 scan"
+alias wifinetwork="iwctl station wlan0 get-networks"
+alias wificonnect="iwctl station wlan0 connect \"Lerp Hyperoptic 1Gb Fibre 5Ghz\""
+alias wifiinfo="iwctl station wlan0 show"
 
 
 #---------------------------------------------
