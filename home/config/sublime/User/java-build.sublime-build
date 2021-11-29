@@ -1,0 +1,5 @@
+{
+	"cmd": "gradle build && gradle run", 
+	"working_dir": "/home/dava/workspace/apps/jmarketwatch/",
+	"shell": true
+}

@@ -13,6 +13,7 @@
 	{ "keys": ["ctrl+alt+h"], "command": "htmlprettify" },
 	{ "keys": ["alt+shift+r"], "command": "reindent", "args": {"single_line": false} },
 	// multi-line select shift+(right-mouse)
+	{ "keys": ["f5"], "command": "build" },
 	// { "keys": ["ctrl+r"], "command": "build" },
 
 
