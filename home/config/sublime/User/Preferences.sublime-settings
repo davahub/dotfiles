@@ -207,6 +207,7 @@
 		"polyfills",
 		"ex3",
 		"Rebasing",
+		"Init",
 	],
 	"color_scheme": "Mariana.sublime-color-scheme",
 	"font_face": "Inconsolata",
