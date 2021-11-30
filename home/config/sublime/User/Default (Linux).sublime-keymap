@@ -3,6 +3,7 @@
 	//---------------------------------------------
 	//-- ACTION
 	//---------------------------------------------
+	// { "keys": ["tab"], "command": "reindent" },
 	{ "keys": ["alt+q"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
@@ -55,7 +56,7 @@
 	// focus file in sidebar
 	// { "keys": ["f4"], "command": "focus_file_on_sidebar" },
 	{ "keys": ["f2"], "command": "rename_file" },
-	{ "keys": ["tab"], "command": "reindent" },
+	
 
 
 	//---------------------------------------------

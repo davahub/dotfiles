@@ -1,9 +1,30 @@
 <application>
+  <component name="DimensionService">
+    <location key="find.popup.0.0.1920.1080" x="517" y="226" />
+    <location key="XPathView.FindDialog.DIMENSION_SERVICE_KEY.SIMPLE.0.0.1920.1080" x="427" y="339" />
+    <size key="find.popup.0.0.1920.1080" width="662" height="678" />
+    <size key="XPathView.FindDialog.DIMENSION_SERVICE_KEY.SIMPLE.0.0.1920.1080" width="674" height="414" />
+  </component>
+  <component name="WindowManager">
+    <frame x="51" y="41" width="1279" height="1011" extendedState="4" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+    </layout>
+  </component>
   <component name="WindowStateApplicationService">
     <state x="743" y="236" width="426" height="481" key="FileChooserDialogImpl" timestamp="1638265900631">
       <screen x="0" y="41" width="1920" height="1011" />
     </state>
     <state x="743" y="236" width="426" height="481" key="FileChooserDialogImpl/0.41.1920.1011" timestamp="1638265900631" />
+    <state width="585" height="83" key="ShowUsagesActions.dimensionServiceKey" timestamp="1638274358406">
+      <screen x="0" y="41" width="1920" height="1011" />
+    </state>
+    <state width="585" height="83" key="ShowUsagesActions.dimensionServiceKey/0.41.1920.1011" timestamp="1638274358406" />
     <state x="960" y="478" width="800" height="600" key="WELCOME_SCREEN" timestamp="1638265890185">
       <screen x="0" y="41" width="1920" height="1011" />
     </state>
