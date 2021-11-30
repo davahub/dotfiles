@@ -1,7 +1,7 @@
 <application>
   <component name="ActionsLocalSummary">
     <e n="EditorBackSpace">
-      <i c="7" l="1638266804892" />
+      <i c="8" l="1638267698406" />
     </e>
     <e n="EditorDuplicate">
       <i c="1" l="1638266802172" />
@@ -10,13 +10,19 @@
       <i c="1" l="1638266806772" />
     </e>
     <e n="ShowSettings">
-      <i c="4" l="1638267193372" />
+      <i c="13" l="1638267789185" />
     </e>
     <e n="WelcomeScreen.OpenProject">
       <i c="1" l="1638265895060" />
     </e>
+    <e n="com.intellij.ide.plugins.newui.SelectionBasedPluginModelAction$UninstallAction">
+      <i c="1" l="1638267710789" />
+    </e>
     <e n="com.intellij.notification.NotificationAction$Simple">
       <i c="3" l="1638266843473" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="1" l="1638267629697" />
     </e>
     <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
       <i c="5" l="1638266845757" />

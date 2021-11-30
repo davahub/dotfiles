@@ -11,6 +11,8 @@
     </trackers>
   </component>
   <component name="PropertiesComponent">
+    <property name="InstalledPluginsSearchHistory" value="color" />
+    <property name="MarketplacePluginsSearchHistory" value="color&#10;scheme&#10;s&#10;colo" />
     <property name="NonModalCommitCustomization.IsApplied" value="true" />
     <property name="appcds.runOnSecondStart" value="IC-212.5457.46-fe6d1f6f8100a5f2bac02db6b2c942709b04502c6de38ace943bce8b4a86fe0a" />
     <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
