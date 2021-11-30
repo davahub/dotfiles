@@ -1,0 +1,7 @@
+{
+   "scope": "source.java",
+   "completions":
+   [
+      { "trigger": "sout", "contents": "System.out.println(${1:str});" }
+   ]
+}

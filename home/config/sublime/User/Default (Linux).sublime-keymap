@@ -50,10 +50,12 @@
 	{ "keys": ["ctrl+;"], "command": "delete_word", "args": { "forward": false } },
 	{ "keys": ["alt+;"], "command": "left_delete" },
 
-	// Windows
+	// Sidebar
 	{ "keys": ["f8"], "command": "toggle_side_bar" },
 	// focus file in sidebar
-	{ "keys": ["f4"], "command": "focus_file_on_sidebar" },
+	// { "keys": ["f4"], "command": "focus_file_on_sidebar" },
+	{ "keys": ["f2"], "command": "rename_file" },
+	{ "keys": ["tab"], "command": "reindent" },
 
 
 	//---------------------------------------------
