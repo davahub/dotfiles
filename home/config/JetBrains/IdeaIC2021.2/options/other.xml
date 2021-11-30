@@ -11,6 +11,7 @@
     </trackers>
   </component>
   <component name="PropertiesComponent">
+    <property name="BuildView.Splitter.Proportion" value="0.26656738" />
     <property name="InstalledPluginsSearchHistory" value="color" />
     <property name="KEYMAP" value="match&#10;optim&#10;evalu&#10;repl&#10;find" />
     <property name="MarketplacePluginsSearchHistory" value="schemes&#10;s&#10;maria&#10;color&#10;scheme" />
@@ -20,12 +21,14 @@
     <property name="appcds.runOnSecondStart" value="IC-212.5457.46-5d7d429a3489643754f4fe8f7645d90fb227a0dff444efc435eb7b993656de0b" />
     <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
     <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.run.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
     <property name="eclipse.projects.detected" value="" />
     <property name="file.chooser.recent.files" value="$USER_HOME$/workspace/apps/jmarketwatch" />
     <property name="file.gist.reindex.count" value="10" />
     <property name="fileTypeChangedCounter" value="3" />
     <property name="fileTypeDetectors" value="com.android.tools.idea.fileTypes.profiler.MemoryCaptureFileType$Detector:com.android.tools.idea.sqlite.fileType.SqliteFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
     <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="got.it.tooltip.reader.mode.got.it" value="1" />
     <property name="ide.memory.adjusted" value="true" />
     <property name="ide.updates.previous.build.number" value="IC-212.5457.46" />
     <property name="ide.updates.whats.new.shown.for" value="212" />

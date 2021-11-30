@@ -73,7 +73,7 @@
       <i c="1" l="1638274271080" />
     </e>
     <e n="GotoDeclaration">
-      <i c="2" l="1638274433659" />
+      <i c="3" l="1638275706320" />
     </e>
     <e n="OptimizeImports">
       <i c="1" l="1638274843578" />
@@ -87,11 +87,17 @@
     <e n="Replace">
       <i c="4" l="1638274765835" />
     </e>
+    <e n="RunClass">
+      <i c="1" l="1638275768115" />
+    </e>
     <e n="ShowSettings">
       <i c="43" l="1638274968091" />
     </e>
     <e n="ShowUsages">
       <i c="1" l="1638274358277" />
+    </e>
+    <e n="ToggleInlineHintsAction">
+      <i c="1" l="1638275737386" />
     </e>
     <e n="WelcomeScreen.OpenProject">
       <i c="1" l="1638265895060" />
@@ -109,7 +115,7 @@
       <i c="3" l="1638266843473" />
     </e>
     <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
-      <i c="1" l="1638267629697" />
+      <i c="2" l="1638275721798" />
     </e>
     <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$AddKeyboardShortcutAction">
       <i c="32" l="1638274978442" />
