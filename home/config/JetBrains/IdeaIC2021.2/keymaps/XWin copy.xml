@@ -9,6 +9,13 @@
     <keyboard-shortcut first-keystroke="ctrl divide" />
     <keyboard-shortcut first-keystroke="alt q" />
   </action>
+  <action id="CopyElement">
+    <keyboard-shortcut first-keystroke="alt f5" />
+  </action>
+  <action id="Debug">
+    <keyboard-shortcut first-keystroke="shift f9" />
+    <keyboard-shortcut first-keystroke="f4" />
+  </action>
   <action id="EditorBackSpace">
     <keyboard-shortcut first-keystroke="back_space" />
     <keyboard-shortcut first-keystroke="shift back_space" />
@@ -100,11 +107,20 @@
     <keyboard-shortcut first-keystroke="alt left" />
     <keyboard-shortcut first-keystroke="ctrl 1" />
   </action>
+  <action id="QuickImplementations" />
   <action id="RecentFiles">
     <keyboard-shortcut first-keystroke="ctrl alt e" />
   </action>
+  <action id="Refactorings.QuickListPopupAction">
+    <keyboard-shortcut first-keystroke="shift ctrl alt t" />
+    <keyboard-shortcut first-keystroke="alt r" />
+  </action>
   <action id="Replace">
     <keyboard-shortcut first-keystroke="shift ctrl r" />
+  </action>
+  <action id="Run">
+    <keyboard-shortcut first-keystroke="shift f10" />
+    <keyboard-shortcut first-keystroke="f5" />
   </action>
   <action id="ShowUsages">
     <keyboard-shortcut first-keystroke="ctrl alt 7" />

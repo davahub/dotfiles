@@ -13,7 +13,7 @@
   <component name="PropertiesComponent">
     <property name="BuildView.Splitter.Proportion" value="0.26656738" />
     <property name="InstalledPluginsSearchHistory" value="color" />
-    <property name="KEYMAP" value="match&#10;optim&#10;evalu&#10;repl&#10;find" />
+    <property name="KEYMAP" value="format&#10;refa&#10;refac&#10;match&#10;optim" />
     <property name="MarketplacePluginsSearchHistory" value="schemes&#10;s&#10;maria&#10;color&#10;scheme" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
