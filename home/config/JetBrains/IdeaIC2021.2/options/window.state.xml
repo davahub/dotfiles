@@ -1,8 +1,12 @@
 <application>
   <component name="WindowStateApplicationService">
-    <state x="960" y="478" width="800" height="600" key="WELCOME_SCREEN" timestamp="1638265728690">
+    <state x="743" y="236" width="426" height="481" key="FileChooserDialogImpl" timestamp="1638265900631">
       <screen x="0" y="41" width="1920" height="1011" />
     </state>
-    <state x="960" y="478" width="800" height="600" key="WELCOME_SCREEN/0.41.1920.1011" timestamp="1638265728690" />
+    <state x="743" y="236" width="426" height="481" key="FileChooserDialogImpl/0.41.1920.1011" timestamp="1638265900631" />
+    <state x="960" y="478" width="800" height="600" key="WELCOME_SCREEN" timestamp="1638265890185">
+      <screen x="0" y="41" width="1920" height="1011" />
+    </state>
+    <state x="960" y="478" width="800" height="600" key="WELCOME_SCREEN/0.41.1920.1011" timestamp="1638265890185" />
   </component>
 </application>

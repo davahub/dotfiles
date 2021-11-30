@@ -1,0 +1,25 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="EditorBackSpace">
+      <i c="7" l="1638266804892" />
+    </e>
+    <e n="EditorDuplicate">
+      <i c="1" l="1638266802172" />
+    </e>
+    <e n="EditorEnter">
+      <i c="1" l="1638266806772" />
+    </e>
+    <e n="ShowSettings">
+      <i c="4" l="1638267193372" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="1" l="1638265895060" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="3" l="1638266843473" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
+      <i c="5" l="1638266845757" />
+    </e>
+  </component>
+</application>
