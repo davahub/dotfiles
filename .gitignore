@@ -8,6 +8,8 @@ Package\ Control.user-ca-bundle
 Package\ Control.merged-ca-bundle
 Package\ Control.last-run
 Package\ Control.cache
+home/config/sublime/User/SBSCompareScheme.hidden-color-scheme
+home/config/sublime/User/remove-popup.txt
 
 # others
 xsystems/dell-config/home/config/openbox/environment
@@ -24,3 +26,7 @@ home/config/JetBrains/IdeaIC2021.2/options/runner.layout.xml
 home/config/JetBrains/IdeaIC2021.2/options/actionSummary.xml
 home/config/JetBrains/IdeaIC2021.2/options/window.state.xml
 home/config/JetBrains/IdeaIC2021.2/port
+home/config/JetBrains/IdeaIC2021.2/options/other.xml
+home/config/JetBrains/IdeaIC2021.2/options/updates.xml
+
+

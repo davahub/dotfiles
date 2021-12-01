@@ -1,13 +1,20 @@
 <keymap version="1" name="XWin copy" parent="Default for XWin">
+  <action id="Arrangement.Rule.Edit" />
   <action id="Back">
     <keyboard-shortcut first-keystroke="ctrl alt left" />
     <mouse-shortcut keystroke="button4" />
     <keyboard-shortcut first-keystroke="alt left" />
   </action>
+  <action id="ChangesView.Rename">
+    <keyboard-shortcut first-keystroke="shift f6" />
+  </action>
   <action id="CommentByLineComment">
     <keyboard-shortcut first-keystroke="ctrl slash" />
     <keyboard-shortcut first-keystroke="ctrl divide" />
     <keyboard-shortcut first-keystroke="alt q" />
+  </action>
+  <action id="ContextHelp">
+    <keyboard-shortcut first-keystroke="ctrl f1" />
   </action>
   <action id="CopyElement">
     <keyboard-shortcut first-keystroke="alt f5" />
@@ -91,9 +98,24 @@
     <mouse-shortcut keystroke="button5" />
     <keyboard-shortcut first-keystroke="alt right" />
   </action>
+  <action id="Git.Rename.Local.Branch">
+    <keyboard-shortcut first-keystroke="shift f6" />
+  </action>
+  <action id="Git.Reword.Commit">
+    <keyboard-shortcut first-keystroke="shift f6" />
+  </action>
   <action id="GotoClass">
     <keyboard-shortcut first-keystroke="ctrl n" />
     <keyboard-shortcut first-keystroke="ctrl r" />
+  </action>
+  <action id="GotoNextError">
+    <keyboard-shortcut first-keystroke="f1" />
+  </action>
+  <action id="GuiDesigner.EditComponent">
+    <keyboard-shortcut first-keystroke="ctrl f2" />
+  </action>
+  <action id="GuiDesigner.EditGroup">
+    <keyboard-shortcut first-keystroke="ctrl f2" />
   </action>
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="alt right" />
@@ -115,6 +137,10 @@
     <keyboard-shortcut first-keystroke="shift ctrl alt t" />
     <keyboard-shortcut first-keystroke="alt r" />
   </action>
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="shift f6" />
+    <keyboard-shortcut first-keystroke="f2" />
+  </action>
   <action id="Replace">
     <keyboard-shortcut first-keystroke="shift ctrl r" />
   </action>
@@ -122,6 +148,7 @@
     <keyboard-shortcut first-keystroke="shift f10" />
     <keyboard-shortcut first-keystroke="f5" />
   </action>
+  <action id="ShelvedChanges.Rename" />
   <action id="ShowUsages">
     <keyboard-shortcut first-keystroke="ctrl alt 7" />
     <keyboard-shortcut first-keystroke="alt e" />
@@ -133,4 +160,5 @@
     <keyboard-shortcut first-keystroke="ctrl alt e" />
   </action>
   <action id="UsageGrouping.DirectoryStructure" />
+  <action id="XDebugger.SetValue" />
 </keymap>
