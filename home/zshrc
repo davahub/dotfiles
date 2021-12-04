@@ -7,6 +7,9 @@
 #--------------------------------------------------------------  
 # Initialize
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
 
 
 #---------------------------------------------
@@ -23,13 +26,13 @@ precmd() {
 # yellow ▶ Unstaged changes in git repository
 function custom_func() {
     if [[ -z "${vcs_info_msg_0_}" ]]; then
-        dir_status="%F{7}$%f"
+        dir_status="%F{7}>%f"
     elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]]; then
-        dir_status="%F{1}$%f"
+        dir_status="%F{1}>%f"
     elif [[ -n "$(git diff --name-status 2>/dev/null )" ]]; then
-        dir_status="%F{3}$%f"
+        dir_status="%F{3}>%f"
     else
-        dir_status="%F{2}$%f"
+        dir_status="%F{2}>%f"
     fi
 }
 
