@@ -26,13 +26,13 @@ precmd() {
 # yellow ▶ Unstaged changes in git repository
 function custom_func() {
     if [[ -z "${vcs_info_msg_0_}" ]]; then
-        dir_status="%F{7}>%f"
+        dir_status="%F{7}%B#%f"
     elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]]; then
-        dir_status="%F{1}>%f"
+        dir_status="%F{1}%B#%f"
     elif [[ -n "$(git diff --name-status 2>/dev/null )" ]]; then
-        dir_status="%F{3}>%f"
+        dir_status="%F{3}%B#%f"
     else
-        dir_status="%F{2}>%f"
+        dir_status="%F{2}%B#%f"
     fi
 }
 
@@ -42,8 +42,7 @@ function custom_func() {
 #---------------------------------------------
 setopt prompt_subst
 
-# PS1='%B%(?..[%?] )%F{green}%b%n@%F{white}%U%m%u${vcs_info_msg_0_}$dir_status '
-PS1='%B%(?..[%?] )%F{white}%b%n@%F{white}%U%m%u${vcs_info_msg_0_}$dir_status '
+PS1='%F{white}%b%n@%F{white}%U%m%u${vcs_info_msg_0_}$dir_status '
 RPS1="%F{${1:-green}}%~%f"
 
 

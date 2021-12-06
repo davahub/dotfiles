@@ -17,6 +17,21 @@
 	{ "keys": ["f5"], "command": "build" },
 	// { "keys": ["ctrl+r"], "command": "build" },
 
+	{ "keys": ["ctrl+space"], "command": "auto_complete", "args": {"mini": true, "default": "\t"},
+		"context":
+		[
+			{ "key": "auto_complete_visible", "operand": false },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "setting.tab_completion", "operator": "equal", "operand": true },
+			{ "key": "preceding_text", "operator": "regex_match", "operand": ".*\\w", "match_all": true },
+		]
+	},
+
+	{ "keys": ["tab"], "command": "expand_snippet", "context":
+		[{ "key": "has_snippetsd" }]
+	},
+
+
 
 	// Bookmark
 	{ "keys": ["ctrl+2"], "command": "next_bookmark" },

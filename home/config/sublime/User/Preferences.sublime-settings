@@ -233,5 +233,7 @@
 	"tab_size": 4,
 	"theme": "Default Dark.sublime-theme",
 	"rulers": [100],
+	"auto_complete": false,
+	"tab_completion": false,
 	"update_check": false,
 }
