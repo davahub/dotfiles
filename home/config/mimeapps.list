@@ -1,5 +1,5 @@
 [Default Applications]
-text/plain=sublime_text_3.desktop
+text/plain=leafpad.desktop
 application/xml=sublime_text_3.desktop
 image/jpg=viewnior.desktop;feh.desktop;darktable.desktop;pinta.desktop;
 image/jpeg=viewnior.desktop
@@ -24,7 +24,7 @@ audio/mpeg=audacious.desktop
 audio/mp4=audacious.desktop
 
 [Added Associations]
-text/plain=sublime_text_3.desktop;
+text/plain=leafpad.desktop;sublime_text_3.desktop;
 inode/directory=xarchiver.desktop;pcmanfm.desktop;vlc.desktop;
 application/xml=sublime_text_3.desktop;
 image/jpg=viewnior.desktop;feh.desktop;darktable.desktop;pinta.desktop;
