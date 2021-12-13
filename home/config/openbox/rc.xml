@@ -575,7 +575,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>lxterminal --geometry=85x30</command>
+        <command>myterm</command>
       </action>
     </keybind>
     <keybind key="W-c">
@@ -1186,6 +1186,13 @@
         <y>center</y>
       </position>
       <desktop>6</desktop>
+    </application>
+    <application class="URxvt" type="normal">
+      <maximized>Vertical</maximized>
+      <position force="yes">
+        <x>-1</x>
+        <y>center</y>
+      </position>
     </application>
   </applications>
 </openbox_config>
