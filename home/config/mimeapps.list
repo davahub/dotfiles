@@ -1,5 +1,5 @@
 [Default Applications]
-text/plain=leafpad.desktop
+text/plain=sublime_text_3.desktop
 application/xml=sublime_text_3.desktop
 image/jpg=viewnior.desktop;feh.desktop;darktable.desktop;pinta.desktop;
 image/jpeg=viewnior.desktop
@@ -22,9 +22,10 @@ video/mpeg=vlc.desktop
 video/quicktime=vlc.desktop
 audio/mpeg=audacious.desktop
 audio/mp4=audacious.desktop
+image/gif=viewnior.desktop
 
 [Added Associations]
-text/plain=leafpad.desktop;sublime_text_3.desktop;
+text/plain=sublime_text_3.desktop;
 inode/directory=xarchiver.desktop;pcmanfm.desktop;vlc.desktop;
 application/xml=sublime_text_3.desktop;
 image/jpg=viewnior.desktop;feh.desktop;darktable.desktop;pinta.desktop;
@@ -52,5 +53,6 @@ video/mpeg=vlc.desktop;
 video/quicktime=vlc.desktop;
 audio/mp4=audacious.desktop;
 text/markdown=google-chrome-beta.desktop;
+image/gif=viewnior.desktop;
 
 [Removed Associations]
