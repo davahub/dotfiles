@@ -208,6 +208,7 @@ gcobr() { git checkout "$1" && git branch; }
 
 #-- DIFF
 gdt() { git-number difftool -y "$1"; }
+alias gdifft="git difftool -y"
 gdtc() { git-number difftool -y --cached "$1"; }
 
 #-- MERGE
