@@ -51,7 +51,6 @@ URxvt.perl-ext-common: default,selection-to-clipboard,osc-xterm-clipboard
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-C-v: perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 URxvt.keysym.M-v: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
