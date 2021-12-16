@@ -580,12 +580,12 @@
     </keybind>
     <keybind key="grave">
       <action name="Execute">
-        <command>myterm</command>
+        <command>toggleTerm</command>
       </action>
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>myterm</command>
+        <command>toggleTerm</command>
       </action>
     </keybind>
     <keybind key="W-c">
