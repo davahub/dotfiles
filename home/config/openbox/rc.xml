@@ -316,6 +316,26 @@
     <keybind key="W-w">
       <action name="Close"/>
     </keybind>
+    <keybind key="C-W-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>90%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="C-W-KP_5">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>90%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
     <keybind key="C-W-Left">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
@@ -350,7 +370,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="C-W-Down">
+    <!-- <keybind key="C-W-Down">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <x>center</x>
@@ -358,7 +378,7 @@
         <width>800</width>
         <height>700</height>
       </action>
-    </keybind>
+    </keybind> -->
     <keybind key="C-W-KP_0">
       <action name="ToggleMaximize"/>
     </keybind>
