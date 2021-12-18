@@ -1,3 +1,5 @@
 {
 	"tab_completion": true,
+	"line_numbers": false,
+	"highlight_gutter": false,
 }

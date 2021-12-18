@@ -17,7 +17,7 @@ SAVEHIST=1000
 #---------------------------------------------
 add-zsh-hook precmd custom_func
 zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:git*' formats "(%b)"
+zstyle ':vcs_info:git*' formats "[%b]"
 precmd() {
     vcs_info
 }
@@ -42,8 +42,8 @@ function custom_func() {
 #---------------------------------------------
 setopt prompt_subst
 
-PS1='%F{white}%b%n@%F{white}%U%m%u${vcs_info_msg_0_}$dir_status '
-RPS1="%F{${1:-green}}%~%f"
+PS1='%F{white}%b%n@%F{white}%m%u${vcs_info_msg_0_}$dir_status '
+RPS1="%F{${1:-green}}%(3/|../%2d|%d)"
 
 
 #---------------------------------------------
