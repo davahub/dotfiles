@@ -3,7 +3,6 @@
 	//-- GENERAL
 	//---------------------------------------------
 	{ "keys": ["alt+q"], "command": "toggle_comment", "args": { "block": false } },
-	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
 	{ "keys": ["alt+down"], "command": "duplicate_line" },
 	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },

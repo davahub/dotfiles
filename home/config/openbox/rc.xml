@@ -618,6 +618,11 @@
         <command>gmrun</command>
       </action>
     </keybind>
+    <keybind key="W-u">
+      <action name="Execute">
+        <command>sub</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
         <command>pcmanfm</command>
