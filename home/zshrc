@@ -267,13 +267,14 @@ export mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
 directory='/home/dava/.2shortcuts/directory'
 myfile='/home/dava/.2shortcuts/file'
 myfileChrome='/home/dava/.2shortcuts/file/chrome'
+myfileSublime='/home/dava/.2shortcuts/file/sublime'
 execute='/home/dava/.2shortcuts/execute'
 system='/home/dava/.2shortcuts/system'
 launcher='/home/dava/.2shortcuts/launcher'
 rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 pythonLocal='/home/dava/.local/bin'
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails:$pythonLocal
-:$myfileChrome"
+:$myfileChrome:$myfileSublime"
 
 
 #---------------------------------------------
