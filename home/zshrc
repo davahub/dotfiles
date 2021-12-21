@@ -253,11 +253,14 @@ export GOPATH=/home/dava/workspace/go
 #---------------------------------------------
 #-- DIRECTORIES
 #---------------------------------------------
+setopt autocd
+setopt cdablevars
+setopt correct
 export MYCONFIG_DIR="/home/dava/.1homepc"
-export myworkspace="/home/dava/workspace"
-export myhomepc="/home/dava/.1homepc"
-export mywinconfig="/home/dava/workspace/.work/winconfig"
-export mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
+myworkspace="/home/dava/workspace"
+myhomepc="/home/dava/.1homepc"
+mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
+mywinconfig="/home/dava/workspace/.work/winconfig"
 
 
 #---------------------------------------------
