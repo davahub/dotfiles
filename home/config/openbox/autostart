@@ -44,8 +44,6 @@ tint2 &
 sleep 1s
 xscreensaver -no-splash &
 
-
-
 sleep 1s
 deluge &
 

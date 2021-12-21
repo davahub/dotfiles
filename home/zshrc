@@ -266,12 +266,14 @@ export mypluralsight="/home/dava/workspace/.work/pluralsight-courses"
 # give absolute path, no $HOME or else shortcuts need sh to run
 directory='/home/dava/.2shortcuts/directory'
 myfile='/home/dava/.2shortcuts/file'
+myfileChrome='/home/dava/.2shortcuts/file/chrome'
 execute='/home/dava/.2shortcuts/execute'
 system='/home/dava/.2shortcuts/system'
 launcher='/home/dava/.2shortcuts/launcher'
 rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 pythonLocal='/home/dava/.local/bin'
-export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails:$pythonLocal"
+export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails:$pythonLocal
+:$myfileChrome"
 
 
 #---------------------------------------------
