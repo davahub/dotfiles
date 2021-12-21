@@ -44,8 +44,7 @@ tint2 &
 sleep 1s
 xscreensaver -no-splash &
 
-sleep 1s
-guake &
+
 
 sleep 1s
 deluge &
@@ -60,7 +59,8 @@ keyboard-reset &
 #-- NOT ENABLED
 #--------------------------------------------------------
 #opensnap -d &
-
+#sleep 1s
+#guake &
 
 
 
