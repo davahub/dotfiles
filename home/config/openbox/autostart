@@ -50,6 +50,9 @@ deluge &
 sleep 1s
 amor &
 
+sleep 1s
+redshift &
+
 keyboard-reset &
 
 

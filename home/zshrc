@@ -255,7 +255,7 @@ export GOPATH=/home/dava/workspace/go
 #---------------------------------------------
 setopt autocd
 setopt cdablevars
-setopt correct
+# setopt correct
 export MYCONFIG_DIR="/home/dava/.1homepc"
 myworkspace="/home/dava/workspace"
 myhomepc="/home/dava/.1homepc"

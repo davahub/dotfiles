@@ -3,7 +3,10 @@
 .idea
 tell.md
 
-# sublime
+
+#---------------------------------------------
+#-- Sublime
+#---------------------------------------------
 Package\ Control.user-ca-bundle
 Package\ Control.merged-ca-bundle
 Package\ Control.last-run
@@ -11,10 +14,10 @@ Package\ Control.cache
 home/config/sublime/User/SBSCompareScheme.hidden-color-scheme
 home/config/sublime/User/remove-popup.txt
 
-# others
-xsystems/dell-config/home/config/openbox/environment
-xsystems/dell-config/home/config/openbox/menu.xml
 
+#---------------------------------------------
+#-- Idea
+#---------------------------------------------
 home/config/JetBrains/IdeaIC2021.2/tasks
 home/config/JetBrains/IdeaIC2021.2/workspace
 home/config/JetBrains/IdeaIC2021.2/options/shownTips.xml
@@ -29,5 +32,16 @@ home/config/JetBrains/IdeaIC2021.2/port
 home/config/JetBrains/IdeaIC2021.2/options/other.xml
 home/config/JetBrains/IdeaIC2021.2/options/updates.xml
 home/config/JetBrains/IdeaIC2021.2/updatedBrokenPlugins.db
+
+
+#---------------------------------------------
+#-- Others
+#---------------------------------------------
+home/local/share/applications/install4j_bban8b-tws.desktop
+xsystems/dell-config/home/config/openbox/environment
+xsystems/dell-config/home/config/openbox/menu.xml
+
+
+
 
 
