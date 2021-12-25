@@ -53,6 +53,9 @@ amor &
 sleep 1s
 redshift &
 
+sleep 1s
+parcellite -d &
+
 keyboard-reset &
 
 

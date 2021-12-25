@@ -578,9 +578,21 @@
         <command>shortcuts</command>
       </action>
     </keybind>
+    <keybind key="F1">
+      <action name="Execute">
+        <command>focusSublime</command>
+      </action>
+    </keybind>
     <keybind key="W-End">
       <action name="Execute">
-        <command>oblogout</command>
+        <prompt>Have you pushed all the code?</prompt>
+        <command>systemctl poweroff</command>
+      </action>
+    </keybind>
+    <keybind key="W-Prior">
+      <action name="Execute">
+        <prompt>Have you pushed all the code?</prompt>
+        <command>lock-suspend</command>
       </action>
     </keybind>
     <keybind key="A-F1">
