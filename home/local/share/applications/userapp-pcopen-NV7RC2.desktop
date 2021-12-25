@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Open with Sublime
+Exec=subl %F --add
+Categories=Other;
+NoDisplay=true
+MimeType=inode/directory
+Terminal=false
+Icon=sublime-text
