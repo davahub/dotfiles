@@ -56,3 +56,4 @@ text/markdown=google-chrome-beta.desktop;
 image/gif=viewnior.desktop;
 
 [Removed Associations]
+text/plain=nvim.desktop;vim.desktop;libreoffice-writer.desktop;nvim-qt.desktop;sublime_merge.desktop
