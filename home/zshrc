@@ -7,7 +7,8 @@
 #--------------------------------------------------------------  
 # Initialize
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
-HISTFILE=~/.histfile
+setopt share_history
+HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -138,10 +139,12 @@ fi
 #---------------------------------------------
 alias ls='ls --color=auto'
 alias ll="ls -la"
+alias his="history"
 alias src="source ~/.zshrc"
 alias sudb="sudo updatedb"
 alias supd="sudo updatedb"
 alias loc="sudo updatedb && locate"
+alias lo="locate"
 alias sys="systemctl"
 alias ssys="sudo systemctl"
 alias ssctl="sudo systemctl"
