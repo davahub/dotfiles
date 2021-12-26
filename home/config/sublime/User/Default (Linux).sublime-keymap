@@ -45,6 +45,7 @@
 	//-- WINDOW
 	//---------------------------------------------
 	{ "keys": ["f2"], "command": "rename_file" },
+	{ "keys": ["ctrl+alt+n"], "command": "new_file" },
 	// Sidebar
 	{ "keys": ["f8"], "command": "toggle_side_bar" },
 	// focus file in sidebar

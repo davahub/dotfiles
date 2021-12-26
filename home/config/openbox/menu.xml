@@ -17,7 +17,16 @@
     </action>
   </item>
 
-  <item label="Terminal">
+  <item label="URxvt Terminal">
+    <action name="Execute">
+      <command>toggleTerm</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+  <item label="LXTerminal">
     <action name="Execute">
       <command>lxterminal --geometry=75x30</command>
       <startupnotify>
@@ -134,7 +143,7 @@
 
   <item label="Chrome">
     <action name="Execute">
-      <command>google-chrome-beta</command>
+      <command>google-chrome-stable</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
