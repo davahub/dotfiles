@@ -16,7 +16,10 @@ URxvt.italicFont 		: xft:terminus:size=16
 URxvt.boldItalicfont 	: xft:terminus:size=16 
 URxvt.letterSpace		: -1
 URxvt.lineSpace 		: 0
-URxvt.depth          	: 24
+
+!! true transparency for native enable transparency, 95 is opacity level
+URxvt.depth: 32
+URxvt.background: [95]#000000
 
 
 !! ---------------------------------------------
@@ -27,13 +30,13 @@ URxvt.scrollBar      	: false
 URxvt.scrollBar_right	: false
 URxvt.internalBorder 	: 20
 URxvt.geometry       	: 92x42
-URxvt.transparent		: true
+URxvt.transparent		: false
 
 !! rxvt, plain, next, or xterm
 URxvt.scrollstyle		: plain
 
 !! shading - 0 to 99 darkens, 101 to 200 lightens.
-URxvt*shading			: 15
+URxvt*shading			: 20
 
 
 !! ---------------------------------------------
@@ -66,7 +69,7 @@ URxvt.urlButton: 1
 
 ! special
 *.foreground: #93a1a1
-*.background: #141c21
+!*.background: #141c21
 *.cursorColor: #afbfbf
 
 ! black

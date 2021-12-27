@@ -211,6 +211,7 @@ alias gplps="git pull --rebase --autostash && git push"
 
 #-- BRANCH
 alias gcl="git clone"
+alias gclone="git clone"
 alias gbr="git branch"
 alias gbrd="git branch -d"
 alias gbrr="git branch -r"
