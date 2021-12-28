@@ -24,9 +24,6 @@
 
 xcompmgr -C -t-5 -l-5 -r4.2 -o.55 &
 
-sleep 1s
-conky &
-
 wallpaper='w.jpg'
 
 feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
@@ -55,6 +52,12 @@ redshift &
 
 sleep 1s
 parcellite -d &
+
+sleep 1s
+fc-cache -fv &
+
+sleep 2s
+conky &
 
 keyboard-reset &
 

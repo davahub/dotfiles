@@ -1,0 +1,50 @@
+{
+	// default_extend_env are used to augment any environment variables
+	// that should be visible for all subprocess repls launched within
+	// SublimeREPL. This is a very good place to add PATH extension
+	// once "PATH": "{PATH}:/home/username/mylocalinstalls/bin" or whatever
+	"default_extend_env": {},
+	"view_auto_close": true,
+	"getenv_command": false,
+	"repl_view_settings": {
+		"translate_tabs_to_spaces": false,
+		"auto_indent": false,
+		"smart_indent": false,
+		"spell_check": false,
+		"indent_subsequent_lines": false,
+		"detect_indentation": false,
+		"auto_complete": false,
+		"line_numbers": false,
+		"gutter": true,
+		"syntax": "Packages/Text/Plain text.tmLanguage"
+	},
+
+	// this settings exposes additional variables in repl config files, especially
+	// those related to sublime projects that are not available through standard API
+	// WARNING: this will switch your build system back to Automatic each time a REPL
+	// is started so beware!
+	"use_build_system_hack": false,
+
+	// IP address used to setup autocomplete server in sublimerepl.
+	// changing this is usefull when you want to exclude one address
+	// from proxychains/tsocks routing
+	"autocomplete_server_ip": "127.0.0.1",
+
+	// Mapping is used, when external_id of REPL does not match
+	// source.[xxx] scope of syntax definition used to highlight
+	// files from which text is being transfered. For example octave
+	// repls use source.matlab syntax files and w/o this mapping text transfer
+	// will not work
+	"external_id_mapping": {
+		"octave": "matlab"
+	},
+
+	// If set to true, SublimeREPL will try to append evaluated code to repl
+	// output before evaluation (e.g. Ctrl+, f)
+	"show_transferred_text": false,
+
+	// If set to true repl view (tab) that receives text for evaluation will
+	// be brought to front after text transfer. Note: This will not fire if repl view
+	// is in the same tab group as the view from which the code is sent.
+	"focus_view_on_transfer": true
+}

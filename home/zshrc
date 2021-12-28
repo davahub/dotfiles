@@ -8,6 +8,8 @@
 # Initialize
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
 setopt share_history
+setopt EXTENDED_HISTORY
+
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
@@ -140,6 +142,7 @@ fi
 alias ls='ls --color=auto'
 alias ll="ls -la"
 alias his="history"
+hissearch() { fc -Dlim "*$@*" 1 }
 alias src="source ~/.zshrc"
 alias sudb="sudo updatedb"
 alias supd="sudo updatedb"
