@@ -24,6 +24,8 @@
 
 xcompmgr -C -t-5 -l-5 -r4.2 -o.55 &
 
+fc-cache -fv &
+
 wallpaper='w.jpg'
 
 feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
@@ -36,7 +38,7 @@ numlockx &
 
 xset -dpms; xset s off; xset -b &
 
-tint2 &
+cairo-dock &
 
 sleep 1s
 xscreensaver -no-splash &
@@ -53,13 +55,10 @@ redshift &
 sleep 1s
 parcellite -d &
 
-sleep 1s
-fc-cache -fv &
-
-sleep 2s
-conky &
-
 keyboard-reset &
+
+sleep 1s
+conky &
 
 
 #--------------------------------------------------------
@@ -68,6 +67,6 @@ keyboard-reset &
 #opensnap -d &
 #sleep 1s
 #guake &
-
+# tint2 &
 
 

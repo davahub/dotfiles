@@ -158,6 +158,7 @@ alias wifiscan="iwctl station wlan0 scan"
 alias wifinetwork="iwctl station wlan0 get-networks"
 alias wificonnect="iwctl station wlan0 connect \"Lerp Hyperoptic 1Gb Fibre 5Ghz\""
 alias wifiinfo="iwctl station wlan0 show"
+alias k="killall"
 
 
 #---------------------------------------------

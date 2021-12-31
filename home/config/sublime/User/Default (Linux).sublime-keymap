@@ -22,7 +22,7 @@
 	//-- EDIT
 	//---------------------------------------------
 	// Emacs like tab
-	{ "keys": ["tab"], "command": "reindent" },
+	// { "keys": ["tab"], "command": "reindent" },
 	//-- Deletion
 	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 	{ "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true } },

@@ -13,7 +13,7 @@ Package\ Control.last-run
 Package\ Control.cache
 home/config/sublime/User/SBSCompareScheme.hidden-color-scheme
 home/config/sublime/User/remove-popup.txt
-
+home/config/sublime/User/.SublimeREPLHistory/python.db
 
 #---------------------------------------------
 #-- Idea
@@ -42,7 +42,10 @@ home/local/share/applications/install4j_bban8b-tws.desktop
 xsystems/dell-config/home/config/openbox/environment
 xsystems/dell-config/home/config/openbox/menu.xml
 
-
+cairo-dock/themes
+cairo-dock/extras
+home/config/cairo-dock/themes
+home/config/cairo-dock/extras
 
 
 

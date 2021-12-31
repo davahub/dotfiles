@@ -343,24 +343,30 @@
   
   <item label="Shutdown">
     <action name="Execute">
-      <prompt>Have you pushed all the code?</prompt>
+      <prompt>Shutdown: Have you pushed all the code?</prompt>
       <command>systemctl poweroff</command>
     </action>
   </item>
   
   <item label="Restart">
     <action name="Execute">
-      <prompt>Have you pushed all the code?</prompt>
+      <prompt>Restart:Have you pushed all the code?</prompt>
       <command>systemctl reboot</command>
     </action>
   </item>
   
   <item label="Suspend">
-    <action name="Execute"><command>lock-suspend</command></action>
+    <action name="Execute">
+      <prompt>Suspend:Have you pushed all the code?</prompt>
+      <command>lock-suspend</command>
+    </action>
   </item>
   
   <item label="Hibernate">
-    <action name="Execute"><command>systemctl hibernate</command></action>
+    <action name="Execute">
+      <prompt>Hibernate:Have you pushed all the code?</prompt>
+      <command>systemctl hibernate</command>
+    </action>
   </item>
 
 </menu>
