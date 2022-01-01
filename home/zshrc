@@ -141,8 +141,7 @@ fi
 #---------------------------------------------
 alias ls='ls --color=auto'
 alias ll="ls -la"
-alias his="history"
-hissearch() { fc -Dlim "*$@*" 1 }
+his() { fc -Dlim "*$@*" 1 }
 alias src="source ~/.zshrc"
 alias sudb="sudo updatedb"
 alias supd="sudo updatedb"

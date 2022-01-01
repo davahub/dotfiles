@@ -580,7 +580,7 @@
     </keybind>
     <keybind key="F1">
       <action name="Execute">
-        <command>focusSublime</command>
+        <command>focusChrome</command>
       </action>
     </keybind>
     <keybind key="W-End">
@@ -617,7 +617,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>toggleTerm</command>
+        <command>focusSublime</command>
       </action>
     </keybind>
     <keybind key="W-c">
