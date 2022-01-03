@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Compare
+Exec=diffmerge-openwith %U
+Categories=Other;
+NoDisplay=true
+MimeType=text/plain
+Terminal=false
+Icon=sourcegearcom-diffmerge

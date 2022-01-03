@@ -145,8 +145,8 @@ his() { fc -Dlim "*$@*" 1 }
 alias src="source ~/.zshrc"
 alias sudb="sudo updatedb"
 alias supd="sudo updatedb"
-alias loc="sudo updatedb && locate"
-alias lo="locate"
+alias locup="sudo updatedb && locate"
+alias loc="locate"
 alias sys="systemctl"
 alias ssys="sudo systemctl"
 alias ssctl="sudo systemctl"
@@ -166,6 +166,7 @@ alias k="killall"
 alias sps="sudo pacman -S"
 alias pss="pacman -Ss"
 alias pqs="pacman -Qs"
+pqe() { pacman -Qe | grep $1; }
 alias pqi="pacman -Qi"
 alias spy="sudo pacman -Sy"
 alias spyu="sudo pacman -Syu"
@@ -201,6 +202,9 @@ alias glog20="git log -n 20 --graph --decorate --pretty=format:'%Cred%h%Creset -
 alias glogall="git log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
 ghis() { gitk "$(git-list "$1")";  }
 ghismerge() { smerge log "$(git-list "$1")";  }
+
+#-- UNDO
+alias gundolastcm="git reset --soft HEAD~1"
 
 #-- STAGING
 alias gadd.="git add ."

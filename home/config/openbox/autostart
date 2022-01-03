@@ -38,7 +38,7 @@ numlockx &
 
 xset -dpms; xset s off; xset -b &
 
-cairo-dock &
+tint2 &
 
 sleep 1s
 xscreensaver -no-splash &
@@ -67,6 +67,6 @@ conky &
 #opensnap -d &
 #sleep 1s
 #guake &
-# tint2 &
+# cairo-dock &
 
 
