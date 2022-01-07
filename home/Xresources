@@ -68,7 +68,8 @@ URxvt.urlButton: 1
 !! ---------------------------------------------
 
 ! special
-*.foreground: #93a1a1
+!*.foreground: #93a1a1
+*.foreground: #C7C7C7
 !*.background: #141c21
 *.cursorColor: #afbfbf
 

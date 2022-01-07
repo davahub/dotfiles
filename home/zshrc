@@ -9,6 +9,8 @@
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
 setopt share_history
 setopt EXTENDED_HISTORY
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -160,6 +162,11 @@ alias wifiinfo="iwctl station wlan0 show"
 alias k="killall"
 
 
+#-- Dir
+alias cdpythonalert="cd /home/dava/workspace/apps/python/alertsys"
+
+
+
 #---------------------------------------------
 #-- PACMAN
 #---------------------------------------------
@@ -286,9 +293,9 @@ execute='/home/dava/.2shortcuts/execute'
 system='/home/dava/.2shortcuts/system'
 launcher='/home/dava/.2shortcuts/launcher'
 rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
+rubyGems='/home/dava/.local/share/gem/ruby/3.0.0/bin'
 pythonLocal='/home/dava/.local/bin'
-export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails:$pythonLocal
-:$myfileChrome:$myfileSublime"
+export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails:$pythonLocal:$myfileChrome:$myfileSublime:$rubyGems"
 
 
 #---------------------------------------------
@@ -296,5 +303,8 @@ export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$ru
 #---------------------------------------------
 cat ~/.welcome-msg
 export NO_AT_BRIDGE=1       # prevent at-spi2-registryd starting when launching gtk3 apps
-
+# perl
+if (command -v perl && command -v cpanm) >/dev/null 2>&1; then
+  test -d "$HOME/perl5/lib/perl5" && eval $(perl -I "$HOME/perl5/lib/perl5" -Mlocal::lib)
+fi
 

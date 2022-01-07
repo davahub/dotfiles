@@ -212,6 +212,7 @@
 		"gmail",
 		"unreceptive",
 		"Parcellite",
+		"crypto",
 	],
 	"color_scheme": "Mariana.sublime-color-scheme",
 	"font_face": "Inconsolata",
@@ -223,6 +224,9 @@
 	"ignored_packages":
 	[
 		"Markdown",
+		"Markdown Extended",
+		"Mediawiker",
+		"SublimeREPL",
 		"Vintage",
 	],
 	"ignored_words":
