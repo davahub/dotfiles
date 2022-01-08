@@ -617,7 +617,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>focusSublime</command>
+        <command>nvim-qt</command>
       </action>
     </keybind>
     <keybind key="W-c">

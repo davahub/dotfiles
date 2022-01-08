@@ -45,6 +45,32 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.1homepc/home/config/nvi
 
 
 "-------------------------------------------------------
+"-- Custom commands
+"-------------------------------------------------------
+function MyToc()
+  Toc
+  vertical resize 40
+endfunction
+
+" command Tr Toc vertical resize 40
+command Tr :call MyToc()
+
+"nnoremap <C-t> :vertical resize 50
+"nnoremap <C-t> :vertical resize 50<CR>
+
+
+"-------------------------------------------------------
+"-- Shortcuts
+"-------------------------------------------------------
+
+" nnoremap tt :Toc<CR> :vertical resize 40<CR> 
+
+
+
+
+
+
+"-------------------------------------------------------
 "-- Main
 "-------------------------------------------------------
 set nocompatible            " disable compatibility to old-time vi
