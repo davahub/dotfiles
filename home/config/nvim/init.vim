@@ -45,12 +45,24 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.1homepc/home/config/nvi
 
 
 "-------------------------------------------------------
-"-- Custom commands
+"-- Functions
 "-------------------------------------------------------
 function MyToc()
   Toc
   vertical resize 30
 endfunction
+
+function AddEmptyLineBelow()
+  call append(line("."), "")
+  call append(line("."), "")
+  call append(line("."), "")
+  call append(line("."), "")
+endfunction
+
+
+"-------------------------------------------------------
+"-- Custom commands
+"-------------------------------------------------------
 
 " command Tr Toc vertical resize 40
 command Tr :call MyToc()
@@ -67,8 +79,9 @@ nnoremap <C-k> 6<C-y>
 nnoremap <A-j> 6j
 nnoremap <A-k> 6k
 
-
 nnoremap mm zt 6<C-y>
+
+nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 
 
 
@@ -126,10 +139,10 @@ set splitbelow
 " nnoremap <A-l> <C-W>L
 
 " move between panes to left/bottom/top/right
-nnoremap <C-A-h> <C-w>h
-nnoremap <C-A-j> <C-w>j
-nnoremap <C-A-k> <C-w>k
-nnoremap <C-A-l> <C-w>l
+"nnoremap <C-A-h> <C-w>h
+"nnoremap <C-A-j> <C-w>j
+"nnoremap <C-A-k> <C-w>k
+"nnoremap <C-A-l> <C-w>l
 
 " Press i to enter insert mode, and ii to exit insert mode.
 :inoremap ii <Esc>
