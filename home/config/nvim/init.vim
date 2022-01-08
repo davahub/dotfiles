@@ -74,7 +74,7 @@ endfunction
 " command Tr Toc vertical resize 40
 command Tr :call MyToc()
 
-command Svim :source .config/nvim/init.vim | :noh
+command Src :source .config/nvim/init.vim | :noh
 
 
 "-------------------------------------------------------
@@ -91,6 +91,9 @@ nnoremap <A-k> 6k
 nnoremap mm zt 6<C-y>
 
 nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
+
+inoremap <C-e> <Esc>A
+vnoremap <C-e> <Esc>A
 
 
 
