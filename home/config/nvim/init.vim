@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'plasticboy/vim-markdown'
+ Plug 'mzlogin/vim-markdown-toc'
 call plug#end()
 
 
@@ -30,6 +31,10 @@ let g:vim_markdown_math = 1
 let g:vim_markdown_frontmatter = 1  " for YAML format
 let g:vim_markdown_toml_frontmatter = 1  " for TOML format
 let g:vim_markdown_json_frontmatter = 1  " for JSON format
+
+" disable default keybindings
+let g:vim_markdown_no_default_key_mappings = 1
+
 
 
 "-------------------------------------------------------
@@ -113,7 +118,8 @@ set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
-set cc=80                  " set an 80 column border for good coding style
+set cc=100                  " set an 80 column border for good coding style
+
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
