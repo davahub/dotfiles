@@ -59,6 +59,13 @@ function AddEmptyLineBelow()
   call append(line("."), "")
 endfunction
 
+function Myfunc()
+  call append(line("."), "")
+  call append(line("."), "")
+  call append(line("."), "")
+  call append(line("."), "")
+endfunction
+
 
 "-------------------------------------------------------
 "-- Custom commands
@@ -66,6 +73,8 @@ endfunction
 
 " command Tr Toc vertical resize 40
 command Tr :call MyToc()
+
+command Svim :source .config/nvim/init.vim | :noh
 
 
 "-------------------------------------------------------
