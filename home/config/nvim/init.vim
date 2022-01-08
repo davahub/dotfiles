@@ -49,14 +49,11 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.1homepc/home/config/nvi
 "-------------------------------------------------------
 function MyToc()
   Toc
-  vertical resize 40
+  vertical resize 30
 endfunction
 
 " command Tr Toc vertical resize 40
 command Tr :call MyToc()
-
-"nnoremap <C-t> :vertical resize 50
-"nnoremap <C-t> :vertical resize 50<CR>
 
 
 "-------------------------------------------------------
@@ -135,6 +132,9 @@ nnoremap <C-l> <C-w>l
 :inoremap kj <Esc>
 :vnoremap jk <Esc>
 :vnoremap kj <Esc>
+
+:inoremap <S-space> <Esc>
+:vnoremap <S-space> <Esc>
 
 
 " open file in a text by placing text and gf
