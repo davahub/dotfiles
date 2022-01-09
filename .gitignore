@@ -46,6 +46,6 @@ cairo-dock/themes
 cairo-dock/extras
 home/config/cairo-dock/themes
 home/config/cairo-dock/extras
-
+home/config/nvim/mysession.vim
 
 
