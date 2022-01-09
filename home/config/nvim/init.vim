@@ -12,6 +12,10 @@ call plug#begin('~/.vim/plugged')
  Plug 'mzlogin/vim-markdown-toc'
 call plug#end()
 
+"let g:NERDTreeChDirMode=2
+
+
+
 
 "-------------------------------------------------------
 "-- Markdown
@@ -36,7 +40,6 @@ let g:vim_markdown_json_frontmatter = 1  " for JSON format
 let g:vim_markdown_no_default_key_mappings = 1
 
 
-
 "-------------------------------------------------------
 "-- Snippet
 "-------------------------------------------------------
@@ -47,6 +50,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-l>"
 
 let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.1homepc/home/config/nvim/ulti-snippets']
+
+
 
 
 "-------------------------------------------------------
@@ -81,12 +86,18 @@ command Tr :call MyToc()
 
 command Src :source .config/nvim/init.vim | :noh
 
+" command Src :source .config/nvim/init.vim | :noh
+
 
 "-------------------------------------------------------
 "-- Shortcuts
 "-------------------------------------------------------
 
 " nnoremap tt :Toc<CR> :vertical resize 40<CR> 
+
+nnoremap <S-t> :tabnew<CR> 
+
+nnoremap tr :NERDTree %<CR> 
 
 nnoremap <C-j> 6<C-e>
 nnoremap <C-k> 6<C-y>
@@ -100,6 +111,12 @@ nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 inoremap <C-e> <Esc>A
 vnoremap <C-e> <Esc>A
 
+
+" move between panes to left/bottom/top/right
+nnoremap <S-h> <C-w>h
+nnoremap <S-j> <C-w>j
+nnoremap <S-k> <C-w>k
+nnoremap <S-l> <C-w>l
 
 
 "-------------------------------------------------------

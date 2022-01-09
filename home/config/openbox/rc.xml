@@ -580,7 +580,7 @@
     </keybind>
     <keybind key="F1">
       <action name="Execute">
-        <command>focusChrome</command>
+        <command>focusNvim</command>
       </action>
     </keybind>
     <keybind key="W-End">
@@ -644,6 +644,11 @@
       <action name="Reconfigure"/>
     </keybind>
     <keybind key="W-o">
+      <action name="Execute">
+        <command>focusNvim</command>
+      </action>
+    </keybind>
+    <keybind key="W-p">
       <action name="Execute">
         <command>restartOpenbox</command>
       </action>
