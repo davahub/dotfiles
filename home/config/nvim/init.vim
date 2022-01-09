@@ -57,6 +57,12 @@ let g:UltiSnipsListSnippets="<c-l>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.1homepc/home/config/nvim/ulti-snippets']
 
 
+"-------------------------------------------------------
+"-- Tabs
+"-------------------------------------------------------
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 
 "-------------------------------------------------------
@@ -81,6 +87,7 @@ function Myfunc()
   call append(line("."), "")
 endfunction
 
+
 "-------------------------------------------------------
 "-- Session
 "-------------------------------------------------------
@@ -92,7 +99,7 @@ endfunction
 function! LoadSession()
   source ~/.config/nvim/mysession.vim
 endfunction
-"au VimEnter * nested :call LoadSession()
+au VimEnter * nested :call LoadSession()
 "au VimLeave * :call SaveSession()
 
 
@@ -117,7 +124,20 @@ command Lsession :call LoadSession()
 
 " nnoremap tt :Toc<CR> :vertical resize 40<CR> 
 
+nnoremap<CR> o<Esc>
+
+nnoremap <C-v> p
+vnoremap <C-v> <Esc>p
+inoremap <C-v> <Esc>p
+
+
+nnoremap <A-q> :call nerdcommenter#Comment(0,"toggle")<C-m>
+inoremap <A-q> <Esc>:call nerdcommenter#Comment(0,"toggle")<C-m>
+vnoremap <A-q> <Esc>:call nerdcommenter#Comment(0,"toggle")<C-m>
+
 nnoremap <C-d> dd
+vnoremap <C-d> <Esc>dd i
+inoremap <C-d> <Esc>dd i
 
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>
@@ -139,6 +159,7 @@ nnoremap mm zt 6<C-y>
 
 nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 
+nnoremap <C-e> A
 inoremap <C-e> <Esc>A
 vnoremap <C-e> <Esc>A
 
@@ -148,6 +169,10 @@ nnoremap <S-h> <C-w>h
 nnoremap <S-j> <C-w>j
 nnoremap <S-k> <C-w>k
 nnoremap <S-l> <C-w>l
+
+" shift+space for esc for space
+:inoremap <S-space> <Esc>
+:vnoremap <S-space> <Esc>
 
 
 "-------------------------------------------------------
@@ -226,9 +251,6 @@ set splitbelow
 :inoremap kj <Esc>
 :vnoremap jk <Esc>
 :vnoremap kj <Esc>
-
-:inoremap <S-space> <Esc>
-:vnoremap <S-space> <Esc>
 
 
 " open file in a text by placing text and gf
