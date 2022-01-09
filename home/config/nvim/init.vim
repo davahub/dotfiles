@@ -140,6 +140,15 @@ command Lsession :call LoadSession()
 
 " nnoremap tt :Toc<CR> :vertical resize 40<CR> 
 
+nnoremap <C-z> u
+inoremap <A-z> <Esc>u
+
+vnoremap <A-f> <Esc>w i
+inoremap <A-f> <Esc>w i
+
+vnoremap <A-l> <Esc>l
+inoremap <A-h> <Esc>h
+
 nnoremap <space> i 
 
 nnoremap<C-;> bdw
@@ -174,6 +183,8 @@ nnoremap <C-k> 6<C-y>
 nnoremap <A-j> 6j
 nnoremap <A-k> 6k
 
+nnoremap <C-l> zt 8<C-y>
+nnoremap <A-m> zt 8<C-y>
 nnoremap mm zt 8<C-y>
 
 nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
