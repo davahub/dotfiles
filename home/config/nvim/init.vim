@@ -95,6 +95,8 @@ command Src :source .config/nvim/init.vim | :noh
 
 " nnoremap tt :Toc<CR> :vertical resize 40<CR> 
 
+nnoremap t % 
+
 nnoremap <S-t> :tabnew<CR> 
 
 nnoremap tr :NERDTree %<CR> 
@@ -117,6 +119,32 @@ nnoremap <S-h> <C-w>h
 nnoremap <S-j> <C-w>j
 nnoremap <S-k> <C-w>k
 nnoremap <S-l> <C-w>l
+
+
+"-------------------------------------------------------
+"-- Session
+"-------------------------------------------------------
+function! MakeSession()
+  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  if (filewritable(b:sessiondir) != 2)
+    exe 'silent !mkdir -p ' b:sessiondir
+    redraw!
+  endif
+  let b:filename = b:sessiondir . '/session.vim'
+  exe "mksession! " . b:filename
+endfunction
+
+function! LoadSession()
+  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  let b:sessionfile = b:sessiondir . "/session.vim"
+  if (filereadable(b:sessionfile))
+    exe 'source ' b:sessionfile
+  else
+    echo "No session loaded."
+  endif
+endfunction
+au VimEnter * nested :call LoadSession()
+au VimLeave * :call MakeSession()
 
 
 "-------------------------------------------------------
