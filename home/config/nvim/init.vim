@@ -15,10 +15,8 @@ call plug#begin('~/.vim/plugged')
   \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'branch': 'release/0.x'
   \ }
+ Plug 'numToStr/Comment.nvim'
 call plug#end()
-
-"let g:NERDTreeChDirMode=2
-
 
 
 
@@ -66,6 +64,26 @@ autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 
 "-------------------------------------------------------
+"-- Comments
+"-------------------------------------------------------
+"nnoremap <A-q> :call nerdcommenter#Comment(0,"toggle")<C-m>
+"inoremap <A-q> <Esc>:call nerdcommenter#Comment(0,"toggle")<C-m>
+"vnoremap <A-q> <Esc>:call nerdcommenter#Comment(0,"toggle")<C-m>
+lua require('Comment').setup()
+
+function MySingleComment()
+  lua require('Comment.api').toggle_current_linewise(cfg)
+endfunction
+
+nnoremap <C-q> :call MySingleComment()<CR>
+vnoremap <C-q> :call MySingleComment()<CR>
+inoremap <C-q> <Esc>:call MySingleComment()<CR>
+nnoremap <A-q> :call MySingleComment()<CR>
+vnoremap <A-q> :call MySingleComment()<CR>
+inoremap <A-q> <Esc>:call MySingleComment()<CR>
+
+
+"-------------------------------------------------------
 "-- Functions
 "-------------------------------------------------------
 function MyToc()
@@ -110,9 +128,7 @@ au VimEnter * nested :call LoadSession()
 " command Tr Toc vertical resize 40
 command Tr :call MyToc()
 
-command Src :source .config/nvim/init.vim | :noh
-
-" command Src :source .config/nvim/init.vim | :noh
+command Src :source ~/.config/nvim/init.vim | :noh
 
 command Ssession :call SaveSession()
 command Lsession :call LoadSession()
@@ -124,16 +140,16 @@ command Lsession :call LoadSession()
 
 " nnoremap tt :Toc<CR> :vertical resize 40<CR> 
 
+nnoremap <space> i 
+
+nnoremap<C-;> bdw
+inoremap <C-;> <Esc>bdw
+
 nnoremap<CR> o<Esc>
 
 nnoremap <C-v> p
 vnoremap <C-v> <Esc>p
 inoremap <C-v> <Esc>p
-
-
-nnoremap <A-q> :call nerdcommenter#Comment(0,"toggle")<C-m>
-inoremap <A-q> <Esc>:call nerdcommenter#Comment(0,"toggle")<C-m>
-vnoremap <A-q> <Esc>:call nerdcommenter#Comment(0,"toggle")<C-m>
 
 nnoremap <C-d> dd
 vnoremap <C-d> <Esc>dd i
@@ -173,6 +189,15 @@ nnoremap <S-l> <C-w>l
 " shift+space for esc for space
 :inoremap <S-space> <Esc>
 :vnoremap <S-space> <Esc>
+
+" parenthesis brackets completion
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
 
 
 "-------------------------------------------------------
