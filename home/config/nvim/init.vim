@@ -10,6 +10,11 @@ call plug#begin('~/.vim/plugged')
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'plasticboy/vim-markdown'
  Plug 'mzlogin/vim-markdown-toc'
+ Plug 'maksimr/vim-jsbeautify'
+ Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'branch': 'release/0.x'
+  \ }
 call plug#end()
 
 "let g:NERDTreeChDirMode=2
@@ -95,6 +100,10 @@ command Src :source .config/nvim/init.vim | :noh
 
 " nnoremap tt :Toc<CR> :vertical resize 40<CR> 
 
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+vnoremap <C-s> <Esc>:w<CR>
+
 nnoremap <A-2> :tabnext<CR>
 nnoremap <A-1> :tabprevious<CR>
 
@@ -123,12 +132,18 @@ nnoremap <S-l> <C-w>l
 
 
 "-------------------------------------------------------
+"-- Prettier
+"-------------------------------------------------------
+let g:prettier#exec_cmd_path = "/home/dava/.nvm/versions/node/v17.1.0/bin/prettier"
+
+
+
+"-------------------------------------------------------
 "-- Session
 "-------------------------------------------------------
 
-" Creates a session
 function! MakeSession()
-  let b:sessiondir = $HOME . "/.vim_sessions" . getcwd()
+  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
   if (filewritable(b:sessiondir) != 2)
     exe 'silent !mkdir -p ' b:sessiondir
     redraw!
@@ -137,18 +152,8 @@ function! MakeSession()
   exe "mksession! " . b:filename
 endfunction
 
-" Updates a session, BUT ONLY IF IT ALREADY EXISTS
-function! UpdateSession()
-  let b:sessiondir = $HOME . "/.vim_session" . getcwd()
-  let b:sessionfile = b:sessiondir . "session.vim"
-  if (filereadable(b:sessionfile))
-    exe "mksession! " . b:filename
-  endif
-endfunction
-
-" Loads a session if it exists
 function! LoadSession()
-  let b:sessiondir = $HOME . "/.vim_sessions" . getcwd()
+  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
   let b:sessionfile = b:sessiondir . "/session.vim"
   if (filereadable(b:sessionfile))
     exe 'source ' b:sessionfile
@@ -156,10 +161,8 @@ function! LoadSession()
     echo "No session loaded."
   endif
 endfunction
-
 au VimEnter * nested :call LoadSession()
-au VimLeave * :call UpdateSession()
-"map <leader>m :call MakeSession()<CR>
+"au VimLeave * :call MakeSession()
 
 
 "-------------------------------------------------------
