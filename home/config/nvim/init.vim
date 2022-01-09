@@ -147,6 +147,9 @@ inoremap <C-;> <Esc>bdw
 
 nnoremap<CR> o<Esc>
 
+vnoremap <C-c> y
+inoremap <C-c> <Esc>y
+
 nnoremap <C-v> p
 vnoremap <C-v> <Esc>p
 inoremap <C-v> <Esc>p
@@ -171,7 +174,7 @@ nnoremap <C-k> 6<C-y>
 nnoremap <A-j> 6j
 nnoremap <A-k> 6k
 
-nnoremap mm zt 6<C-y>
+nnoremap mm zt 8<C-y>
 
 nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 
