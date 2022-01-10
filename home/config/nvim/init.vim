@@ -16,6 +16,15 @@ call plug#begin('~/.vim/plugged')
   \ 'branch': 'release/0.x'
   \ }
  Plug 'numToStr/Comment.nvim'
+ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+ Plug 'patstockwell/vim-monokai-tasty'
+ Plug 'HerringtonDarkholme/yats.vim'
+ Plug 'pangloss/vim-javascript'
+ Plug 'MaxMEllon/vim-jsx-pretty'
+ Plug 'styled-components/vim-styled-components'
+ Plug 'elzr/vim-json'
+ Plug 'jparise/vim-graphql'
+ Plug 'mangeshrex/uwu.vim'
 call plug#end()
 
 
@@ -61,6 +70,40 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.1homepc/home/config/nvi
 autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+
+
+"-------------------------------------------------------
+"-- Themes
+"-------------------------------------------------------
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+"colorscheme evening
+colorscheme dracula
+
+"colorscheme vim-monokai-tasty
+"colorscheme uwu
+" To enable
+let g:UwuNR=1 " default
+
+
+" Tokyo Night
+let g:lightline = {'colorscheme': 'tokyonight'}
+
+"let g:tokyonight_style = "storm"
+"let g:tokyonight_italic_functions = 1
+"let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+"let g:tokyonight_colors = {
+"  \ 'hint': 'orange',
+"  \ 'error': '#ff0000'
+"\ }
+
+" Load the colorscheme
+"colorscheme tokyonight
+
 
 
 "-------------------------------------------------------
@@ -253,14 +296,8 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
+syntax enable
 
-" color schemes
-if (has("termguicolors"))
- set termguicolors
- endif
- syntax enable
- " colorscheme evening
-colorscheme dracula
 " open new split panes to right and below
 set splitright
 set splitbelow
