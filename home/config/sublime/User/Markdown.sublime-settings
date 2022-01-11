@@ -1,5 +1,5 @@
 {
 	"tab_completion": true,
-	"line_numbers": false,
+	"line_numbers": true,
 	"highlight_gutter": false,
 }

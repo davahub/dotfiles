@@ -10,6 +10,7 @@
 	{ "keys": ["ctrl+alt+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 	{ "keys": ["ctrl+alt+y"], "command": "htmlprettify" },
 	{ "keys": ["alt+shift+r"], "command": "reindent", "args": {"single_line": false} },
+	{ "keys": ["shift+alt+f"], "command": "js_prettier" },
 
 
 	//---------------------------------------------
