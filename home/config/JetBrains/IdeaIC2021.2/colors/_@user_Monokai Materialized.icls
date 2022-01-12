@@ -4,7 +4,7 @@
     <property name="created">2021-11-30T10:22:17</property>
     <property name="ide">Idea</property>
     <property name="ideVersion">2021.2.3.0.0</property>
-    <property name="modified">2021-11-30T12:49:26</property>
+    <property name="modified">2022-01-12T18:47:26</property>
     <property name="originalScheme">Monokai Materialized</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.0" />
@@ -52,7 +52,7 @@
     <option name="RIGHT_MARGIN_COLOR" value="424242" />
     <option name="SELECTED_INDENT_GUIDE" value="424242" />
     <option name="SELECTED_TEARLINE_COLOR" value="757575" />
-    <option name="SELECTION_BACKGROUND" value="1a237e" />
+    <option name="SELECTION_BACKGROUND" value="4d4d4d" />
     <option name="SELECTION_FOREGROUND" value="" />
     <option name="SEPARATOR_BELOW_COLOR" value="e0e0e0" />
     <option name="SOFT_WRAP_SIGN_COLOR" value="bdbdbd" />
@@ -21407,7 +21407,7 @@
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="f5f5f5" />
-        <option name="BACKGROUND" value="2b2b2b" />
+        <option name="BACKGROUND" value="282923" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>

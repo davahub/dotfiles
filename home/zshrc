@@ -202,6 +202,7 @@ alias gst="git-number && git branch"
 alias gs="git-number"
 alias gcm="git commit -m"
 alias gcma="git commit -am"
+alias gaddcm="git add . && git commit -m"
 
 #-- LOG
 alias glog="git log -n 10 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
