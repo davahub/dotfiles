@@ -1,9 +1,10 @@
-#--------------------------------------------------------------  
+
 #     _    _ _
 #    / \  | (_) __ _ ___
 #   / _ \ | | |/ _` / __|
 #  / ___ \| | | (_| \__ \
 # /_/   \_\_|_|\__,_|___/
+#--------------------------------------------------------------  
 
 alias ls='ls --color=auto'
 alias ll="ls -la"
@@ -31,7 +32,9 @@ alias sshwork="ssh-add $HOME/.ssh/id_rsa_work && ssh-add -l"
 #---------------------------------------------
 #-- Directories
 #---------------------------------------------
-alias cdpythonalert="cd /home/dava/workspace/apps/python/alertsys"
+alias dpythonalert="cd /home/dava/workspace/apps/python/alertsys"
+alias dworkspace="cd /home/dava/workspace/"
+alias dapps="cd /home/dava/workspace/apps/"
 
 
 #---------------------------------------------
@@ -125,22 +128,12 @@ alias gpsbr="git push --set-upstream origin "
 
 
 
-
-
-
-
-
-
-
-
-
-#-------------------------------------------------------------- 
 #  _____    _     
 # |__  /___| |__  
 #   / // __| '_ \ 
 #  / /_\__ \ | | |
 # /____|___/_| |_|
- 
+#-------------------------------------------------------------- 
 # Initialize
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
 setopt share_history
