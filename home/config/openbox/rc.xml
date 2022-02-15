@@ -591,7 +591,6 @@
     </keybind>
     <keybind key="W-Prior">
       <action name="Execute">
-        <prompt>Suspend: pushed all the code?</prompt>
         <command>lock-suspend</command>
       </action>
     </keybind>

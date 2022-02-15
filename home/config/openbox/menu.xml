@@ -357,7 +357,6 @@
   
   <item label="Suspend">
     <action name="Execute">
-      <prompt>Suspend:Have you pushed all the code?</prompt>
       <command>lock-suspend</command>
     </action>
   </item>

@@ -25,6 +25,7 @@ alias wifinetwork="iwctl station wlan0 get-networks"
 alias wificonnect="iwctl station wlan0 connect \"Lerp Hyperoptic 1Gb Fibre 5Ghz\""
 alias wifiinfo="iwctl station wlan0 show"
 alias k="killall"
+alias setwallpaper="feh --bg-scale /home/dava/.3installed/wallpaper/w.jpg"
 alias sshhome="ssh-add $HOME/.ssh/id_rsa && ssh-add -l"
 alias sshwork="ssh-add $HOME/.ssh/id_rsa_work && ssh-add -l"
 
