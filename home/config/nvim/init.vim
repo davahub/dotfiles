@@ -160,7 +160,7 @@ endfunction
 function! LoadSession()
   source ~/.config/nvim/mysession.vim
 endfunction
-au VimEnter * nested :call LoadSession()
+"au VimEnter * nested :call LoadSession()
 "au VimLeave * :call SaveSession()
 
 
