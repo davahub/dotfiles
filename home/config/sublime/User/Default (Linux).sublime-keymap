@@ -87,6 +87,9 @@
 	{ "keys": ["ctrl+."], "command": "move_to", "args": {"to": "eof", "extend": false} },
 	{ "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
 
+	{ "keys": ["alt+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["alt+down"], "command": "select_lines", "args": {"forward": true} },
+
 
 	//---------------------------------------------
 	//-- MACROS
