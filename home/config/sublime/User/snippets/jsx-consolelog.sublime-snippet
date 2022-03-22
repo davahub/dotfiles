@@ -6,6 +6,6 @@ console.log($1)
 	<!-- <tabTrigger>hello</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
-	<tabTrigger>clog</tabTrigger>
-	<scope>source.js source.jsx</scope>
+	<tabTrigger>cout</tabTrigger>
+	<scope>source.jsx meta.function.js meta.block.js meta.function-call.js meta.group.js meta.function.js meta.block.js meta.function-call.method.js meta.group.js meta.function.js meta.block.js</scope>
 </snippet>
