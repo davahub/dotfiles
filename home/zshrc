@@ -20,14 +20,16 @@ alias ssctl="sudo systemctl"
 alias sleaf="sudo leafpad"
 alias leaf="leafpad"
 alias wifi="iwctl"
-alias wifiscan="iwctl station wlan0 scan"
-alias wifinetwork="iwctl station wlan0 get-networks"
-alias wificonnect="iwctl station wlan0 connect \"Lerp Hyperoptic 1Gb Fibre 5Ghz\""
-alias wifiinfo="iwctl station wlan0 show"
+alias wifiscan="iwctl station wlan2 scan"
+alias wifinetwork="iwctl station wlan2 get-networks"
+alias wificonnect5="iwctl station wlan2 connect \"Lerp Hyperoptic 1Gb Fibre 5Ghz\""
+alias wificonnect2="iwctl station wlan2 connect \"Lerp Hyperoptic 1Gb Fibre 2.4Ghz\""
+alias wifiinfo="iwctl station wlan2 show"
 alias k="killall"
 alias setwallpaper="feh --bg-scale /home/dava/.3installed/wallpaper/w.jpg"
 alias sshhome="ssh-add $HOME/.ssh/id_rsa && ssh-add -l"
 alias sshwork="ssh-add $HOME/.ssh/id_rsa_work && ssh-add -l"
+alias py="python"
 
 
 #---------------------------------------------
@@ -90,6 +92,7 @@ alias gadd.="git add ."
 gadd() { git-number add "$1";}
 gunstage() { git-number reset HEAD "$1"; }
 guntrack() { git-number rm --cached "$1"; }
+guntrackf() { git-number rm -r --cached "$1"; }
 grevert() { git-number checkout "$1"; }
 alias glast="git log -1 HEAD"
 alias gpl="git pull --rebase --autostash"

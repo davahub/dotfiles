@@ -9,7 +9,5 @@ $1
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
 	<tabTrigger>mdsh</tabTrigger>
-	<scope>text.html.markdown</scope>
-	<scope>text.html.markdown.multimarkdo</scope>
 	<scope>text.plain</scope>
 </snippet>

@@ -50,7 +50,7 @@ sleep 1s
 amor &
 
 sleep 1s
-redshift &
+redshift-gtk &
 
 sleep 1s
 parcellite -d &

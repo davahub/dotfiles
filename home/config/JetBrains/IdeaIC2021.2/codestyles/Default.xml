@@ -1,1 +1,10 @@
-<code_scheme name="Default" version="173" />
+<code_scheme name="Default" version="173">
+  <editorconfig>
+    <option name="ENABLED" value="false" />
+  </editorconfig>
+  <codeStyleSettings language="JAVA">
+    <option name="SPACE_AROUND_EQUALITY_OPERATORS" value="false" />
+    <option name="SPACE_BEFORE_COLON" value="false" />
+    <option name="SPACE_AFTER_COLON" value="false" />
+  </codeStyleSettings>
+</code_scheme>

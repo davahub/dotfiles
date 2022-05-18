@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Version=1.1
+Name=Eclipse IDE for Enterprise Java and Web Developers - 2022-03
+Exec=/home/dava/.3installed/eclipse-latest/jee-2022-03/eclipse/eclipse
+Categories=Eclipse
+Icon=/home/dava/.3installed/eclipse-latest/jee-2022-03/eclipse/icon.xpm
