@@ -60,6 +60,9 @@ keyboard-reset &
 sleep 1s
 conky &
 
+#sleep 1s
+#discord &
+
 
 #--------------------------------------------------------
 #-- NOT ENABLED
