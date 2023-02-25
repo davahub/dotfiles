@@ -213,6 +213,7 @@
 		"unreceptive",
 		"Parcellite",
 		"crypto",
+		"Laggy",
 	],
 	"color_scheme": "Mariana.sublime-color-scheme",
 	"font_face": "Inconsolata",
@@ -223,7 +224,6 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"Markdown",
 		"Markdown Extended",
 		"Mediawiker",
 		"SublimeREPL",

@@ -60,8 +60,13 @@ keyboard-reset &
 sleep 1s
 conky &
 
+sleep 1s
+xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" 0 & 
+
 #sleep 1s
 #discord &
+
+
 
 
 #--------------------------------------------------------

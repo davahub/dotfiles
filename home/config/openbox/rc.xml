@@ -316,6 +316,9 @@
     <keybind key="W-w">
       <action name="Close"/>
     </keybind>
+    <keybind key="A-w">
+      <action name="Close"/>
+    </keybind>
     <keybind key="C-W-Down">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
@@ -432,6 +435,8 @@
         <direction>down</direction>
       </action>
     </keybind>
+
+
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- ~~ EXECUTE -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -596,7 +601,7 @@
     </keybind>
     <keybind key="A-F1">
       <action name="Execute">
-        <command>google-chrome-unstable</command>
+        <command>google-chrome-stable</command>
       </action>
     </keybind>
     <keybind key="W-n">
