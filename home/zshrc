@@ -323,6 +323,14 @@ export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$ru
 
 
 #---------------------------------------------
+#-- Applications
+#---------------------------------------------
+snapbin='/var/lib/snapd/snap/bin'
+export PATH="${PATH}:$snapbin"
+
+
+
+#---------------------------------------------
 #-- OTHERS
 #---------------------------------------------
 cat ~/.welcome-msg

@@ -1,0 +1,22 @@
+
+# "xbindkeys_show" 
+#   control+shift + q
+
+
+# "xsel -p | xsel -i -b"
+#     alt + c
+
+
+# "xdotool sleep 0.150 key ctrl+v"
+#     alt + v
+
+
+# "xdotool sleep 0.150 key --clearmodifiers ctrl-v"
+#     alt + v
+
+
+"xdotool sleep 0.200 type -- $(printf '=%.0s' {1..70})"
+    control + minus
+
+
+

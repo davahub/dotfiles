@@ -61,7 +61,9 @@ sleep 1s
 conky &
 
 sleep 1s
-xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" 0 & 
+xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -0.9 & 
+xset mouse 3 6 & 
+
 
 #sleep 1s
 #discord &

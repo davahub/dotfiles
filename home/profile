@@ -20,6 +20,14 @@ export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$ru
 :$myfileChrome:$myfileSublime"
 
 
+#---------------------------------------------
+#-- Applications
+#---------------------------------------------
+snapbin='/var/lib/snapd/snap/bin'
+export PATH="${PATH}:$snapbin"
+
+
+
 #--------------------------------------------------------
 # OTHERS
 #--------------------------------------------------------
