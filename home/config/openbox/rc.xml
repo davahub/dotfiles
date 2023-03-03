@@ -583,7 +583,7 @@
         <command>shortcuts</command>
       </action>
     </keybind>
-    <keybind key="F1">
+    <keybind key="W-KP_0">
       <action name="Execute">
         <command>focusChrome</command>
       </action>
@@ -614,7 +614,7 @@
         <command>web</command>
       </action>
     </keybind>
-    <keybind key="grave">
+    <keybind key="F1">
       <action name="Execute">
         <command>toggleTerm</command>
       </action>
