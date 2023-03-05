@@ -533,12 +533,12 @@
     </keybind>
     <keybind key="Pause">
       <action name="Execute">
-        <command>playerctl stop</command>
+        <command>playerctl play-pause</command>
       </action>
     </keybind>
     <keybind key="W-Pause">
       <action name="Execute">
-        <command>playerctl play-pause</command>
+        <command>playerctl stop</command>
       </action>
     </keybind>
     <keybind key="XF86AudioPlay">
@@ -615,6 +615,11 @@
       </action>
     </keybind>
     <keybind key="F1">
+      <action name="Execute">
+        <command>toggleTerm</command>
+      </action>
+    </keybind>
+    <keybind key="A-grave">
       <action name="Execute">
         <command>toggleTerm</command>
       </action>

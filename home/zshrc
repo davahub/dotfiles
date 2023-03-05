@@ -27,9 +27,25 @@ alias wificonnect2="iwctl station wlan2 connect \"Lerp Hyperoptic 1Gb Fibre 2.4G
 alias wifiinfo="iwctl station wlan2 show"
 alias k="killall"
 alias setwallpaper="feh --bg-scale /home/dava/.3installed/wallpaper/w.jpg"
+
+alias py="python"
+
+
+#---------------------------------------------
+#-- Applications
+#---------------------------------------------
+
+#-- SSH
 alias sshhome="ssh-add $HOME/.ssh/id_rsa && ssh-add -l"
 alias sshwork="ssh-add $HOME/.ssh/id_rsa_work && ssh-add -l"
-alias py="python"
+alias sshfs="ssh-add $HOME/.ssh/id_rsa_fs && ssh-add -l"
+
+alias sshall='
+ssh-add $HOME/.ssh/id_rsa && ssh-add -l
+ssh-add $HOME/.ssh/id_rsa_work && ssh-add -l
+ssh-add $HOME/.ssh/id_rsa_fs && ssh-add -l
+'
+
 
 
 #---------------------------------------------
