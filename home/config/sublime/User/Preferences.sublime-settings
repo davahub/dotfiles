@@ -214,6 +214,15 @@
 		"Parcellite",
 		"crypto",
 		"Laggy",
+		"transpile",
+		"transpiles",
+		"Readonly",
+		"readonly",
+		"const",
+		"destructuring",
+		"params",
+		"tcp",
+		"udp",
 	],
 	"color_scheme": "Mariana.sublime-color-scheme",
 	"font_face": "Inconsolata",
@@ -231,8 +240,10 @@
 	],
 	"ignored_words":
 	[
-		"Servlets"
+		"Params",
+		"Servlets",
 	],
+	
 	"remember_open_files": true,
 	"save_on_focus_lost": true,
 	"scroll_speed": 0,
@@ -243,5 +254,6 @@
 	"rulers": [100],
 	"auto_complete": true,
 	// "tab_completion": false,
+	"preview_on_click": false,
 	"update_check": false,
 }

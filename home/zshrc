@@ -8,7 +8,9 @@
 
 alias ls='ls --color=auto'
 alias ll="ls -la"
+alias l="ls --color=auto"
 his() { fc -Dlim "*$@*" 1 }
+myip() { curl ifconfig.me; echo ""  }
 alias src="source ~/.zshrc"
 alias sudb="sudo updatedb"
 alias supd="sudo updatedb"
@@ -36,15 +38,30 @@ alias py="python"
 #---------------------------------------------
 
 #-- SSH
+alias sshshow="subl $HOME/.ssh/config"
 alias sshhome="ssh-add $HOME/.ssh/id_rsa && ssh-add -l"
 alias sshwork="ssh-add $HOME/.ssh/id_rsa_work && ssh-add -l"
 alias sshfs="ssh-add $HOME/.ssh/id_rsa_fs && ssh-add -l"
-
 alias sshall='
 ssh-add $HOME/.ssh/id_rsa && ssh-add -l
 ssh-add $HOME/.ssh/id_rsa_work && ssh-add -l
 ssh-add $HOME/.ssh/id_rsa_fs && ssh-add -l
 '
+
+#-- Docker
+alias dimgs="docker images"
+alias dimgrm="docker image rm"
+alias drm="docker rm"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias dstart="docker start"
+alias dstop="docker stop"
+
+
+
+
+
+
 
 
 
@@ -92,6 +109,7 @@ alias gs="git-number"
 alias gcm="git commit -m"
 alias gcma="git commit -am"
 alias gaddcm="git add . && git commit -m"
+grm() { git-number remove "$1"; }
 
 #-- LOG
 alias glog="git log -n 10 --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
@@ -140,6 +158,8 @@ alias gstashls="git stash list"
 alias gstashapply="git stash apply "
 alias gstashdrop="git stash drop "
 alias gstashrm="git stash drop "
+gstashf() { git-number stash push -m "$1" "$2"; }
+gstashfile() { git-number stash push -m "$1" "$2"; }
 
 #-- PUSH
 alias gps="git push"

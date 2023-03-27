@@ -1,4 +1,12 @@
 // Settings in here override those in "LSP/LSP.sublime-settings"
+// "box", "underline", "stippled", "squiggly" or ""
 {
-	"show_multiline_diagnostics_highlights": false
+	"show_multiline_diagnostics_highlights": false,
+
+	"diagnostics_highlight_style": {
+	    "error": "stippled",
+	    "warning": "stippled",
+	    "info": "stippled",
+	    "hint": "stippled"
+	},
 }

@@ -26,6 +26,18 @@
 
 
 	//---------------------------------------------
+	//-- Vintage
+	//---------------------------------------------
+	{ "keys": ["alt+j"], "command": "exit_insert_mode",
+    	"context":
+    	[
+        	{ "key": "setting.command_mode", "operand": false },
+        	{ "key": "setting.is_widget", "operand": false }
+    	]
+	},
+
+
+	//---------------------------------------------
 	//-- EDIT
 	//---------------------------------------------
 	// Emacs like tab
@@ -60,8 +72,8 @@
 	// focus file in sidebar
 	{ "keys": ["f4"], "command": "focus_file_on_sidebar" },
 	//-- Switch tabs
-	{ "keys": ["ctrl+alt+2"], "command": "next_view" },	
-	{ "keys": ["ctrl+alt+1"], "command": "prev_view" },
+	{ "keys": ["alt+2"], "command": "next_view" },	
+	{ "keys": ["alt+1"], "command": "prev_view" },
 	{ "keys": ["alt+up"], "command": "next_view" },	
 	{ "keys": ["alt+down"], "command": "prev_view" },
 	// Bookmark

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+```typescript
+$1
+```
+]]></content>
+	<tabTrigger>mdts</tabTrigger>
+	<scope>text.html.markdown</scope>
+	<scope>text.html.markdown.multimarkdo</scope>
+	<scope>text.plain</scope>
+</snippet>

@@ -385,6 +385,9 @@
     <keybind key="C-W-KP_0">
       <action name="ToggleMaximize"/>
     </keybind>
+    <keybind key="C-W-Return">
+      <action name="ToggleMaximize"/>
+    </keybind>
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>
