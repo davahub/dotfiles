@@ -38,7 +38,7 @@ numlockx &
 
 xset -dpms; xset s off; xset -b &
 
-xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -0.95 & 
+xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -1 & 
 xset mouse 3 6 & 
 xbindkeys &
 
@@ -56,21 +56,13 @@ amor &
 sleep 1s
 redshift-gtk &
 
-sleep 1s
-parcellite -d &
-
 keyboard-reset &
 
 sleep 1s
 conky &
 
 sleep 1s
-xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -0.9 & 
-xset mouse 3 6 & 
-
-
-#sleep 1s
-#discord &
+parcellite -d &
 
 
 
@@ -78,6 +70,9 @@ xset mouse 3 6 &
 #--------------------------------------------------------
 #-- NOT ENABLED
 #--------------------------------------------------------
+#sleep 1s
+#discord &
+
 #opensnap -d &
 #sleep 1s
 #guake &

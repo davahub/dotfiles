@@ -58,7 +58,8 @@ alias dstart="docker start"
 alias dstop="docker stop"
 
 
-
+#-- Python
+alias puns="pip uninstall"
 
 
 

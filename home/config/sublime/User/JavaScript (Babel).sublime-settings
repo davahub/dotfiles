@@ -3,5 +3,6 @@
 	[
 		"js"
 	],
+	"spell_check": false,
 	"tab_size": 4
 }

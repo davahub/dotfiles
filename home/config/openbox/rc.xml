@@ -1214,13 +1214,13 @@
         <y>center</y>
       </position>
     </application>
-    <application class="Diffmerge" type="normal">
+    <!-- <application class="Diffmerge" type="normal">
       <maximized>true</maximized>
       <position force="yes">
         <x>center</x>
         <y>center</y>
       </position>
-    </application>
+    </application> -->
     <application class="Gmrun" type="normal">
       <position force="yes">
         <x>center</x>
