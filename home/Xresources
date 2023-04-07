@@ -18,9 +18,9 @@ URxvt.letterSpace		: -1
 URxvt.lineSpace 		: 0
 
 !! true transparency for native enable transparency, 95 is opacity level
-URxvt.depth: 75
+URxvt.depth: 60
 !URxvt.background: [75]#000000
-URxvt.background: [75]#1a1b26
+URxvt.background: [60]#1a1b26
 
 
 !! ---------------------------------------------
