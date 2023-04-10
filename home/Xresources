@@ -71,10 +71,9 @@ URxvt.urlButton: 1
 !! -- URxvt Color
 !! ---------------------------------------------
 ! special
-!*.foreground: #93a1a1
 *.foreground: #C7C7C7
-!*.background: #141c21
 *.cursorColor: #afbfbf
+urxvt*background:       #212629
 
 ! black
 *.color0: #263640

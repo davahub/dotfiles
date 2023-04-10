@@ -96,6 +96,7 @@
 	{ "keys": ["ctrl+l"], "command": "move", "args": {"by": "characters", "forward": true} },
 	{ "keys": ["ctrl+alt+l"], "command": "show_at_center" },
 	{ "keys": ["alt+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["ctrl+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
 	{ "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 6.0 } },
 	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
 	{ "keys": ["ctrl+,"], "command": "move_to", "args": {"to": "bof", "extend": false} },
@@ -110,7 +111,7 @@
 	//-- MACROS
 	//---------------------------------------------
 	{"keys": ["alt+n"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
-	{"keys": ["ctrl+h"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
+	{"keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
 	{"keys": ["alt+p"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
 	{"keys": ["ctrl+l"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
 	{"keys": ["ctrl+alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}},
