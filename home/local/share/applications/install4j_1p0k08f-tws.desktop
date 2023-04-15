@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Name=Trader Workstation
+Exec="/home/dava/installs/IB-new/tws/tws" %U
+Icon=/home/dava/installs/IB-new/tws/.install4j/tws.png
+Categories=Application;
+StartupWMClass=install4j-jclient-Launcher
