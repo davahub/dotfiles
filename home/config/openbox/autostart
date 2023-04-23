@@ -38,7 +38,7 @@ numlockx &
 
 xset -dpms; xset s off; xset -b &
 
-xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -1 & 
+xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -0.9 & 
 xset mouse 3 6 & 
 xbindkeys &
 
@@ -60,7 +60,7 @@ sleep 1s
 conky &
 
 sleep 1s
-lxpanel &
+tint2 &
 
 sleep 1s
 parcellite -d &
@@ -78,6 +78,6 @@ parcellite -d &
 #sleep 1s
 #guake &
 # cairo-dock &
-# tint2 &
-
+sleep 1s
+lxpanel &
 

@@ -45,7 +45,8 @@
 	// { "keys": ["tab"], "command": "reindent" },
 	//-- Deletion
 	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
-	{ "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true } },
+	// { "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true } },
+	{ "keys": ["alt+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 	{ "keys": ["alt+x"], "command": "right_delete" },
 	{ "keys": ["ctrl+;"], "command": "delete_word", "args": { "forward": false } },
 	{ "keys": ["alt+;"], "command": "left_delete" },

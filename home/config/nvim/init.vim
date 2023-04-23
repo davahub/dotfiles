@@ -27,10 +27,6 @@ call plug#begin('~/.vim/plugged')
  Plug 'mangeshrex/uwu.vim'
 call plug#end()
 
-"-------------------------------------------------------
-"-- Main
-"-------------------------------------------------------
-let g:python3_host_prog = '/usr/bin/python3'
 
 "-------------------------------------------------------
 "-- Markdown
@@ -127,6 +123,10 @@ inoremap <C-q> <Esc>:call MySingleComment()<CR>
 nnoremap <A-q> :call MySingleComment()<CR>
 vnoremap <A-q> :call MySingleComment()<CR>
 inoremap <A-q> <Esc>:call MySingleComment()<CR>
+nnoremap <A-e> :call MySingleComment()<CR>
+vnoremap <A-e> :call MySingleComment()<CR>
+inoremap <A-e> <Esc>:call MySingleComment()<CR>
+
 
 
 "-------------------------------------------------------
@@ -184,72 +184,37 @@ command Lsession :call LoadSession()
 "-- Shortcuts
 "-------------------------------------------------------
 
-" nnoremap tt :Toc<CR> :vertical resize 40<CR> 
-
-nnoremap <C-z> u
-inoremap <A-z> <Esc>u
-
-vnoremap <A-f> <Esc>w i
-inoremap <A-f> <Esc>w i
-
-vnoremap <A-l> <Esc>l
-inoremap <A-h> <Esc>h
-
+"-- Main
+nnoremap <F3> :set hlsearch!<CR> " toggle highlight search
+" esc replacement 
+inoremap <S-space> <Esc>
+vnoremap <S-space> <Esc>
+inoremap <A-j> <Esc>
+vnoremap <A-j> <Esc>
 nnoremap <space> i 
-
 nnoremap<C-;> bdw
 inoremap <C-;> <Esc>bdw
-
 nnoremap<CR> o<Esc>
-
-vnoremap <C-c> y
-inoremap <C-c> <Esc>y
-
-nnoremap <C-v> p
-vnoremap <C-v> <Esc>p
-inoremap <C-v> <Esc>p
-
 nnoremap <C-d> dd
 vnoremap <C-d> <Esc>dd i
 inoremap <C-d> <Esc>dd i
-
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>
-vnoremap <C-s> <Esc>:w<CR>
-
-nnoremap <A-2> :tabnext<CR>
-nnoremap <A-1> :tabprevious<CR>
-
-nnoremap <S-t> :tabnew<CR> 
-
-nnoremap tr :NERDTree %<CR> 
-
-nnoremap <C-j> 6<C-e>
-nnoremap <C-k> 6<C-y>
-nnoremap <A-j> 6j
-nnoremap <A-k> 6k
-
-nnoremap <C-l> zt 8<C-y>
-nnoremap <A-m> zt 8<C-y>
-nnoremap mm zt 8<C-y>
-
+nnoremap <A-d> dd
+vnoremap <A-d> <Esc>dd i
+inoremap <A-d> <Esc>dd i
 nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
-
+" movement
+nnoremap <C-j> 6<C-e>
+nnoremap <C-u> 6<C-y>
+nnoremap <C-k> 6j
+nnoremap <C-l> 6k
 nnoremap <C-e> A
 inoremap <C-e> <Esc>A
 vnoremap <C-e> <Esc>A
-
-
-" move between panes to left/bottom/top/right
-nnoremap <S-h> <C-w>h
-nnoremap <S-j> <C-w>j
-nnoremap <S-k> <C-w>k
-nnoremap <S-l> <C-w>l
-
-" shift+space for esc for space
-:inoremap <S-space> <Esc>
-:vnoremap <S-space> <Esc>
-
+inoremap <A-z> <Esc>u
+vnoremap <A-f> <Esc>w i
+inoremap <A-f> <Esc>w i
+vnoremap <A-l> <Esc>l
+inoremap <A-h> <Esc>h
 " parenthesis brackets completion
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
@@ -258,6 +223,37 @@ inoremap [ []<Esc>i
 inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
+" copy paste undo
+vnoremap <C-c> y
+inoremap <C-c> <Esc>y
+nnoremap <C-v> p
+vnoremap <C-v> <Esc>p
+inoremap <C-v> <Esc>p
+nnoremap <C-z> u
+" tab movement
+nnoremap <A-2> :tabnext<CR>
+nnoremap <A-1> :tabprevious<CR>
+nnoremap <S-t> :tabnew<CR> 
+
+
+
+
+"-- Others
+" nnoremap tt :Toc<CR> :vertical resize 40<CR> 
+" nnoremap <C-l> zt 8<C-y>
+
+" move between panes to left/bottom/top/right
+nnoremap <S-h> <C-w>h
+nnoremap <S-j> <C-w>j
+nnoremap <S-k> <C-w>k
+nnoremap <S-l> <C-w>l
+
+nnoremap tr :NERDTree %<CR> 
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+vnoremap <C-s> <Esc>:w<CR>
+nnoremap <A-m> zt 8<C-y>
+nnoremap mm zt 8<C-y>
 
 
 "-------------------------------------------------------
@@ -273,6 +269,7 @@ let g:prettier#exec_cmd_path = "/home/dava/.nvm/versions/node/v17.1.0/bin/pretti
 "-------------------------------------------------------
 "-- Main
 "-------------------------------------------------------
+let g:python3_host_prog = '/usr/bin/python3'
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
@@ -287,6 +284,8 @@ set autoindent              " indent a new line the same amount as the line just
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=100                  " set an 80 column border for good coding style
+set nobackup
+
 
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
