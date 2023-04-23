@@ -27,7 +27,10 @@ call plug#begin('~/.vim/plugged')
  Plug 'mangeshrex/uwu.vim'
 call plug#end()
 
-
+"-------------------------------------------------------
+"-- Main
+"-------------------------------------------------------
+let g:python3_host_prog = '/usr/bin/python3'
 
 "-------------------------------------------------------
 "-- Markdown
