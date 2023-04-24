@@ -78,6 +78,6 @@ parcellite -d &
 #sleep 1s
 #guake &
 # cairo-dock &
-sleep 1s
-lxpanel &
+#sleep 1s
+#lxpanel &
 
