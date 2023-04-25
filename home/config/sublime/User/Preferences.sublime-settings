@@ -246,7 +246,7 @@
 	"remember_open_files": true,
 	"save_on_focus_lost": true,
 	"scroll_speed": 0,
-	"spell_check": true,
+	"spell_check": false,
 	"tab_completion": true,
 	"tab_size": 4,
 	"theme": "Default Dark.sublime-theme",
