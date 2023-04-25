@@ -191,6 +191,7 @@ inoremap <S-space> <Esc>
 vnoremap <S-space> <Esc>
 inoremap <A-j> <Esc>
 vnoremap <A-j> <Esc>
+nnoremap <A-j> <Esc>
 nnoremap <space> i 
 nnoremap<C-;> bdw
 inoremap <C-;> <Esc>bdw
