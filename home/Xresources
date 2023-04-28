@@ -10,17 +10,17 @@ URxvt.saveLines			: 5000
 !! ---------------------------------------------
 !! -- Font
 !! ---------------------------------------------
-URxvt.font           	: xft:terminus:size=18
-URxvt.boldFont          : xft:terminus:size=18 
-URxvt.italicFont 		: xft:terminus:size=18 
-URxvt.boldItalicfont 	: xft:terminus:size=18 
+URxvt.font           	: xft:terminus:size=22
+URxvt.boldFont          : xft:terminus:size=22 
+URxvt.italicFont 		: xft:terminus:size=22 
+URxvt.boldItalicfont 	: xft:terminus:size=22 
 URxvt.letterSpace		: -1
 URxvt.lineSpace 		: 0
 
 !! true transparency for native enable transparency, 95 is opacity level
-URxvt.depth: 60
+URxvt.depth: 80
 !URxvt.background: [75]#000000
-URxvt.background: [60]#1a1b26
+URxvt.background: [30]#1a1b26
 
 
 !! ---------------------------------------------
@@ -31,7 +31,7 @@ URxvt.scrollBar      	: false
 URxvt.scrollBar_right	: false
 URxvt.internalBorder 	: 12
 URxvt.geometry       	: 92x42
-URxvt.transparent		: false
+URxvt.transparent		: true
 
 !! rxvt, plain, next, or xterm
 URxvt.scrollstyle		: plain
@@ -73,7 +73,7 @@ URxvt.urlButton: 1
 ! special
 *.foreground: #C7C7C7
 *.cursorColor: #afbfbf
-urxvt*background:       #212629
+urxvt*background:       [80]#212629
 
 ! black
 *.color0: #263640

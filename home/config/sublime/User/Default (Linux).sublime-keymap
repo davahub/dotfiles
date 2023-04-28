@@ -89,6 +89,7 @@
 	//-- NAVIGATION MOVEMENT
 	//---------------------------------------------
 	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	{ "keys": ["alt+l"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 	{ "keys": ["alt+b"], "command": "move", "args": {"by": "words", "forward": false} },
 	{ "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
 	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
@@ -102,7 +103,7 @@
 	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
 	{ "keys": ["ctrl+,"], "command": "move_to", "args": {"to": "bof", "extend": false} },
 	{ "keys": ["ctrl+."], "command": "move_to", "args": {"to": "eof", "extend": false} },
-	{ "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
+	// { "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
 
 	{ "keys": ["alt+up"], "command": "select_lines", "args": {"forward": false} },
 	{ "keys": ["alt+down"], "command": "select_lines", "args": {"forward": true} },

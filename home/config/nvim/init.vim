@@ -29,6 +29,98 @@ call plug#end()
 
 
 "-------------------------------------------------------
+"-- Shortcuts
+"-------------------------------------------------------
+
+"-- Main
+nnoremap <F3> :set hlsearch!<CR> " toggle highlight search
+" esc replacement 
+inoremap <S-space> <Esc>
+vnoremap <S-space> <Esc>
+inoremap <A-j> <Esc>
+vnoremap <A-j> <Esc>
+nnoremap <A-j> <Esc>
+nnoremap <space> i 
+nnoremap<C-;> bdw
+inoremap <C-;> <Esc>bdw
+nnoremap<CR> o<Esc>
+nnoremap <C-d> dd
+vnoremap <C-d> <Esc>dd i
+inoremap <C-d> <Esc>dd i
+nnoremap <A-d> dd
+vnoremap <A-d> <Esc>dd i
+inoremap <A-d> <Esc>dd i
+nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
+
+" movement ----------------------------
+nnoremap <C-j> 6<C-e>
+nnoremap <C-u> 6<C-y>
+
+inoremap <C-k> 6j
+nnoremap <C-k> 6j
+inoremap <C-l> 6k 
+nnoremap <C-l> 6k
+
+nnoremap <C-e> A
+inoremap <C-e> <Esc>A
+vnoremap <C-e> <Esc>A
+inoremap <A-z> <Esc>u
+vnoremap <A-f> <Esc>w i
+inoremap <A-f> <Esc>w i
+vnoremap <A-l> <Esc>l
+inoremap <A-h> <Esc>h
+
+inoremap <A-h> <Esc>0
+vnoremap <A-h> <Esc>0
+nnoremap <A-h> <Esc>0
+
+inoremap <A-l> <Esc>$
+vnoremap <A-l> $
+nnoremap <A-l> <Esc>$
+" -------------------------------------
+
+
+" parenthesis brackets completion
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+" copy paste undo
+vnoremap <C-c> y
+inoremap <C-c> <Esc>y
+nnoremap <C-v> p
+vnoremap <C-v> <Esc>p
+inoremap <C-v> <Esc>p
+nnoremap <C-z> u
+" tab movement
+nnoremap <A-2> :tabnext<CR>
+nnoremap <A-1> :tabprevious<CR>
+nnoremap <S-t> :tabnew<CR> 
+
+
+"-- Others
+" nnoremap tt :Toc<CR> :vertical resize 40<CR> 
+" nnoremap <C-l> zt 8<C-y>
+
+" move between panes to left/bottom/top/right
+nnoremap <S-h> <C-w>h
+nnoremap <S-j> <C-w>j
+nnoremap <S-k> <C-w>k
+nnoremap <S-l> <C-w>l
+
+nnoremap tr :NERDTree %<CR> 
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+vnoremap <C-s> <Esc>:w<CR>
+nnoremap <A-m> zt 8<C-y>
+nnoremap mm zt 8<C-y>
+
+
+
+"-------------------------------------------------------
 "-- Markdown
 "-------------------------------------------------------
 
@@ -180,81 +272,7 @@ command Ssession :call SaveSession()
 command Lsession :call LoadSession()
 
 
-"-------------------------------------------------------
-"-- Shortcuts
-"-------------------------------------------------------
 
-"-- Main
-nnoremap <F3> :set hlsearch!<CR> " toggle highlight search
-" esc replacement 
-inoremap <S-space> <Esc>
-vnoremap <S-space> <Esc>
-inoremap <A-j> <Esc>
-vnoremap <A-j> <Esc>
-nnoremap <A-j> <Esc>
-nnoremap <space> i 
-nnoremap<C-;> bdw
-inoremap <C-;> <Esc>bdw
-nnoremap<CR> o<Esc>
-nnoremap <C-d> dd
-vnoremap <C-d> <Esc>dd i
-inoremap <C-d> <Esc>dd i
-nnoremap <A-d> dd
-vnoremap <A-d> <Esc>dd i
-inoremap <A-d> <Esc>dd i
-nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
-" movement
-nnoremap <C-j> 6<C-e>
-nnoremap <C-u> 6<C-y>
-nnoremap <C-k> 6j
-nnoremap <C-l> 6k
-nnoremap <C-e> A
-inoremap <C-e> <Esc>A
-vnoremap <C-e> <Esc>A
-inoremap <A-z> <Esc>u
-vnoremap <A-f> <Esc>w i
-inoremap <A-f> <Esc>w i
-vnoremap <A-l> <Esc>l
-inoremap <A-h> <Esc>h
-" parenthesis brackets completion
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap {<CR> {<CR>}<Esc>O
-inoremap [ []<Esc>i
-inoremap < <><Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
-" copy paste undo
-vnoremap <C-c> y
-inoremap <C-c> <Esc>y
-nnoremap <C-v> p
-vnoremap <C-v> <Esc>p
-inoremap <C-v> <Esc>p
-nnoremap <C-z> u
-" tab movement
-nnoremap <A-2> :tabnext<CR>
-nnoremap <A-1> :tabprevious<CR>
-nnoremap <S-t> :tabnew<CR> 
-
-
-
-
-"-- Others
-" nnoremap tt :Toc<CR> :vertical resize 40<CR> 
-" nnoremap <C-l> zt 8<C-y>
-
-" move between panes to left/bottom/top/right
-nnoremap <S-h> <C-w>h
-nnoremap <S-j> <C-w>j
-nnoremap <S-k> <C-w>k
-nnoremap <S-l> <C-w>l
-
-nnoremap tr :NERDTree %<CR> 
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>
-vnoremap <C-s> <Esc>:w<CR>
-nnoremap <A-m> zt 8<C-y>
-nnoremap mm zt 8<C-y>
 
 
 "-------------------------------------------------------
@@ -293,7 +311,7 @@ syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
-set cursorline              " highlight current cursorline
+" set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file

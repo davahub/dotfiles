@@ -345,7 +345,8 @@
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
-        <width>960</width>
+        <!-- <width>960</width> -->
+        <width>1280</width>
         <height>100%</height>
       </action>
       <action name="MoveToEdge">
@@ -356,9 +357,11 @@
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
-        <x>960</x>
+        <!-- <x>960</x> -->
+        <x>1280</x>
         <y>0</y>
-        <width>960</width>
+        <!-- <width>960</width> -->
+        <width>1280</width>
         <height>100%</height>
       </action>
       <action name="MoveToEdgeEast"/>
@@ -1247,6 +1250,19 @@
       <desktop>6</desktop>
     </application>
     <application class="URxvt" type="normal">
+      <maximized>Vertical</maximized>
+      <position force="yes">
+        <x>-1</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="Galculator" type="normal">
+      <position force="yes">
+        <x>-1</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="nvim-qt" type="normal">
       <maximized>Vertical</maximized>
       <position force="yes">
         <x>-1</x>
