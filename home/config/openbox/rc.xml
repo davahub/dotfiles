@@ -1247,7 +1247,7 @@
         <x>-1</x>
         <y>center</y>
       </position>
-      <desktop>6</desktop>
+      <desktop>all</desktop>
     </application>
     <application class="URxvt" type="normal">
       <maximized>Vertical</maximized>

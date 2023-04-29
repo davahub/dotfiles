@@ -36,6 +36,20 @@
         	{ "key": "setting.is_widget", "operand": false }
     	]
 	},
+	{ "keys": ["alt+j"], "command": "exit_visual_mode",
+		"context":
+		[
+			{ "key": "setting.command_mode"},
+			{ "key": "num_selections", "operand": 1},
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+		]
+	},
+	{ "keys": ["alt+l"], "command": "set_motion", "args": {
+        "motion": "vi_move_to_hard_eol",
+        "motion_args": {"repeat": 1, "extend": true},
+        "inclusive": true },
+        "context": [{"key": "setting.command_mode"}]
+    },
 
 
 	//---------------------------------------------
@@ -89,7 +103,7 @@
 	//-- NAVIGATION MOVEMENT
 	//---------------------------------------------
 	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
-	{ "keys": ["alt+l"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	// { "keys": ["alt+l"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 	{ "keys": ["alt+b"], "command": "move", "args": {"by": "words", "forward": false} },
 	{ "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
 	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
