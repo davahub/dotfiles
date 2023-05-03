@@ -1245,9 +1245,9 @@
     <application class="Audacious" type="normal">
       <position force="yes">
         <x>-1</x>
-        <y>center</y>
+        <y>top</y>
       </position>
-      <desktop>all</desktop>
+      <desktop>6</desktop>
     </application>
     <application class="URxvt" type="normal">
       <maximized>Vertical</maximized>

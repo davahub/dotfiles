@@ -63,7 +63,7 @@ sleep 1s
 tint2 &
 
 sleep 1s
-parcellite -d &
+parcellite &
 
 
 

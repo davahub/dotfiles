@@ -7,7 +7,7 @@
 	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
 	{ "keys": ["alt+shift+d"], "command": "duplicate_line" },
 	{ "keys": ["alt+down"], "command": "duplicate_line" },
-	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["ctrl+alt+i"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 	{ "keys": ["ctrl+t"], "command": "new_file" },
 	{ "keys": ["ctrl+alt+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 	{ "keys": ["ctrl+alt+y"], "command": "htmlprettify" },
@@ -19,10 +19,6 @@
 	  "args": { "immediate": true, "single_pane": true, "other_group": "left", "project": true}
 	},
 	{ "keys": ["ctrl+q"], "command": "build" },
-
-	//---------------------------------------------
-	//-- BUILD
-	//---------------------------------------------
 	{ "keys": ["f5"], "command": "build" },
 
 
@@ -44,12 +40,58 @@
 			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
 		]
 	},
+	{ "keys": ["alt+j"], "command": "vi_cancel_current_action", "context":
+		[
+			{ "key": "setting.command_mode" },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+			{ "key": "vi_has_input_state" }
+		]
+	},
+	{ "keys": ["alt+j"], "command": "hide_auto_complete", "context":
+		[
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
+
 	{ "keys": ["alt+l"], "command": "set_motion", "args": {
         "motion": "vi_move_to_hard_eol",
         "motion_args": {"repeat": 1, "extend": true},
         "inclusive": true },
         "context": [{"key": "setting.command_mode"}]
     },
+    { "keys": ["alt+i"], "command": "enter_insert_mode", "args":
+		{"insert_command": "move_to", "insert_args": {"to": "hardeol"} },
+		"context": [{"key": "setting.command_mode"}]
+	},
+	{ "keys": ["ctrl+i"], "command" : "center_on_cursor",
+		"context": [{"key": "setting.command_mode"}] 
+	},
+	{ "keys": ["enter"], "command": "enter_insert_mode",
+	  "context":
+	  [
+			{"key": "setting.command_mode"},
+			{"key": "selection_empty"}
+	  ]
+	},
+	{ "keys": ["alt+h"], "command": "set_motion", "args": {
+		"motion": "move_to",
+		"motion_args": {"to": "hardbol", "extend": true }},
+		"context":
+		[
+			{"key": "setting.command_mode"},
+			{"key": "vi_has_repeat_digit", "operand": false}
+		]
+	},
+	{ "keys": ["alt+h"], "command": "set_motion", "args": {
+		"motion": "move_to",
+		"motion_args": {"to": "hardbol", "extend": true }},
+		"context":
+		[
+			{"key": "setting.command_mode"},
+			{"key": "vi_has_repeat_digit", "operand": false}
+		]
+	},
 
 
 	//---------------------------------------------
@@ -102,23 +144,23 @@
 	//---------------------------------------------
 	//-- NAVIGATION MOVEMENT
 	//---------------------------------------------
-	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
-	// { "keys": ["alt+l"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 	{ "keys": ["alt+b"], "command": "move", "args": {"by": "words", "forward": false} },
 	{ "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
 	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
 	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true} },
 	{ "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false} },
-	{ "keys": ["ctrl+l"], "command": "move", "args": {"by": "characters", "forward": true} },
+	// move to end of line
+	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 	{ "keys": ["ctrl+alt+l"], "command": "show_at_center" },
-	{ "keys": ["alt+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	// move to beggining of line
 	{ "keys": ["ctrl+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	// { "keys": ["alt+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	// scroll lines
 	{ "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 6.0 } },
 	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
 	{ "keys": ["ctrl+,"], "command": "move_to", "args": {"to": "bof", "extend": false} },
 	{ "keys": ["ctrl+."], "command": "move_to", "args": {"to": "eof", "extend": false} },
 	// { "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
-
 	{ "keys": ["alt+up"], "command": "select_lines", "args": {"forward": false} },
 	{ "keys": ["alt+down"], "command": "select_lines", "args": {"forward": true} },
 
@@ -126,10 +168,13 @@
 	//---------------------------------------------
 	//-- MACROS
 	//---------------------------------------------
+	// down 6 lines
 	{"keys": ["alt+n"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
 	{"keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
+	// up 6 lines
 	{"keys": ["alt+p"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
 	{"keys": ["ctrl+l"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
+	// add 6 lines
 	{"keys": ["ctrl+alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}},
 
 
