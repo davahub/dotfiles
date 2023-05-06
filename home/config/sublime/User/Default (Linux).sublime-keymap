@@ -2,6 +2,7 @@
 	//---------------------------------------------
 	//-- GENERAL
 	//---------------------------------------------
+	// replace all under cursor ctrl+f3
 	{ "keys": ["alt+q"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["alt+e"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["ctrl+alt+d"], "command": "duplicate_line" },
@@ -25,6 +26,8 @@
 	//---------------------------------------------
 	//-- Vintage
 	//---------------------------------------------
+	{ "keys": ["ctrl+o"], "command": "jump_back"},
+	{ "keys": ["ctrl+i"], "command": "jump_forward"},
 	{ "keys": ["alt+j"], "command": "exit_insert_mode",
     	"context":
     	[
@@ -64,7 +67,7 @@
 		{"insert_command": "move_to", "insert_args": {"to": "hardeol"} },
 		"context": [{"key": "setting.command_mode"}]
 	},
-	{ "keys": ["ctrl+i"], "command" : "center_on_cursor",
+	{ "keys": ["ctrl+m"], "command" : "center_on_cursor",
 		"context": [{"key": "setting.command_mode"}] 
 	},
 	{ "keys": ["enter"], "command": "enter_insert_mode",
@@ -74,23 +77,22 @@
 			{"key": "selection_empty"}
 	  ]
 	},
-	{ "keys": ["alt+h"], "command": "set_motion", "args": {
-		"motion": "move_to",
-		"motion_args": {"to": "hardbol", "extend": true }},
-		"context":
-		[
-			{"key": "setting.command_mode"},
-			{"key": "vi_has_repeat_digit", "operand": false}
-		]
-	},
-	{ "keys": ["alt+h"], "command": "set_motion", "args": {
-		"motion": "move_to",
-		"motion_args": {"to": "hardbol", "extend": true }},
-		"context":
-		[
-			{"key": "setting.command_mode"},
-			{"key": "vi_has_repeat_digit", "operand": false}
-		]
+	// beginning of line
+	// { "keys": ["alt+n"], "command": "set_motion", "args": {
+	// 	"motion": "move_to",
+	// 	"motion_args": {"to": "hardbol", "extend": true }},
+	// 	"context":
+	// 	[
+	// 		{"key": "setting.command_mode"},
+	// 		{"key": "vi_has_repeat_digit", "operand": false}
+	// 	]
+	// },
+	// begining of line word
+	{ "keys": ["alt+n"], "command": "set_motion", "args": {
+		"motion": "vi_move_to_first_non_white_space_character",
+		"motion_args": {"extend": true },
+		"clip_to_line": true },
+		"context": [{"key": "setting.command_mode"}]
 	},
 
 
@@ -169,7 +171,7 @@
 	//-- MACROS
 	//---------------------------------------------
 	// down 6 lines
-	{"keys": ["alt+n"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
+	// {"keys": ["alt+n"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
 	{"keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
 	// up 6 lines
 	{"keys": ["alt+p"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},

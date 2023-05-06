@@ -254,6 +254,6 @@
 	"auto_complete": true,
 	// "tab_completion": false,
 	"preview_on_click": false,
-	"vintage_use_clipboard": true,
+	"vintage_use_clipboard": false,
 	"update_check": false,
 }
