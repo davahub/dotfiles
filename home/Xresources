@@ -10,10 +10,10 @@ URxvt.saveLines			: 5000
 !! ---------------------------------------------
 !! -- Font
 !! ---------------------------------------------
-URxvt.font           	: xft:terminus:size=22
-URxvt.boldFont          : xft:terminus:size=22 
-URxvt.italicFont 		: xft:terminus:size=22 
-URxvt.boldItalicfont 	: xft:terminus:size=22 
+URxvt.font           	: xft:terminus:size=20
+URxvt.boldFont          : xft:terminus:size=20 
+URxvt.italicFont 		: xft:terminus:size=20 
+URxvt.boldItalicfont 	: xft:terminus:size=20 
 URxvt.letterSpace		: -1
 URxvt.lineSpace 		: 0
 

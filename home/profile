@@ -18,7 +18,8 @@ rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 pythonLocal='/home/dava/.local/bin'
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails:$pythonLocal
 :$myfileChrome:$myfileSublime"
-
+anki_dir='/home/dava/.3installed/anki-2.1.62-linux-qt6'
+export PATH="${PATH}:$anki_dir"
 
 #---------------------------------------------
 #-- Applications

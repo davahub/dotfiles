@@ -1,3 +1,4 @@
+
 #  _____    _     
 # |__  /___| |__  
 #   / // __| '_ \ 
@@ -5,7 +6,14 @@
 # /____|___/_| |_|
 # 
 
+#-- My custom prompt 
+export MYCONFIG_DIR="/home/dava/.1homepc"
+[ -f "${MYCONFIG_DIR}/home/urxvt/zsh-my-prompt" ] && source "${MYCONFIG_DIR}/home/urxvt/zsh-my-prompt"
+
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
+promptinit
+# prompt adam2
+
 setopt share_history
 setopt EXTENDED_HISTORY
 setopt autocd
@@ -15,31 +23,18 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 #-- Git setup
-add-zsh-hook precmd custom_func
+# add-zsh-hook precmd custom_func
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git*' formats "[%b]"
 precmd() {
     vcs_info
 }
-# black 0, red 1, green 2, yellow 3, blue 4, magenta 5, cyan 6, white 7
-# white → > Not a git repository, green ▶ Clean git repository, red ▶ Staged changes in git repository
-# yellow ▶ Unstaged changes in git repository
-function custom_func() {
-    if [[ -z "${vcs_info_msg_0_}" ]]; then
-        dir_status="%F{7}%B#%f"
-    elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]]; then
-        dir_status="%F{1}%B#%f"
-    elif [[ -n "$(git diff --name-status 2>/dev/null )" ]]; then
-        dir_status="%F{3}%B#%f"
-    else
-        dir_status="%F{2}%B#%f"
-    fi
-}
 
 #-- Prompt
 setopt prompt_subst
-PS1='%F{white}%b%n@%F{white}%m%u${vcs_info_msg_0_}$dir_status '
-RPS1="%F{${1:-green}}%(3/|../%2d|%d)"
+prompt_adam2_setup "$@"
+# PS1='%F{white}%b%n@%F{white}%m%u${vcs_info_msg_0_}$dir_status '
+# RPS1="%F{${1:-green}}%(3/|../%2d|%d)"
 
 #-- Auto completion
 compinit
