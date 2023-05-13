@@ -1,4 +1,5 @@
 // These settings override both User and Default settings for the TypeScript syntax
 {
-	"spell_check": false
+	"spell_check": false,
+	"tab_size": 2,
 }

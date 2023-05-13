@@ -1,26 +1,51 @@
 
 !! ---------------------------------------------
+!! -- Xft
+!! ---------------------------------------------
+Xft.dpi: 96
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+
+!! ---------------------------------------------
 !! -- Main
 !! ---------------------------------------------
 
 URxvt.loginShell		: false
-URxvt.saveLines			: 5000
+URxvt.saveLines			: 10000
+# do not scroll with output
+URxvt*scrollTtyOutput: false
+# scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+# scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
 
 
 !! ---------------------------------------------
 !! -- Font
 !! ---------------------------------------------
 URxvt.font           	: xft:terminus:size=20
-URxvt.boldFont          : xft:terminus:size=20 
-URxvt.italicFont 		: xft:terminus:size=20 
-URxvt.boldItalicfont 	: xft:terminus:size=20 
+URxvt.boldFont        	: xft:terminus:size=20
+URxvt.italicFont 		: xft:terminus:size=20
+URxvt.boldItalicfont 	: xft:terminus:size=20
+
+# URxvt.font           	: xft:monaco:size=17
+# URxvt.boldFont        : xft:monaco:size=17
+# URxvt.italicFont 		: xft:monaco:size=17
+# URxvt.boldItalicfont 	: xft:monaco:size=17
+
 URxvt.letterSpace		: -1
 URxvt.lineSpace 		: 0
 
 !! true transparency for native enable transparency, 95 is opacity level
-URxvt.depth: 80
-!URxvt.background: [75]#000000
-URxvt.background: [30]#1a1b26
+# URxvt.depth: 80
+URxvt.depth: 24
+!!URxvt.background: [75]#000000
+!!URxvt.background: [30]#1a1b26
 
 
 !! ---------------------------------------------
@@ -29,15 +54,15 @@ URxvt.background: [30]#1a1b26
 URxvt.cursorBlink    	: false
 URxvt.scrollBar      	: false
 URxvt.scrollBar_right	: false
-URxvt.internalBorder 	: 12
-URxvt.geometry       	: 92x42
-URxvt.transparent		: true
+URxvt.internalBorder 	: 15
+URxvt.geometry       	: 96x43
+!!URxvt.transparent		: true
 
 !! rxvt, plain, next, or xterm
 URxvt.scrollstyle		: plain
 
 !! shading - 0 to 99 darkens, 101 to 200 lightens.
-URxvt*shading			: 20
+!!URxvt*shading			: 0
 
 
 !! ---------------------------------------------
@@ -73,7 +98,9 @@ URxvt.urlButton: 1
 ! special
 *.foreground: #C7C7C7
 *.cursorColor: #afbfbf
-urxvt*background:       [80]#212629
+# urxvt*background:       [80]#212629
+# urxvt*background:       #3C3B37
+urxvt*background:       #373B41
 
 ! black
 *.color0: #263640
@@ -108,15 +135,6 @@ urxvt*background:       [80]#212629
 *.color15: #fdf6e3
 
 
-!! ---------------------------------------------
-!! -- Xft
-!! ---------------------------------------------
-Xft.dpi: 96
-Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintslight
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+
 
 

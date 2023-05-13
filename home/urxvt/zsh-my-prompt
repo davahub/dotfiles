@@ -83,13 +83,13 @@ prompt_adam2_precmd() {
     # white → > Not a git repository, green ▶ Clean git repository, red ▶ Staged changes in git repository
     # yellow ▶ Unstaged changes in git repository
     if [[ -z "${vcs_info_msg_0_}" ]]; then
-        dir_status="%F{7}%B#%f"
+        dir_status="${vcs_info_msg_0_}%F{7}%B#%f"
     elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]]; then
-        dir_status="%F{1}%B#%f"
+        dir_status="${vcs_info_msg_0_}%F{1}%B#%f"
     elif [[ -n "$(git diff --name-status 2>/dev/null )" ]]; then
-        dir_status="%F{3}%B#%f"
+        dir_status="${vcs_info_msg_0_}%F{3}%B#%f"
     else
-        dir_status="%F{2}%B#%f"
+        dir_status="${vcs_info_msg_0_}%F{2}%B#%f"
     fi
 
     PS1="$prompt_line_1$prompt_newline$prompt_line_2%B%F{white}$prompt_char%b%f%k$dir_status "
@@ -110,7 +110,7 @@ prompt_adam2_choose_prompt () {
   if (( prompt_padding_size > 0 )); then
     local prompt_padding
     eval "prompt_padding=\${(l:${prompt_padding_size}::${prompt_gfx_hyphen}:)_empty_zz}"
-    prompt_line_1="$prompt_line_1a$prompt_padding$prompt_line_1b ${vcs_info_msg_0_}"
+    prompt_line_1="$prompt_line_1a$prompt_padding$prompt_line_1b"
     return
   fi
 

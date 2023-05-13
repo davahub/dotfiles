@@ -94,6 +94,11 @@
 		"clip_to_line": true },
 		"context": [{"key": "setting.command_mode"}]
 	},
+	{ "keys": ["backspace"], "command": "set_action_motion", "args": {
+		"action": "vi_right_delete",
+		"motion": null },
+		"context": [{"key": "setting.command_mode"}]
+	},
 
 
 	//---------------------------------------------

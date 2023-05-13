@@ -32,7 +32,9 @@ precmd() {
 
 #-- Prompt
 setopt prompt_subst
-prompt_adam2_setup "$@"
+# hyphens, current directory, user@host, user input
+# prompt adam2 [ 8bit ] [<color1> [<color2> [<color3>] [<color4>]]
+prompt_adam2_setup "$@" "grey" "green" "red" "white"
 # PS1='%F{white}%b%n@%F{white}%m%u${vcs_info_msg_0_}$dir_status '
 # RPS1="%F{${1:-green}}%(3/|../%2d|%d)"
 

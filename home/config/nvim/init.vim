@@ -70,9 +70,9 @@ inoremap <A-f> <Esc>w i
 vnoremap <A-l> <Esc>l
 inoremap <A-h> <Esc>h
 
-inoremap <A-h> <Esc>0
-vnoremap <A-h> <Esc>0
-nnoremap <A-h> <Esc>0
+inoremap <A-n> <Esc>^
+vnoremap <A-n> ^
+nnoremap <A-n> ^
 
 inoremap <A-l> <Esc>$
 vnoremap <A-l> $
