@@ -1,0 +1,26 @@
+[
+    {
+        "class": "sidebar_label",
+        "font.bold": false,
+        // "font.face": "Terminus",
+        "font.face": "Inconsolata Medium",
+        "color": [192,197,203],
+        "font.size": 20
+    },
+    {
+        "class": "sidebar_tree",
+        "row_padding": [10, 6],
+        "indent": 12,
+        "indent_offset": 12,
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row","attributes": ["hover"]}],
+        "color": [255,255,255] 
+    },
+]
+
+
+
+
+
