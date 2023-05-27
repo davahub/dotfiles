@@ -26,6 +26,7 @@ image/gif=viewnior.desktop
 x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/webcal=google-chrome.desktop
 
 [Added Associations]
 text/plain=leafpad.desktop;sublime_text_3.desktop;userapp-pcopen-NV7RC3.desktop;

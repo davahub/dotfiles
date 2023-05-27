@@ -78,16 +78,6 @@
 			{"key": "selection_empty"}
 	  ]
 	},
-	// beginning of line
-	// { "keys": ["alt+n"], "command": "set_motion", "args": {
-	// 	"motion": "move_to",
-	// 	"motion_args": {"to": "hardbol", "extend": true }},
-	// 	"context":
-	// 	[
-	// 		{"key": "setting.command_mode"},
-	// 		{"key": "vi_has_repeat_digit", "operand": false}
-	// 	]
-	// },
 	// begining of line word
 	{ "keys": ["alt+n"], "command": "set_motion", "args": {
 		"motion": "vi_move_to_first_non_white_space_character",
@@ -153,7 +143,7 @@
 	//-- NAVIGATION MOVEMENT
 	//---------------------------------------------
 	{ "keys": ["alt+b"], "command": "move", "args": {"by": "words", "forward": false} },
-	{ "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+	// { "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
 	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
 	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true} },
 	{ "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false} },
@@ -165,9 +155,11 @@
 	// { "keys": ["alt+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
 	// scroll lines
 	{ "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 6.0 } },
+	{ "keys": ["ctrl+shift+u"], "command": "scroll_lines", "args": {"amount": 24.0 } },
 	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
-	{ "keys": ["ctrl+,"], "command": "move_to", "args": {"to": "bof", "extend": false} },
-	{ "keys": ["ctrl+."], "command": "move_to", "args": {"to": "eof", "extend": false} },
+	{ "keys": ["ctrl+shift+j"], "command": "scroll_lines", "args": {"amount": -24.0 } },
+	// { "keys": ["ctrl+,"], "command": "move_to", "args": {"to": "bof", "extend": false} },
+	// { "keys": ["ctrl+."], "command": "move_to", "args": {"to": "eof", "extend": false} },
 	// { "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
 	{ "keys": ["alt+up"], "command": "select_lines", "args": {"forward": false} },
 	{ "keys": ["alt+down"], "command": "select_lines", "args": {"forward": true} },
