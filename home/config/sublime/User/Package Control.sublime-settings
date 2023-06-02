@@ -32,6 +32,8 @@
 		"Package Control",
 		"SideBarEnhancements",
 		"SML (Standard ML)",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
 		"SublimeREPL",
 		"Theme - Spacegray",
 		"XQuery",
