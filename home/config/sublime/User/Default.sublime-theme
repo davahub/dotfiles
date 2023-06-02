@@ -1,37 +1,39 @@
 [
-    //= SIDE BAR
-    {
-        "class": "sidebar_container",
-        // "layer0.tint": [80, 80, 80],
-        "layer0.tint": [39, 49, 60],
-        // "layer0.opacity": 0.6,
-        "layer0.opacity": 0.6,
-        "layer0.draw_center": false,
-        "layer0.inner_margin": [0, 0, 10, 0],
-        "content_margin": [0, 0, 10, 0]
-    },
-    {
-        "class": "sidebar_heading",
-        "color": [124, 134, 146],
-        "font.bold": true,
-        "font.face": "sf mono regular",
-        "font.size": 10,
-        "shadow_color": [250, 250, 250],
-        "shadow_offset": [0, 0]
-    },
-    {
-        "class": "sidebar_tree",
-        // "row_padding": [4, 3],
-        "row_padding": [4, 3],
-        "indent": 15,
-        "indent_offset": 15,
-        "indent_top_level": false,
-        // "layer0.tint": [217, 222, 229],
-        "layer0.tint": [39, 49, 60],
-        // "layer0.opacity": 1.0,
-        "layer0.opacity": 0.5,
-        "dark_content": false
-    },
+    //------------------------------------------
+    //-- SIDE BAR
+    //------------------------------------------
+    // {
+    //     "class": "sidebar_container",
+    //     // "layer0.tint": [80, 80, 80],
+    //     "layer0.tint": [39, 49, 60],
+    //     // "layer0.opacity": 0.6,
+    //     "layer0.opacity": 0.6,
+    //     "layer0.draw_center": false,
+    //     "layer0.inner_margin": [0, 0, 10, 0],
+    //     "content_margin": [0, 0, 10, 0]
+    // },
+    // {
+    //     "class": "sidebar_heading",
+    //     "color": [124, 134, 146],
+    //     "font.bold": true,
+    //     "font.face": "sf mono regular",
+    //     "font.size": 10,
+    //     "shadow_color": [250, 250, 250],
+    //     "shadow_offset": [0, 0]
+    // },
+    // {
+    //     "class": "sidebar_tree",
+    //     // "row_padding": [4, 3],
+    //     "row_padding": [4, 3],
+    //     "indent": 15,
+    //     "indent_offset": 15,
+    //     "indent_top_level": false,
+    //     // "layer0.tint": [217, 222, 229],
+    //     "layer0.tint": [39, 49, 60],
+    //     // "layer0.opacity": 1.0,
+    //     "layer0.opacity": 0.5,
+    //     "dark_content": false
+    // },
     {
         "class": "tree_row",
         "attributes": ["selected"],
@@ -46,7 +48,10 @@
     {
         "class": "sidebar_label",
         "font.bold": false,
-        "font.face": "Ubuntu Light",
+        "font.face": "Roboto Light",
+        // "font.face": "Consolas",
+        // "font.face": "Ubuntu Light",
+        // "font.face": "Ubuntu",
         // "font.face": "Terminus",
         // "font.face": "System-ui Regular",
         // "font.face": "Roboto Light",
@@ -56,9 +61,9 @@
         // "font.face": "Noto Sans",
         // "font.face": "Inconsolata",
         // "color": [192, 197, 203],
-        "color": [200, 200, 200],
+        // "color": [200, 200, 200],
         // "font.size": 18
-        "font.size": 18
+        "font.size": 22
     },
     {
         "class": "sidebar_tree",
@@ -78,21 +83,25 @@
         // "color": [255, 255, 255],
         "color": [103, 254, 135]
     },
-    //= TAB
+
+    //------------------------------------------
+    //-- TAB
+    //------------------------------------------
     {
         "class": "tab_label",
         // "font.face": "Terminus",
-        "font.face": "Ubuntu Light",
-        // "font.face": "sf mono regular",
-        // "font.face": "Roboto",
-        // "font.face": "Noto Sans",
         // "font.face": "Ubuntu",
+        // "font.face": "Ubuntu Light",
+        // "font.face": "sf mono regular",
+        "font.face": "Roboto",
+        // "font.face": "Noto Sans",
         // "color": [194, 254, 188],
         "color": [213, 213, 213],
-        "font.size": 16
-        // "font.face": "Ubuntu"
+        "font.size": 18
     },
-    //= STATUS BAR
+    //------------------------------------------
+    //-- STATUS BAR
+    //------------------------------------------
     {
         "class": "status_bar",
         // "layer0.tint": [240, 240, 240],
@@ -125,7 +134,9 @@
         "class": "status_container",
         "content_margin": [0, 4, 0, 0]
     },
-    //= MINIMAP
+    //------------------------------------------
+    //-- MINIMAP
+    //------------------------------------------
     {
         "class": "minimap_control",
         // "viewport_color": [104, 174, 251, 10],

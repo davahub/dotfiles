@@ -261,6 +261,7 @@
 	"mdpopups.use_sublime_highlighter": true,
 	"auto_hide_menu": false,
 	"reveal_menu": false,
-	"overlay_scroll_bars": "disabled",
+	"mini_diff": false,
+	// "overlay_scroll_bars": "disabled",
 	"update_check": false,
 }
