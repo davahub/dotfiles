@@ -242,6 +242,14 @@
 		"Params",
 		"Servlets",
 	],
+	"font_options": 
+	[
+		"gray_antialias"
+	],
+	"theme_font_options": 
+	[
+		"gray_antialias"
+	],
 	"remember_open_files": true,
 	"save_on_focus_lost": true,
 	"scroll_speed": 0,
@@ -262,6 +270,5 @@
 	"auto_hide_menu": false,
 	"reveal_menu": false,
 	"mini_diff": false,
-	// "overlay_scroll_bars": "disabled",
 	"update_check": false,
 }

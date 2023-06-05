@@ -8,7 +8,8 @@
 			"selector": "source.ts, source.js, source.tsx, source.jsx - meta.attribute-with-value",
 			"prefer_eslint_d": true,
 			// "executable": "${folder}/node_modules/.bin/eslint",
-			"executable": "/home/dava/.nvm/versions/node/v18.12.0/bin/eslint_d"
+			"executable": "/home/dava/.nvm/versions/node/v18.12.0/bin/eslint_d",
+            "excludes": ["*/*.md"],
 		}
 	},
 	"styles": [
