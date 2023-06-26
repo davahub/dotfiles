@@ -85,11 +85,25 @@
 		"clip_to_line": true },
 		"context": [{"key": "setting.command_mode"}]
 	},
+	// beginning of line
+	{ "keys": ["ctrl+alt+n"], "command": "set_motion", "args": {
+		"motion": "move_to",
+		"motion_args": {"to": "hardbol", "extend": true }},
+		"context":
+		[
+			{"key": "setting.command_mode"},
+			{"key": "vi_has_repeat_digit", "operand": false}
+		]
+	},
 	{ "keys": ["backspace"], "command": "set_action_motion", "args": {
 		"action": "vi_right_delete",
 		"motion": null },
 		"context": [{"key": "setting.command_mode"}]
 	},
+	{ "keys": ["alt+j"], "command": "hide_popup", "context":[{ "key": "popup_visible", "operator": "equal", "operand": true }]},
+	{ "keys": ["alt+j"], "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]},
+	{ "keys": ["alt+j"], "command": "clear_fields", "context":[{ "key": "has_prev_field", "operator": "equal", "operand": true }]},
+	{ "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
 
 
 	//---------------------------------------------
@@ -122,7 +136,6 @@
 	//-- WINDOW
 	//---------------------------------------------
 	{ "keys": ["f2"], "command": "rename_file" },
-	{ "keys": ["ctrl+alt+n"], "command": "new_file" },
 	// Sidebar
 	{ "keys": ["f8"], "command": "toggle_side_bar" },
 	// focus file in sidebar
@@ -152,10 +165,9 @@
 	{ "keys": ["ctrl+alt+l"], "command": "show_at_center" },
 	// move to beggining of line
 	{ "keys": ["ctrl+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
-	// { "keys": ["alt+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
 	// scroll lines
-	{ "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 6.0 } },
-	{ "keys": ["ctrl+shift+u"], "command": "scroll_lines", "args": {"amount": 24.0 } },
+	{ "keys": ["ctrl+k"], "command": "scroll_lines", "args": {"amount": 6.0 } },
+	{ "keys": ["ctrl+shift+k"], "command": "scroll_lines", "args": {"amount": 24.0 } },
 	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
 	{ "keys": ["ctrl+shift+j"], "command": "scroll_lines", "args": {"amount": -24.0 } },
 	// { "keys": ["ctrl+,"], "command": "move_to", "args": {"to": "bof", "extend": false} },
@@ -169,13 +181,19 @@
 	//-- MACROS
 	//---------------------------------------------
 	// down 6 lines
-	// {"keys": ["alt+n"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
-	{"keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
+	// {"keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
+	{
+		"keys": ["J"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"},
+		"context": [ { "key": "setting.command_mode", "operand": true } ] 
+	},
 	// up 6 lines
 	{"keys": ["alt+p"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
 	{"keys": ["ctrl+l"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
+	{
+		"keys": ["K"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"},
+		"context": [ { "key": "setting.command_mode", "operand": true } ] 
+	},
 	// add 6 lines
-	{"keys": ["ctrl+alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}},
 
 
 	//---------------------------------------------

@@ -1,18 +1,18 @@
 // SublimeLinter Settings - User
 {
-	// "debug": true,
-	"lint_mode": "background",
-	"linters": {
-		"eslint": {
-			"env": { "PATH": "/home/dava/.nvm/versions/node/v18.12.0/bin" },
-			"selector": "source.ts, source.js, source.tsx, source.jsx - meta.attribute-with-value",
-			"prefer_eslint_d": true,
-			// "executable": "${folder}/node_modules/.bin/eslint",
-			"executable": "/home/dava/.nvm/versions/node/v18.12.0/bin/eslint_d",
-            "excludes": ["*/*.md"],
-		}
-	},
-	"styles": [
+    // "debug": true,
+    "lint_mode": "background",
+    "linters": {
+        "eslint": {
+            "env": { "PATH": "/home/dava/.nvm/versions/node/v18.12.0/bin" },
+            "selector": "source.ts, source.js, source.tsx, source.jsx - meta.attribute-with-value",
+            "prefer_eslint_d": true,
+            // "executable": "${folder}/node_modules/.bin/eslint",
+            "executable": "/home/dava/.nvm/versions/node/v18.12.0/bin/eslint_d",
+            "excludes": ["*/*.md"]
+        }
+    },
+    "styles": [
         {
             // Used to determine the color. E.g. region.<colorish>, with one of
             // redish, orangish, yellowish, greenish, bluish, purplish, pinkish.
@@ -64,5 +64,5 @@
             // Override this *per* linter to reduce clutter and noise.
             "phantom": ""
         }
-    ],
+    ]
 }

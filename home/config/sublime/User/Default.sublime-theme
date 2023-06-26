@@ -110,6 +110,16 @@
         // "viewport_color": [104, 174, 251, 10],
         "viewport_color": [217, 217, 217, 8],
         "viewport_opacity": 5.0,
+    },
+    {
+        "class": "tool_tip_control",
+        // "layer0.texture": "",
+        "layer0.tint": [125, 125, 125], // 02
+        "layer0.inner_margin": [1,1],
+        "layer0.opacity": 1,
+        "content_margin": [4,4],
+        "font.face": "Ubuntu",
+        "font.size": 12
     }
 ]
 
