@@ -314,6 +314,9 @@
     <keybind key="W-v">
       <action name="Iconify"/>
     </keybind>
+    <keybind key="A-h">
+      <action name="Iconify"/>
+    </keybind>
     <keybind key="W-w">
       <action name="Close"/>
     </keybind>
