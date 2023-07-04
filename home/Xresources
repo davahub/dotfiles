@@ -17,11 +17,11 @@ Xft.rgba: rgb
 
 URxvt.loginShell		: false
 URxvt.saveLines			: 10000
-# do not scroll with output
+!! do not scroll with output
 URxvt*scrollTtyOutput: false
-# scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+!! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
 URxvt*scrollWithBuffer: true
-# scroll back to the bottom on keypress
+!! scroll back to the bottom on keypress
 URxvt*scrollTtyKeypress: true
 
 
@@ -32,17 +32,11 @@ URxvt.font           	: xft:terminus:size=20
 URxvt.boldFont        	: xft:terminus:size=20
 URxvt.italicFont 		: xft:terminus:size=20
 URxvt.boldItalicfont 	: xft:terminus:size=20
-
-# URxvt.font           	: xft:monaco:size=17
-# URxvt.boldFont        : xft:monaco:size=17
-# URxvt.italicFont 		: xft:monaco:size=17
-# URxvt.boldItalicfont 	: xft:monaco:size=17
-
 URxvt.letterSpace		: -1
 URxvt.lineSpace 		: 0
 
 !! true transparency for native enable transparency, 95 is opacity level
-# URxvt.depth: 80
+!! URxvt.depth: 80
 URxvt.depth: 24
 !!URxvt.background: [75]#000000
 !!URxvt.background: [30]#1a1b26
@@ -98,8 +92,8 @@ URxvt.urlButton: 1
 ! special
 *.foreground: #C7C7C7
 *.cursorColor: #afbfbf
-# urxvt*background:       [80]#212629
-# urxvt*background:       #3C3B37
+!! urxvt*background:       [80]#212629
+!! urxvt*background:       #3C3B37
 urxvt*background:       #373B41
 
 ! black

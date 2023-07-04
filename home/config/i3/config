@@ -40,9 +40,6 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -196,7 +193,10 @@ bindsym $mod+F11 exec "killall conky && i3-nagbar -t warning -m 'You pressed the
 bindsym $mod+F9 exec "killall conky"
 bindsym $mod+F12 exec "i3-nagbar"
 
-bindsym $mod+r exec --no-startup-id dmenu_run
+# runner
+bindsym $mod+r exec --no-startup-id rofi -show run
+# bindsym $mod+r exec --no-startup-id dmenu_run
+# bindsym $mod+r exec --no-startup-id gmrun
 
 bindsym $mod+d mode "resize"
 
@@ -208,6 +208,9 @@ bindsym $mod+End exec systemctl poweroff
 
 # reload config
 bindsym $mod+o reload
+
+# toggle windows
+bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 
 #-- Applications
@@ -224,13 +227,19 @@ bindsym $mod+s exec --no-startup-id shortcuts
 bindsym Mod1+Control+Delete exec --no-startup-id lxtask
 
 # redshift
-bindsym Scroll_Lock exec redshift-switch
+bindsym Scroll_Lock exec --no-startup-id redshift-switch
 
-
+# start a terminal
+bindsym $mod+Return exec --no-startup-id myterm
+bindsym F1 exec --no-startup-id myterm
+# bindsym F1 exec toggleTerm 
 
 
 
 #-- Default
+# start a terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+
 # mode "bla" {
 # 	# exec killall conky
 # 	bindsym F11 exec "killall conky && i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
