@@ -29,34 +29,71 @@
 	//---------------------------------------------
 	{ "keys": ["ctrl+o"], "command": "jump_back"},
 	{ "keys": ["ctrl+i"], "command": "jump_forward"},
-	{ "keys": ["alt+j"], "command": "exit_insert_mode",
-    	"context":
-    	[
-        	{ "key": "setting.command_mode", "operand": false },
-        	{ "key": "setting.is_widget", "operand": false }
-    	]
-	},
-	{ "keys": ["alt+j"], "command": "exit_visual_mode",
-		"context":
-		[
-			{ "key": "setting.command_mode"},
-			{ "key": "num_selections", "operand": 1},
-			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
-		]
-	},
-	{ "keys": ["alt+j"], "command": "vi_cancel_current_action", "context":
-		[
-			{ "key": "setting.command_mode" },
-			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
-			{ "key": "vi_has_input_state" }
-		]
-	},
-	{ "keys": ["alt+j"], "command": "hide_auto_complete", "context":
-		[
-			{ "key": "auto_complete_visible", "operator": "equal", "operand": true }
-		]
-	},
-	{ "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
+	// { "keys": ["alt+j"], "command": "exit_insert_mode",
+    // 	"context":
+    // 	[
+    //     	{ "key": "setting.command_mode", "operand": false },
+    //     	{ "key": "setting.is_widget", "operand": false }
+    // 	]
+	// },
+	// { "keys": ["alt+j"], "command": "exit_visual_mode",
+	// 	"context":
+	// 	[
+	// 		{ "key": "setting.command_mode"},
+	// 		{ "key": "num_selections", "operand": 1},
+	// 		{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+	// 	]
+	// },
+	// { "keys": ["alt+j"], "command": "vi_cancel_current_action", "context":
+	// 	[
+	// 		{ "key": "setting.command_mode" },
+	// 		{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+	// 		{ "key": "vi_has_input_state" }
+	// 	]
+	// },
+	// { "keys": ["alt+j"], "command": "hide_auto_complete", "context":[{ "key": "auto_complete_visible", "operator": "equal", "operand": true }] },
+	// { "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
+	// { "keys": ["alt+j"], "command": "hide_popup", "context":[{ "key": "popup_visible", "operator": "equal", "operand": true }]},
+	// { "keys": ["alt+j"], "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]},
+	// { "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
+	{ "keys": ["alt+j"], "command": "run_multiple_commands", "args": {
+		"commands": [
+        {
+          "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]
+        },
+        {
+          "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]
+        },
+        {
+          "command": "hide_popup", "context":[{ "key": "popup_visible", "operator": "equal", "operand": true }]
+        },
+        {
+          "command": "hide_auto_complete", "context":[{ "key": "auto_complete_visible", "operator": "equal", "operand": true }]
+        },
+				{
+          "command": "vi_cancel_current_action", "context":
+					[
+						{ "key": "setting.command_mode" },
+						{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+						{ "key": "vi_has_input_state" }
+					]
+        },
+        {
+          "command": "exit_visual_mode", "context":
+					[
+						{ "key": "setting.command_mode"},
+						{ "key": "num_selections", "operand": 1},
+						{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+					]
+        },
+        {
+        	"command": "exit_insert_mode", "context":
+	    		[
+	        	{ "key": "setting.command_mode", "operand": false },
+	        	{ "key": "setting.is_widget", "operand": false }
+	    		]
+        }
+    ]}},
 
 	{ "keys": ["alt+l"], "command": "set_motion", "args": {
         "motion": "vi_move_to_hard_eol",
@@ -78,6 +115,8 @@
 			{"key": "selection_empty"}
 	  ]
 	},
+	
+
 	// begining of line word
 	{ "keys": ["alt+n"], "command": "set_motion", "args": {
 		"motion": "vi_move_to_first_non_white_space_character",
@@ -100,10 +139,7 @@
 		"motion": null },
 		"context": [{"key": "setting.command_mode"}]
 	},
-	{ "keys": ["alt+j"], "command": "hide_popup", "context":[{ "key": "popup_visible", "operator": "equal", "operand": true }]},
-	{ "keys": ["alt+j"], "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]},
-	{ "keys": ["alt+j"], "command": "clear_fields", "context":[{ "key": "has_prev_field", "operator": "equal", "operand": true }]},
-	{ "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
+	
 
 
 	//---------------------------------------------

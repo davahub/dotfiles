@@ -48,9 +48,10 @@ bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -220,8 +221,12 @@ bindsym $mod+r exec --no-startup-id rofi -show run
 
 bindsym $mod+v mode "resize"
 
-bindsym XF86AudioRaiseVolume exec vol up -i 20 -m Master && $refresh_i3status
-bindsym XF86AudioLowerVolume exec vol down -i 20 -m Master && $refresh_i3status
+# volume
+bindsym XF86AudioRaiseVolume exec vol up -i 5 -m Master && $refresh_i3status
+bindsym XF86AudioLowerVolume exec vol down -i 5 -m Master && $refresh_i3status
+bindsym $mod+Up exec vol up -i 20 -m Master && $refresh_i3status
+bindsym $mod+Down exec vol down -i 20 -m Master && $refresh_i3status
+
 
 # shutdown
 bindsym $mod+End exec systemctl poweroff
