@@ -22,48 +22,48 @@
 #--------------------------------------------------------
 #xrandr --output HDMI-0 --auto --output DVI-I-1 --auto --right-of HDMI-0 &
 
-xcompmgr -C -t-5 -l-5 -r4.2 -o.55 &
+#xcompmgr -C -t-5 -l-5 -r4.2 -o.55 &
 
-fc-cache -fv &
+#fc-cache -fv &
 
-wallpaper='w.jpg'
+#wallpaper='w.jpg'
 
-feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
+#feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
 
-$MYCONFIG_DIR/home/setlayout 0 3 2 0 &
+#$MYCONFIG_DIR/home/setlayout 0 3 2 0 &
 
-volumeicon &
+#volumeicon &
 
-numlockx &
+#numlockx &
 
-xset -dpms; xset s off; xset -b &
+#xset -dpms; xset s off; xset -b &
 
-xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -0.9 & 
-xset mouse 3 6 & 
-xbindkeys &
+#xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -0.9 & 
+#xset mouse 3 6 & 
+#xbindkeys &
 
-sleep 1s
-xscreensaver -no-splash &
+#sleep 1s
+#xscreensaver -no-splash &
 
-sleep 1s
-deluge &
+#sleep 1s
+#deluge &
 
-sleep 1s
-amor &
+#sleep 1s
+#amor &
 
-sleep 1s
-redshift-gtk &
+#sleep 1s
+#redshift-gtk &
 
-keyboard-reset &
+#keyboard-reset &
 
-sleep 1s
-conky &
+#sleep 1s
+#conky &
 
-sleep 1s
-tint2 &
+#sleep 1s
+#tint2 &
 
-sleep 1s
-parcellite &
+#sleep 1s
+#parcellite &
 
 
 

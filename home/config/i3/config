@@ -153,6 +153,13 @@ mode "resize" {
 
 
 #-----------------------------------------------
+#-- Settings
+#-----------------------------------------------
+
+focus_follows_mouse no
+
+
+#-----------------------------------------------
 #-- Look & feel
 #-----------------------------------------------
 
@@ -227,15 +234,15 @@ bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 # move windows
 mode "mode-move-window" {
-	bindsym 1 move container to workspace number $ws1 ; mode "default"
-	bindsym 2 move container to workspace number $ws2 ; mode "default"
-	bindsym 3 move container to workspace number $ws3 ; mode "default"
-	bindsym 4 move container to workspace number $ws4 ; mode "default"
-	bindsym 5 move container to workspace number $ws5 ; mode "default"
-	bindsym 6 move container to workspace number $ws6 ; mode "default"
-	bindsym 7 move container to workspace number $ws7 ; mode "default"
-	bindsym 8 move container to workspace number $ws8 ; mode "default"
-	bindsym 9 move container to workspace number $ws9 ; mode "default"
+	bindsym 1 move container to workspace number $ws1 ; workspace number $ws1 ; mode "default"
+	bindsym 2 move container to workspace number $ws2 ; workspace number $ws2 ; mode "default"
+	bindsym 3 move container to workspace number $ws3 ; workspace number $ws3 ; mode "default"
+	bindsym 4 move container to workspace number $ws4 ; workspace number $ws4 ; mode "default"
+	bindsym 5 move container to workspace number $ws5 ; workspace number $ws5 ; mode "default"
+	bindsym 6 move container to workspace number $ws6 ; workspace number $ws6 ; mode "default"
+	bindsym 7 move container to workspace number $ws7 ; workspace number $ws7 ; mode "default"
+	bindsym 8 move container to workspace number $ws8 ; workspace number $ws8 ; mode "default"
+	bindsym 9 move container to workspace number $ws9 ; workspace number $ws9 ; mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
     bindsym $mod+d mode "default"
@@ -328,6 +335,8 @@ exec --no-startup-id fc-cache -fv
 
 exec --no-startup-id numlockx
 
+exec --no-startup-id xcompmgr -C -t-5 -l-5 -r4.2 -o.55
+
 exec --no-startup-id "xset -dpms; xset s off; xset -b"
 
 exec --no-startup-id xbindkeys 
@@ -335,6 +344,8 @@ exec --no-startup-id xbindkeys
 exec --no-startup-id keyboard-reset
 
 exec --no-startup-id "feh --bg-scale /home/dava/.3installed/wallpaper/w.jpg"
+
+exec --no-startup-id parcellite
 
 exec --no-startup-id myconky
 
@@ -349,9 +360,6 @@ exec --no-startup-id myterm
 exec --no-startup-id pcmanfm	
 
 exec --no-startup-id sub	
-
-
-
 
 
 

@@ -18,7 +18,7 @@
             },
             "marks": [],
             "name": "Dava",
-            "percent": 0.2,
+            "percent": 0.25,
             "swallows": [
                 {
                     "class": "^Pcmanfm$",
@@ -39,7 +39,7 @@
             },
             "marks": [],
             "name": "*- Sublime Text",
-            "percent": 0.8,
+            "percent": 0.75,
             "swallows": [
                 {
                     "class": "^Sub$",
