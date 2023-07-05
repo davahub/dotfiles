@@ -189,9 +189,9 @@ bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+w layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
-bindsym $mod+F11 exec "killall conky && i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
+bindsym $mod+F12 exec "killall conky && i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
 bindsym $mod+F9 exec "killall conky"
-bindsym $mod+F12 exec "i3-nagbar"
+# bindsym $mod+F12 exec "i3-nagbar"
 
 # runner
 bindsym $mod+r exec --no-startup-id rofi -show run
@@ -286,6 +286,16 @@ exec --no-startup-id "feh --bg-scale /home/dava/.3installed/wallpaper/w.jpg"
 exec --no-startup-id myconky
 
 exec --no-startup-id deluge	
+
+exec --no-startup-id google-chrome-stable	
+
+exec --no-startup-id i3-restore
+
+exec --no-startup-id myterm	
+
+exec --no-startup-id pcmanfm	
+
+exec --no-startup-id sub	
 
 
 
