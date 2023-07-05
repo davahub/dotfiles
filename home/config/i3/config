@@ -180,7 +180,7 @@ bar {
 #-- System
 
 # split in horizontal orientation
-bindsym $mod+n split h
+bindsym $mod+t split h
 
 # split in vertical orientation
 bindsym $mod+b split v
@@ -278,13 +278,18 @@ bindsym Mod1+Control+Delete exec --no-startup-id lxtask
 bindsym Scroll_Lock exec --no-startup-id redshift-switch
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id myterm
-# bindsym F1 exec --no-startup-id myterm
+bindsym $mod+Return exec --no-startup-id toggleTerm
 bindsym F1 exec --no-startup-id toggleTerm 
+
+# note
+bindsym $mod+n exec --no-startup-id notes 
+
 
 
 
 #-- Default
+# bindsym F1 exec --no-startup-id myterm
+
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 
