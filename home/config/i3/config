@@ -231,8 +231,8 @@ bindsym Scroll_Lock exec --no-startup-id redshift-switch
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id myterm
-bindsym F1 exec --no-startup-id myterm
-# bindsym F1 exec toggleTerm 
+# bindsym F1 exec --no-startup-id myterm
+bindsym F1 exec --no-startup-id toggleTerm 
 
 
 
