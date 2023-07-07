@@ -96,12 +96,25 @@
     ]}},
     { "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
 
-	{ "keys": ["alt+l"], "command": "set_motion", "args": {
+		// { "keys": ["alt+l"], "command": "set_motion", "args": {
+    //     "motion": "vi_move_to_hard_eol",
+    //     "motion_args": {"repeat": 1, "extend": true},
+    //     "inclusive": true },
+    //     "context": [{"key": "setting.command_mode"}]
+    // },
+    { "keys": ["alt+n"], "command": "set_motion", "args": {
+		"motion": "vi_move_to_first_non_white_space_character",
+		"motion_args": {"extend": true },
+		"clip_to_line": true },
+		"context": [{"key": "setting.command_mode"}]
+		},
+    { "keys": ["alt+l"], "command": "set_motion", "args": {
         "motion": "vi_move_to_hard_eol",
         "motion_args": {"repeat": 1, "extend": true},
         "inclusive": true },
         "context": [{"key": "setting.command_mode"}]
     },
+
     { "keys": ["alt+i"], "command": "enter_insert_mode", "args":
 		{"insert_command": "move_to", "insert_args": {"to": "hardeol"} },
 		"context": [{"key": "setting.command_mode"}]
@@ -116,15 +129,13 @@
 			{"key": "selection_empty"}
 	  ]
 	},
-	
-
 	// begining of line word
-	{ "keys": ["alt+n"], "command": "set_motion", "args": {
-		"motion": "vi_move_to_first_non_white_space_character",
-		"motion_args": {"extend": true },
-		"clip_to_line": true },
-		"context": [{"key": "setting.command_mode"}]
-	},
+	// { "keys": ["alt+n"], "command": "set_motion", "args": {
+	// 	"motion": "vi_move_to_first_non_white_space_character",
+	// 	"motion_args": {"extend": true },
+	// 	"clip_to_line": true },
+	// 	"context": [{"key": "setting.command_mode"}]
+	// },
 	// beginning of line
 	{ "keys": ["ctrl+alt+n"], "command": "set_motion", "args": {
 		"motion": "move_to",

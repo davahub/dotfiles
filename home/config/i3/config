@@ -162,6 +162,9 @@ bar {
 #-- SYSTEM
 #-----------------------------------------------
 
+# full screen
+bindsym $mod+Return fullscreen toggle  
+
 # split in horizontal orientation
 bindsym $mod+t split h
 
@@ -273,7 +276,9 @@ mode "mode-move-window" {
 bindsym $mod+d mode "mode-move-window"
 
 bindsym $mod+h focus left
+bindsym $mod+Right focus right 
 bindsym $mod+l focus right
+bindsym $mod+Left focus left
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -312,8 +317,10 @@ mode "mode-shutdown" {
 bindsym $mod+End mode "mode-shutdown"
 
 # skip tracks
-bindsym $mod+Right exec --no-startup-id playerctl next
-bindsym $mod+Left exec --no-startup-id playerctl previous
+bindsym $mod+XF86AudioNext exec --no-startup-id playerctl next
+bindsym $mod+Control+Right exec --no-startup-id playerctl next
+bindsym $mod+XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym $mod+Control+Left exec --no-startup-id playerctl previous
 
 # lock desktop
 bindsym Mod1+Control+q exec --no-startup-id lock-desktop
@@ -344,7 +351,6 @@ bindsym Mod1+Control+Delete exec --no-startup-id lxtask
 bindsym Scroll_Lock exec --no-startup-id redshift-switch
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id toggleTerm
 bindsym F1 exec --no-startup-id toggleTerm 
 
 # note
@@ -357,6 +363,10 @@ bindsym --release $mod+x exec --no-startup-id xkill
 #-----------------------------------------------
 #-- Startup
 #-----------------------------------------------
+# exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+
+# exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
+
 exec --no-startup-id fc-cache -fv
 
 exec --no-startup-id numlockx
@@ -391,7 +401,7 @@ exec --no-startup-id pcmanfm
 
 exec --no-startup-id sub	
 
-# exec --no-startup-id mypolybar
+
 
 
 
@@ -399,6 +409,7 @@ exec --no-startup-id sub
 #-----------------------------------------------
 #-- Unused
 #-----------------------------------------------
+# exec --no-startup-id mypolybar
 
 #-- Not enabled
 # exec redshift-gtk
