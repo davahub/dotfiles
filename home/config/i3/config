@@ -136,7 +136,7 @@ focus_follows_mouse no
 #-- Look & feel
 #-----------------------------------------------
 
-gaps top 41px
+# gaps top 41px
 
 gaps inner 4px
 
