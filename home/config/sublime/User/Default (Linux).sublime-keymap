@@ -52,15 +52,15 @@
 	// 	]
 	// },
 	// { "keys": ["alt+j"], "command": "hide_auto_complete", "context":[{ "key": "auto_complete_visible", "operator": "equal", "operand": true }] },
-	// { "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
+	
 	// { "keys": ["alt+j"], "command": "hide_popup", "context":[{ "key": "popup_visible", "operator": "equal", "operand": true }]},
 	// { "keys": ["alt+j"], "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]},
 	// { "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
 	{ "keys": ["alt+j"], "command": "run_multiple_commands", "args": {
 		"commands": [
-        {
-          "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]
-        },
+        // {
+        //   "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]
+        // },
         {
           "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]
         },
@@ -94,6 +94,7 @@
 	    		]
         }
     ]}},
+    { "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
 
 	{ "keys": ["alt+l"], "command": "set_motion", "args": {
         "motion": "vi_move_to_hard_eol",

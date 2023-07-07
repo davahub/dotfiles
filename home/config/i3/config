@@ -121,33 +121,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 # bindsym $mod+Shift+r restart
-bindsym $mod+Shift+r i3-restart
+bindsym $mod+Shift+r exec i3-restart
 
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+d mode "default"
-}
 
 
 #-----------------------------------------------
@@ -168,10 +143,9 @@ gaps inner 4px
 bar {
     # status_command i3status
     # i3bar_command i3bar --transparency
-    i3bar_command i3bar
+    # i3bar_command i3bar
     font pango:Terminus 16
     workspace_min_width 40
-    
     colors {
         background #3B3B3B
     }
@@ -216,10 +190,32 @@ bindsym $mod+F9 exec "killall conky"
 bindsym $mod+F11 exec "toggleVideo"
 
 # runner
-bindsym $mod+r exec --no-startup-id rofi -show run
+# bindsym $mod+r exec --no-startup-id rofi -show run
 # bindsym $mod+r exec --no-startup-id dmenu_run
-# bindsym $mod+r exec --no-startup-id gmrun
+bindsym $mod+r exec --no-startup-id gmrun
 
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+v mode "default"
+}
 bindsym $mod+v mode "resize"
 
 # volume
@@ -228,14 +224,14 @@ bindsym XF86AudioLowerVolume exec vol down -i 5 -m Master && $refresh_i3status
 bindsym $mod+Up exec vol up -i 20 -m Master && $refresh_i3status
 bindsym $mod+Down exec vol down -i 20 -m Master && $refresh_i3status
 
-# shutdown
-bindsym $mod+End exec systemctl poweroff
-
 # reload config
 bindsym $mod+o reload
 
 # toggle windows
-bindsym Mod1+Tab exec --no-startup-id rofi -show window
+bindsym Mod1+Tab focus right
+
+# search windows
+bindsym $mod+f exec --no-startup-id rofi -show window
 
 # move windows
 mode "mode-move-window" {
@@ -249,8 +245,16 @@ mode "mode-move-window" {
 	bindsym 8 move container to workspace number $ws8 ; workspace number $ws8 ; mode "default"
 	bindsym 9 move container to workspace number $ws9 ; workspace number $ws9 ; mode "default"
 
-    bindsym Left focus left
-    bindsym Right focus right
+    # bindsym h focus left
+    bindsym h workspace prev
+    bindsym l workspace next
+    bindsym j focus down 
+    bindsym k focus up
+
+    # bindsym Left focus left
+    bindsym Left workspace prev
+    # bindsym Right focus right
+    bindsym Right workspace next
     bindsym Down focus down 
     bindsym Up focus up
 
@@ -259,11 +263,23 @@ mode "mode-move-window" {
     bindsym Shift+Up move up
     bindsym Shift+Right move right
 
+    bindsym Shift+l workspace next
+    bindsym Shift+h workspace prev
+
     bindsym Return mode "default"
     bindsym Escape mode "default"
     bindsym $mod+d mode "default"
 }
 bindsym $mod+d mode "mode-move-window"
+
+bindsym $mod+h focus left
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
 
 # go to windows
 mode "go-to" {
@@ -283,15 +299,30 @@ mode "go-to" {
 }
 bindsym $mod+g mode "go-to"
 
+# shutdown commands
+mode "mode-shutdown" {
+    bindsym e exec systemctl poweroff ; mode "default"
+    bindsym s exec --no-startup-id lock-suspend ; mode "default"
+    bindsym r exec systemctl reboot ; mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+End mode "default"
+}
+bindsym $mod+End mode "mode-shutdown"
+
 # skip tracks
 bindsym $mod+Right exec --no-startup-id playerctl next
 bindsym $mod+Left exec --no-startup-id playerctl previous
 
 # lock desktop
-bindsym $mod+l exec --no-startup-id lock-desktop
+bindsym Mod1+Control+q exec --no-startup-id lock-desktop
 
-# suspend
-bindsym $mod+Prior exec --no-startup-id lock-suspend 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
 
 #-----------------------------------------------
@@ -350,7 +381,7 @@ exec --no-startup-id myconky
 
 exec --no-startup-id deluge	
 
-exec --no-startup-id google-chrome-stable	
+exec --no-startup-id google-chrome-stable
 
 exec --no-startup-id i3-restore
 
@@ -359,6 +390,10 @@ exec --no-startup-id myterm
 exec --no-startup-id pcmanfm	
 
 exec --no-startup-id sub	
+
+# exec --no-startup-id mypolybar
+
+
 
 
 #-----------------------------------------------
@@ -369,7 +404,6 @@ exec --no-startup-id sub
 # exec redshift-gtk
 # exec "xinput --set-prop \"Logitech G203 Prodigy Gaming Mouse\" \"libinput Accel Speed\" -0.9"
 # exec xset mouse 3 6
-
 
 #-- Default
 # mode "mode-focus" {

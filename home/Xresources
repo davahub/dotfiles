@@ -48,7 +48,7 @@ URxvt.depth: 24
 URxvt.cursorBlink    	: false
 URxvt.scrollBar      	: false
 URxvt.scrollBar_right	: false
-URxvt.internalBorder 	: 15
+URxvt.internalBorder 	: 20
 URxvt.geometry       	: 96x43
 !!URxvt.transparent		: true
 
