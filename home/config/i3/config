@@ -1,5 +1,4 @@
 # i3 config file (v4)
-#
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
@@ -198,23 +197,16 @@ bindsym $mod+F11 exec "toggleVideo"
 bindsym $mod+r exec --no-startup-id gmrun
 
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+v mode "default"
@@ -222,10 +214,10 @@ mode "resize" {
 bindsym $mod+v mode "resize"
 
 # volume
-bindsym XF86AudioRaiseVolume exec vol up -i 5 -m Master && $refresh_i3status
-bindsym XF86AudioLowerVolume exec vol down -i 5 -m Master && $refresh_i3status
-bindsym $mod+Up exec vol up -i 20 -m Master && $refresh_i3status
-bindsym $mod+Down exec vol down -i 20 -m Master && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec vol -d up -i 5 && $refresh_i3status
+bindsym XF86AudioLowerVolume exec vol -d down -i 5 && $refresh_i3status
+bindsym $mod+Up exec vol -d up -i 10 && $refresh_i3status
+bindsym $mod+Down exec vol -d down -i 10 && $refresh_i3status
 
 # reload config
 bindsym $mod+o reload
@@ -390,6 +382,8 @@ exec --no-startup-id parcellite
 exec --no-startup-id myconky
 
 exec --no-startup-id deluge	
+
+exec --no-startup-id xscreensaver -no-splash 
 
 exec --no-startup-id google-chrome-stable
 
