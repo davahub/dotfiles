@@ -229,7 +229,7 @@ bindsym Mod1+Tab focus right
 bindsym $mod+f exec --no-startup-id rofi -show window
 
 # move windows
-mode "mode-move-window" {
+mode "window-mode" {
 	bindsym 1 move container to workspace number $ws1 ; workspace number $ws1 ; mode "default"
 	bindsym 2 move container to workspace number $ws2 ; workspace number $ws2 ; mode "default"
 	bindsym 3 move container to workspace number $ws3 ; workspace number $ws3 ; mode "default"
@@ -243,15 +243,30 @@ mode "mode-move-window" {
     # bindsym h focus left
     bindsym h workspace prev
     bindsym l workspace next
-    bindsym j focus down 
-    bindsym k focus up
+    # bindsym k focus up
+    # bindsym j focus down 
 
     # bindsym Left focus left
     bindsym Left workspace prev
     # bindsym Right focus right
     bindsym Right workspace next
-    bindsym Down focus down 
-    bindsym Up focus up
+
+    # focus
+    bindsym Shift+h focus left
+    bindsym Shift+l focus right
+    bindsym Shift+j focus down 
+    bindsym Shift+k focus up
+
+    bindsym Shift+Up focus up
+    bindsym Shift+Down focus down 
+    bindsym Shift+Right focus right
+    bindsym Shift+Left focus left 
+
+    # resize
+    bindsym Up resize grow width 10 px or 10 ppt
+    bindsym k resize grow width 10 px or 10 ppt
+    bindsym Down resize shrink width 10 px or 10 ppt
+    bindsym j resize shrink width 10 px or 10 ppt
 
     bindsym Shift+Left move left
     bindsym Shift+Down move down
@@ -265,7 +280,7 @@ mode "mode-move-window" {
     bindsym Escape mode "default"
     bindsym $mod+d mode "default"
 }
-bindsym $mod+d mode "mode-move-window"
+bindsym $mod+d mode "window-mode"
 
 bindsym $mod+h focus left
 bindsym $mod+Right focus right 
