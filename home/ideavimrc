@@ -1,5 +1,12 @@
 
 " -------------------------------------
+" -- Config
+" -------------------------------------
+set surround
+
+
+
+" -------------------------------------
 " -- Set IDE
 " -------------------------------------
 sethandler <C-c> n-v:ide i:vim
@@ -12,14 +19,19 @@ sethandler <C-a> n-v:ide i:vim
 
 imap <M-j> <ESC>
 
-nnoremap <A-i> A
-
 nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 
 " end of the line
 inoremap <A-l> <Esc>$
 vnoremap <A-l> $
 nnoremap <A-l> <Esc>$
+
+" end of the line insert
+nnoremap <A-i> A
+
+inoremap <C-e> <Esc>A
+vnoremap <C-e> A
+nnoremap <C-e> A
 
 " beginning of the line
 inoremap <A-n> <Esc>^
@@ -34,6 +46,9 @@ nnoremap <S-j> 6j
 vnoremap <S-k> 6k
 nnoremap <S-k> 6k
 
+" duplicate a line
+inoremap <A-S-d> <Esc>yypk
+nnoremap <A-S-d> yypk
 
 " -------------------------------------
 " -- Don't work

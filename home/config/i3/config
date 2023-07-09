@@ -287,11 +287,17 @@ bindsym $mod+Right focus right
 bindsym $mod+l focus right
 bindsym $mod+Left focus left
 
+# bindsym $mod+k resize grow width 10 px or 10 ppt
+# bindsym $mod+j resize shrink width 10 px or 10 ppt
+
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# move windows using h and l
+bindsym Control+Mod1+h workspace prev
+bindsym Control+Mod1+l workspace next
 
 # go to windows
 mode "go-to" {

@@ -26,7 +26,7 @@ contexts:
     # strings in YAML. When using single quoted strings, only single quotes
     # need to be escaped: this is done by using two single quotes next to each
     # other.
-    - match: '\b(sethandler|imap|nnoremap|inoremap|vnoremap|action|map)\b'
+    - match: '\b(set|sethandler|imap|nnoremap|inoremap|vnoremap|action|map)\b'
       scope: keyword.control.example-c
 
   numbers:
