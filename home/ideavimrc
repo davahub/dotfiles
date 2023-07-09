@@ -1,0 +1,45 @@
+
+" -------------------------------------
+" -- Set IDE
+" -------------------------------------
+sethandler <C-c> n-v:ide i:vim
+sethandler <C-a> n-v:ide i:vim
+
+
+" -------------------------------------
+" -- Shortcuts
+" -------------------------------------
+
+imap <M-j> <ESC>
+
+nnoremap <A-i> A
+
+nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
+
+" end of the line
+inoremap <A-l> <Esc>$
+vnoremap <A-l> $
+nnoremap <A-l> <Esc>$
+
+" beginning of the line
+inoremap <A-n> <Esc>^
+vnoremap <A-n> ^
+nnoremap <A-n> ^
+
+" down 6 lines
+vnoremap <S-j> 6j
+nnoremap <S-j> 6j
+
+" up 6 lines
+vnoremap <S-k> 6k
+nnoremap <S-k> 6k
+
+
+" -------------------------------------
+" -- Don't work
+" -------------------------------------
+
+nnoremap <C-F12> :action IdeaVim.ReloadVimRc.reload<CR>
+
+
+
