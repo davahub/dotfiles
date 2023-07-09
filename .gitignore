@@ -15,24 +15,6 @@ home/config/sublime/User/SBSCompareScheme.hidden-color-scheme
 home/config/sublime/User/remove-popup.txt
 home/config/sublime/User/.SublimeREPLHistory/python.db
 
-#---------------------------------------------
-#-- Idea
-#---------------------------------------------
-home/config/JetBrains/IdeaIC2021.2/tasks
-home/config/JetBrains/IdeaIC2021.2/workspace
-home/config/JetBrains/IdeaIC2021.2/options/shownTips.xml
-home/config/JetBrains/IdeaIC2021.2/options/recentProjects.xml
-home/config/JetBrains/IdeaIC2021.2/options/find.xml
-home/config/JetBrains/IdeaIC2021.2/options/visualizationTool.xml
-home/config/JetBrains/IdeaIC2021.2/options/features.usage.statistics.xml
-home/config/JetBrains/IdeaIC2021.2/options/runner.layout.xml
-home/config/JetBrains/IdeaIC2021.2/options/actionSummary.xml
-home/config/JetBrains/IdeaIC2021.2/options/window.state.xml
-home/config/JetBrains/IdeaIC2021.2/port
-home/config/JetBrains/IdeaIC2021.2/options/other.xml
-home/config/JetBrains/IdeaIC2021.2/options/updates.xml
-home/config/JetBrains/IdeaIC2021.2/updatedBrokenPlugins.db
-home/config/JetBrains/IdeaIC2021.2/options/filetypes.xml
 
 
 #---------------------------------------------
