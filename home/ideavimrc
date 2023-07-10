@@ -47,8 +47,8 @@ vnoremap <S-k> 6k
 nnoremap <S-k> 6k
 
 " duplicate a line
-inoremap <A-S-d> <Esc>yypk
-nnoremap <A-S-d> yypk
+" inoremap <A-S-d> <Esc>yypk
+" nnoremap <A-S-d> yypk
 
 " -------------------------------------
 " -- Don't work

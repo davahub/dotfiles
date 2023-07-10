@@ -41,8 +41,6 @@ tiling_drag modifier titlebar
 
 # change focus
 # bindsym $mod+j focus left
-# bindsym $mod+k focus down
-# bindsym $mod+l focus up
 # bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -67,11 +65,8 @@ bindsym $mod+Shift+semicolon move right
 # enter fullscreen mode for the focused container
 bindsym $mod+Shif+f fullscreen toggle 
 
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -161,14 +156,11 @@ bar {
 #-- SYSTEM
 #-----------------------------------------------
 
+# change language
+bindsym $mod+space exec --no-startup-id toggleKeyboard
+
 # full screen
 bindsym $mod+Return fullscreen toggle  
-
-# split in horizontal orientation
-bindsym $mod+t split h
-
-# split in vertical orientation
-bindsym $mod+b split v
 
 bindsym Control+Mod1+Right workspace next
 
@@ -211,7 +203,7 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+v mode "default"
 }
-bindsym $mod+v mode "resize"
+# bindsym $mod+v mode "resize"
 
 # volume
 bindsym XF86AudioRaiseVolume exec vol -d up -i 5 && $refresh_i3status
@@ -222,11 +214,8 @@ bindsym $mod+Down exec vol -d down -i 10 && $refresh_i3status
 # reload config
 bindsym $mod+o reload
 
-# toggle windows
-bindsym Mod1+Tab focus right
-
 # search windows
-bindsym $mod+f exec --no-startup-id rofi -show window
+bindsym $mod+g exec --no-startup-id rofi -show window
 
 # move windows
 mode "window-mode" {
@@ -282,11 +271,6 @@ mode "window-mode" {
 }
 bindsym $mod+d mode "window-mode"
 
-bindsym $mod+h focus left
-bindsym $mod+Right focus right 
-bindsym $mod+l focus right
-bindsym $mod+Left focus left
-
 # bindsym $mod+k resize grow width 10 px or 10 ppt
 # bindsym $mod+j resize shrink width 10 px or 10 ppt
 
@@ -315,7 +299,7 @@ mode "go-to" {
     bindsym Escape mode "default"
     bindsym $mod+g mode "default"
 }
-bindsym $mod+g mode "go-to"
+# bindsym $mod+g mode "go-to"
 
 # shutdown commands
 mode "mode-shutdown" {
@@ -335,14 +319,33 @@ bindsym $mod+Control+Right exec --no-startup-id playerctl next
 bindsym $mod+XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+Control+Left exec --no-startup-id playerctl previous
 
+# play pause
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
+
 # lock desktop
 bindsym Mod1+Control+q exec --no-startup-id lock-desktop
 
-# Make the currently focused window a scratchpad
-bindsym $mod+Shift+minus move scratchpad
+# toggle float
+# bindsym $mod+Shift+space floating toggle
+bindsym $mod+t floating toggle
 
-# Show the first scratchpad window
-bindsym $mod+minus scratchpad show
+# split in horizontal and vertical orientation
+bindsym $mod+y split h
+bindsym $mod+b split v
+
+# scratchpad
+bindsym $mod+v move scratchpad
+bindsym Mod1+Tab scratchpad show
+
+# focus windows
+bindsym $mod+h focus left
+bindsym $mod+Right focus right 
+bindsym $mod+j focus right
+bindsym $mod+Left focus left
+bindsym $mod+l focus left
+bindsym $mod+k focus down
+# bindsym $mod+l focus up
 
 
 #-----------------------------------------------
@@ -373,6 +376,7 @@ bindsym $mod+n exec --no-startup-id notes
 bindsym --release $mod+x exec --no-startup-id xkill
 
 
+
 #-----------------------------------------------
 #-- Startup
 #-----------------------------------------------
@@ -391,8 +395,6 @@ exec --no-startup-id "xset -dpms; xset s off; xset -b"
 exec --no-startup-id xbindkeys 
 
 exec --no-startup-id dropbox
-
-exec --no-startup-id lightscreen
 
 exec --no-startup-id xscreensaver -no-splash
 
