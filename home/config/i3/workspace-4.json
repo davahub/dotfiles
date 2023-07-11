@@ -9,8 +9,8 @@
     "rect": {
        "height": 116,
        "width": 275,
-       "x": 2285,
-       "y": 41
+       "x": 2287,
+       "y": 42
     },
     "type": "floating_con",
     "nodes": [
@@ -29,8 +29,8 @@
             "percent": 1,
             "swallows": [
                {
-               // "class": "^Audacious$",
-               // "instance": "^audacious$",
+               "class": "^Audacious$",
+               "instance": "^audacious$",
                // "machine": "^home$",
                // "title": "^The\\ Isley\\ Brothers\\ \\-\\ The\\ Essential\\ Isley\\ Brothers\\ CD1\\ \\-\\ Work\\ to\\ Do\\ \\(3\\:10\\)\\ \\-\\ Audacious$",
                // "window_role": "^mainwindow$"
@@ -51,8 +51,8 @@
     "rect": {
        "height": 609,
        "width": 525,
-       "x": 2048,
-       "y": 157
+       "x": 2035,
+       "y": 158
     },
     "type": "floating_con",
     "nodes": [
@@ -71,8 +71,8 @@
             "percent": 1,
             "swallows": [
                {
-               // "class": "^Audacious$",
-               // "instance": "^audacious$",
+               "class": "^Audacious$",
+               "instance": "^audacious$",
                // "machine": "^home$",
                // "title": "^Audacious\\ Playlist\\ Editor$",
                // "window_role": "^playlist$"
