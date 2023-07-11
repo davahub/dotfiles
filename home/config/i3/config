@@ -63,7 +63,7 @@ bindsym $mod+Shift+semicolon move right
 # bindsym $mod+Shift+Right move right
 
 # enter fullscreen mode for the focused container
-bindsym $mod+Shif+f fullscreen toggle 
+bindsym $mod+Shift+f fullscreen toggle 
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
@@ -176,7 +176,7 @@ bindsym $mod+Shift+w layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
 # logout i3
-bindsym $mod+F12 exec "killall conky && i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
+bindsym $mod+F12 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
 bindsym $mod+F9 exec "killall conky"
 # bindsym $mod+F12 exec "i3-nagbar"
 
@@ -188,22 +188,20 @@ bindsym $mod+F11 exec "toggleVideo"
 # bindsym $mod+r exec --no-startup-id dmenu_run
 bindsym $mod+r exec --no-startup-id gmrun
 
-mode "resize" {
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+# reload config
+bindsym $mod+o reload
 
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# lock desktop
+bindsym Mod1+Control+q exec --no-startup-id lock-desktop
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+v mode "default"
-}
-# bindsym $mod+v mode "resize"
+
+#-----------------------------------------------
+#-- MEDIA
+#-----------------------------------------------
+
+# play pause
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 
 # volume
 bindsym XF86AudioRaiseVolume exec vol -d up -i 5 && $refresh_i3status
@@ -211,8 +209,18 @@ bindsym XF86AudioLowerVolume exec vol -d down -i 5 && $refresh_i3status
 bindsym $mod+Up exec vol -d up -i 10 && $refresh_i3status
 bindsym $mod+Down exec vol -d down -i 10 && $refresh_i3status
 
-# reload config
-bindsym $mod+o reload
+# skip tracks
+bindsym $mod+XF86AudioNext exec --no-startup-id playerctl next
+bindsym $mod+XF86AudioPrev exec --no-startup-id playerctl previous
+
+bindsym $mod+Right exec --no-startup-id playerctl next
+bindsym $mod+Left exec --no-startup-id playerctl previous
+
+
+
+#-----------------------------------------------
+#-- WINDOW MANAGEMENT
+#-----------------------------------------------
 
 # search windows
 bindsym $mod+g exec --no-startup-id rofi -show window
@@ -271,13 +279,17 @@ mode "window-mode" {
 }
 bindsym $mod+d mode "window-mode"
 
-# bindsym $mod+k resize grow width 10 px or 10 ppt
-# bindsym $mod+j resize shrink width 10 px or 10 ppt
+# move windows
+bindsym $mod+Control+Left move left
+bindsym $mod+Control+Down move down
+bindsym $mod+Control+Up move up
+bindsym $mod+Control+Right move right
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# focus windows
+bindsym $mod+h focus left
+bindsym $mod+j focus right
+bindsym $mod+l focus left
+bindsym $mod+k focus down
 
 # move windows using h and l
 bindsym Control+Mod1+h workspace prev
@@ -313,19 +325,6 @@ mode "mode-shutdown" {
 }
 bindsym $mod+End mode "mode-shutdown"
 
-# skip tracks
-bindsym $mod+XF86AudioNext exec --no-startup-id playerctl next
-bindsym $mod+Control+Right exec --no-startup-id playerctl next
-bindsym $mod+XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym $mod+Control+Left exec --no-startup-id playerctl previous
-
-# play pause
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
-
-# lock desktop
-bindsym Mod1+Control+q exec --no-startup-id lock-desktop
-
 # toggle float
 # bindsym $mod+Shift+space floating toggle
 bindsym $mod+t floating toggle
@@ -338,14 +337,7 @@ bindsym $mod+b split v
 bindsym $mod+v move scratchpad
 bindsym Mod1+Tab scratchpad show
 
-# focus windows
-bindsym $mod+h focus left
-bindsym $mod+Right focus right 
-bindsym $mod+j focus right
-bindsym $mod+Left focus left
-bindsym $mod+l focus left
-bindsym $mod+k focus down
-# bindsym $mod+l focus up
+
 
 
 #-----------------------------------------------
@@ -376,13 +368,14 @@ bindsym $mod+n exec --no-startup-id notes
 bindsym --release $mod+x exec --no-startup-id xkill
 
 
-
 #-----------------------------------------------
 #-- Startup
 #-----------------------------------------------
-# exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
+exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'"
+# exec --no-startup-id i3-restore
 
-# exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
 
 exec --no-startup-id fc-cache -fv
 
@@ -410,24 +403,18 @@ exec --no-startup-id deluge
 
 exec --no-startup-id xscreensaver -no-splash 
 
-exec --no-startup-id google-chrome-stable
-
-exec --no-startup-id i3-restore
-
-exec --no-startup-id myterm	
-
-exec --no-startup-id pcmanfm	
-
-exec --no-startup-id sub	
-
-
-
+exec --no-startup-id launch-default-apps
 
 
 
 #-----------------------------------------------
 #-- Unused
-#-----------------------------------------------
+# -----------------------------------------------
+# exec --no-startup-id myterm 
+# exec --no-startup-id google-chrome-stable
+# exec --no-startup-id pcmanfm    
+# exec --no-startup-id pcmanfm  
+
 # exec --no-startup-id mypolybar
 
 #-- Not enabled

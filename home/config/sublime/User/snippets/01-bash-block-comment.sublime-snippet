@@ -9,6 +9,6 @@
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
 	<tabTrigger>shblock-comment</tabTrigger>
-	<scope>text.html.markdown markup.raw.code-fence.shell.markdown-gfm source.shell.interactive.markdown</scope>
+	<scope>source.shell.bash</scope>
 	<!-- <scope>text.html.markdown.multimarkdo</scope> -->
 </snippet>

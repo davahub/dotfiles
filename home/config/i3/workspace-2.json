@@ -18,7 +18,7 @@
             },
             "marks": [],
             "name": "Dava",
-            "percent": 0.25,
+            "percent": 0.5,
             "swallows": [
                 {
                     "class": "^Pcmanfm$",
@@ -38,12 +38,12 @@
                 "y": 0
             },
             "marks": [],
-            "name": "*- Sublime Text",
-            "percent": 0.75,
+            "name": "Dava",
+            "percent": 0.5,
             "swallows": [
                 {
-                    "class": "^Sub$",
-                    "instance": "^sub$"
+                    "class": "^Pcmanfm$",
+                    "instance": "^pcmanfm$"
                 }
             ],
             "type": "con"
