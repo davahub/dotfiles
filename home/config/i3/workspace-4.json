@@ -1,85 +1,26 @@
 // vim:ts=4:sw=4:et
 {
-    // floating_con with 1 children
     "border": "normal",
+    "current_border_width": 2,
     "floating": "auto_off",
-    "layout": "splith",
-    "marks": [],
-    "percent": null,
-    "rect": {
-       "height": 116,
-       "width": 275,
-       "x": 2287,
-       "y": 42
+    "geometry": {
+       "height": 1335,
+       "width": 2548,
+       "x": 6,
+       "y": 70
     },
-    "type": "floating_con",
-    "nodes": [
-        {
-            "border": "none",
-            "current_border_width": 2,
-            "floating": "auto_on",
-            "geometry": {
-               "height": 116,
-               "width": 275,
-               "x": 2288,
-               "y": 89
-            },
-            "marks": [],
-            "name": "The Isley Brothers - The Essential Isley Brothers CD1 - Work to Do (3:10) - Audacious",
-            "percent": 1,
-            "swallows": [
-               {
-               "class": "^Audacious$",
-               "instance": "^audacious$",
-               // "machine": "^home$",
-               // "title": "^The\\ Isley\\ Brothers\\ \\-\\ The\\ Essential\\ Isley\\ Brothers\\ CD1\\ \\-\\ Work\\ to\\ Do\\ \\(3\\:10\\)\\ \\-\\ Audacious$",
-               // "window_role": "^mainwindow$"
-               }
-            ],
-            "type": "con"
-        }
-    ]
-}
-
-{
-    // floating_con with 1 children
-    "border": "normal",
-    "floating": "auto_off",
-    "layout": "splith",
     "marks": [],
-    "percent": null,
-    "rect": {
-       "height": 609,
-       "width": 525,
-       "x": 2035,
-       "y": 158
-    },
-    "type": "floating_con",
-    "nodes": [
-        {
-            "border": "none",
-            "current_border_width": 2,
-            "floating": "auto_on",
-            "geometry": {
-               "height": 609,
-               "width": 525,
-               "x": 2035,
-               "y": 219
-            },
-            "marks": [],
-            "name": "Audacious Playlist Editor",
-            "percent": 1,
-            "swallows": [
-               {
-               "class": "^Audacious$",
-               "instance": "^audacious$",
-               // "machine": "^home$",
-               // "title": "^Audacious\\ Playlist\\ Editor$",
-               // "window_role": "^playlist$"
-               }
-            ],
-            "type": "con"
-        }
-    ]
+    "name": "- Audacious",
+    "percent": 1,
+    "swallows": [
+       {
+       "class": "^Audacious$",
+       "instance": "^audacious$",
+       // "machine": "^home$",
+       // "title": "^Harry\\ Styles\\ \\-\\ Fine\\ Line\\ \\-\\ Canyon\\ Moon\\ \\(3\\:09\\)\\ \\-\\ Audacious$",
+       // "window_role": "^mainwindow$"
+       }
+    ],
+    "type": "con"
 }
 

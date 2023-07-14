@@ -197,7 +197,7 @@ bindsym Mod1+Control+q exec --no-startup-id lock-desktop
 
 # kill window on mouse right click
 bindsym --release button2 kill
-bindsym --whole-window $mod+button3 kill
+bindsym --whole-window $mod+button2 kill
 
 
 #-----------------------------------------------
@@ -310,6 +310,9 @@ bindsym $mod+j focus right
 bindsym $mod+l focus left
 bindsym $mod+k focus down
 
+bindsym $mod+Shift+Right focus right
+bindsym $mod+Shift+Left focus left
+
 # move windows using h and l
 bindsym Control+Mod1+h workspace prev
 bindsym Control+Mod1+l workspace next
@@ -335,9 +338,9 @@ bindsym $mod+g mode "go-to"
 
 # shutdown commands
 mode "mode-shutdown" {
-    bindsym e exec systemctl poweroff ; mode "default"
+    bindsym e exec --no-startup-id systemctl poweroff ; mode "default"
     bindsym s exec --no-startup-id lock-suspend ; mode "default"
-    bindsym r exec systemctl reboot ; mode "default"
+    bindsym r exec --no-startup-id systemctl reboot ; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"

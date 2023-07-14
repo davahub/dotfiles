@@ -6,15 +6,26 @@ pcm.usb
     card U0x46d0x804
 }
 
+# pcm.!default {
+# 	type hw
+# 	card PCH
+# 	capture.pcm
+# 	{
+# 		type plug
+# 	  	slave.pcm "usb"
+# 	}
+# }
+
 pcm.!default {
-	type hw
-	card PCH
-	capture.pcm
-	{
-		type plug
-	  	slave.pcm "usb"
-	}
+   type plug
+   slave.pcm {
+       @func getenv
+       vars [ ALSAPCM ]
+       default "hw:PCH"
+   }
 }
+
+
 ctl.!default {
 	type hw           
 	card PCH
