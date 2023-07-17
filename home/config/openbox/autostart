@@ -32,6 +32,8 @@ feh --bg-scale /home/dava/.3installed/wallpaper/$wallpaper &
 
 numlockx &
 
+$MYCONFIG_DIR/home/setlayout 0 3 2 0 &
+
 xset -dpms; xset s off; xset -b &
 
 xinput --set-prop "Logitech G203 Prodigy Gaming Mouse" "libinput Accel Speed" -0.9 & 
@@ -53,7 +55,7 @@ sleep 1s
 conky &
 
 #sleep 1s
-#tint2 &
+tint2 &
 
 sleep 1s
 parcellite &
@@ -64,7 +66,7 @@ parcellite &
 #--------------------------------------------------------
 #-- NOT ENABLED
 #--------------------------------------------------------
-#$MYCONFIG_DIR/home/setlayout 0 3 2 0 &
+
 #volumeicon &
 #sleep 1s
 #amor &

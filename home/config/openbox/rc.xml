@@ -1174,6 +1174,13 @@
         <y>center</y>
       </position>
     </application>
+    <application class="Google-chrome" type="normal">
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+      <maximized>Vertical</maximized>
+    </application>
     <application class="Chromium" type="normal">
       <position force="yes">
         <x>center</x>

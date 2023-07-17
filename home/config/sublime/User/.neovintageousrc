@@ -1,0 +1,25 @@
+" Type :help nv for help.
+
+inoremap <A-j> <Esc>
+vnoremap <A-j> <Esc>
+inoremap <A-j> <Esc>
+
+inoremap J 6j
+vnoremap J 6j
+nnoremap J 6j
+
+inoremap K 6k 
+vnoremap K 6k 
+nnoremap K 6k
+
+
+vnoremap <M-l> $
+nnoremap <M-l> $
+
+
+vnoremap <M-n> ^
+nnoremap <M-n> ^
+
+
+
+

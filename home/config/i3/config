@@ -295,8 +295,43 @@ mode "window-mode" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
     bindsym $mod+d mode "default"
+    bindsym Mod1+j mode "default"
 }
 bindsym $mod+d mode "window-mode"
+
+# ride wndows
+mode "ride-mode" {
+    # bindsym 1 workspace number $ws1 ; mode "default"
+    # bindsym 2 workspace number $ws2 ; mode "default"
+    # bindsym 3 workspace number $ws3 ; mode "default"
+    # bindsym 4 workspace number $ws4 ; mode "default"
+    # bindsym 5 workspace number $ws5 ; mode "default"
+    # bindsym 6 workspace number $ws6 ; mode "default"
+    # bindsym 7 workspace number $ws7 ; mode "default"
+    # bindsym 8 workspace number $ws8 ; mode "default"
+    # bindsym 9 workspace number $ws9 ; mode "default"
+    
+    bindsym 1 workspace number $ws1 
+    bindsym 2 workspace number $ws2 
+    bindsym 3 workspace number $ws3 
+    bindsym 4 workspace number $ws4 
+    bindsym 5 workspace number $ws5 
+    bindsym 6 workspace number $ws6 
+    bindsym 7 workspace number $ws7 
+    bindsym 8 workspace number $ws8 
+    bindsym 9 workspace number $ws9 
+
+    # bindsym h focus left
+    bindsym h workspace prev
+    bindsym l workspace next
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+j mode "default"
+    bindsym Mod1+j mode "default"
+}
+bindsym $mod+j mode "ride-mode"
+
 
 # move windows
 bindsym $mod+Control+Left move left
@@ -306,7 +341,7 @@ bindsym $mod+Control+Right move right
 
 # focus windows
 bindsym $mod+h focus left
-bindsym $mod+j focus right
+# bindsym $mod+j focus right
 bindsym $mod+l focus left
 bindsym $mod+k focus down
 

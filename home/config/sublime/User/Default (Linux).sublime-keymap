@@ -29,38 +29,8 @@
 	//---------------------------------------------
 	{ "keys": ["ctrl+o"], "command": "jump_back"},
 	{ "keys": ["ctrl+i"], "command": "jump_forward"},
-	// { "keys": ["alt+j"], "command": "exit_insert_mode",
-    // 	"context":
-    // 	[
-    //     	{ "key": "setting.command_mode", "operand": false },
-    //     	{ "key": "setting.is_widget", "operand": false }
-    // 	]
-	// },
-	// { "keys": ["alt+j"], "command": "exit_visual_mode",
-	// 	"context":
-	// 	[
-	// 		{ "key": "setting.command_mode"},
-	// 		{ "key": "num_selections", "operand": 1},
-	// 		{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
-	// 	]
-	// },
-	// { "keys": ["alt+j"], "command": "vi_cancel_current_action", "context":
-	// 	[
-	// 		{ "key": "setting.command_mode" },
-	// 		{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
-	// 		{ "key": "vi_has_input_state" }
-	// 	]
-	// },
-	// { "keys": ["alt+j"], "command": "hide_auto_complete", "context":[{ "key": "auto_complete_visible", "operator": "equal", "operand": true }] },
-	
-	// { "keys": ["alt+j"], "command": "hide_popup", "context":[{ "key": "popup_visible", "operator": "equal", "operand": true }]},
-	// { "keys": ["alt+j"], "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]},
-	// { "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
 	{ "keys": ["alt+j"], "command": "run_multiple_commands", "args": {
 		"commands": [
-        // {
-        //   "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]
-        // },
         {
           "command": "clear_fields", "context":[{ "key": "has_next_field", "operator": "equal", "operand": true }]
         },
@@ -95,7 +65,10 @@
         }
     ]}},
     { "keys": ["alt+j"], "command": "hide_panel", "args": {"cancel": true},"context":[{ "key": "panel_visible", "operator": "equal", "operand": true }]},
-
+    // { "keys": ["ctrl+w", "j"], "command": "move_group_focus",
+		// 	"args": {"repeat": 2, "direction": "down"},
+		// 	"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+		// },
 		// { "keys": ["alt+l"], "command": "set_motion", "args": {
     //     "motion": "vi_move_to_hard_eol",
     //     "motion_args": {"repeat": 1, "extend": true},
@@ -231,14 +204,14 @@
 	// down 6 lines
 	// {"keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"}},
 	{
-		"keys": ["J"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-down.sublime-macro"},
+		"keys": ["J"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/vim-move-cursor-6-down.sublime-macro"},
 		"context": [ { "key": "setting.command_mode", "operand": true } ] 
 	},
 	// up 6 lines
 	{"keys": ["alt+p"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
 	{"keys": ["ctrl+l"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"}},
 	{
-		"keys": ["K"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/move-cursor-6-up.sublime-macro"},
+		"keys": ["K"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/vim-move-cursor-6-up.sublime-macro"},
 		"context": [ { "key": "setting.command_mode", "operand": true } ] 
 	},
 	// add 6 lines

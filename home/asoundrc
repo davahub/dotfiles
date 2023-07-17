@@ -1,32 +1,17 @@
-
-# SET DEFAULT SOUNDCARD ###############################
-pcm.usb
-{
-    type hw
-    card U0x46d0x804
-}
-
-# pcm.!default {
-# 	type hw
-# 	card PCH
-# 	capture.pcm
-# 	{
-# 		type plug
-# 	  	slave.pcm "usb"
-# 	}
-# }
-
 pcm.!default {
-   type plug
-   slave.pcm {
-       @func getenv
-       vars [ ALSAPCM ]
-       default "hw:PCH"
-   }
+    type hw
+    card PCH
+}
+ctl.!default {
+    type hw
+    card PCH
 }
 
-
-ctl.!default {
-	type hw           
-	card PCH
+pcm.usb-audio {
+    type hw
+    card PCH
+}     
+ctl.usb-audio {
+    type hw
+    card PCH
 }

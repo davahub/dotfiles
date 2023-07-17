@@ -235,7 +235,9 @@
 	[
 		"Markdown Extended",
 		"Mediawiker",
+		"Six",
 		"SublimeREPL",
+		"Vintageous",
 	],
 	"ignored_words":
 	[
@@ -250,6 +252,15 @@
 	[
 		"gray_antialias"
 	],
+	"vintageous_i_escape_jj": true,
+	"vintageous_i_escape_jk": true,
+	"vintageous_use_alt_keys": true,
+	"vintageous_handle_keys": {
+		"<C-f>": false,
+		"<C-v>": false,
+		"<C-c>": false,
+		"<A>": false,
+	},
 	"remember_open_files": true,
 	"save_on_focus_lost": true,
 	"scroll_speed": 0,
@@ -271,4 +282,5 @@
 	"reveal_menu": false,
 	"mini_diff": false,
 	"update_check": false,
+	"neovintageous_build_version": 12700,
 }
