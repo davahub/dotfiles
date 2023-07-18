@@ -140,10 +140,22 @@ bar {
     # i3bar_command i3bar
     font pango:Terminus 16
     workspace_min_width 40
+    # colors {
+    #     background #3B3B3B
+    # }
     colors {
-        background #3B3B3B
+        background #2f343f
+        statusline #2f343f
+        separator #4b5262
+
+        # colour of border, background, and text
+        # focused_workspace       #2f343f #bf616a #d8dee8
+        # active_workspace        #2f343f #2f343f #d8dee8
+        # inactive_workspace      #2f343f #2f343f #d8dee8
+        # urgent_workspacei       #2f343f #ebcb8b #2f343f
     }
     bindsym --release button3 exec --no-startup-id rofi -show window
+    bindsym --release button2 exec --no-startup-id rofi -show window
 }
 
 
@@ -220,7 +232,6 @@ bindsym $mod+XF86AudioPrev exec --no-startup-id playerctl previous
 
 bindsym $mod+Right exec --no-startup-id playerctl next
 bindsym $mod+Left exec --no-startup-id playerctl previous
-
 
 
 #-----------------------------------------------
@@ -396,8 +407,6 @@ bindsym $mod+b split v
 # scratchpad
 bindsym $mod+v move scratchpad
 bindsym Mod1+Tab scratchpad show
-
-
 
 
 #-----------------------------------------------

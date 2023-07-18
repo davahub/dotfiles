@@ -217,6 +217,7 @@
 	// add 6 lines
 	{"keys": ["ctrl+alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}},
 
+
 	//---------------------------------------------
 	//-- REMAP
 	//---------------------------------------------

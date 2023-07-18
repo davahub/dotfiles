@@ -252,15 +252,6 @@
 	[
 		"gray_antialias"
 	],
-	"vintageous_i_escape_jj": true,
-	"vintageous_i_escape_jk": true,
-	"vintageous_use_alt_keys": true,
-	"vintageous_handle_keys": {
-		"<C-f>": false,
-		"<C-v>": false,
-		"<C-c>": false,
-		"<A>": false,
-	},
 	"remember_open_files": true,
 	"save_on_focus_lost": true,
 	"scroll_speed": 0,
