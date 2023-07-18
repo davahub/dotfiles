@@ -175,10 +175,6 @@ bindsym $mod+space exec --no-startup-id toggleKeyboard
 # full screen
 bindsym $mod+Return fullscreen toggle  
 
-bindsym Control+Mod1+Right workspace next
-
-bindsym Control+Mod1+Left workspace prev
-
 bindsym Mod1+w kill
 
 bindsym $mod+w kill
@@ -237,6 +233,18 @@ bindsym $mod+Left exec --no-startup-id playerctl previous
 #-----------------------------------------------
 #-- WINDOW MANAGEMENT
 #-----------------------------------------------
+
+bindsym Control+Mod1+Right workspace next
+bindsym $mod+l workspace next
+
+bindsym Control+Mod1+Left workspace prev
+bindsym $mod+h workspace prev
+
+# focus windows
+# bindsym $mod+h focus left
+bindsym $mod+j focus right
+# bindsym $mod+l focus left
+bindsym $mod+k focus down
 
 # search windows
 bindsym $mod+f exec --no-startup-id rofi -show window
@@ -339,9 +347,10 @@ mode "ride-mode" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
     bindsym $mod+j mode "default"
+    bindsym $mod+semicolon mode "default"
     bindsym Mod1+j mode "default"
 }
-bindsym $mod+j mode "ride-mode"
+bindsym $mod+semicolon mode "ride-mode"
 
 
 # move windows
@@ -350,18 +359,13 @@ bindsym $mod+Control+Down move down
 bindsym $mod+Control+Up move up
 bindsym $mod+Control+Right move right
 
-# focus windows
-bindsym $mod+h focus left
-# bindsym $mod+j focus right
-bindsym $mod+l focus left
-bindsym $mod+k focus down
 
 bindsym $mod+Shift+Right focus right
 bindsym $mod+Shift+Left focus left
 
 # move windows using h and l
-bindsym Control+Mod1+h workspace prev
-bindsym Control+Mod1+l workspace next
+# bindsym Control+Mod1+h workspace prev
+# bindsym Control+Mod1+l workspace next
 
 # go to windows
 mode "go-to" {
