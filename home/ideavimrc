@@ -10,9 +10,13 @@ set ignorecase
 " -- Disable vim keys for IDE
 " -------------------------------------
 
-sethandler <C-c> n-v:ide i:vim
-sethandler <C-a> n-v:ide i:vim
-sethandler <C-f> n-v:ide i:vim
+sethandler <C-c> n-v:ide n-i:ide n-n:ide
+sethandler <C-a> n-v:ide n-i:ide n-n:ide
+sethandler <C-f> n-v:ide n-i:ide n-n:ide
+sethandler <C-z> n-v:ide n-i:ide n-n:ide
+sethandler <C-x> n-v:ide n-i:ide n-n:ide
+sethandler <C-s> n-v:ide n-i:ide n-n:ide
+
 
 
 
@@ -24,7 +28,9 @@ sethandler <C-f> n-v:ide i:vim
 " -- Shortcuts
 " -------------------------------------
 
-imap <M-j> <ESC>
+inoremap <M-j> <ESC>
+vnoremap <M-j> <ESC>
+nnoremap <M-j> <ESC>
 
 nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 
