@@ -281,6 +281,8 @@ mode "window-mode" {
     bindsym Left workspace prev
     # bindsym Right focus right
     bindsym Right workspace next
+    bindsym j focus right
+    bindsym k focus down
 
     # focus
     bindsym Shift+h focus left
@@ -295,9 +297,9 @@ mode "window-mode" {
 
     # resize
     bindsym Up resize grow width 10 px or 10 ppt
-    bindsym k resize grow width 10 px or 10 ppt
     bindsym Down resize shrink width 10 px or 10 ppt
-    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym i resize grow width 10 px or 10 ppt
+    bindsym o resize shrink width 10 px or 10 ppt
 
     bindsym Shift+Left move left
     bindsym Shift+Down move down

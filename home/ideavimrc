@@ -3,14 +3,21 @@
 " -- Config
 " -------------------------------------
 set surround
-
+set ignorecase
 
 
 " -------------------------------------
-" -- Set IDE
+" -- Disable vim keys for IDE
 " -------------------------------------
+
 sethandler <C-c> n-v:ide i:vim
 sethandler <C-a> n-v:ide i:vim
+sethandler <C-f> n-v:ide i:vim
+
+
+
+
+
 
 
 " -------------------------------------
