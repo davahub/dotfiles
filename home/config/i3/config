@@ -235,9 +235,11 @@ bindsym $mod+Left exec --no-startup-id playerctl previous
 #-----------------------------------------------
 
 bindsym Control+Mod1+Right workspace next
+bindsym Control+Mod1+l workspace next
 bindsym $mod+l workspace next
 
 bindsym Control+Mod1+Left workspace prev
+bindsym Control+Mod1+h workspace prev
 bindsym $mod+h workspace prev
 
 # focus windows
@@ -317,8 +319,10 @@ mode "window-mode" {
     bindsym Escape mode "default"
     bindsym $mod+d mode "default"
     bindsym Mod1+j mode "default"
+    bindsym Control+Mod1+d mode "default"
 }
 bindsym $mod+d mode "window-mode"
+bindsym Control+Mod1+d mode "window-mode"
 
 # ride wndows
 mode "ride-mode" {

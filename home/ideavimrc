@@ -27,6 +27,8 @@ sethandler <C-s> n-v:ide n-i:ide n-n:ide
 " -------------------------------------
 " -- Shortcuts
 " -------------------------------------
+vnoremap <BS> x
+nnoremap <BS> x
 
 inoremap <M-j> <ESC>
 vnoremap <M-j> <ESC>
