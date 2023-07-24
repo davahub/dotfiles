@@ -273,22 +273,16 @@ mode "window-mode" {
     bindsym Shift+8 workspace number $ws8
     bindsym Shift+9 workspace number $ws9
 
-    # bindsym h focus left
-    bindsym h workspace prev
-    bindsym l workspace next
-    # bindsym k focus up
-    # bindsym j focus down 
 
-    # bindsym Left focus left
+    # move worksapce
+    bindsym Shift+h workspace prev
+    bindsym Shift+l workspace next
     bindsym Left workspace prev
-    # bindsym Right focus right
     bindsym Right workspace next
-    bindsym j focus right
-    bindsym k focus down
 
     # focus
-    bindsym Shift+h focus left
-    bindsym Shift+l focus right
+    bindsym h focus left
+    bindsym l focus right
     bindsym Shift+j focus down 
     bindsym Shift+k focus up
 
@@ -300,8 +294,8 @@ mode "window-mode" {
     # resize
     bindsym Up resize grow width 10 px or 10 ppt
     bindsym Down resize shrink width 10 px or 10 ppt
-    bindsym i resize grow width 10 px or 10 ppt
-    bindsym o resize shrink width 10 px or 10 ppt
+    bindsym k resize grow width 10 px or 10 ppt
+    bindsym j resize shrink width 10 px or 10 ppt
 
     bindsym Shift+Left move left
     bindsym Shift+Down move down
@@ -416,7 +410,8 @@ bindsym $mod+b split v
 
 # scratchpad
 bindsym $mod+v move scratchpad
-bindsym Mod1+Tab scratchpad show
+bindsym Control+Mod1+Tab scratchpad show
+bindsym Mod1+Tab focus right
 
 
 #-----------------------------------------------
