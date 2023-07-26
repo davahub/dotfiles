@@ -234,19 +234,23 @@ bindsym $mod+Left exec --no-startup-id playerctl previous
 #-- WINDOW MANAGEMENT
 #-----------------------------------------------
 
+# move workspaces
 bindsym Control+Mod1+Right workspace next
 bindsym Control+Mod1+l workspace next
-bindsym $mod+l workspace next
+# bindsym $mod+l workspace next
 
 bindsym Control+Mod1+Left workspace prev
 bindsym Control+Mod1+h workspace prev
-bindsym $mod+h workspace prev
+# bindsym $mod+h workspace prev
 
 # focus windows
-# bindsym $mod+h focus left
-bindsym $mod+j focus right
-# bindsym $mod+l focus left
-bindsym $mod+k focus down
+bindsym $mod+h focus left
+bindsym $mod+l focus right
+# bindsym $mod+j focus right
+
+# resize
+bindsym $mod+k resize grow width 10 px or 10 ppt
+bindsym $mod+j resize shrink width 10 px or 10 ppt
 
 # search windows
 bindsym $mod+f exec --no-startup-id rofi -show window

@@ -37,10 +37,50 @@ key[Control-Right]="${terminfo[kRIT5]}"
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
-
-
 # setup keys
 bindkey '^e^e' up-line-or-beginning-search
+
+
+# ---------------------------------------------
+# -- Keybind
+# ---------------------------------------------
+
+bindkey -M viins "^[j" vi-cmd-mode
+
+
+# Yank to the system clipboard
+#function vi-yank-xclip {
+#    vi-yank-x-selection () { print -rn -- $CUTBUFFER | xsel -i -p; }
+#}
+
+#function yank-xclip() {
+#    zle vi-yank
+#    echo "$CUTBUFFER" | xclip -i 
+#}
+#zle -N yank-xclip
+
+#bindkey -M visual "y" yank-xclip
+
+# Function to yank selected text to clipboard
+function yank-xclip() {
+    zle copy-region-as-kill # Copy the selected text to the kill buffer
+    echo -n "$CUTBUFFER" | xclip -selection clipboard # Copy the kill buffer content to the clipboard using xclip
+    zle vi-yank
+}
+
+zle -N yank-xclip
+# Bind the function to the 'y' key in visual mode
+bindkey -M visual 'y' yank-xclip
+
+
+x-paste() {
+    PASTE=$(xclip -o -sel clip)
+    LBUFFER="$LBUFFER${RBUFFER:0:1}"
+    RBUFFER="$PASTE${RBUFFER:1:${#RBUFFER}}"
+}
+zle -N x-paste
+
+bindkey -M vicmd "p" x-paste
 
 
 # Finally, make sure the terminal is in application mode, when zle is

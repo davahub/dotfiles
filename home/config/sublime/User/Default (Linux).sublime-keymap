@@ -124,6 +124,8 @@
 		"motion": null },
 		"context": [{"key": "setting.command_mode"}]
 	},
+	// Join lines
+	{ "keys": ["alt+shift+j"], "command": "join_lines", "context": [{"key": "setting.command_mode"}] },
 	
 
 
