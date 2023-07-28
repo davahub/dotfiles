@@ -1,4 +1,7 @@
 
+# ---------------------------------------------
+# -- Shortcuts
+# ---------------------------------------------
 typeset -g -A key
 key[Home]="${terminfo[khome]}"
 key[End]="${terminfo[kend]}"
@@ -41,25 +44,11 @@ bindkey '^N' history-beginning-search-forward
 bindkey '^e^e' up-line-or-beginning-search
 
 
-# ---------------------------------------------
-# -- Keybind
-# ---------------------------------------------
 
+# ---------------------------------------------
+# -- Vim
+# ---------------------------------------------
 bindkey -M viins "^[j" vi-cmd-mode
-
-
-# Yank to the system clipboard
-#function vi-yank-xclip {
-#    vi-yank-x-selection () { print -rn -- $CUTBUFFER | xsel -i -p; }
-#}
-
-#function yank-xclip() {
-#    zle vi-yank
-#    echo "$CUTBUFFER" | xclip -i 
-#}
-#zle -N yank-xclip
-
-#bindkey -M visual "y" yank-xclip
 
 # Function to yank selected text to clipboard
 function yank-xclip() {
@@ -82,7 +71,19 @@ zle -N x-paste
 
 bindkey -M vicmd "p" x-paste
 
+bindkey -M vicmd "^[i" vi-add-eol
 
+bindkey -M vicmd "H" vi-digit-or-beginning-of-line
+
+bindkey -M vicmd "L" vi-end-of-line
+
+
+
+
+
+# ---------------------------------------------
+# -- Others
+# ---------------------------------------------
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
 if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
