@@ -69,6 +69,7 @@ URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Right: \033[1;5C
 ! fix for delayed ctrl-e
 URxvt.keysym.Control-e: \033[F
+URxvt.keysym.C-semicolon: \033[50~
 
 
 

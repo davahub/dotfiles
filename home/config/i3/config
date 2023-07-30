@@ -310,8 +310,8 @@ mode "window-mode" {
     bindsym Shift+h workspace prev
 
     bindsym s layout stacking
-    bindsym w layout tabbed
-    bindsym t+e layout toggle split
+    bindsym t layout tabbed
+    bindsym i layout toggle split
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -415,6 +415,8 @@ bindsym $mod+b split v
 # scratchpad
 bindsym $mod+v move scratchpad
 bindsym Control+Mod1+Tab scratchpad show
+bindsym Control+Shift+Tab scratchpad show
+# bindsym Mod1+Tab scratchpad show
 bindsym Mod1+Tab focus right
 
 
@@ -444,6 +446,11 @@ bindsym $mod+n exec --no-startup-id notes
 
 # xkill
 bindsym --release $mod+x exec --no-startup-id xkill
+
+
+
+
+
 
 
 #-----------------------------------------------
@@ -486,6 +493,9 @@ exec --no-startup-id deluge
 exec --no-startup-id xscreensaver -no-splash 
 
 exec --no-startup-id launch-default-apps
+
+exec --no-startup-id mylightscreen
+
 
 
 

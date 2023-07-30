@@ -48,6 +48,8 @@ bindkey '^e^e' up-line-or-beginning-search
 # ---------------------------------------------
 # -- Vim
 # ---------------------------------------------
+# ^ Control, ^[ Alt, 
+
 bindkey -M viins "^[j" vi-cmd-mode
 
 # Function to yank selected text to clipboard
@@ -79,6 +81,17 @@ bindkey -M vicmd "L" vi-end-of-line
 
 
 
+# backward kill word
+my-delete() {
+    zle backward-delete-word
+    zle delete-char
+}
+zle -N my-delete
+bindkey -M vicmd "^[;" my-delete
+bindkey -M vicmd '^;' my-delete
+bindkey '^H' backward-kill-word
+# come from urxvt
+bindkey "\033[50~" backward-kill-word
 
 
 # ---------------------------------------------
