@@ -165,6 +165,9 @@ bar {
 #  ___) | | | | (_) | |  | || (__| |_| | |_\__ \
 # |____/|_| |_|\___/|_|   \__\___|\__,_|\__|___/
 
+# bindsym --whole-window -> whole window for mouse
+# button2 - scroll click, button1 - left click, button3 - right click
+
 #-----------------------------------------------
 #-- SYSTEM
 #-----------------------------------------------
@@ -205,7 +208,11 @@ bindsym Mod1+Control+q exec --no-startup-id lock-desktop
 
 # kill window on mouse right click
 bindsym --release button2 kill
-bindsym --whole-window $mod+button2 kill
+# bindsym --whole-window $mod+button2 kill
+
+# toggle float
+bindsym $mod+t floating toggle
+bindsym --whole-window $mod+button2 floating toggle
 
 
 #-----------------------------------------------
@@ -257,6 +264,16 @@ bindsym $mod+f exec --no-startup-id rofi -show window
 
 # move windows
 mode "window-mode" {
+    bindsym F1 move container to workspace number $ws1 ; workspace number $ws1 ; mode "default"
+    bindsym F2 move container to workspace number $ws2 ; workspace number $ws2 ; mode "default"
+    bindsym F3 move container to workspace number $ws3 ; workspace number $ws3 ; mode "default"
+    bindsym F4 move container to workspace number $ws4 ; workspace number $ws4 ; mode "default"
+    bindsym F5 move container to workspace number $ws5 ; workspace number $ws5 ; mode "default"
+    bindsym F6 move container to workspace number $ws6 ; workspace number $ws6 ; mode "default"
+    bindsym F7 move container to workspace number $ws7 ; workspace number $ws7 ; mode "default"
+    bindsym F8 move container to workspace number $ws8 ; workspace number $ws8 ; mode "default"
+    bindsym F9 move container to workspace number $ws9 ; workspace number $ws9 ; mode "default"
+
 	bindsym 1 move container to workspace number $ws1 ; workspace number $ws1 ; mode "default"
 	bindsym 2 move container to workspace number $ws2 ; workspace number $ws2 ; mode "default"
 	bindsym 3 move container to workspace number $ws3 ; workspace number $ws3 ; mode "default"
@@ -402,11 +419,6 @@ mode "mode-shutdown" {
     bindsym $mod+d mode "default"
 }
 bindsym $mod+End mode "mode-shutdown"
-
-# toggle float
-# bindsym $mod+Shift+space floating toggle
-bindsym $mod+t floating toggle
-bindsym button3 floating toggle
 
 # split in horizontal and vertical orientation
 bindsym $mod+y split h
