@@ -29,7 +29,6 @@ prompt_clint_setup () {
   pc['\)']="%F{$pcc[1]})"
 
   p_date="$pc['\[']%F{$pcc[2]}%D{%a %y/%m/%d %R %Z}$pc['\]']"
-  p_tty="$pc['\[']%F{$pcc[3]}%l$pc['\]']"
   p_plat="$pc['\[']%F{$pcc[2]}${MACHTYPE}/${OSTYPE}/$(uname -r)$pc['\]']"
   p_ver="$pc['\[']%F{$pcc[2]}${ZSH_VERSION}$pc['\]']"
 
@@ -46,9 +45,12 @@ prompt_clint_setup () {
   zle_highlight[(r)default:*]=default:$pcc[2]
 
   p_mode_indicator="$pc['\[']%F{$pcc[3]}${MODE_INDICATOR_PROMPT}$pc['\]']"
+  # p_tty="$pc['\[']%F{$pcc[3]}%l$pc['\]']"
+  p_tty="$pc['\[']%F{$pcc[3]}%l$pc['\]']"
 
-  prompt="$p_tty$p_mode_indicator$p_userpwd${vcs_info_msg_0_}$dir_status
-%2v%F{7}%B%3v%f%F{1}%B%4v%f%F{3}%B%5v%f%F{2}%B%6v%f"
+
+  prompt="$p_mode_indicator$p_userpwd$p_tty
+%F{7}%B%2v%f%F{7}%B%3v%f%F{1}%B%4v%f%F{3}%B%5v%f%F{2}%B%6v%f"
   PS2='%(4_.\.)%3_> %E'
 
   add-zsh-hook precmd prompt_clint_precmd
