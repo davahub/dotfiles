@@ -62,8 +62,7 @@ bindsym $mod+Shift+semicolon move right
 # bindsym $mod+Shift+Up move up
 # bindsym $mod+Shift+Right move right
 
-# enter fullscreen mode for the focused container
-bindsym $mod+Shift+f fullscreen toggle 
+
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
@@ -176,7 +175,9 @@ bar {
 bindsym $mod+space exec --no-startup-id toggleKeyboard
 
 # full screen
-bindsym $mod+Return fullscreen toggle  
+bindsym Control+Mod1+f fullscreen toggle 
+bindsym Control+$mod+Return fullscreen toggle 
+# bindsym Mod1+Return fullscreen toggle  
 
 bindsym Mod1+w kill
 
@@ -213,6 +214,7 @@ bindsym --release button2 kill
 # toggle float
 bindsym $mod+t floating toggle
 bindsym --whole-window $mod+button2 floating toggle
+bindsym $mod+Return floating toggle
 
 
 #-----------------------------------------------

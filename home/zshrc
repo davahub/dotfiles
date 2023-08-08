@@ -6,32 +6,37 @@
 # /____|___/_| |_|
 # 
 
-#-- My custom prompt 
+#---------------------------------------------
+#-- Initialize
+#---------------------------------------------
+
 export MYCONFIG_DIR="/home/dava/.1homepc"
 [ -f "${MYCONFIG_DIR}/home/urxvt/zsh-my-prompt" ] && source "${MYCONFIG_DIR}/home/urxvt/zsh-my-prompt"
-
+[ -f "${MYCONFIG_DIR}/home/urxvt/zsh-my-clint-theme" ] && source "${MYCONFIG_DIR}/home/urxvt/zsh-my-clint-theme"
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
 promptinit
-# prompt adam2
+# prompt clint
 
 setopt share_history
 setopt EXTENDED_HISTORY
 setopt autocd
 setopt cdablevars
 setopt PROMPT_SUBST
+# setopt NO_prompt_subst
 
+
+#---------------------------------------------
 #-- Plugins
-
+#---------------------------------------------
+# MODE_INDICATOR=""
 source "$HOME/.zsh/plugins/zsh-vim-mode.plugin.zsh"
 
 
+#---------------------------------------------
+#-- Prompt
+#---------------------------------------------
 
-
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-
-#-- Git setup
+# when changing prompts close all from tmux and zsh instances
 # add-zsh-hook precmd custom_func
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git*' formats "[%b]"
@@ -40,12 +45,26 @@ precmd() {
 }
 
 #-- Prompt
-setopt prompt_subst
-# hyphens, current directory, user@host, user input
-# prompt adam2 [ 8bit ] [<color1> [<color2> [<color3>] [<color4>]]
-prompt_adam2_setup "$@" "grey" "green" "red" "white"
+# my old
+setopt PROMPT_SUBST
 # PS1='%F{white}%b%n@%F{white}%m%u${vcs_info_msg_0_}$dir_status '
 # RPS1="%F{${1:-green}}%(3/|../%2d|%d)"
+
+
+# colors are: hyphens, current directory, user@host, user input
+# prompt adam2 [ 8bit ] [<color1> [<color2> [<color3>] [<color4>]]
+setopt PROMPT_SUBST
+# prompt_adam2_setup "$@" "grey" "green" "red" "white"
+
+
+prompt_clint_setup "$@" "grey" "green" "red" "white"
+
+
+
+# setopt PROMPT_SUBST
+# Note the single quotes
+RPS1=''
+
 
 MODE_CURSOR_VIINS="#00ff00 steady bar"
 MODE_CURSOR_REPLACE="$MODE_CURSOR_VIINS #ff0000"
@@ -61,7 +80,10 @@ MODE_INDICATOR_SEARCH='%F{13}%F{5}:Search%f'
 MODE_INDICATOR_VISUAL='%F{12}%F{4}:Visual%f'
 MODE_INDICATOR_VLINE='%F{12}%F{4}:Vline%f'
 
+
+#---------------------------------------------
 #-- Auto completion
+#---------------------------------------------
 compinit
 zstyle ':completion:*' menu select          # enable auto completion menu
 setopt COMPLETE_ALIASES                     # enable auto completion aliases
@@ -69,11 +91,27 @@ zstyle ':completion:*' rehash true          # rehash automatically
 # auto completion for sudo commands, not enable this if you use untrusted autocompletion scripts
 zstyle ':completion::complete:*' gain-privileges 1  
 
+
+#---------------------------------------------
+#-- General setup
+#---------------------------------------------
+
 #-- Key bindings
 [ -f "${HOME}/.zsh-key-bindings" ] && source "${HOME}/.zsh-key-bindings"
 
 #-- Alias
 [ -f "${HOME}/.aliases" ] && source "${HOME}/.aliases"
+
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+
+
+
+
+
 
 
 #   ____             __
@@ -119,5 +157,9 @@ PERL_MM_OPT="INSTALL_BASE=/home/dava/.perl5"; export PERL_MM_OPT;
 cat ~/.welcome-msg
 export NO_AT_BRIDGE=1       # prevent at-spi2-registryd starting when launching gtk3 apps
 
-
+# enable vi mode
 bindkey -v
+
+# src fzf
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh

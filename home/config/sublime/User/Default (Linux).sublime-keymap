@@ -25,6 +25,20 @@
 
 
 	//---------------------------------------------
+	//-- Emmet
+	//---------------------------------------------
+	// Go to Matching Tag/Tag Pair
+  {
+    "keys": [";", "m"],
+    "command": "emmet_go_to_tag_pair"
+  },
+  {
+  	"keys": [";", "e"], "command": "emmet_enter_abbreviation"
+  },
+
+
+
+	//---------------------------------------------
 	//-- Vintage
 	//---------------------------------------------
 	{ "keys": ["ctrl+o"], "command": "jump_back"},
@@ -69,9 +83,6 @@
   { "keys": ["alt+i"], "command": "enter_insert_mode", "args":
 	{"insert_command": "move_to", "insert_args": {"to": "hardeol"} },
 	"context": [{"key": "setting.command_mode"}]
-	},
-	{ "keys": ["ctrl+m"], "command" : "center_on_cursor",
-		"context": [{"key": "setting.command_mode"}] 
 	},
 	{ "keys": ["enter"], "command": "enter_insert_mode",
 	  "context":
@@ -129,7 +140,17 @@
 	{ "keys": ["ctrl+shift+backspace"], "command": "left_delete" },
 	// Join lines
 	{ "keys": ["alt+shift+j"], "command": "join_lines", "context": [{"key": "setting.command_mode"}] },
-	
+
+	//-- LEADER 
+	{ "keys": [";", "i"], "command": "goto_definition", "context": [{"key": "setting.command_mode"}] },
+	{ "keys": [";", "r"], "command": "lsp_symbol_references",
+        "args": {"side_by_side": false, "force_group": true, "fallback": false, "group": -1, "include_declaration": false},
+        "context": [{"key": "lsp.session_with_capability", "operand": "referencesProvider"}, {"key": "setting.command_mode"}] },
+	{ "keys": [";", "f"], "command": "fold_by_level", "args": {"level": 1} },
+	{ "keys": [";", "u"], "command": "unfold", "args": {"level": 1} },
+	{ "keys": [";", "c"], "command" : "center_on_cursor", "context": [{"key": "setting.command_mode"}] },	
+	{ "keys": [";", "t"], "command" : "toggle_side_bar" },	
+
 
 
 	//---------------------------------------------
@@ -156,6 +177,8 @@
 	{ "keys": ["ctrl+shift+l"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
 	{ "keys": ["alt+shift+h"], "command": "move", "args": {"by": "words", "forward": false, "extend": true} },
 	{ "keys": ["alt+shift+l"], "command": "move", "args": {"by": "word_ends", "forward": true, "extend": true} },
+
+
 
 
 	//---------------------------------------------
@@ -191,7 +214,7 @@
 	{ "keys": ["ctrl+alt+l"], "command": "show_at_center" },
 	// move to beggining of line
 	{ "keys": ["ctrl+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
-	// scroll lines
+	// lines
 	{ "keys": ["ctrl+k"], "command": "scroll_lines", "args": {"amount": 6.0 } },
 	{ "keys": ["ctrl+shift+k"], "command": "scroll_lines", "args": {"amount": 24.0 } },
 	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
@@ -201,6 +224,7 @@
 	// { "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
 	{ "keys": ["alt+up"], "command": "select_lines", "args": {"forward": false} },
 	{ "keys": ["alt+down"], "command": "select_lines", "args": {"forward": true} },
+	{ "keys": ["ctrl+m"], "command": "move_to", "args": {"to": "brackets"} },
 
 
 	//---------------------------------------------

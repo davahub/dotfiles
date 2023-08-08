@@ -84,11 +84,12 @@ bindkey -M vicmd "L" vi-end-of-line
 # backward kill word
 my-delete() {
     zle backward-delete-word
-    zle delete-char
+    # zle delete-char
 }
 zle -N my-delete
 bindkey -M vicmd "^[;" my-delete
 bindkey -M vicmd '^;' my-delete
+bindkey -M viins '^;' my-delete
 bindkey '^H' backward-kill-word
 # come from urxvt
 bindkey "\033[50~" backward-kill-word
