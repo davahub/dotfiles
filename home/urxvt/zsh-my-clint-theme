@@ -15,8 +15,6 @@ prompt_clint_setup () {
   local -A pc
   local p_date p_tty p_plat p_ver p_userpwd p_apm p_shlvlhist p_rc p_end p_win
 
-  autoload -Uz vcs_info
-
   pcc[1]=${1:-${${SSH_CLIENT+'yellow'}:-'red'}}
   pcc[2]=${2:-'cyan'}
   pcc[3]=${3:-'green'}
@@ -37,7 +35,7 @@ prompt_clint_setup () {
 
   [[ -n "$WINDOW" ]] && p_win="$pc['\(']%F{$pcc[4]}$WINDOW$pc['\)']"
 
-  p_userpwd="$pc['<']%F{$pcc[3]}%n@%m$p_win%F{$pcc[5]}:%F{$pcc[4]}%~$pc['>']"
+  p_userpwd="$pc['\[']%F{$pcc[3]}%n@%m$p_win%F{$pcc[5]}:%F{$pcc[4]}%~$pc['\]']"
   local p_vcs="%(2v.%U%2v%u.)"
 
   p_shlvlhist="%fzsh%(2L./$SHLVL.) %B%h%b "
@@ -47,9 +45,10 @@ prompt_clint_setup () {
   typeset -ga zle_highlight
   zle_highlight[(r)default:*]=default:$pcc[2]
 
-  prompt="$p_date$p_tty$p_plat$p_ver
-$p_userpwd
-$p_shlvlhist$p_rc$p_vcs$p_end"
+  p_mode_indicator="$pc['\[']%F{$pcc[3]}${MODE_INDICATOR_PROMPT}$pc['\]']"
+
+  prompt="$p_tty$p_mode_indicator$p_userpwd${vcs_info_msg_0_}$dir_status
+%2v%F{7}%B%3v%f%F{1}%B%4v%f%F{3}%B%5v%f%F{2}%B%6v%f"
   PS2='%(4_.\.)%3_> %E'
 
   add-zsh-hook precmd prompt_clint_precmd
@@ -66,8 +65,25 @@ prompt_clint_precmd () {
 
   [[ -o interactive ]] && jobs -l
 
+  # black 0, red 1, green 2, yellow 3, blue 4, magenta 5, cyan 6, white 7
+  # white → > Not a git repository, green ▶ Clean git repository, red ▶ Staged changes in git repository
+  # yellow ▶ Unstaged changes in git repository
   vcs_info
-  [[ -n $vcs_info_msg_0_ ]] && psvar[2]="$vcs_info_msg_0_"
+  if [[ -z "${vcs_info_msg_0_}" ]]; then
+      # dir_status="${vcs_info_msg_0_}%F{7}%B#%f"
+      # dir_status="${vcs_info_msg_0_}%F{7}%B#%f"
+      psvar[3]=" # "
+  elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]]; then
+      # dir_status="${vcs_info_msg_0_}%F{1}%B#%f"
+      psvar[4]=" # "
+  elif [[ -n "$(git diff --name-status 2>/dev/null )" ]]; then
+      # dir_status="${vcs_info_msg_0_}%F{3}%B#%f"
+      psvar[5]=" # "
+  else
+      # dir_status="${vcs_info_msg_0_}%F{2}%B#%f"
+      psvar[6]=" # "
+  fi
+  [[ -n $vcs_info_msg_0_ ]] && psvar[2]="${vcs_info_msg_0_}"
 }
 
 
