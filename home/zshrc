@@ -40,6 +40,7 @@ setopt PROMPT_SUBST
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git*' formats "[%b]"
 precmd() {
+    # vcs_info
 }
 
 
@@ -57,6 +58,7 @@ precmd() {
 # Clint theme
 prompt_clint_setup "$@" 
 # prompt_clint_setup "$@" "grey" "green" "red" "white"
+# remove vim mode on the right side
 RPS1=''
 
 MODE_CURSOR_VIINS="#00ff00 steady bar"
@@ -66,7 +68,7 @@ MODE_CURSOR_SEARCH="#ff00ff steady underline"
 MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
 MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
 
-MODE_INDICATOR_VIINS='%F{15}%F{8}ins%f'
+MODE_INDICATOR_VIINS='%F{15}%F{#7788FB}ins%f'
 MODE_INDICATOR_VICMD='%F{10}%F{2}nor%f'
 MODE_INDICATOR_REPLACE='%F{9}%F{1}replace%f'
 MODE_INDICATOR_SEARCH='%F{13}%F{5}search%f'
