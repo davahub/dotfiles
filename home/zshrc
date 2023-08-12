@@ -11,7 +11,8 @@
 #---------------------------------------------
 
 export MYCONFIG_DIR="/home/dava/.1homepc"
-[ -f "${MYCONFIG_DIR}/home/urxvt/zsh-my-prompt" ] && source "${MYCONFIG_DIR}/home/urxvt/zsh-my-prompt"
+# export MYOSTYPE=$(cat /etc/os-release | grep -E '^ID' | awk -F '=' '{print $2}')
+# [ -f "${MYCONFIG_DIR}/home/urxvt/zsh-my-prompt" ] && source "${MYCONFIG_DIR}/home/urxvt/zsh-my-prompt"
 [ -f "${MYCONFIG_DIR}/home/urxvt/zsh-my-clint-theme" ] && source "${MYCONFIG_DIR}/home/urxvt/zsh-my-clint-theme"
 autoload -Uz compinit promptinit add-zsh-hook vcs_info 
 promptinit
@@ -68,14 +69,12 @@ MODE_CURSOR_SEARCH="#ff00ff steady underline"
 MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
 MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
 
-MODE_INDICATOR_VIINS='%F{15}%F{#7788FB}ins%f'
-MODE_INDICATOR_VICMD='%F{10}%F{2}nor%f'
+MODE_INDICATOR_VIINS='%F{15}%F{green}ins%f'
+MODE_INDICATOR_VICMD='%F{10}%F{blue}nor%f'
 MODE_INDICATOR_REPLACE='%F{9}%F{1}replace%f'
 MODE_INDICATOR_SEARCH='%F{13}%F{5}search%f'
 MODE_INDICATOR_VISUAL='%F{12}%F{4}vis%f'
 MODE_INDICATOR_VLINE='%F{12}%F{4}v-line%f'
-
-
 
 
 

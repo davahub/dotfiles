@@ -20,6 +20,7 @@ prompt_clint_setup () {
   pcc[3]=${3:-'green'}
   pcc[4]=${4:-'yellow'}
   pcc[5]=${5:-'white'}
+  pcc[6]=${6:-'blue'}
 
   pc['\[']="%F{$pcc[1]}["
   pc['\]']="%F{$pcc[1]}]"
@@ -34,7 +35,6 @@ prompt_clint_setup () {
 
   [[ -n "$WINDOW" ]] && p_win="$pc['\(']%F{$pcc[4]}$WINDOW$pc['\)']"
 
-  p_userpwd="$pc['\[']%F{$pcc[3]}%n@%m$p_win%F{$pcc[5]}:%F{$pcc[4]}%~$pc['\]']"
   local p_vcs="%(2v.%U%2v%u.)"
 
   p_shlvlhist="%fzsh%(2L./$SHLVL.) %B%h%b "
@@ -45,11 +45,14 @@ prompt_clint_setup () {
   zle_highlight[(r)default:*]=default:$pcc[2]
 
   p_mode_indicator="$pc['\[']%F{$pcc[3]}${MODE_INDICATOR_PROMPT}$pc['\]']"
-  # p_tty="$pc['\[']%F{$pcc[3]}%l$pc['\]']"
   p_tty="$pc['\[']%F{$pcc[3]}%l$pc['\]']"
+  # p_userpwd="$pc['\[']%F{$pcc[3]}%n@%m$p_win%F{$pcc[5]}:%F{$pcc[4]}%~$pc['\]']"
+  # p_userpwd="$pc['\[']%F{$pcc[3]}@${MYOSTYPE}$p_win%F{$pcc[5]}:%F{$pcc[4]}%(3/|..%3d|%~)$pc['\]']"
+
+  p_userpwd="$pc['\[']%F{$pcc[3]}$p_win%F{$pcc[5]}:%F{$pcc[6]}%~$pc['\]']"
 
 
-  prompt="$p_mode_indicator$p_userpwd$p_tty
+  prompt="$p_mode_indicator$p_userpwd
 %F{7}%B%2v%f%F{7}%B%3v%f%F{1}%B%4v%f%F{3}%B%5v%f%F{2}%B%6v%f"
   PS2='%(4_.\.)%3_> %E'
 

@@ -60,7 +60,6 @@ function yank-xclip() {
 }
 
 zle -N yank-xclip
-# Bind the function to the 'y' key in visual mode
 bindkey -M visual 'y' yank-xclip
 
 

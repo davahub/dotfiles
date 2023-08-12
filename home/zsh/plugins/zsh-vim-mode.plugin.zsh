@@ -1,3 +1,5 @@
+# https://github.com/softmoth/zsh-vim-mode
+
 # Global aliases can break things. Unset before using any non-builtins.
 [[ -o aliases ]] && _vim_mode_shopt_aliases=1
 builtin set -o no_aliases
