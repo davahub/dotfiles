@@ -40,13 +40,19 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 syntax enable
 
+"-------------------------------------------------------
+"-- Neovide
+"-------------------------------------------------------
+let g:neovide_refresh_rate = 60
+
+
 
 "-------------------------------------------------------
 "-- Shortcuts
 "-------------------------------------------------------
 
 " toggle highlight search
-nnoremap <F3> :set hlsearch!<CR> 
+nnoremap <F3> :set hlsearch!<CR>
 
 " ESC  
 inoremap <A-j> <Esc>
@@ -57,15 +63,26 @@ nnoremap <A-j> <Esc>
 inoremap <C-j> 6<C-e>
 vnoremap <C-j> 6<C-e>
 nnoremap <C-j> 6<C-e>
+" 24 up
+nnoremap <C-A-j> 24<C-e>
+
 
 " C-k scroll down
 inoremap <C-k> 6<C-y>
 vnoremap <C-k> 6<C-y>
 nnoremap <C-k> 6<C-y>
 
+" 24 down
+nnoremap <C-A-k> 24<C-y>
+
+
 " Jump up 6 line
 vnoremap K 6k
 nnoremap K 6k
+" 24
+" inoremap <C-j-j> <Esc>:Commentary<CR>i
+" vnoremap <C-S-j> :Commentary<CR>
+
 
 " Jump down 6 line
 vnoremap J 6j
@@ -84,11 +101,11 @@ vnoremap <A-i> A
 nnoremap <A-i> A
 
 " Comment line
-inoremap <A-e> :Commentary<CR>
+inoremap <A-e> <Esc>:Commentary<CR>i
 vnoremap <A-e> :Commentary<CR>
 nnoremap <A-e> :Commentary<CR>
-
-
+ 
+" Scroll 24 lines
 
 
 
