@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-
+    Plug 'tpope/vim-commentary'
 call plug#end()
 
 
@@ -83,11 +83,18 @@ nnoremap L $
 vnoremap <A-i> A
 nnoremap <A-i> A
 
+" Comment line
+inoremap <A-e> :Commentary<CR>
+vnoremap <A-e> :Commentary<CR>
+nnoremap <A-e> :Commentary<CR>
+
+
+
 
 
 nnoremap <space> i
 nnoremap<C-;> bdw
-inoremap <C-;> <Esc>bdw  
+inoremap <C-;> <Esc>bdw
 nnoremap<CR> o<Esc>
 nnoremap <C-d> dd
 vnoremap <C-d> <Esc>dd i
@@ -95,5 +102,5 @@ inoremap <C-d> <Esc>dd i
 nnoremap <A-d> dd
 vnoremap <A-d> <Esc>dd i
 inoremap <A-d> <Esc>dd i
-nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
+" nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 
