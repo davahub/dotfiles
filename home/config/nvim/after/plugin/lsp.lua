@@ -1,5 +1,7 @@
 require'lspconfig'.lua_ls.setup{}
 
+
+-- see :help lsp-zero-keybindings
 local lsp = require('lsp-zero')
 
 lsp.preset("recommended")
@@ -36,8 +38,8 @@ lsp.on_attach(function(client, bufnr)
     
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 
-    vim.keymap.set("n", "K", "6k")
-    vim.keymap.set("v", "K", "6k")
+    vim.keymap.set("n", "K", "6k", opts)
+    vim.keymap.set("v", "K", "6k", opts)
 -- vnoremap K 6k
 -- nnoremap K 6k
 end)

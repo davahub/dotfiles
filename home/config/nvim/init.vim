@@ -1,14 +1,14 @@
 
 call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
-    " Themes
-    Plug 'folke/tokyonight.nvim'
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'EdenEast/nightfox.nvim'
-    Plug 'ellisonleao/gruvbox.nvim'
-    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'marko-cerovac/material.nvim', 
+    " Themes
+    " Plug 'folke/tokyonight.nvim'
+    " Plug 'altercation/vim-colors-solarized'
+    Plug 'EdenEast/nightfox.nvim'
+    " Plug 'ellisonleao/gruvbox.nvim'
+    " Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+    " Plug 'marko-cerovac/material.nvim', 
     " File management
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
@@ -124,7 +124,7 @@ let mapleader = ","
 " -- ACTION --
 
 " Telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope find_files search_dirs={"~/workspace/dans"}<cr>
 nnoremap <leader>fg <cmd>Telescope git_files<cr>
 nnoremap <leader>fi <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -196,18 +196,18 @@ nnoremap <leader>c 6<C-e>
 
 
 " C-j scroll up
-inoremap <C-j> 6<C-e>
-vnoremap <C-j> 6<C-e>
-nnoremap <C-j> 6<C-e>
+inoremap <C-j> <Esc>6<C-e>Mi
+vnoremap <C-j> 6<C-e>M
+nnoremap <C-j> 6<C-e>M
 " 24 up
-nnoremap <C-A-j> 24<C-e>
+nnoremap <C-A-j> 24<C-e>M
 
 " C-k scroll down
-inoremap <C-k> 6<C-y>
-vnoremap <C-k> 6<C-y>
-nnoremap <C-k> 6<C-y>
+inoremap <C-k> <Esc>6<C-y>Mi
+vnoremap <C-k> 6<C-y>M
+nnoremap <C-k> 6<C-y>M
 " 24 down
-nnoremap <C-A-k> 24<C-y>
+nnoremap <C-A-k> 24<C-y>M
 
 " Jump up 6 line
 vnoremap K 6k
