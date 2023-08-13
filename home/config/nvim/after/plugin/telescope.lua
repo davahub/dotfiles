@@ -1,4 +1,5 @@
 local builtin = require('telescope.builtin')
+local utils = require("telescope.utils")
 
 vim.keymap.set('n', '<leader>fs', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });

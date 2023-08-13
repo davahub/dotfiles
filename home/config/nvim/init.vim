@@ -27,6 +27,7 @@ call plug#end()
 
 lua require('config')
 lua require('treesitter')
+lua require('myremap')
 
 
 "-------------------------------------------------------
@@ -125,6 +126,7 @@ let mapleader = ","
 
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files search_dirs={"~/workspace/dans"}<cr>
+nnoremap <leader>fc <cmd>Telescope find_files search_dirs={"~/.config/nvim"}<cr>
 nnoremap <leader>fg <cmd>Telescope git_files<cr>
 nnoremap <leader>fi <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -180,32 +182,40 @@ vnoremap <c-v> c<ESC>"*p
 inoremap <C-v> <ESC>"*p
 nnoremap <C-v> "*p
 
-
 " block visual
 vnoremap <C-A-v> <C-v>
 nnoremap <C-A-v> <C-v>
 vnoremap <leader>v <C-v>
 nnoremap <leader>v <C-v>
 
+" toggle recent buffers
+vnoremap <A-o> <C-^>
+nnoremap <A-o> <C-^>
+
 
 " -- MOTION --
 
-" center
-vnoremap <leader>c 
-nnoremap <leader>c 6<C-e>
+" switch lines
+" nnoremap <leader>j v$:m '>+1<CR>gv=gv
+" vnoremap <leader>j :m '>+1<CR>gv=gv
 
+" nnoremap <leader>k v$:m '>-2<CR>gv=gv
+" vnoremap <leader>k :m '>-2<CR>gv=gv
+
+" center
+nnoremap <leader>c zz
 
 " C-j scroll up
-inoremap <C-j> <Esc>6<C-e>Mi
-vnoremap <C-j> 6<C-e>M
-nnoremap <C-j> 6<C-e>M
+inoremap <C-j> <Esc>6<C-e>
+vnoremap <C-j> 6<C-e>
+nnoremap <C-j> 6<C-e>
 " 24 up
 nnoremap <C-A-j> 24<C-e>M
 
 " C-k scroll down
-inoremap <C-k> <Esc>6<C-y>Mi
-vnoremap <C-k> 6<C-y>M
-nnoremap <C-k> 6<C-y>M
+inoremap <C-k> <Esc>6<C-y>
+vnoremap <C-k> 6<C-y>
+nnoremap <C-k> 6<C-y>
 " 24 down
 nnoremap <C-A-k> 24<C-y>M
 
