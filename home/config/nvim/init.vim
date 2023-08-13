@@ -1,17 +1,29 @@
 
 call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
+    " Themes
     Plug 'folke/tokyonight.nvim'
     Plug 'altercation/vim-colors-solarized'
     Plug 'EdenEast/nightfox.nvim'
     Plug 'ellisonleao/gruvbox.nvim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'marko-cerovac/material.nvim', 
+    " File management
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
     Plug 'ThePrimeagen/harpoon'
-call plug#end()
 
+    " lsp zero
+    Plug 'neovim/nvim-lspconfig'             " Required
+    Plug 'williamboman/mason.nvim',          " Optional
+    Plug 'williamboman/mason-lspconfig.nvim' " Optional
+    " Autocompletion required by lsp zero
+    Plug 'hrsh7th/nvim-cmp'     " Required
+    Plug 'hrsh7th/cmp-nvim-lsp' " Required
+    Plug 'L3MON4D3/LuaSnip'     " Required
+    Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
+call plug#end()
 
 lua require('config')
 lua require('treesitter')
@@ -27,14 +39,15 @@ lua require('treesitter')
 " let g:tokyonight_style = 'moon'
 " let g:tokyonight_sidebars = [ 'quickfix', '__vista__', 'terminal' ]
 " let g:tokyonight_style = 'night'
+
 " colorscheme tokyonight
 
 "-- Solarized --
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 
 "-- Nightfox --
-" colorscheme nightfox
+colorscheme nightfox
 " colorscheme nordfox
 " colorscheme carbonfox
 " colorscheme terafox
@@ -46,6 +59,9 @@ colorscheme solarized
 
 "-- Catppuccin --
 " colorscheme catppuccin
+
+"-- Material --
+" colorscheme material
 
 
 "-------------------------------------------------------
@@ -167,10 +183,11 @@ inoremap <C-v> <ESC>"*p
 nnoremap <C-v> "*p
 
 
-" block
+" block visual
 vnoremap <C-A-v> <C-v>
 nnoremap <C-A-v> <C-v>
-
+vnoremap <leader>v <C-v>
+nnoremap <leader>v <C-v>
 
 
 " -- MOTION --
