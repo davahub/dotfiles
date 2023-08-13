@@ -3,22 +3,51 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'folke/tokyonight.nvim'
     Plug 'altercation/vim-colors-solarized'
+    Plug 'EdenEast/nightfox.nvim'
+    Plug 'ellisonleao/gruvbox.nvim'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
+
+
+lua require('config')
+lua require('treesitter')
 
 
 "-------------------------------------------------------
 "-- Theme
 "-------------------------------------------------------
-colorscheme tokyonight
+
+"-- Tokyo night --
 " let g:tokyonight_style = 'storm'
-let g:tokyonight_style = 'night'
 " let g:tokyonight_style = 'day'
 " let g:tokyonight_style = 'moon'
-let g:tokyonight_sidebars = [ 'quickfix', '__vista__', 'terminal' ]
+" let g:tokyonight_sidebars = [ 'quickfix', '__vista__', 'terminal' ]
+" let g:tokyonight_style = 'night'
+" colorscheme tokyonight
+
+"-- Solarized --
+set background=dark
+colorscheme solarized
+
+"-- Nightfox --
+" colorscheme nightfox
+" colorscheme nordfox
+" colorscheme carbonfox
+" colorscheme terafox
+" colorscheme duskfox
+
+"-- Gruvbox --
+" set background=dark " or light if you want light mode
+" colorscheme gruvbox
+
+"-- Catppuccin --
+" colorscheme catppuccin
 
 
 "-------------------------------------------------------
 "-- Main
+
 "-------------------------------------------------------
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
@@ -46,7 +75,6 @@ set noswapfile              " disable creating swap file
 set backupdir=~/.cache/vim  " Directory to store backup files.
 filetype plugin indent on   "allow auto-indenting depending on file type
 set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
@@ -77,8 +105,6 @@ inoremap <C-s> <Esc>:w<CR>i
 vnoremap <C-s> :w<CR>
 nnoremap <C-s> :w<CR>
 
-
-
 " toggle highlight search
 nnoremap <F3> :set hlsearch!<CR>
 
@@ -102,7 +128,7 @@ vnoremap <A-d> :t.<CR>
 nnoremap <A-d> :t.<CR>
 
 " add 6 empty lines below
-function AddEmptyLineBelow()
+function! AddEmptyLineBelow()
   call append(line("."), "")
   call append(line("."), "")
   call append(line("."), "")
@@ -113,13 +139,14 @@ endfunction
 " nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 
 " copy and paste from system clipboard
-vnoremap <C-c> "*y
+vnoremap <C-c> "*ygv"+y
 vnoremap <C-x> "*c
-vnoremap <C-v> c<ESC>"*p
+vnoremap <c-v> c<ESC>"*p
 inoremap <C-v> <ESC>"*p
 nnoremap <C-v> "*p
 
-" visual block
+
+" block
 vnoremap <C-A-v> <C-v>
 nnoremap <C-A-v> <C-v>
 
@@ -185,8 +212,8 @@ inoremap <C-;> <Esc>bdw
 "-- Functions
 "-------------------------------------------------------
 
-command Src :w | :source ~/.config/nvim/init.vim | :noh
-command Srcg :w | :source ~/.config/nvim/ginit.vim | :noh
+command So :w | :source ~/.config/nvim/init.vim | :noh
+command Sog :w | :source ~/.config/nvim/ginit.vim | :noh
 
 
 
