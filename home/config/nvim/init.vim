@@ -112,9 +112,15 @@ let g:neovide_refresh_rate = 60
 
 
 "-------------------------------------------------------
-"-- Telescope
+"-- Commands
 "-------------------------------------------------------
+" use call to call a function 
+" function! Myformat()
+    " :! prettier %:p --write 
+    " call append(line("."), "")
+" endfunction
 
+command! Format :w | :! prettier %:p --write
 
 
 "-------------------------------------------------------
