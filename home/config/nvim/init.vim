@@ -99,11 +99,7 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 syntax enable
 " turn off auto comment after o
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal formatoptions-=ro
-augroup END
-
+set formatoptions-=ro
 
 "-------------------------------------------------------
 "-- Neovide
@@ -122,6 +118,8 @@ let g:neovide_refresh_rate = 60
 "-------------------------------------------------------
 let mapleader = ","
 
+" example lua config key map
+" vim.keymap.set("n", "K", "6k")
 
 " -- ACTION --
 
