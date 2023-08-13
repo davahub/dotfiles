@@ -23,6 +23,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/cmp-nvim-lsp' " Required
     Plug 'L3MON4D3/LuaSnip'     " Required
     Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
+
+    " Prettier
+
 call plug#end()
 
 lua require('config')
