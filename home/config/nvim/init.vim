@@ -7,6 +7,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'ellisonleao/gruvbox.nvim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+    Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 
@@ -47,7 +50,6 @@ colorscheme solarized
 
 "-------------------------------------------------------
 "-- Main
-
 "-------------------------------------------------------
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
@@ -93,12 +95,31 @@ augroup END
 let g:neovide_refresh_rate = 60
 
 
+"-------------------------------------------------------
+"-- Telescope
+"-------------------------------------------------------
+
+
 
 "-------------------------------------------------------
 "-- Shortcuts
 "-------------------------------------------------------
+let mapleader = ","
+
 
 " -- ACTION --
+
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope git_files<cr>
+nnoremap <leader>fi <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" explorer
+inoremap <leader>ee <Esc>:Ex<CR>
+vnoremap <leader>ee :Ex<CR>
+nnoremap <leader>ee :Ex<CR>
 
 " ctrl+s to save
 inoremap <C-s> <Esc>:w<CR>i
@@ -153,6 +174,12 @@ nnoremap <C-A-v> <C-v>
 
 
 " -- MOTION --
+
+" center
+vnoremap <leader>c 
+nnoremap <leader>c 6<C-e>
+
+
 " C-j scroll up
 inoremap <C-j> 6<C-e>
 vnoremap <C-j> 6<C-e>
@@ -212,8 +239,8 @@ inoremap <C-;> <Esc>bdw
 "-- Functions
 "-------------------------------------------------------
 
-command So :w | :source ~/.config/nvim/init.vim | :noh
-command Sog :w | :source ~/.config/nvim/ginit.vim | :noh
+" command So :w | :source ~/.config/nvim/init.vim | :noh
+" command Sog :w | :source ~/.config/nvim/ginit.vim | :noh
 
 
 
