@@ -1,15 +1,11 @@
-let s:fontsize = 14
-function! AdjustFontSize(amount)
-  let s:fontsize = s:fontsize+a:amount
-  :execute "GuiFont! Consolas:h" . s:fontsize
-endfunction
 
-"noremap <C-ScrollWheelUp> :call AdjustFontSize(1)<CR>
-"noremap <C-ScrollWheelDown> :call AdjustFontSize(-1)<CR>
-"inoremap <C-ScrollWheelUp> <Esc>:call AdjustFontSize(1)<CR>a
-"inoremap <C-ScrollWheelDown> <Esc>:call AdjustFontSize(-1)<CR>a
 
-execute "GuiFont! Inconsolata:h" . s:fontsize
+if exists("g:neovide")
+    " Put anything you want to happen only in Neovide here
+    set guifont=Inconsolata:h18
+endif
+
+
 
 " set color of cc ruler
 hi ColorColumn ctermbg=0 guibg=Grey23

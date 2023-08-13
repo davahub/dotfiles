@@ -339,7 +339,7 @@ mode "window-mode" {
     bindsym Control+Mod1+d mode "default"
 }
 bindsym $mod+d mode "window-mode"
-bindsym Control+Mod1+d mode "window-mode"
+# bindsym Control+Mod1+d mode "window-mode"
 
 # ride wndows
 mode "ride-mode" {
