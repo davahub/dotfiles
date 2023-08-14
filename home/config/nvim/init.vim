@@ -30,7 +30,7 @@ call plug#end()
 
 lua require('config')
 lua require('treesitter')
-lua require('myremap')
+lua require('mykeymap')
 
 
 "-------------------------------------------------------
@@ -105,27 +105,39 @@ syntax enable
 " turn off auto commevident after o
 set formatoptions-=ro
 " foldmethod
-set foldmethod=manual
+set foldmethod=indent
 " insert comment on empty lines
 " let g:vim_commentary_add_space = 1
 
 
+"--------------------------------------------------------
+"-- Syntax
 "-------------------------------------------------------
+" see file types :setfiletype <space> <c-d>
+autocmd BufNewFile,BufRead *.aliases set filetype=bash
+
+
+
+
+"--------------------------------------------------------
 "-- Neovide
 " -------------------------------------------------------
 let g:neovide_refresh_rate = 60
-
-
+ 
+ 
 "-------------------------------------------------------
 "-- Commands
 "-------------------------------------------------------
 " use call to call a function 
-" function! Myformat()
+" function! Myformat()command So :w | :source ~/.config/nvim/init.vim | :noh
     " :! prettier %:p --write 
     " call append(line("."), "")
 " endfunction
 
 command! Format :w | :! prettier %:p --write
+
+" source
+command! Sr :w | :source ~/.config/nvim/init.vim | :noh
 
 
 "-------------------------------------------------------
@@ -140,7 +152,21 @@ let mapleader = ","
 " Source
 nnoremap <C-0> :w<CR>:so<CR>
 
+" Format code
+" manual		manually define folds
+" indent		more indent means a higher fold level
+" expr		specify an expression to define folds
+" syntax		folds defined by syntax highlighting
+" diff		folds for unchanged text
+" marker		folds defined by markers in the text
+nnoremap <F12> :set foldmethod=indent<CR>
+nnoremap <F9> :set foldmethod=manual<CR>vatzfzz
+
+" Fold code
+" nnoremap <A-f> :Format<CR>
+
 " Telescope
+" file_files hidden=true layout_config={"prompt_position": "top"}
 nnoremap <leader>ff <cmd>Telescope find_files search_dirs={"~/workspace/dans"}<cr>
 nnoremap <leader>fc <cmd>Telescope find_files search_dirs={"~/.config/nvim"}<cr>
 nnoremap <leader>fg <cmd>Telescope git_files<cr>
@@ -166,13 +192,6 @@ inoremap <A-j> <Esc>
 vnoremap <A-j> <Esc>
 nnoremap <A-j> <Esc>
 
-
-
- 
- 
-
-
-
 " Comment line
 func! MyCommentToggle()
     if getline('.') =~ '^\s*$'
@@ -195,14 +214,9 @@ inoremap <C-A-d> <Esc>:t.<CR>i
 vnoremap <C-A-d> :t.<CR>
 nnoremap <C-A-d> :t.<CR>
 
+" deleting lines
 inoremap <C-d> <Esc>:t.<CR>i
 vnoremap <C-d> :t.<CR>
-
-
-
-
-
-
 nnoremap <C-d> :t.<CR>
 
 " add 6 empty lines below
@@ -240,11 +254,13 @@ nnoremap <A-o> <C-^>
 " -- MOTION --
 
 " switch lines
-" nnoremap <leader>j v$:m '>+1<CR>gv=gv
-" vnoremap <leader>j :m '>+1<CR>gv=gv
+" down
+vnoremap <C-down> :m '>+1<CR>gv=gv
+vnoremap <C-up> :m '<-2<CR>gv=gv
 
-" nnoremap <leader>k v$:m '>-2<CR>gv=gv
-" vnoremap <leader>k :m '>-2<CR>gv=gv
+" up
+nnoremap <C-down> v$:m '>+1<CR>gv=gv<Esc>
+nnoremap <C-up> v$:m '>-2<CR>gv=gv<Esc>
 
 " center
 nnoremap <leader>c zz
@@ -288,9 +304,9 @@ nnoremap <A-i> A
 
 " -- EDIT --
 " delete line
-inoremap <A-d> <Esc>dd
-vnoremap <A-d> dd
-nnoremap <A-d> dd
+inoremap <C-d> <Esc>dd
+vnoremap <C-d> dd
+nnoremap <C-d> dd
 
 " enter insert
 nnoremap<CR> o<Esc> 
