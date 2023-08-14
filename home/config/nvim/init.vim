@@ -102,12 +102,17 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 syntax enable
-" turn off auto comment after o
+" turn off auto commevident after o
 set formatoptions-=ro
+" foldmethod
+set foldmethod=manual
+" insert comment on empty lines
+" let g:vim_commentary_add_space = 1
+
 
 "-------------------------------------------------------
 "-- Neovide
-"-------------------------------------------------------
+" -------------------------------------------------------
 let g:neovide_refresh_rate = 60
 
 
@@ -132,6 +137,8 @@ let mapleader = ","
 " vim.keymap.set("n", "K", "6k")
 
 " -- ACTION --
+" Source
+nnoremap <C-0> :w<CR>:so<CR>
 
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files search_dirs={"~/workspace/dans"}<cr>
@@ -142,12 +149,12 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " explorer
+nnoremap <leader>ee :Ex<CR>
 inoremap <leader>ee <Esc>:Ex<CR>
 vnoremap <leader>ee :Ex<CR>
-nnoremap <leader>ee :Ex<CR>
 
 " ctrl+s to save
-inoremap <C-s> <Esc>:w<CR>i
+inoremap <C-s> <Esc>:w<CR>
 vnoremap <C-s> :w<CR>
 nnoremap <C-s> :w<CR>
 
@@ -159,19 +166,44 @@ inoremap <A-j> <Esc>
 vnoremap <A-j> <Esc>
 nnoremap <A-j> <Esc>
 
+
+
+ 
+ 
+
+
+
 " Comment line
-inoremap <A-e> <Esc>:Commentary<CR>i
-vnoremap <A-e> :Commentary<CR>
-nnoremap <A-e> :Commentary<CR>
+func! MyCommentToggle()
+    if getline('.') =~ '^\s*$'
+        :normal i text
+        :normal 0x
+        Commentary
+        :normal wdw
+        :startinsert!
+        echo 'commenting empty line!'
+    else
+        Commentary
+    endif
+endfunc
+inoremap <A-e> <Esc>:call MyCommentToggle()<CR>
+vnoremap <A-e> :call MyCommentToggle()<CR>
+nnoremap <A-e> :call MyCommentToggle()<CR>
  
 " duplicate lines
 inoremap <C-A-d> <Esc>:t.<CR>i
 vnoremap <C-A-d> :t.<CR>
 nnoremap <C-A-d> :t.<CR>
 
-inoremap <A-d> <Esc>:t.<CR>i
-vnoremap <A-d> :t.<CR>
-nnoremap <A-d> :t.<CR>
+inoremap <C-d> <Esc>:t.<CR>i
+vnoremap <C-d> :t.<CR>
+
+
+
+
+
+
+nnoremap <C-d> :t.<CR>
 
 " add 6 empty lines below
 function! AddEmptyLineBelow()
@@ -183,10 +215,13 @@ function! AddEmptyLineBelow()
   call append(line("."), "")
 endfunction
 " nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
+nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
 
 " copy and paste from system clipboard
 vnoremap <C-c> "*ygv"+y
-vnoremap <C-x> "*c
+vnoremap <C-x> "*d
+
+" paste 
 vnoremap <c-v> c<ESC>"*p
 inoremap <C-v> <ESC>"*p
 nnoremap <C-v> "*p
@@ -214,19 +249,21 @@ nnoremap <A-o> <C-^>
 " center
 nnoremap <leader>c zz
 
-" C-j scroll up
+" C-j scroll down
 inoremap <C-j> <Esc>6<C-e>
 vnoremap <C-j> 6<C-e>
 nnoremap <C-j> 6<C-e>
-" 24 up
-nnoremap <C-A-j> 24<C-e>M
+" 24 down
+" nnoremap <C-A-j> 24<C-e>M
+nnoremap <C-A-j> <C-d>M
 
-" C-k scroll down
+" C-k scroll up
 inoremap <C-k> <Esc>6<C-y>
 vnoremap <C-k> 6<C-y>
 nnoremap <C-k> 6<C-y>
-" 24 down
-nnoremap <C-A-k> 24<C-y>M
+" 24 up
+" nnoremap <C-A-k> 24<C-y>M
+nnoremap <C-A-k> <C-u>M
 
 " Jump up 6 line
 vnoremap K 6k
@@ -251,9 +288,9 @@ nnoremap <A-i> A
 
 " -- EDIT --
 " delete line
-inoremap <C-d> <Esc>dd
-vnoremap <C-d> dd
-nnoremap <C-d> dd
+inoremap <A-d> <Esc>dd
+vnoremap <A-d> dd
+nnoremap <A-d> dd
 
 " enter insert
 nnoremap<CR> o<Esc> 
@@ -263,7 +300,7 @@ nnoremap <space> i
 
 " delete backwards
 nnoremap<C-;> bdw
-inoremap <C-;> <Esc>bdw
+inoremap <C-;> <Esc>bdwa
 
 
 
@@ -275,7 +312,6 @@ inoremap <C-;> <Esc>bdw
 
 " command So :w | :source ~/.config/nvim/init.vim | :noh
 " command Sog :w | :source ~/.config/nvim/ginit.vim | :noh
-
 
 
 
