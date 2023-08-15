@@ -144,6 +144,13 @@ command! Format :w | :! prettier %:p --write
 command! Sr :w | :source ~/.config/nvim/init.vim | :noh
 
 
+" com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+" nnoremap <F5> :FormatXML<Cr>
+
+vnoremap <F5> :! xmllint --format -
+nnoremap <F5> ggVG:!xmllint --format -<CR>
+
+
 "-------------------------------------------------------
 "-- Shortcuts
 "-------------------------------------------------------
