@@ -118,6 +118,7 @@ set foldlevel=2
 "-------------------------------------------------------
 " see file types :setfiletype <space> <c-d>
 autocmd BufNewFile,BufRead *.aliases set filetype=bash
+autocmd BufNewFile,BufRead *. set filetype=bash
 
 
 
@@ -262,8 +263,9 @@ vnoremap <C-up> :m '<-2<CR>gv=gv
 nnoremap <C-down> v$:m '>+1<CR>gv=gv<Esc>
 nnoremap <C-up> v$:m '>-2<CR>gv=gv<Esc>
 
-" center
+" center middle
 nnoremap <leader>c zz
+nnoremap mm zz
 
 " C-j scroll down
 inoremap <C-j> <Esc>6<C-e>

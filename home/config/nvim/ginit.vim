@@ -2,7 +2,7 @@
 
 if exists("g:neovide")
     " Put anything you want to happen only in Neovide here
-    set guifont=Inconsolata:h18
+    set guifont=Inconsolata:h17
 endif
 
 
