@@ -104,8 +104,11 @@ set ttyfast                 " Speed up scrolling in Vim
 syntax enable
 " turn off auto commevident after o
 set formatoptions-=ro
-" foldmethod
+" foldmethod default manual, syntax, indent, manual
 set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 " insert comment on empty lines
 " let g:vim_commentary_add_space = 1
 
@@ -152,18 +155,15 @@ let mapleader = ","
 " Source
 nnoremap <C-0> :w<CR>:so<CR>
 
-" Format code
-" manual		manually define folds
-" indent		more indent means a higher fold level
-" expr		specify an expression to define folds
-" syntax		folds defined by syntax highlighting
-" diff		folds for unchanged text
-" marker		folds defined by markers in the text
-nnoremap <F12> :set foldmethod=indent<CR>
-nnoremap <F9> :set foldmethod=manual<CR>vatzfzz
-
 " Fold code
-" nnoremap <A-f> :Format<CR>
+nnoremap <C-f> zc
+" nnoremap <leader>uf zo
+inoremap <C-f> <Esc>zc
+" nnoremap <F12> :set foldmethod=indent<CR>
+" nnoremap <F9> :set foldmethod=manual<CR>vatzfzz
+
+" Format code
+nnoremap <leader>t :Format<CR>
 
 " Telescope
 " file_files hidden=true layout_config={"prompt_position": "top"}
@@ -185,7 +185,7 @@ vnoremap <C-s> :w<CR>
 nnoremap <C-s> :w<CR>
 
 " toggle highlight search
-nnoremap <F3> :set hlsearch!<CR>
+nnoremap <silent><F3> :set hlsearch!<CR>
 
 " ESC  
 inoremap <A-j> <Esc>
