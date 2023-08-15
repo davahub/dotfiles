@@ -14,6 +14,7 @@
 	{ "keys": ["ctrl+alt+y"], "command": "htmlprettify" },
 	{ "keys": ["alt+shift+r"], "command": "reindent", "args": {"single_line": false} },
 	{ "keys": ["shift+alt+f"], "command": "js_prettier" },
+	{ "keys": ["alt+t"], "command": "js_prettier" },
 	{
 	  "keys": ["ctrl+alt+q"],
 	  "command": "dired",

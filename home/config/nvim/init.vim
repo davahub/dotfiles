@@ -251,6 +251,9 @@ nnoremap <leader>v <C-v>
 vnoremap <A-o> <C-^>
 nnoremap <A-o> <C-^>
 
+" select all
+nnoremap <C-a> ggVG
+
 
 " -- MOTION --
 

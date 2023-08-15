@@ -28,7 +28,7 @@ setopt PROMPT_SUBST
 #---------------------------------------------
 #-- Plugins
 #---------------------------------------------
-# MODE_INDICATOR=""
+# MODE_INDICATOR
 source "$HOME/.zsh/plugins/zsh-vim-mode.plugin.zsh"
 
 
