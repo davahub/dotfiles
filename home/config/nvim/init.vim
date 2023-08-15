@@ -160,6 +160,11 @@ let mapleader = ","
 " vim.keymap.set("n", "K", "6k")
 
 " -- ACTION --
+
+" move to right left window
+nnoremap <A-h> <C-w>h
+nnoremap <A-l> <C-w>l
+
 " Source
 nnoremap <C-0> :w<CR>:so<CR>
 
