@@ -245,9 +245,9 @@
 	{ "keys": ["ctrl+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
 	// lines
 	{ "keys": ["ctrl+k"], "command": "scroll_lines", "args": {"amount": 6.0 } },
-	{ "keys": ["ctrl+shift+k"], "command": "scroll_lines", "args": {"amount": 24.0 } },
+	{ "keys": ["ctrl+alt+k"], "command": "scroll_lines", "args": {"amount": 24.0 } },
 	{ "keys": ["ctrl+j"], "command": "scroll_lines", "args": {"amount": -6.0 } },
-	{ "keys": ["ctrl+shift+j"], "command": "scroll_lines", "args": {"amount": -24.0 } },
+	{ "keys": ["ctrl+alt+j"], "command": "scroll_lines", "args": {"amount": -24.0 } },
 	// { "keys": ["ctrl+,"], "command": "move_to", "args": {"to": "bof", "extend": false} },
 	// { "keys": ["ctrl+."], "command": "move_to", "args": {"to": "eof", "extend": false} },
 	// { "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
@@ -273,7 +273,7 @@
 		"context": [ { "key": "setting.command_mode", "operand": true } ] 
 	},
 	// add 6 lines
-	{"keys": ["ctrl+alt+j"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}},
+	{"keys": ["ctrl+alt+i"], "command": "run_macro_file", "args": {"file": "res://Packages/User/macros/add-4-newline.sublime-macro"}},
 	// word 4 skip back forward
 	{"keys": ["W"], "command": "run_macro_file", 
 		"args": {"file": "res://Packages/User/macros/4word-skip-forward.sublime-macro"},

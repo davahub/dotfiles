@@ -28,7 +28,9 @@ call plug#begin('~/.vim/plugged')
     " Plug 'plasticboy/vim-markdown',
     Plug 'nvim-treesitter/playground'
     Plug 'sainnhe/gruvbox-material',
-    Plug 'liuchengxu/vista.vim'
+    Plug 'liuchengxu/vista.vim',
+    Plug 'nvim-tree/nvim-web-devicons' " optional
+    " Plug 'nvim-tree/nvim-tree.lua'
 
 call plug#end()
 
@@ -163,11 +165,20 @@ nnoremap <F5> ggVG:!xmllint --format -<CR>
 "-- Shortcuts
 "-------------------------------------------------------
 let mapleader = ","
-
 " example lua config key map
 " vim.keymap.set("n", "K", "6k")
 
+
+
 " -- ACTION --
+
+
+
+
+" indent tab
+nnoremap <tab> >>w
+vnoremap <tab> >
+
 
 " Vista
 nnoremap <A-r> :Vista finder<CR>
@@ -252,9 +263,10 @@ function! AddEmptyLineBelow()
   call append(line("."), "")
   call append(line("."), "")
   call append(line("."), "")
-endfunction
+endfunctioncolon
 " nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
+nnoremap <C-A-i> :call AddEmptyLineBelow()<CR>
 
 " copy and paste from system clipboard
 vnoremap <C-c> "*ygv"+y
@@ -264,6 +276,7 @@ vnoremap <C-x> "*d
 vnoremap <c-v> c<ESC>"*p
 inoremap <C-v> <ESC>"*p
 nnoremap <C-v> "*p
+
 
 " block visual
 vnoremap <C-A-v> <C-v>
@@ -330,6 +343,10 @@ nnoremap L $
 vnoremap <A-i> A
 nnoremap <A-i> A
 
+" top and bottom
+nnoremap T H
+nnoremap B L
+
 
 " -- EDIT --
 " delete line
@@ -372,6 +389,14 @@ let g:vim_markdown_json_frontmatter = 1  " for JSON format
 " disable default keybindings
 let g:vim_markdown_no_default_key_mappings = 1
 
+
+"-------------------------------------------------------
+"-- NVIM Tree
+"-------------------------------------------------------
+
+nnoremap <F8> :NvimTreeToggle<CR> 
+nnoremap <F6> :NvimTreeRefresh<CR>  
+nnoremap <F5> :NvimTreeFindFile<CR> 
 
 
 
