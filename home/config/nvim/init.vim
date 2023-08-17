@@ -2,6 +2,8 @@
 call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/playground'
+
     " Themes
     " Plug 'folke/tokyonight.nvim'
     " Plug 'altercation/vim-colors-solarized'
@@ -10,6 +12,7 @@ call plug#begin('~/.vim/plugged')
     " Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     " Plug 'marko-cerovac/material.nvim', 
     " Plug 'sainnhe/gruvbox-material'
+    Plug 'sainnhe/gruvbox-material',
 
     " File management
     Plug 'nvim-lua/plenary.nvim'
@@ -25,9 +28,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/cmp-nvim-lsp' " Required
     Plug 'L3MON4D3/LuaSnip'     " Required
     Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
-    " Plug 'plasticboy/vim-markdown',
-    Plug 'nvim-treesitter/playground'
-    Plug 'sainnhe/gruvbox-material',
     Plug 'liuchengxu/vista.vim',
     Plug 'nvim-tree/nvim-web-devicons' " optional
     " Plug 'nvim-tree/nvim-tree.lua'
@@ -113,8 +113,6 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 syntax enable
-" turn off auto commevident after o
-set formatoptions-=ro
 " foldmethod default manual, syntax, indent, manual
 set foldmethod=indent
 set foldnestmax=10
@@ -124,24 +122,27 @@ set foldlevel=2
 " let g:vim_commentary_add_space = 1
 
 
-"--------------------------------------------------------
-"-- Syntax
-"-------------------------------------------------------
+" --------------------------------------------------------
+" -- Syntax
+" -------------------------------------------------------
+
 " see file types :setfiletype <space> <c-d>
 autocmd BufNewFile,BufRead *.aliases set filetype=bash
 autocmd BufNewFile,BufRead *. set filetype=bash
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+
+
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'lua', 'vim', 'typescript', 'javascript' ]
 
-"--------------------------------------------------------
-"-- Neovide
+" --------------------------------------------------------
+" -- Neovide
 " -------------------------------------------------------
 let g:neovide_refresh_rate = 60
  
  
-"-------------------------------------------------------
-"-- Commands
-"-------------------------------------------------------
+" -------------------------------------------------------
+" -- Commands
+" -------------------------------------------------------
 " use call to call a function 
 " function! Myformat()command So :w | :source ~/.config/nvim/init.vim | :noh
     " :! prettier %:p --write 
@@ -173,12 +174,9 @@ let mapleader = ","
 " -- ACTION --
 
 
-
-
 " indent tab
 nnoremap <tab> >>w
 vnoremap <tab> >
-
 
 " Vista
 nnoremap <A-r> :Vista finder<CR>
@@ -187,9 +185,6 @@ nnoremap <F9> :Vista!!<CR>
 " move to right left window
 nnoremap <A-h> <C-w>h
 nnoremap <A-l> <C-w>l
-
-" Source
-nnoremap <C-0> :w<CR>:so<CR>
 
 " Fold code
 nnoremap <C-f> zc
@@ -263,7 +258,7 @@ function! AddEmptyLineBelow()
   call append(line("."), "")
   call append(line("."), "")
   call append(line("."), "")
-endfunctioncolon
+endfunction
 " nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
 nnoremap <C-A-i> :call AddEmptyLineBelow()<CR>
@@ -390,13 +385,14 @@ let g:vim_markdown_json_frontmatter = 1  " for JSON format
 let g:vim_markdown_no_default_key_mappings = 1
 
 
+
 "-------------------------------------------------------
 "-- NVIM Tree
 "-------------------------------------------------------
 
-nnoremap <F8> :NvimTreeToggle<CR> 
-nnoremap <F6> :NvimTreeRefresh<CR>  
-nnoremap <F5> :NvimTreeFindFile<CR> 
+" nnoremap <F8> :NvimTreeToggle<CR> 
+" nnoremap <F6> :NvimTreeRefresh<CR>  
+" nnoremap <F5> :NvimTreeFindFile<CR> 
 
 
 

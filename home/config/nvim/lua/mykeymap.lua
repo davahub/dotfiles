@@ -11,3 +11,11 @@
 
 
 
+-- SOURCE
+-- nnoremap <C-0> :w<CR>:so<CR>:echom "source success!"<cr>
+vim.keymap.set("v", "<C-down>", "v$:m '>+1<CR>gv=gv<Esc>")
+
+
+
+
+
