@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
     " Plug 'ellisonleao/gruvbox.nvim'
     " Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     " Plug 'marko-cerovac/material.nvim', 
+    " Plug 'sainnhe/gruvbox-material'
+
     " File management
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
@@ -23,8 +25,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/cmp-nvim-lsp' " Required
     Plug 'L3MON4D3/LuaSnip'     " Required
     Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
-
-    " Prettier
+    " Plug 'plasticboy/vim-markdown',
+    Plug 'nvim-treesitter/playground'
+    Plug 'sainnhe/gruvbox-material',
+    Plug 'liuchengxu/vista.vim'
 
 call plug#end()
 
@@ -66,6 +70,11 @@ colorscheme nightfox
 
 "-- Material --
 " colorscheme material
+
+" gruvbox material
+" colorscheme gruvbox-material
+
+
 
 
 "-------------------------------------------------------
@@ -119,9 +128,8 @@ set foldlevel=2
 " see file types :setfiletype <space> <c-d>
 autocmd BufNewFile,BufRead *.aliases set filetype=bash
 autocmd BufNewFile,BufRead *. set filetype=bash
-
-
-
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'lua', 'vim', 'typescript', 'javascript' ]
 
 "--------------------------------------------------------
 "-- Neovide
@@ -161,6 +169,10 @@ let mapleader = ","
 
 " -- ACTION --
 
+" Vista
+nnoremap <A-r> :Vista finder<CR>
+nnoremap <F9> :Vista!!<CR>
+
 " move to right left window
 nnoremap <A-h> <C-w>h
 nnoremap <A-l> <C-w>l
@@ -184,7 +196,7 @@ nnoremap <leader>ff <cmd>Telescope find_files search_dirs={"~/workspace/dans"}<c
 nnoremap <leader>fc <cmd>Telescope find_files search_dirs={"~/.config/nvim"}<cr>
 nnoremap <leader>fg <cmd>Telescope git_files<cr>
 nnoremap <leader>fi <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " explorer
@@ -337,20 +349,28 @@ inoremap <C-;> <Esc>bdwa
 
 
 
-
-
 "-------------------------------------------------------
-"-- Functions
+"-- Markdown
 "-------------------------------------------------------
+" disable header folding
+let g:vim_markdown_folding_disabled = 1
 
-" command So :w | :source ~/.config/nvim/init.vim | :noh
-" command Sog :w | :source ~/.config/nvim/ginit.vim | :noh
+" do not use conceal feature, the implementation is not so good
+let g:vim_markdown_conceal = 0
 
+let g:markdown_minlines = 100
 
+" disable math tex conceal feature
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
 
+" support front matter of various format
+let g:vim_markdown_frontmatter = 1  " for YAML format
+let g:vim_markdown_toml_frontmatter = 1  " for TOML format
+let g:vim_markdown_json_frontmatter = 1  " for JSON format
 
-
-
+" disable default keybindings
+let g:vim_markdown_no_default_key_mappings = 1
 
 
 
