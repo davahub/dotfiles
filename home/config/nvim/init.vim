@@ -123,6 +123,22 @@ set foldlevel=2
 
 
 " --------------------------------------------------------
+" -- NETRW Explorer
+" -------------------------------------------------------
+
+" set window size
+let g:netrw_winsize=15
+
+" kill netrw buffer for toggle
+augroup AutoDeleteNetrwHiddenBuffers
+  au!
+  au FileType netrw setlocal bufhidden=wipe
+augroup end
+
+nnoremap <F8> :Lexplore %:p:h<cr>
+
+
+" --------------------------------------------------------
 " -- Syntax
 " -------------------------------------------------------
 
@@ -163,15 +179,18 @@ nnoremap <F5> ggVG:!xmllint --format -<CR>
 
 
 "-------------------------------------------------------
-"-- Shortcuts
+"-- MAIN SHORTCUTS
 "-------------------------------------------------------
 let mapleader = ","
-" example lua config key map
-" vim.keymap.set("n", "K", "6k")
 
+" resize vertical
+nnoremap <A-b> :vertical resize +20<cr>
+nnoremap <A-s> :vertical resize -20<cr>
+nnoremap <C-A-s> :vertical resize -20<cr>
 
-
-" -- ACTION --
+" split windows
+nnoremap <A-"> <C-w>v
+nnoremap <A-!> <C-w>s
 
 
 " indent tab
@@ -182,48 +201,32 @@ vnoremap <tab> >
 nnoremap <A-r> :Vista finder<CR>
 nnoremap <F9> :Vista!!<CR>
 
-" move to right left window
+" move to right llft window
 nnoremap <A-h> <C-w>h
 nnoremap <A-l> <C-w>l
 
 " Fold code
 nnoremap <C-f> zc
-" nnoremap <leader>uf zo
 inoremap <C-f> <Esc>zc
-" nnoremap <F12> :set foldmethod=indent<CR>
-" nnoremap <F9> :set foldmethod=manual<CR>vatzfzz
 
 " Format code
 nnoremap <leader>t :Format<CR>
 
 " Telescope
 " file_files hidden=true layout_config={"prompt_position": "top"}
-nnoremap <leader>ff <cmd>Telescope find_files search_dirs={"~/workspace/dans"}<cr>
-nnoremap <leader>fc <cmd>Telescope find_files search_dirs={"~/.config/nvim"}<cr>
-nnoremap <leader>fg <cmd>Telescope git_files<cr>
-nnoremap <leader>fi <cmd>Telescope live_grep<cr>
-nnoremap <leader>b <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>lf <cmd>Telescope find_files search_dirs={"~/workspace/dans"}<cr>
+nnoremap <leader>c <cmd>Telescope find_files search_dirs={"~/.config/nvim"}<cr>
+nnoremap <leader>lg <cmd>Telescope git_files<cr>
+" nnoremap <leader>fi <cmd>Telescope live_grep<cr>
+nnoremap <leader>lb <cmd>Telescope buffers<cr>
+nnoremap <leader>lh <cmd>Telescope help_tags<cr>
 
 " explorer
 nnoremap <leader>ee :Ex<CR>
 inoremap <leader>ee <Esc>:Ex<CR>
 vnoremap <leader>ee :Ex<CR>
 
-" ctrl+s to save
-inoremap <C-s> <Esc>:w<CR>
-vnoremap <C-s> :w<CR>
-nnoremap <C-s> :w<CR>
-
-" toggle highlight search
-nnoremap <silent><F3> :set hlsearch!<CR>
-
-" ESC  
-inoremap <A-j> <Esc>
-vnoremap <A-j> <Esc>
-nnoremap <A-j> <Esc>
-
-" Comment line
+" Comment toggle
 func! MyCommentToggle()
     if getline('.') =~ '^\s*$'
         :normal i text
@@ -237,18 +240,12 @@ func! MyCommentToggle()
     endif
 endfunc
 inoremap <A-e> <Esc>:call MyCommentToggle()<CR>
-vnoremap <A-e> :call MyCommentToggle()<CR>
 nnoremap <A-e> :call MyCommentToggle()<CR>
- 
-" duplicate lines
-inoremap <C-A-d> <Esc>:t.<CR>i
-vnoremap <C-A-d> :t.<CR>
-nnoremap <C-A-d> :t.<CR>
+vnoremap <A-e> :call MyCommentToggle()<CR>
 
-" deleting lines
-inoremap <C-d> <Esc>:t.<CR>i
-vnoremap <C-d> :t.<CR>
-nnoremap <C-d> :t.<CR>
+" Join lines
+nnoremap <leader>j J
+
 
 " add 6 empty lines below
 function! AddEmptyLineBelow()
@@ -268,9 +265,9 @@ vnoremap <C-c> "*ygv"+y
 vnoremap <C-x> "*d
 
 " paste 
+nnoremap <C-v> i<Esc>"*p
 vnoremap <c-v> c<ESC>"*p
 inoremap <C-v> <ESC>"*p
-nnoremap <C-v> "*p
 
 
 " block visual
@@ -340,14 +337,10 @@ nnoremap <A-i> A
 
 " top and bottom
 nnoremap T H
-nnoremap B L
+" nnoremap B L
 
 
 " -- EDIT --
-" delete line
-inoremap <C-d> <Esc>dd
-vnoremap <C-d> dd
-nnoremap <C-d> dd
 
 " enter insert
 nnoremap<CR> o<Esc> 
