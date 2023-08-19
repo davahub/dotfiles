@@ -7,7 +7,12 @@
     "snippets": [
       {
         "language": [
-          "markdown"
+            "plaintext",
+            "markdown",
+            "tex",
+            "html",
+            "global",
+            "all"
         ],
         "path": "./snippets/global.json"
       },
@@ -17,6 +22,10 @@
           "rmd"
         ],
         "path": "./snippets/markdown.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/lua.json"
       }
     ]
   }

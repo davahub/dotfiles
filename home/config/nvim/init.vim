@@ -167,7 +167,6 @@ autocmd BufNewFile,BufRead *.aliases set filetype=bash
 autocmd BufNewFile,BufRead *. set filetype=bash
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 
-
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'lua', 'vim', 'typescript', 'javascript' ]
 
 " --------------------------------------------------------
@@ -221,8 +220,8 @@ nnoremap <A-!> <C-w>s
 
 
 " indent tab
-" nnoremap <tab> >>w
-" vnoremap <tab> >
+nnoremap <tab> >>w
+vnoremap <tab> >
 
 " Vista
 nnoremap <A-r> :Vista finder<CR>
@@ -285,7 +284,10 @@ function! AddEmptyLineBelow()
 endfunction
 " nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
 nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
-nnoremap <C-A-i> :call AddEmptyLineBelow()<CR>
+nnoremap <silent> <C-A-i> :call AddEmptyLineBelow()<CR>
+nnoremap <silent> <C-A-j> :call AddEmptyLineBelow()<CR>
+inoremap <silent> <C-A-i> <esc>:call AddEmptyLineBelow()<CR>i
+inoremap <silent> <C-A-j> <esc>:call AddEmptyLineBelow()<CR>i
 
 " copy and paste from system clipboard
 vnoremap <C-c> "*ygv"+y
@@ -374,9 +376,11 @@ nnoremap<CR> o<Esc>
 " space insert
 nnoremap <space> i
 
-" delete backwards
+" delete backwards  
 nnoremap<C-;> bdw
-inoremap <C-;> <Esc>bdwa
+inoremap <C-;> <Esc>dbxi
+
+
 
 
 

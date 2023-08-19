@@ -28,6 +28,22 @@
         "prefix": "mdh6",
         "body": ["###### ${0}"],
         "description": "Add header level 6"
+    },
+    "comment insert": {
+        "prefix": "mdc",
+        "body": ["# ${0}"],
+        "description": ""
+    },
+
+    "Open shell": {
+        "prefix": "mdsh",
+        "body": [
+            "```sh",
+            "${0}",
+            "```"
+        ],
+        "description": "shell insert"
     }
+
 }
 

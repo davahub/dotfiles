@@ -102,7 +102,9 @@ require("luasnip.loaders.from_vscode").load({ paths = { "/home/dava/.config/nvim
 require("luasnip.loaders.from_vscode").lazy_load()
 
 
-vim.keymap.set({"i"}, "<leader>,", function() ls.expand() end, {silent = true})
+-- vim.keymap.set({"i"}, "<leader>,", function() ls.expand() end, {silent = true})
+vim.keymap.set({"i"}, "<leader><space>", function() ls.expand() end, {silent = true})
+vim.keymap.set({"i"}, "<A-k>", function() ls.expand() end, {silent = true})
 -- vim.keymap.set({"i"}, "<C-Space>", function() ls.expand() end, {silent = true, noremap = true})
 -- vim.keymap.set({"i"}, "<C-@>", "<C-Space>", {silent = true, noremap = true})
 
