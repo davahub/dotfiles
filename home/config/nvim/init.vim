@@ -29,8 +29,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'L3MON4D3/LuaSnip'     " Required
     Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
     Plug 'liuchengxu/vista.vim',
-    Plug 'nvim-tree/nvim-web-devicons' " optional
+    Plug 'nvim-tree/nvim-web-devicons', " optional
     " Plug 'nvim-tree/nvim-tree.lua'
+
+    " Snippets
+    " Plug 'SirVer/ultisnips',
+    " Plug 'honza/vim-snippets',
 
 call plug#end()
 
@@ -78,7 +82,6 @@ colorscheme nightfox
 
 
 
-
 "-------------------------------------------------------
 "-- Main
 "-------------------------------------------------------
@@ -122,6 +125,7 @@ set foldlevel=2
 " let g:vim_commentary_add_space = 1
 
 
+
 " --------------------------------------------------------
 " -- NETRW Explorer
 " -------------------------------------------------------
@@ -136,6 +140,22 @@ augroup AutoDeleteNetrwHiddenBuffers
 augroup end
 
 nnoremap <F8> :Lexplore %:p:h<cr>
+
+
+"-------------------------------------------------------
+"-- Snippet
+"-------------------------------------------------------
+" let g:UltiSnipsExpandTrigger="<tab>"  " use <Tab> to trigger autocompletion
+" let g:UltiSnipsExpandTrigger="<A-n>"  " use <Tab> to trigger autocompletion
+" let g:UltiSnipsJumpForwardTrigger="<C-N>"
+" let g:UltiSnipsJumpBackwardTrigger="<C-P>"
+
+" let g:UltiSnipsListSnippets="<leader>lsn"
+
+" Do not look for SnipMate snippets
+" let g:UltiSnipsEnableSnipMate = 0
+
+" let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/my_snippets']
 
 
 " --------------------------------------------------------
@@ -170,6 +190,10 @@ command! Format :w | :! prettier %:p --write
 " source
 command! Sr :w | :source ~/.config/nvim/init.vim | :noh
 
+" reload snippets
+command! ReloadSnip :call UltiSnips#RefreshSnippets()
+
+
 
 " com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 " nnoremap <F5> :FormatXML<Cr>
@@ -183,6 +207,9 @@ nnoremap <F5> ggVG:!xmllint --format -<CR>
 "-------------------------------------------------------
 let mapleader = ","
 
+" find
+nnoremap <C-f> /
+
 " resize vertical
 nnoremap <A-b> :vertical resize +20<cr>
 nnoremap <A-s> :vertical resize -20<cr>
@@ -194,8 +221,8 @@ nnoremap <A-!> <C-w>s
 
 
 " indent tab
-nnoremap <tab> >>w
-vnoremap <tab> >
+" nnoremap <tab> >>w
+" vnoremap <tab> >
 
 " Vista
 nnoremap <A-r> :Vista finder<CR>
@@ -206,8 +233,8 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-l> <C-w>l
 
 " Fold code
-nnoremap <C-f> zc
-inoremap <C-f> <Esc>zc
+nnoremap <A-f> zc
+inoremap <A-f> <Esc>zc
 
 " Format code
 nnoremap <leader>t :Format<CR>
@@ -296,7 +323,6 @@ nnoremap <C-down> v$:m '>+1<CR>gv=gv<Esc>
 nnoremap <C-up> v$:m '>-2<CR>gv=gv<Esc>
 
 " center middle
-nnoremap <leader>c zz
 nnoremap mm zz
 
 " C-j scroll down
