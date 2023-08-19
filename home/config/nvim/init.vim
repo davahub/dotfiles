@@ -245,7 +245,7 @@ nnoremap <leader>lf <cmd>Telescope find_files search_dirs={"~/workspace/dans"}<c
 nnoremap <leader>c <cmd>Telescope find_files search_dirs={"~/.config/nvim"}<cr>
 nnoremap <leader>lg <cmd>Telescope git_files<cr>
 " nnoremap <leader>fi <cmd>Telescope live_grep<cr>
-nnoremap <leader>lb <cmd>Telescope buffers<cr>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>lh <cmd>Telescope help_tags<cr>
 
 " explorer
@@ -331,7 +331,7 @@ vnoremap <C-j> 6<C-e>
 nnoremap <C-j> 6<C-e>
 " 24 down
 " nnoremap <C-A-j> 24<C-e>M
-nnoremap <C-A-j> <C-d>M
+nnoremap <A-J> <C-d>M
 
 " C-k scroll up
 inoremap <C-k> <Esc>6<C-y>
@@ -339,7 +339,7 @@ vnoremap <C-k> 6<C-y>
 nnoremap <C-k> 6<C-y>
 " 24 up
 " nnoremap <C-A-k> 24<C-y>M
-nnoremap <C-A-k> <C-u>M
+nnoremap <A-K> <C-u>M
 
 " Jump up 6 line
 vnoremap K 6k

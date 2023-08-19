@@ -42,7 +42,7 @@ ls.setup({
 	ext_base_prio = 300,
 	-- minimal increase in priority.
 	ext_prio_increase = 1,
-	enable_autosnippets = true,
+	-- enable_autosnippets = true,
 	-- mapping for cutting selected text so it's usable as SELECT_DEDENT,
 	-- SELECT_RAW or TM_SELECTED_TEXT (mapped via xmap).
 	store_selection_keys = "<Tab>",
@@ -103,6 +103,8 @@ require("luasnip.loaders.from_vscode").lazy_load()
 
 
 vim.keymap.set({"i"}, "<leader>,", function() ls.expand() end, {silent = true})
+-- vim.keymap.set({"i"}, "<C-Space>", function() ls.expand() end, {silent = true, noremap = true})
+-- vim.keymap.set({"i"}, "<C-@>", "<C-Space>", {silent = true, noremap = true})
 
 
 
