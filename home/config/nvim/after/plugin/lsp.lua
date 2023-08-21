@@ -48,6 +48,9 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set('n', 'gr', function() require('telescope.builtin').lsp_references() end, opts)
     vim.keymap.set("n", "K", "6k", opts)
     vim.keymap.set("v", "K", "6k", opts)
+
+    vim.keymap.set("i", "<C-e>", "<ESC>$i", opts)
+
     -- vim.keymap.set('n', 'gr', function() 
         -- require('telescope.builtin').lsp_references() end, { noremap = true, silent = true }, opts )
 

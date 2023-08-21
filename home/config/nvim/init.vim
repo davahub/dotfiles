@@ -40,7 +40,7 @@ call plug#end()
 
 lua require('config')
 lua require('treesitter')
-lua require('mykeymap')
+" lua require('mykeymap')
 
 
 "-------------------------------------------------------
@@ -218,7 +218,6 @@ nnoremap <C-A-s> :vertical resize -20<cr>
 nnoremap <A-"> <C-w>v
 nnoremap <A-!> <C-w>s
 
-
 " indent tab
 nnoremap <tab> >>w
 vnoremap <tab> >
@@ -298,50 +297,13 @@ nnoremap <C-v> i<Esc>"*p
 vnoremap <c-v> c<ESC>"*p
 inoremap <C-v> <ESC>"*p
 
-
 " block visual
 vnoremap <C-A-v> <C-v>
 nnoremap <C-A-v> <C-v>
 vnoremap <leader>v <C-v>
 nnoremap <leader>v <C-v>
 
-" toggle recent buffers
-vnoremap <A-o> <C-^>
-nnoremap <A-o> <C-^>
-
-" select all
-nnoremap <C-a> ggVG
-
-
 " -- MOTION --
-
-" switch lines
-" down
-vnoremap <C-down> :m '>+1<CR>gv=gv
-vnoremap <C-up> :m '<-2<CR>gv=gv
-
-" up
-nnoremap <C-down> v$:m '>+1<CR>gv=gv<Esc>
-nnoremap <C-up> v$:m '>-2<CR>gv=gv<Esc>
-
-" center middle
-nnoremap mm zz
-
-" C-j scroll down
-inoremap <C-j> <Esc>6<C-e>
-vnoremap <C-j> 6<C-e>
-nnoremap <C-j> 6<C-e>
-" 24 down
-" nnoremap <C-A-j> 24<C-e>M
-nnoremap <A-J> <C-d>M
-
-" C-k scroll up
-inoremap <C-k> <Esc>6<C-y>
-vnoremap <C-k> 6<C-y>
-nnoremap <C-k> 6<C-y>
-" 24 up
-" nnoremap <C-A-k> 24<C-y>M
-nnoremap <A-K> <C-u>M
 
 " Jump up 6 line
 vnoremap K 6k
@@ -355,30 +317,9 @@ nnoremap J 6j
 vnoremap H 0
 nnoremap H 0
 
-" End of line
-vnoremap L $
-nnoremap L $
-
-" Insert end of line
-vnoremap <A-i> A
-nnoremap <A-i> A
-
 " top and bottom
 nnoremap T H
 " nnoremap B L
-
-
-" -- EDIT --
-
-" enter insert
-nnoremap<CR> o<Esc> 
-
-" space insert
-nnoremap <space> i
-
-" delete backwards  
-nnoremap<C-;> bdw
-inoremap <C-;> <Esc>dbxi
 
 
 

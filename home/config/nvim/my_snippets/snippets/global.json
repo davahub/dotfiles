@@ -1,6 +1,6 @@
 {
     "Vimscript block comment": {
-        "prefix": "vib",
+        "prefix": ["vib", "vimb"],
         "body": [
             "\" ---------------------------------------------",
             "\" -- $0 ",
