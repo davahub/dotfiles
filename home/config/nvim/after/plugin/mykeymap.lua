@@ -1,9 +1,35 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
+vim.g.mapleader = ","
+
 -- ---------------------------------------------
 -- -- MAIN
 -- ---------------------------------------------
+
+-- RELAY MACRO
+keymap("n", "\\", "@", opts)
+-- nnoremap <\> @
+
+-- FIND
+keymap("n", "<C-f>", "/", opts)
+-- nnoremap <C-f> /
+
+-- VISTA
+keymap("n", "<A-r>", ":Vista finder<CR>", opts)
+keymap("n", "<F9>", ":Vista!!<CR>", opts)
+
+-- FOLD CODE
+keymap("n", "<A-f>", "zc", opts)
+keymap("n", "<A-f>", "<Esc>zc", opts)
+
+-- FORMAT CODE
+keymap("n", "<leader>t", ":Format<CR>", opts)
+
+-- EXPLORER
+keymap("n", "<leader>ee", ":Ex<CR>", opts)
+keymap("i", "<leader>ee", "<Esc>:Ex<CR>", opts)
+keymap("v", "<leader>ee", ":Ex<CR>", opts)
 
 -- SOURCE
 keymap("n", "<C-0>", ":w<CR>:so<CR>:echom 'source success!'<cr>", opts)
@@ -13,9 +39,6 @@ keymap("n", "<A-0>", ":w<CR>:so<CR>:echom 'source success!'<cr>", opts)
 keymap("i", "<C-s>", "<Esc>:w<CR>", opts)
 keymap("v", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
-
--- TOGGLE HIGHLIGHT
-keymap("n", "<F3>", ":set hlsearch!<cr>", opts)
 
 --  ESC
 keymap("n", "<A-j>", "<Esc>", opts)
@@ -35,14 +58,22 @@ keymap("n", "<C-a>", "ggVG", opts)
 -- ---------------------------------------------
 
 -- SPLIT WINDOWS
-keymap("i", '<A-">', "<C-w>v", opts)
-keymap("v", "<A-!>", "<C-w>s", opts)
+keymap("n", '<A-">', "<C-w>v", opts)
+keymap("n", "<A-!>", "<C-w>s", opts)
 
 -- MOVE SPLIT WINDOWS
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("i", "<C-h>", "<esc><C-w>h", opts)
-keymap("i", "<C-l>", "<esc><C-w>l", opts)
+keymap("n", "<A-h>", "<C-w>h", opts)
+keymap("n", "<A-l>", "<C-w>l", opts)
+keymap("i", "<A-h>", "<esc><C-w>h", opts)
+keymap("i", "<A-l>", "<esc><C-w>l", opts)
+
+keymap("n", "<A-b>", ":vertical resize +20<cr>", opts)
+keymap("n", "<A-s>", ":vertical resize -20<cr>", opts)
+keymap("n", "<C-A-s>", ":vertical resize -20<cr>", opts)
+-- " resize vertical
+-- nnoremap <A-b> :vertical resize +20<cr>
+-- nnoremap <A-s> :vertical resize -20<cr>
+-- nnoremap <C-A-s> :vertical resize -20<cr>
 
 
 -- ---------------------------------------------
@@ -51,12 +82,10 @@ keymap("i", "<C-l>", "<esc><C-w>l", opts)
 
 -- JUMP UP 6
 keymap("n", 'K', "6k", opts)
-keymap("i", "K", "6k", opts)
 keymap("v", "K", "6k", opts)
 
 -- JUMP DOWN 6
 keymap("n", 'J', "6j", opts)
-keymap("i", "J", "6j", opts)
 keymap("v", "J", "6j", opts)
 
 -- BEGGINING OF LINE
@@ -68,7 +97,7 @@ keymap("n", 'T', "H", opts)
 keymap("n", "B", "L", opts)
 
 -- MOVE TO END OF LINE
-keymap("i", "<C-e>", "<esc>$i", opts)
+keymap("i", "<C-e>", "<esc>$a", opts)
 keymap("v", "<C-e>", "$", opts)
 keymap("n", "<C-e>", "$a", opts)
 keymap("v", "L", "$", opts)
@@ -103,6 +132,9 @@ keymap("n", "<C-A-k>", "<C-u>M", opts)
 -- ---------------------------------------------
 -- -- EDIT
 -- ---------------------------------------------
+
+-- JOIN LINES
+keymap("n", "<leader>j", "J", opts)
 
 -- COPY SYSTEM CLIPBOARD
 keymap("v", "<C-c>", '"*ygv"+y', opts)
@@ -157,10 +189,3 @@ keymap("n", "<C-A-v>", "<C-v>", opts)
 keymap("i", "<C-A-v>", "<C-v>", opts)
 keymap("n", "<leader>v", "<C-v>", opts)
 keymap("i", "<leader>v", "<C-v>", opts)
-
-
-
-
-
-
-

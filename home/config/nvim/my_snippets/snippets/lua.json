@@ -1,5 +1,19 @@
 {
-   "lua block comment": {
+    "whole keymap": {
+        "prefix": ["key", ""],
+        "body": [
+            "keymap(\"n\", \"$1\", \"$2\", opts)"
+        ],
+        "description": ""
+    },
+    "command keymap": {
+        "prefix": ["keyc", "kc"],
+        "body": [
+            "<C-$0>"
+        ],
+        "description": ""
+    }, 
+    "lua block comment": {
         "prefix": "luab",
         "body": [
             "-- ---------------------------------------------",
