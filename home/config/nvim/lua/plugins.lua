@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
   -- Load on an autocommand event
   use {'andymass/vim-matchup', event = 'VimEnter'}
   use {'liuchengxu/vista.vim'}
+  use {'preservim/nerdtree'}
 
 
   -- ---------------------------------------------

@@ -62,10 +62,18 @@ keymap("n", '<A-">', "<C-w>v", opts)
 keymap("n", "<A-!>", "<C-w>s", opts)
 
 -- MOVE SPLIT WINDOWS
+-- left
 keymap("n", "<A-h>", "<C-w>h", opts)
+keymap("n", "<A-left>", "<C-w>h", opts)
+-- right
 keymap("n", "<A-l>", "<C-w>l", opts)
+keymap("n", "<A-right>", "<C-w>l", opts)
 keymap("i", "<A-h>", "<esc><C-w>h", opts)
 keymap("i", "<A-l>", "<esc><C-w>l", opts)
+-- down
+keymap("n", "<A-down>", "<C-w>k", opts)
+-- up
+keymap("n", "<A-up>", "<C-w>j", opts)
 
 keymap("n", "<A-b>", ":vertical resize +20<cr>", opts)
 keymap("n", "<A-s>", ":vertical resize -20<cr>", opts)
@@ -159,6 +167,7 @@ keymap("n", "<A-D>", ":t.<CR>", opts)
 keymap("i", "<C-d>", "<Esc>dd", opts)
 keymap("v", "<C-d>", "dd", opts)
 keymap("n", "<C-d>", "dd", opts)
+keymap("n", "<A-d>", "dd", opts)
 
 -- vim.keymap.set("i", "<C-d>", "<Esc><C-d>zz")
 -- vim.keymap.set("v", "<C-d>", "<C-d>zz")

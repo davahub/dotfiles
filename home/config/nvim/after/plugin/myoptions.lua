@@ -1,27 +1,31 @@
+
+
+-- ---------------------------------------------
+-- GLOBAL 
+-- ---------------------------------------------
+
+-- enable markdown syntax highlighting
+vim.g.markdown_fenced_languages = {'html', 'python', 'bash=sh', 'lua', 'vim', 'typescript', 'javascript' }
+
+
+-- --------------------------------------------------------
+-- CMD
+-- --------------------------------------------------------
 -- turn off auto commevident after o
 vim.cmd [[autocmd FileType * set formatoptions-=ro]]
-
 vim.cmd [[filetype plugin on]]
-
 -- allow auto-indenting depending on file type
 vim.cmd [[filetype plugin indent on]]
-
 -- highlight syntax
 vim.cmd [[syntax on]]
 
 
--- --------------------------------------------------------
--- Syntax
--- --------------------------------------------------------
-
--- see file types :setfiletype <space> <c-d>
+-- ---------------------------------------------
+-- -- FILE TYPES 
+-- ---------------------------------------------
 vim.cmd [[autocmd BufNewFile,BufRead *.aliases set filetype=bash]]
 vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]
-vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]
-
--- autocmd BufNewFile,BufRead *. set filetype=bash
-
-
+vim.cmd [[autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc]]
 
 
 -- set nocompatible            " disable compatibility to old-time vi
@@ -63,7 +67,7 @@ local options = {
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
-  cursorline = true,                       -- highlight the current line
+  cursorline = false,                       -- highlight the current line
   number = true,                           -- set numbered lines
   relativenumber = false,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
