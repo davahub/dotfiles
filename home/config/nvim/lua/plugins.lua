@@ -16,6 +16,20 @@ return require('packer').startup(function(use)
 
 
   -- ---------------------------------------------
+  -- -- Themes
+  -- ---------------------------------------------
+  use('EdenEast/nightfox.nvim')
+  use('folke/tokyonight.nvim')
+  -- use('altercation/vim-colors-solarized')
+  use('ellisonleao/gruvbox.nvim')
+  use("rebelot/kanagawa.nvim")
+  use { "catppuccin/nvim", as = "catppuccin" }
+  -- use('marko-cerovac/material.nvim')
+  -- use('sainnhe/gruvbox-material')
+
+
+
+  -- ---------------------------------------------
   -- -- Init plugins
   -- --------------------------------------------- 
   use 'tpope/vim-commentary'
@@ -48,15 +62,5 @@ return require('packer').startup(function(use)
   } 
 
 
-
-  -- ---------------------------------------------
-  -- -- Themes
-  -- ---------------------------------------------
-  use('EdenEast/nightfox.nvim')
-  -- use('folke/tokyonight.nvim')
-  -- use('altercation/vim-colors-solarized')
-  -- use('ellisonleao/gruvbox.nvim')
-  -- use('marko-cerovac/material.nvim')
-  -- use('sainnhe/gruvbox-material')
-
+  
 end)

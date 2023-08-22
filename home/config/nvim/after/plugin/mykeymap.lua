@@ -98,7 +98,6 @@ keymap("v", "J", "6j", opts)
 
 -- BEGGINING OF LINE
 keymap("n", 'H', "0", opts)
-keymap("i", "H", "0", opts)
 
 -- TOP AND BOTTOM
 keymap("n", 'T', "H", opts)

@@ -3,13 +3,13 @@
 -- Theme
 -- -------------------------------------------------------
 
-local colorscheme = "nightfox"
+-- local colorscheme = "nightfox"
 
--- -- Tokyo night --
--- vim.g.tokyonight_style = 'storm'
--- vim.g.tokyonight_style = 'day'
--- vim.g.tokyonight_style = 'moon'
--- vim.g.tokyonight_style = 'night'
+-- TOKYONIGHT
+-- local colorscheme = "tokyonight"
+-- local colorscheme = "tokyonight-night"
+-- local colorscheme = "tokyonight-storm"
+-- local colorscheme = "tokyonight-moon"
 -- vim.g.tokyonight_style = { 'quickfix', '__vista__', 'terminal' }
 
 -- Solarized --
@@ -26,7 +26,8 @@ local colorscheme = "nightfox"
 -- Gruvbox --
 -- " set background=dark " or light if you want light mode
 -- " colorscheme gruvbox
-
+-- local colorscheme = "gruvbox"
+-- vim.opt.background="dark"
 -- Catppuccin --
 -- " colorscheme catppuccin
 
@@ -35,9 +36,21 @@ local colorscheme = "nightfox"
 -- " gruvbox material
 -- " colorscheme gruvbox-material
 
+-- Kaganawa
+-- local colorscheme = "kanagawa-wave"
+-- local colorscheme = "kanagawa-dragon"
+-- vim.cmd("colorscheme kanagawa-wave")
+-- vim.cmd("colorscheme kanagawa-dragon")
+-- vim.cmd("colorscheme kanagawa-lotus")
+
+-- Catppuccin
+-- colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+local colorscheme = "catppuccin"
+
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
   return
 end
+
 

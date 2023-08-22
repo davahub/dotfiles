@@ -18,6 +18,7 @@ vim.cmd [[filetype plugin on]]
 vim.cmd [[filetype plugin indent on]]
 -- highlight syntax
 vim.cmd [[syntax on]]
+vim.cmd [[:au FocusLost * :wa]]
 
 
 -- ---------------------------------------------

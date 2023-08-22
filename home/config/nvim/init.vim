@@ -9,10 +9,11 @@ lua require('color')
 " -------------------------------------------------------
 " -- COMMANDS
 " -------------------------------------------------------
+command! Ps :PackerSync
 command! Format :w | :! prettier %:p --write
 command! Focus :NERDTreeFind
 command! Oconfig :NERDTree ~/.config/nvim
-command! Oworkspace :NERDTree ~/.config/nvim
+command! Oworkspace :NERDTree ~/workspace/dans
 
 
 "-------------------------------------------------------
@@ -22,13 +23,14 @@ command! Oworkspace :NERDTree ~/.config/nvim
 " nerd toggle
 nnoremap <F8> :NERDTreeToggle<CR>
 
-" dir config
+"dir config
 nnoremap <space>dc :NERDTree ~/.config/nvim<CR>
 
 " dir workspace
-nnoremap <space>dw :NERDTree ~/workspace<CR>
+nnoremap <space>dw :NERDTree ~/workspace/dans<CR>
 
-
+" focus nerd tree 
+nnoremap <space>f :NERDTreeFocus<CR>
 
 
 
