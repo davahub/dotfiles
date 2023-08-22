@@ -1,111 +1,166 @@
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
+
 -- ---------------------------------------------
--- -- MAIN 
+-- -- MAIN
 -- ---------------------------------------------
 
 -- SOURCE
-vim.keymap.set("n", "<C-0>", ":w<CR>:so<CR>:echom 'source success!'<cr>")
-vim.keymap.set("n", "<A-0>", ":w<CR>:so<CR>:echom 'source success!'<cr>")
+keymap("n", "<C-0>", ":w<CR>:so<CR>:echom 'source success!'<cr>", opts)
+keymap("n", "<A-0>", ":w<CR>:so<CR>:echom 'source success!'<cr>", opts)
 
 -- SAVE
-vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>")
-vim.keymap.set("v", "<C-s>", ":w<CR>")
-vim.keymap.set("n", "<C-s>", ":w<CR>")
+keymap("i", "<C-s>", "<Esc>:w<CR>", opts)
+keymap("v", "<C-s>", ":w<CR>", opts)
+keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- TOGGLE HIGHLIGHT
-vim.keymap.set("n", "<F3>", ":set hlsearch!<cr>", { silent = true })
+keymap("n", "<F3>", ":set hlsearch!<cr>", opts)
 
---  ESC  
-vim.keymap.set("n", "<A-j>", "<Esc>")
-vim.keymap.set("v", "<A-j>", "<Esc>")
-vim.keymap.set("i", "<A-j>", "<Esc>")
+--  ESC
+keymap("n", "<A-j>", "<Esc>", opts)
+keymap("v", "<A-j>", "<Esc>", opts)
+keymap("i", "<A-j>", "<Esc>", opts)
 
--- SWITCH RECENT BUFFERS 
-vim.keymap.set("n", "<A-o>", "<C-^>")
-vim.keymap.set("v", "<A-o>", "<C-^>")
+-- SWITCH RECENT BUFFERS
+keymap("n", "<A-o>", "<C-^>", opts)
+keymap("v", "<A-o>", "<C-^>", opts)
 
 -- SELECT ALL
-vim.keymap.set("n", "<C-a>", "ggVG")
+keymap("n", "<C-a>", "ggVG", opts)
 
 
 -- ---------------------------------------------
--- -- MOVEMENT 
+-- -- WINDOW
 -- ---------------------------------------------
+
+-- SPLIT WINDOWS
+keymap("i", '<A-">', "<C-w>v", opts)
+keymap("v", "<A-!>", "<C-w>s", opts)
+
+-- MOVE SPLIT WINDOWS
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("i", "<C-h>", "<esc><C-w>h", opts)
+keymap("i", "<C-l>", "<esc><C-w>l", opts)
+
+
+-- ---------------------------------------------
+-- -- MOVEMENT
+-- ---------------------------------------------
+
+-- JUMP UP 6
+keymap("n", 'K', "6k", opts)
+keymap("i", "K", "6k", opts)
+keymap("v", "K", "6k", opts)
+
+-- JUMP DOWN 6
+keymap("n", 'J', "6j", opts)
+keymap("i", "J", "6j", opts)
+keymap("v", "J", "6j", opts)
+
+-- BEGGINING OF LINE
+keymap("n", 'H', "0", opts)
+keymap("i", "H", "0", opts)
+
+-- TOP AND BOTTOM
+keymap("n", 'T', "H", opts)
+keymap("n", "B", "L", opts)
 
 -- MOVE TO END OF LINE
-vim.keymap.set("i", "<C-e>", "<esc>$i")
-vim.keymap.set("v", "<C-e>", "$")
-vim.keymap.set("n", "<C-e>", "$a")
-vim.keymap.set("v", "L", "$")
-vim.keymap.set("n", "L", "$")
+keymap("i", "<C-e>", "<esc>$i", opts)
+keymap("v", "<C-e>", "$", opts)
+keymap("n", "<C-e>", "$a", opts)
+keymap("v", "L", "$", opts)
+keymap("n", "L", "$", opts)
 
 -- SWITCH LINES DOWN
-vim.keymap.set("v", "<C-down>", ":m '>+1<CR>gv=gv")
-vim.keymap.set("n", "<C-down>", "v$:m '>+1<CR>gv=gv<Esc>")
+keymap("v", "<C-down>", ":m '>+1<CR>gv=gv", opts)
+keymap("n", "<C-down>", "v$:m '>+1<CR>gv=gv<Esc>", opts)
 
 -- SWITCH LINES UP
-vim.keymap.set("v", "<C-up>", ":m '<-2<CR>gv=gv")
-vim.keymap.set("n", "<C-up>", "v$:m '>-2<CR>gv=gv<Esc>")
+keymap("v", "<C-up>", ":m '<-2<CR>gv=gv", opts)
+keymap("n", "<C-up>", "v$:m '>-2<CR>gv=gv<Esc>", opts)
 
 -- CENTER MIDDLE
-vim.keymap.set("n", "mm", "zz")
+keymap("n", "mm", "zz", opts)
 
 -- SCROLL DOWN
-vim.keymap.set("i", "<C-j>", "<Esc>6<C-e>")
-vim.keymap.set("v", "<C-j>", "6<C-e>")
-vim.keymap.set("n", "<C-j>", "6<C-e>")
+keymap("i", "<C-j>", "<Esc>6<C-e>", opts)
+keymap("v", "<C-j>", "6<C-e>", opts)
+keymap("n", "<C-j>", "6<C-e>", opts)
 -- HALF DOWN
-vim.keymap.set("n", "<C-A-j>", "<C-d>M")
+keymap("n", "<C-A-j>", "<C-d>M", opts)
 
 -- SCROLL UP
-vim.keymap.set("i", "<C-k>", "<Esc>6<C-y>")
-vim.keymap.set("v", "<C-k>", "6<C-y>")
-vim.keymap.set("n", "<C-k>", "6<C-y>")
+keymap("i", "<C-k>", "<Esc>6<C-y>", opts)
+keymap("v", "<C-k>", "6<C-y>", opts)
+keymap("n", "<C-k>", "6<C-y>", opts)
 -- HALF UP
-vim.keymap.set("n", "<C-A-k>", "<C-u>M")
+keymap("n", "<C-A-k>", "<C-u>M", opts)
 
 
 -- ---------------------------------------------
--- -- EDIT 
+-- -- EDIT
 -- ---------------------------------------------
+
+-- COPY SYSTEM CLIPBOARD
+keymap("v", "<C-c>", '"*ygv"+y', opts)
+keymap("v", "<C-x>", '"*d', opts)
+
+-- PASTE
+keymap("n", "<C-v>", 'i<Esc>"*p', opts)
+keymap("v", "<C-v>", 'c<ESC>"*p', opts)
+keymap("i", "<C-v>", '<ESC>"*p', opts)
 
 -- INSERT END OF LINE
-vim.keymap.set("i", "<A-i>", "A")
-vim.keymap.set("v", "<A-i>", "A")
-vim.keymap.set("n", "<A-i>", "A")
+keymap("i", "<A-i>", "A", opts)
+keymap("v", "<A-i>", "A", opts)
+keymap("n", "<A-i>", "A", opts)
 
 -- DUPLICATE LINES
-vim.keymap.set("i", "<A-D>", "<Esc>:t.<CR>i")
-vim.keymap.set("v", "<A-D>", ":t.<CR>")
-vim.keymap.set("n", "<A-D>", ":t.<CR>")
+keymap("i", "<A-D>", "<Esc>:t.<CR>i", opts)
+keymap("v", "<A-D>", ":t.<CR>", opts)
+keymap("n", "<A-D>", ":t.<CR>", opts)
 
 -- DELETE LINE
-vim.keymap.set("i", "<C-d>", "<Esc>dd")
-vim.keymap.set("v", "<C-d>", "dd")
-vim.keymap.set("n", "<C-d>", "dd")
+keymap("i", "<C-d>", "<Esc>dd", opts)
+keymap("v", "<C-d>", "dd", opts)
+keymap("n", "<C-d>", "dd", opts)
 
 -- vim.keymap.set("i", "<C-d>", "<Esc><C-d>zz")
 -- vim.keymap.set("v", "<C-d>", "<C-d>zz")
 -- vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("i", "<C-A-j>", "<Esc><C-d>zz")
-vim.keymap.set("v", "<C-A-j>", "<C-d>zz")
-vim.keymap.set("n", "<C-A-j>", "<C-d>zz")
+keymap("i", "<C-A-j>", "<Esc><C-d>zz", opts)
+keymap("v", "<C-A-j>", "<C-d>zz", opts)
+keymap("n", "<C-A-j>", "<C-d>zz", opts)
 
-vim.keymap.set("i", "<C-u>", "<Esc><C-u>zz")
-vim.keymap.set("v", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("i", "<C-A-k>", "<Esc><C-u>zz")
-vim.keymap.set("v", "<C-A-k>", "<C-u>zz")
-vim.keymap.set("n", "<C-A-k>", "<C-u>zz")
+keymap("i", "<C-u>", "<Esc><C-u>zz", opts)
+keymap("v", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("i", "<C-A-k>", "<Esc><C-u>zz", opts)
+keymap("v", "<C-A-k>", "<C-u>zz", opts)
+keymap("n", "<C-A-k>", "<C-u>zz", opts)
 
 -- ENTER INSERT
-vim.keymap.set("n", "<CR>", "o<esc>")
+keymap("n", "<CR>", "o<esc>", opts)
 
 -- SPACE INSERT
-vim.keymap.set("n", "<space>", "i")
+-- keymap("n", "<space>", "i", opts)
 
 -- DELETE BACKWARD
-vim.keymap.set("n", "<C-;>", "bdw")
-vim.keymap.set("i", "<C-;>", "<Esc>dbxi")
+keymap("n", "<C-;>", "bdw", opts)
+keymap("i", "<C-;>", "<Esc>dbxi", opts)
+
+-- BLOCK VISUAL
+keymap("n", "<C-A-v>", "<C-v>", opts)
+keymap("i", "<C-A-v>", "<C-v>", opts)
+keymap("n", "<leader>v", "<C-v>", opts)
+keymap("i", "<leader>v", "<C-v>", opts)
+
+
+
+
 
 
 
