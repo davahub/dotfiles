@@ -11,7 +11,9 @@ endif
 " Set Editor Font
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
-    GuiFont Inconsolata:h17
+    " GuiFont Inconsolata:h17
+    " GuiFont Hack Nerd Font Mono:h15
+    GuiFont Inconsolata Nerd Font Mono:h16
 endif
 
 " set color of cc ruler

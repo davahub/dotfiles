@@ -45,7 +45,23 @@
 
 -- Catppuccin
 -- colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-local colorscheme = "catppuccin"
+-- local colorscheme = "catppuccin"
+-- local colorscheme = "catppuccin-frappe"
+-- local colorscheme = "catppuccin-macchiato"
+-- local colorscheme = "catppuccin-mocha"
+
+-- Nord
+-- local colorscheme = "nord"
+
+-- Ayu
+-- local colorscheme = "ayu"
+
+-- Vim one
+-- local colorscheme = "one"
+
+-- Oceanic next
+local colorscheme = "OceanicNext"
+
 
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

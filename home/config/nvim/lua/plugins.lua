@@ -20,10 +20,15 @@ return require('packer').startup(function(use)
   -- ---------------------------------------------
   use('EdenEast/nightfox.nvim')
   use('folke/tokyonight.nvim')
-  -- use('altercation/vim-colors-solarized')
   use('ellisonleao/gruvbox.nvim')
-  use("rebelot/kanagawa.nvim")
+  use("nvim-tree/nvim-web-devicons")
   use { "catppuccin/nvim", as = "catppuccin" }
+  use("mhartington/oceanic-next")
+  -- use("sonph/onehalf")
+  -- use("ayu-theme/ayu-vim")
+  -- use("nordtheme/vim")
+  -- use('altercation/vim-colors-solarized')
+  -- use("rebelot/kanagawa.nvim")
   -- use('marko-cerovac/material.nvim')
   -- use('sainnhe/gruvbox-material')
 
@@ -46,20 +51,37 @@ return require('packer').startup(function(use)
   -- -- LSP
   -- ---------------------------------------------
   use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
-    requires = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason.nvim'},           -- Optional
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    "jose-elias-alvarez/null-ls.nvim",
+    "hrsh7th/nvim-cmp",      
+    "hrsh7th/cmp-nvim-lsp",      
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
+    -- "mfussenegger/nvim-lint"
+  }
+  use("L3MON4D3/LuaSnip")
+  -- enable cmp luasnip
+  -- use("saadparwaiz1/cmp_luasnip")
 
+
+  -- use {
+    -- 'VonHeikemen/lsp-zero.nvim',
+    -- branch = 'v2.x',
+    -- requires = {
+      -- LSP Support
+      -- {'neovim/nvim-lspconfig'},             -- Required
+      -- {'williamboman/mason.nvim'},           -- Optional
+      -- {'williamboman/mason-lspconfig.nvim'}, -- Optional
+-- 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
-    }
-  } 
+      -- {'hrsh7th/nvim-cmp'},     -- Required
+      -- {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      -- {'L3MON4D3/LuaSnip'},     -- Required
+    -- }
+  -- } 
 
 
   

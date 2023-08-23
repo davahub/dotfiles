@@ -26,7 +26,7 @@ vim.cmd [[:au FocusLost * :wa]]
 -- ---------------------------------------------
 vim.cmd [[autocmd BufNewFile,BufRead *.aliases set filetype=bash]]
 vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]
-vim.cmd [[autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc]]
+-- vim.cmd [[autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc]]
 
 
 -- set nocompatible            " disable compatibility to old-time vi

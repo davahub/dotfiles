@@ -48,6 +48,7 @@ keymap("i", "<A-j>", "<Esc>", opts)
 -- SWITCH RECENT BUFFERS
 keymap("n", "<A-o>", "<C-^>", opts)
 keymap("v", "<A-o>", "<C-^>", opts)
+keymap("i", "<A-o>", "<esc><C-^>a", opts)
 
 -- SELECT ALL
 keymap("n", "<C-a>", "ggVG", opts)
@@ -145,7 +146,7 @@ keymap("n", "<leader>j", "J", opts)
 
 -- COPY SYSTEM CLIPBOARD
 keymap("v", "<C-c>", '"*ygv"+y', opts)
-keymap("v", "<C-x>", '"*d', opts)
+keymap("v", "<C-x>", '"+ygv"*d', opts)
 
 -- PASTE
 keymap("n", "<C-v>", 'i<Esc>"*p', opts)
@@ -183,7 +184,7 @@ keymap("v", "<C-A-k>", "<C-u>zz", opts)
 keymap("n", "<C-A-k>", "<C-u>zz", opts)
 
 -- ENTER INSERT
-keymap("n", "<CR>", "o<esc>", opts)
+-- keymap("n", "<CR>", "o<esc>", opts)
 
 -- SPACE INSERT
 -- keymap("n", "<space>", "i", opts)
