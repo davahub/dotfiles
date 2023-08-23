@@ -31,6 +31,13 @@ keymap('n', '<leader>wr', function()
   builtin.live_grep({ cwd = "~/workspace/dans"});
 end)
 
+keymap('n', '<A-R>', function()
+  builtin.live_grep({ cwd = "~/workspace/dans"});
+end)
+-- ---------------------------------------------
+-- WINDOW 
+-- ---------------------------------------------
+
 -- require('telescope.builtin').live_grep({
 --     search_dirs = { path },
 --     prompt_title = string.format('Grep in [%s]', vim.fs.basename(path)),

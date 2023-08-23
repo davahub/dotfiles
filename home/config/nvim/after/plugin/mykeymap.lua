@@ -155,6 +155,10 @@ keymap("v", "<C-x>", '"+ygv"*d', opts)
 keymap("n", "<C-v>", 'i<Esc>"*p', opts)
 keymap("v", "<C-v>", 'c<ESC>"*p', opts)
 keymap("i", "<C-v>", '<ESC>"*p', opts)
+-- to buffers, other windows
+keymap("n", "<A-V>", "<C-r>+", opts)
+keymap("i", "<A-V>", "<C-r>+", opts)
+
 
 -- INSERT END OF LINE
 keymap("i", "<A-i>", "A", opts)

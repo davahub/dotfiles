@@ -29,7 +29,7 @@ x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/webcal=google-chrome.desktop
 
 [Added Associations]
-text/plain=leafpad.desktop;sublime_text_3.desktop;userapp-pcopen-NV7RC3.desktop;
+text/plain=leafpad.desktop;mynvim-qt-NV7RC3.desktop;sublime_text_3.desktop;userapp-pcopen-NV7RC3.desktop;
 inode/directory=xarchiver.desktop;pcmanfm.desktop;vlc.desktop;
 application/xml=sublime_text_3.desktop;
 image/jpg=viewnior.desktop;feh.desktop;darktable.desktop;pinta.desktop;
@@ -60,6 +60,6 @@ text/markdown=google-chrome-beta.desktop;
 image/gif=viewnior.desktop;
 
 [Removed Associations]
-text/plain=nvim.desktop;vim.desktop;libreoffice-writer.desktop;nvim-qt.desktop;sublime_merge.desktop;diffmerge.desktop;
+text/plain=nvim.desktop;nvim-qt.desktop;neovide.desktop;vim.desktop;libreoffice-writer.desktop;sublime_merge.desktop;diffmerge.desktop;
 application/x-executable=nvim.desktop;
 application/x-shellscript=nvim.desktop;vim.desktop;nvim-qt.desktop;

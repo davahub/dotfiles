@@ -43,7 +43,24 @@
             "```"
         ],
         "description": "shell insert"
+    },
+
+    "Bold": {
+        "prefix": "mdb",
+        "body": [
+            "**${0}**  "
+        ],
+        "description": "shell insert"
+    },
+
+    "mdh": {
+        "prefix": "mdh",
+        "body": [
+            "`${0}`"
+        ],
+        "description": "shell insert"
     }
+
 
 }
 

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Neo
+Exec=vnop %F
+Categories=TextEditor;
+NoDisplay=true
+MimeType=text/plain
+Terminal=false
+Icon=nvim-qt
