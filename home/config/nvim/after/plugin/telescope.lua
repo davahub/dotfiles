@@ -9,7 +9,7 @@ local keymap = vim.keymap.set
 -- ---------------------------------------------
 
 -- open proj dir
-keymap('n', '<leader>ff', function()
+keymap('n', '<leader>w', function()
     builtin.find_files({ cwd = "~/workspace/dans" });
 end)
 
@@ -22,9 +22,7 @@ end)
 keymap('n', '<leader>lg', builtin.git_files, opts)
 
 -- buffer
-keymap('n', '<leader>b', function()
-    builtin.find_files({ cwd = utils.buffer_dir() });
-end)
+keymap('n', '<leader>b', builtin.buffers, opts)
 
 -- search
 vim.keymap.set('n', '<leader>fs', function()

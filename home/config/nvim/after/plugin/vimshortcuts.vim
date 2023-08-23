@@ -7,9 +7,6 @@
 "-- KEY MAPPING
 "-------------------------------------------------------
 
-
-
-
 " COMMENT TOGGLE
 func! MyCommentToggle()
     if getline('.') =~ '^\s*$'
@@ -23,9 +20,10 @@ func! MyCommentToggle()
         Commentary
     endif
 endfunc
+
 inoremap <A-e> <Esc>:call MyCommentToggle()<CR>
 nnoremap <A-e> :call MyCommentToggle()<CR>
-vnoremap <A-e> :call MyCommentToggle()<CR>
+vnoremap <A-e> :Commentary<CR>
 
 
 " empty lines below

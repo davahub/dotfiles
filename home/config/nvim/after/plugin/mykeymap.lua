@@ -15,6 +15,8 @@ keymap("n", "\\", "@", opts)
 keymap("n", "<C-f>", "/", opts)
 -- nnoremap <C-f> /
 
+keymap("n", "<F3>", ":set hlsearch!<cr>", opts)
+
 -- VISTA
 keymap("n", "<A-r>", ":Vista finder<CR>", opts)
 keymap("n", "<F9>", ":Vista!!<CR>", opts)
