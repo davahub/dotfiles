@@ -3,7 +3,13 @@
 -- MASON 
 -- ---------------------------------------------
 
-require("mason").setup()
+require("mason").setup(
+  {
+    ensure_installed = { 
+    "black", 
+    },
+  }
+)
 require("mason-lspconfig").setup {
     ensure_installed = { 
     "lua_ls", 
@@ -57,7 +63,7 @@ local function format()
 end
 
 -- keymap
-vim.keymap.set("n", "<leader>f", format, { desc = "LSP: Formats the current buffer" })
+vim.keymap.set("n", "<space>f", format, { desc = "LSP: Formats the current buffer" })
 
 
 -- ---------------------------------------------
@@ -70,11 +76,39 @@ lspconfig.tsserver.setup {}
 lspconfig.eslint.setup {}
 lspconfig.jsonls.setup {}
 lspconfig.vale_ls.setup {}
+lspconfig.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using
+        -- (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {
+          'vim',
+          'require'
+        },
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        -- library = vim.api.nvim_get_runtime_file("", true),
+        -- disable notification question
+        checkThirdParty = false, -- THIS IS THE IMPORTANT LINE TO ADD
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    }
+  }
+}
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
     ['rust-analyzer'] = {},
-  },
+  }
 }
 
 -- Global mappings.

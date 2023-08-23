@@ -23,6 +23,7 @@ keymap("n", "<F9>", ":Vista!!<CR>", opts)
 
 -- FOLD CODE
 keymap("n", "<A-f>", "zc", opts)
+-- keymap("n", "<leader>f", "zc", opts)
 keymap("n", "<A-f>", "<Esc>zc", opts)
 
 -- FORMAT CODE

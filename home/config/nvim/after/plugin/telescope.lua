@@ -1,3 +1,4 @@
+
 local builtin = require('telescope.builtin')
 local utils = require("telescope.utils")
 local opts = { noremap = true, silent = true }
@@ -24,10 +25,21 @@ keymap('n', '<leader>lg', builtin.git_files, opts)
 -- buffer
 keymap('n', '<leader>b', builtin.buffers, opts)
 
--- search
-vim.keymap.set('n', '<leader>fs', function()
-    builtin.grep_string({ search = vim.fn.input("Grep > "), cwd = utils.buffer_dir() });
+-- ripgrep
+-- vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, { noremap = true })
+keymap('n', '<leader>wr', function()
+  builtin.live_grep({ cwd = "~/workspace/dans"});
 end)
+
+-- require('telescope.builtin').live_grep({
+--     search_dirs = { path },
+--     prompt_title = string.format('Grep in [%s]', vim.fs.basename(path)),
+--   })
+
+-- search
+-- vim.keymap.set('n', '<leader>fs', function()
+--     builtin.grep_string({ search = vim.fn.input("Grep > "), cwd = utils.buffer_dir() });
+-- end)
 
 -- vim.keymap.set('n', '<leader>ff', function()
 --     builtin.find_files({ cwd = utils.buffer_dir() });
