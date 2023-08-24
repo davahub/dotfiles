@@ -82,7 +82,7 @@ local options = {
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
   ttyfast = true,                           -- Speed up scrolling in Vim
   foldmethod="indent",
-  foldnestmax=10,
+  foldnestmax=2,
   foldenable=false,
   foldlevel=2,
 }

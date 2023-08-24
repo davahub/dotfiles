@@ -6,12 +6,16 @@
 " source
 command! Sr :w | :source ~/.config/nvim/init.vim | :noh
 
+" wrap toggle
+command! Wrap :set wrap!
+
 " python format
 command! Fpython :! black %:p
 
 " format jsx prettier
 command! Fprettier :! prettier --write %:p
 command! Fjsx :! prettier --write %:p
+command! Ftsx :! prettier --write %:p
 
 " xmlformat
 vnoremap <F5> :! xmllint --format -

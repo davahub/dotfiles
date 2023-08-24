@@ -92,6 +92,16 @@ keymap("n", "<C-A-s>", ":vertical resize -20<cr>", opts)
 -- -- MOVEMENT
 -- ---------------------------------------------
 
+-- TAB SWITCH
+keymap("n", '<A-1>', ":tabprevious<CR>", opts)
+keymap("v", "<A-1>", ":tabprevious<CR>", opts)
+keymap("i", "<A-1>", "<esc>:tabprevious<CR>", opts)
+
+keymap("n", '<A-2>', ":tabnext<CR>", opts)
+keymap("v", "<A-2>", ":tabnext<CR>", opts)
+keymap("i", "<A-2>", "<esc>:tabnext<CR>", opts)
+
+
 -- JUMP UP 6
 keymap("n", 'K', "6k", opts)
 keymap("v", "K", "6k", opts)
@@ -167,9 +177,9 @@ keymap("v", "<A-i>", "A", opts)
 keymap("n", "<A-i>", "A", opts)
 
 -- DUPLICATE LINES
-keymap("i", "<A-D>", "<Esc>:t.<CR>i", opts)
-keymap("v", "<A-D>", ":t.<CR>", opts)
-keymap("n", "<A-D>", ":t.<CR>", opts)
+-- keymap("i", "<A-D>", "<Esc>:t.<CR>i", opts)
+-- keymap("v", "<A-D>", ":t.<CR>", opts)
+-- keymap("n", "<A-D>", ":t.<CR>", opts)
 
 -- DELETE LINE
 keymap("i", "<C-d>", "<Esc>dd", opts)

@@ -14,6 +14,7 @@ command! Format :w | :! prettier %:p --write
 command! Focus :NERDTreeFind
 command! Oconfig :NERDTree ~/.config/nvim
 command! Oworkspace :NERDTree ~/workspace/dans
+command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md
 
 
 "-------------------------------------------------------
@@ -37,4 +38,12 @@ nnoremap <space>f :nerdtreefocus<cr>
 let NERDTreeIgnore = ['__init__.py', '__pycache__', 'node_modules']
 
 " nnoremap gp `[v`]
+
+" duplicate
+nnoremap <A-D> ddkpp
+" normal
+" vnoremap <A-D> xp}p
+" new line
+vnoremap <A-D> xp}pi<cr><tab><esc>
+
 
