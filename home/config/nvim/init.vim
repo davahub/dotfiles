@@ -33,6 +33,6 @@ nnoremap <space>dw :NERDTree ~/workspace/dans<CR>
 nnoremap <space>f :NERDTreeFocus<CR>
 
 
-
+let NERDTreeIgnore = ['__init__.py', '__pycache__', 'node_modules']
 
 

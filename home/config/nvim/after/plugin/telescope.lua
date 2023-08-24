@@ -11,12 +11,12 @@ local keymap = vim.keymap.set
 
 -- open proj dir
 keymap('n', '<leader>w', function()
-    builtin.find_files({ cwd = "~/workspace/dans" });
+  builtin.find_files({ cwd = "~/workspace/dans" });
 end)
 
 -- open config
 keymap('n', '<leader>c', function()
-    builtin.find_files({ cwd = "~/.config/nvim" });
+  builtin.find_files({ cwd = "~/.config/nvim" });
 end)
 
 -- git files
@@ -25,15 +25,42 @@ keymap('n', '<leader>lg', builtin.git_files, opts)
 -- buffer
 keymap('n', '<leader>b', builtin.buffers, opts)
 
--- ripgrep
--- vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, { noremap = true })
-keymap('n', '<leader>wr', function()
-  builtin.live_grep({ cwd = "~/workspace/dans"});
-end)
-
 keymap('n', '<A-R>', function()
   builtin.live_grep({ cwd = "~/workspace/dans"});
 end)
+
+
+vim.api.nvim_create_user_command('Wrip',
+  function()
+    builtin.live_grep({ cwd = "~/workspace/dans"});
+  end,
+  { nargs = 0 })
+
+
+
+
+
+
+-- ---------------------------------------------
+-- Archive 
+-- ---------------------------------------------
+
+-- ripgrep
+-- vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, { noremap = true })
+
+-- keymap('n', '<leader>wr', function()
+--   builtin.live_grep({ cwd = "~/workspace/dans"});
+-- end)
+
+-- vim.api.nvim_exec([[
+-- function! EchoStrategy(cmd)
+--   echo 'It works! Command for running tests: ' . a:cmd
+-- endfunction
+
+-- let g:test#custom_strategies = {'echo': function('EchoStrategy')}
+-- let g:test#strategy = 'echo'
+-- ]], false)
+
 -- ---------------------------------------------
 -- WINDOW 
 -- ---------------------------------------------

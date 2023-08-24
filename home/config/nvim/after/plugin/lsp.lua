@@ -3,16 +3,11 @@
 -- MASON 
 -- ---------------------------------------------
 
-require("mason").setup(
-  {
-    ensure_installed = { 
-    "black", 
-    },
-  }
-)
+require("mason").setup()
+
 require("mason-lspconfig").setup {
-    ensure_installed = { 
-    "lua_ls", 
+    ensure_installed = {
+    "lua_ls",
     'tsserver',
     'eslint',
     'rust_analyzer',

@@ -6,6 +6,9 @@
 " source
 command! Sr :w | :source ~/.config/nvim/init.vim | :noh
 
+" python format
+command! Fpython :! black %:p
+
 " xmlformat
 vnoremap <F5> :! xmllint --format -
 nnoremap <F5> ggVG:!xmllint --format -<CR>

@@ -12,11 +12,8 @@
 -- local colorscheme = "tokyonight-moon"
 -- vim.g.tokyonight_style = { 'quickfix', '__vista__', 'terminal' }
 
--- Solarized --
--- " set background=dark
--- " colorscheme solarized
-
 --  Nightfox --
+local colorscheme = "nordfox"
 -- colorscheme nightfox
 -- " colorscheme nordfox
 -- " colorscheme carbonfox
@@ -39,13 +36,13 @@
 -- Kaganawa
 -- local colorscheme = "kanagawa-wave"
 -- local colorscheme = "kanagawa-dragon"
--- vim.cmd("colorscheme kanagawa-wave")
--- vim.cmd("colorscheme kanagawa-dragon")
--- vim.cmd("colorscheme kanagawa-lotus")
+-- local colorscheme = "kanagawa-wave"
+-- "colorscheme kanagawa-wave")
 
 -- Catppuccin
 -- colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 -- local colorscheme = "catppuccin"
+-- local colorscheme = "catppuccin-latte"
 -- local colorscheme = "catppuccin-frappe"
 -- local colorscheme = "catppuccin-macchiato"
 -- local colorscheme = "catppuccin-mocha"
@@ -60,8 +57,13 @@
 -- local colorscheme = "one"
 
 -- Oceanic next
-local colorscheme = "OceanicNext"
+-- local colorscheme = "OceanicNext"
 
+-- Solarized --
+-- " set background=dark
+-- vim.opt.background = 'dark'
+-- local colorscheme = "solarized"
+-- " colorscheme solarized
 
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

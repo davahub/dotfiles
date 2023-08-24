@@ -12,8 +12,11 @@ endif
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
     " GuiFont Inconsolata:h17
-    " GuiFont Hack Nerd Font Mono:h15
-    GuiFont Inconsolata Nerd Font Mono:h16
+    GuiFont Hack Nerd Font Mono:h14
+    " GuiFont Inconsolata Nerd Font Mono:h16
+    " GuiFont Inconsolata LGC Nerd Font Mono:h16
+    " GuiFont RobotoMono Nerd:h16
+    " GuiFont FiraCode Nerd Font Mono:h14
 endif
 
 " set color of cc ruler

@@ -24,11 +24,11 @@ return require('packer').startup(function(use)
   use("nvim-tree/nvim-web-devicons")
   use { "catppuccin/nvim", as = "catppuccin" }
   use("mhartington/oceanic-next")
+  use('altercation/vim-colors-solarized')
   -- use("sonph/onehalf")
   -- use("ayu-theme/ayu-vim")
   -- use("nordtheme/vim")
-  -- use('altercation/vim-colors-solarized')
-  -- use("rebelot/kanagawa.nvim")
+  use("rebelot/kanagawa.nvim")
   -- use('marko-cerovac/material.nvim')
   -- use('sainnhe/gruvbox-material')
 
