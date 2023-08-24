@@ -8,7 +8,23 @@
         ],
         "description": ""
     },
-   "Shell block comment": {
+    "tsx block comment": {
+        "prefix": ["tsxb"],
+        "body": [
+            "{/* ============================================================= */}",
+            "{/* $0 */}",
+            "{/* ============================================================= */}"
+        ],
+        "description": ""
+    },
+    "console log": {
+        "prefix": ["clog"],
+        "body": [
+            "console.log($0)"
+        ],
+        "description": ""
+    },
+    "Shell block comment": {
         "prefix": "shb",
         "body": [
             "# ---------------------------------------------",

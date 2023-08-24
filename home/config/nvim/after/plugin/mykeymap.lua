@@ -152,9 +152,10 @@ keymap("v", "<C-c>", '"*ygv"+y', opts)
 keymap("v", "<C-x>", '"+ygv"*d', opts)
 
 -- PASTE
-keymap("n", "<C-v>", 'i<Esc>"*p', opts)
-keymap("v", "<C-v>", 'c<ESC>"*p', opts)
-keymap("i", "<C-v>", '<ESC>"*p', opts)
+-- keymap("n", "<C-v>", ':set paste<cr>i<c-r>+<esc>:set nopaste<cr>`[v`]=', opts)
+keymap("n", "<C-v>", 'i<esc>"*p`[v`]=', opts)
+keymap("v", "<C-v>", 'c<ESC>"*p`[v`]=', opts)
+keymap("i", "<C-v>", '<esc>"*p`[v`]=', opts)
 -- to buffers, other windows
 keymap("n", "<A-V>", "<C-r>+", opts)
 keymap("i", "<A-V>", "<C-r>+", opts)
