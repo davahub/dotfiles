@@ -39,11 +39,21 @@ let NERDTreeIgnore = ['__init__.py', '__pycache__', 'node_modules']
 
 " nnoremap gp `[v`]
 
+
+
+"
+" hello
+" therre
+" hello
+" therre
+"
+
 " duplicate
-nnoremap <A-D> ddkpp
+" nnoremap <A-D> ddkpp
 " normal
 " vnoremap <A-D> xp}p
+vnoremap <A-D> ygvvo<esc>p`[v`]=
 " new line
-vnoremap <A-D> xp}pi<cr><tab><esc>
+" vnoremap <A-D> xp}pi<cr><tab><esc>
 
 

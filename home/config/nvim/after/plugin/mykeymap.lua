@@ -179,7 +179,7 @@ keymap("n", "<A-i>", "A", opts)
 -- DUPLICATE LINES
 -- keymap("i", "<A-D>", "<Esc>:t.<CR>i", opts)
 -- keymap("v", "<A-D>", ":t.<CR>", opts)
--- keymap("n", "<A-D>", ":t.<CR>", opts)
+keymap("n", "<A-D>", ":t.<CR>", opts)
 
 -- DELETE LINE
 keymap("i", "<C-d>", "<Esc>dd", opts)
