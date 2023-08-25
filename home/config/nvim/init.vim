@@ -31,6 +31,13 @@ endfunction
 command! Ssession :NERDTreeClose | :call SaveSession()
 command! Lsession :call LoadSession() | :Oworkspace
 
+" Save session on quitting Vim
+" autocmd VimLeave * NERDTreeClose
+" autocmd VimLeave * mksession! [filename]
+
+" Restore session on starting Vim
+" autocmd VimEnter * call MySessionRestoreFunction()
+" autocmd VimEnter * NERDTree
 
 
 "-------------------------------------------------------
