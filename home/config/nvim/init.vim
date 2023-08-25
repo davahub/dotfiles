@@ -5,8 +5,9 @@
 lua require('plugins')
 lua require('color')
 
-
 let NERDTreeIgnore = ['__init__.py', '__pycache__', 'node_modules']
+
+
 " -------------------------------------------------------
 " -- COMMANDS
 " -------------------------------------------------------
@@ -16,6 +17,20 @@ command! Focus :NERDTreeFind
 command! Oconfig :NERDTree ~/.config/nvim
 command! Oworkspace :NERDTree ~/workspace/dans
 command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md
+
+
+" sessions
+function! SaveSession()
+  mksession! ~/.config/nvim/mysession.vim
+endfunction
+
+function! LoadSession()
+  source ~/.config/nvim/mysession.vim
+endfunction
+
+command! Ssession :NERDTreeClose | :call SaveSession()
+command! Lsession :call LoadSession() | :Oworkspace
+
 
 
 "-------------------------------------------------------
