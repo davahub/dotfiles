@@ -6,6 +6,7 @@ lua require('plugins')
 lua require('color')
 
 
+let NERDTreeIgnore = ['__init__.py', '__pycache__', 'node_modules']
 " -------------------------------------------------------
 " -- COMMANDS
 " -------------------------------------------------------
@@ -33,27 +34,8 @@ nnoremap <space>dw :NERDTree ~/workspace/dans<CR>
 " focus nerd tree 
 nnoremap <space>f :NERDTreeFocus<CR>
 
-nnoremap <space>f :nerdtreefocus<cr>
-
-let NERDTreeIgnore = ['__init__.py', '__pycache__', 'node_modules']
-
-" nnoremap gp `[v`]
-
-
-
-"
-" hello
-" therre
-" hello
-" therre
-"
-
 " duplicate
-" nnoremap <A-D> ddkpp
-" normal
-" vnoremap <A-D> xp}p
 vnoremap <A-D> ygvvo<esc>p`[v`]=
-" new line
-" vnoremap <A-D> xp}pi<cr><tab><esc>
+
 
 

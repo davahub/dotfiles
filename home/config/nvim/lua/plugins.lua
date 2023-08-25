@@ -13,7 +13,8 @@ return require('packer').startup(function(use)
   use {'andymass/vim-matchup', event = 'VimEnter'}
   use {'liuchengxu/vista.vim'}
   use {'preservim/nerdtree'}
-
+  use {'luukvbaal/statuscol.nvim'}
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
   -- ---------------------------------------------
   -- -- Themes
