@@ -140,14 +140,33 @@ keymap("i", "<C-j>", "<Esc>6<C-e>", opts)
 keymap("v", "<C-j>", "6<C-e>", opts)
 keymap("n", "<C-j>", "6<C-e>", opts)
 -- HALF DOWN
+-- keymap("n", "<C-A-j>", "<C-d>M", opts)
 keymap("n", "<C-A-j>", "<C-d>M", opts)
+keymap("i", "<C-A-j>", "<Esc><C-d>M", opts)
+keymap("v", "<C-A-j>", "<C-d>M", opts)
+
+-- keymap("i", "<C-A-j>", "<Esc><C-d>zz", opts)
+-- keymap("v", "<C-A-j>", "<C-d>zz", opts)
+-- keymap("n", "<C-A-j>", "<C-d>zz", opts)
+
+
+
 
 -- SCROLL UP
 keymap("i", "<C-k>", "<Esc>6<C-y>", opts)
 keymap("v", "<C-k>", "6<C-y>", opts)
 keymap("n", "<C-k>", "6<C-y>", opts)
 -- HALF UP
+-- keymap("n", "<C-A-k>", "<C-u>M", opts)
 keymap("n", "<C-A-k>", "<C-u>M", opts)
+keymap("i", "<C-A-k>", "<Esc><C-u>M", opts)
+keymap("v", "<C-A-k>", "<C-u>M", opts)
+
+-- keymap("i", "<C-A-k>", "<Esc><C-u>zz", opts)
+-- keymap("v", "<C-A-k>", "<C-u>zz", opts)
+-- keymap("n", "<C-A-k>", "<C-u>zz", opts)
+
+
 
 
 -- ---------------------------------------------
@@ -190,16 +209,10 @@ keymap("n", "<A-d>", "dd", opts)
 -- vim.keymap.set("i", "<C-d>", "<Esc><C-d>zz")
 -- vim.keymap.set("v", "<C-d>", "<C-d>zz")
 -- vim.keymap.set("n", "<C-d>", "<C-d>zz")
-keymap("i", "<C-A-j>", "<Esc><C-d>zz", opts)
-keymap("v", "<C-A-j>", "<C-d>zz", opts)
-keymap("n", "<C-A-j>", "<C-d>zz", opts)
 
 keymap("i", "<C-u>", "<Esc><C-u>zz", opts)
 keymap("v", "<C-u>", "<C-u>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
-keymap("i", "<C-A-k>", "<Esc><C-u>zz", opts)
-keymap("v", "<C-A-k>", "<C-u>zz", opts)
-keymap("n", "<C-A-k>", "<C-u>zz", opts)
 
 -- ENTER INSERT
 -- keymap("n", "<CR>", "o<esc>", opts)
