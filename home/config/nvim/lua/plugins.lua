@@ -2,19 +2,30 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
+
 return require('packer').startup(function(use)
-  -- Packer can manage itself
+  -- packer manage itself
   use 'wbthomason/packer.nvim'
-  -- Simple plugins can be specified as strings
   use 'rstacruz/vim-closer'
   -- Lazy loading:
   -- use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'}}
   -- Load on an autocommand event
   use {'andymass/vim-matchup', event = 'VimEnter'}
-  use {'liuchengxu/vista.vim'}
-  use {'preservim/nerdtree'}
-  use {'luukvbaal/statuscol.nvim'}
-  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+  use {'liuchengxu/vista.vim', commit = 'f925e481bba7cd5451fb8bca9a6ecfc2bf1f2858'}
+  use {'preservim/nerdtree', commit = 'c46e12a886b4a6618a9e834c90f6245952567115'}
+  use {'luukvbaal/statuscol.nvim', commit = '9f1ff2dcf614544c5022e876d83b4894c1944e87'}
+  use {'kevinhwang91/nvim-ufo', commit = '8b01594c29bd01e7b49b647a663c819ed909714f',
+    requires = 'kevinhwang91/promise-async' }
+  use {
+    'AckslD/nvim-FeMaco.lua',
+    config = 'require("femaco").setup()',
+    commit = 'c06f8befe4b9438aa4f4b763e70d77cabf5093f1'
+  }
+  -- tab bar
+  -- use 'romgrk/barbar.nvim'
+  -- bufferline
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
 
   -- ---------------------------------------------
   -- -- Themes
@@ -23,24 +34,23 @@ return require('packer').startup(function(use)
   use('folke/tokyonight.nvim')
   use('ellisonleao/gruvbox.nvim')
   use("nvim-tree/nvim-web-devicons")
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use("mhartington/oceanic-next")
-  use('altercation/vim-colors-solarized')
+  -- use { "catppuccin/nvim", as = "catppuccin" }
+  -- use("mhartington/oceanic-next")
+  -- use('altercation/vim-colors-solarized')
   -- use("sonph/onehalf")
   -- use("ayu-theme/ayu-vim")
   -- use("nordtheme/vim")
-  use("rebelot/kanagawa.nvim")
+  -- use("rebelot/kanagawa.nvim")
   -- use('marko-cerovac/material.nvim')
   -- use('sainnhe/gruvbox-material')
-
 
 
   -- ---------------------------------------------
   -- -- Init plugins
   -- --------------------------------------------- 
   use 'tpope/vim-commentary'
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
+  use( {'nvim-treesitter/nvim-treesitter' , commit = "cb74c1c5aefd8b903f1b547d08d4df42be07aa2a" , run = ':TSUpdate' })
+  use { 'nvim-treesitter/playground', commit = '429f3e76cbb1c59fe000b690f7a5bea617b890c0'}
   use('ThePrimeagen/harpoon')
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
@@ -51,39 +61,15 @@ return require('packer').startup(function(use)
   -- ---------------------------------------------
   -- -- LSP
   -- ---------------------------------------------
-  use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-    "jose-elias-alvarez/null-ls.nvim",
-    "hrsh7th/nvim-cmp",      
-    "hrsh7th/cmp-nvim-lsp",      
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
-    -- "mfussenegger/nvim-lint"
-  }
-  use("L3MON4D3/LuaSnip")
-  -- enable cmp luasnip
-  -- use("saadparwaiz1/cmp_luasnip")
+  use { "williamboman/mason.nvim", commit = "34b3d0d01dfeba0b869bedf32ae846ef63ad4bd1" }
+  use { "williamboman/mason-lspconfig.nvim", commit = "2997f467881ac4faa6f8c5e7065e3a672297c8ad" }
+  use { "neovim/nvim-lspconfig", commit = "a27356f1ef9c11e1f459cc96a3fcac5c265e72d6" }
+  use { "jose-elias-alvarez/null-ls.nvim", commit = "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7" }
+  use { "hrsh7th/nvim-cmp",  commit = "5dce1b778b85c717f6614e3f4da45e9f19f54435" }
+  use { "hrsh7th/cmp-nvim-lsp",  commit = "44b16d11215dce86f253ce0c30949813c0a90765" }
+  use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" }
+  use { "hrsh7th/cmp-path", commit = "91ff86cd9c29299a64f968ebb45846c485725f23" }
+  use { "hrsh7th/cmp-cmdline", commit = "8ee981b4a91f536f52add291594e89fb6645e451" }
+  use { "L3MON4D3/LuaSnip", commit = "c4d6298347f7707e9757351b2ee03d0c00da5c20" }
 
-
-  -- use {
-    -- 'VonHeikemen/lsp-zero.nvim',
-    -- branch = 'v2.x',
-    -- requires = {
-      -- LSP Support
-      -- {'neovim/nvim-lspconfig'},             -- Required
-      -- {'williamboman/mason.nvim'},           -- Optional
-      -- {'williamboman/mason-lspconfig.nvim'}, -- Optional
--- 
-      -- Autocompletion
-      -- {'hrsh7th/nvim-cmp'},     -- Required
-      -- {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      -- {'L3MON4D3/LuaSnip'},     -- Required
-    -- }
-  -- } 
-
-
-  
 end)

@@ -25,7 +25,7 @@ vim.cmd [[:au FocusLost * :wa]]
 -- -- FILE TYPES 
 -- ---------------------------------------------
 vim.cmd [[autocmd BufNewFile,BufRead *.aliases set filetype=bash]]
-vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]
+-- vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]
 -- vim.cmd [[autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc]]
 
 

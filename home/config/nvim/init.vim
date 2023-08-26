@@ -29,7 +29,9 @@ function! LoadSession()
 endfunction
 
 command! Ssession :NERDTreeClose | :call SaveSession()
+command! Save :NERDTreeClose | :call SaveSession()
 command! Lsession :call LoadSession() | :Oworkspace
+command! Load :call LoadSession() | :Oworkspace
 
 " Save session on quitting Vim
 " autocmd VimLeave * NERDTreeClose
