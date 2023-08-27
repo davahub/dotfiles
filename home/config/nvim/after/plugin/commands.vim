@@ -10,12 +10,12 @@ command! Sr :w | :source ~/.config/nvim/init.vim | :noh
 command! Wrap :set wrap!
 
 " python format
-command! Fpython :! black %:p
+command! Fpython :w | :! black %:p
 
 " format jsx prettier
-command! Fprettier :! prettier --write %:p
-command! Fjsx :! prettier --write %:p
-command! Ftsx :! prettier --write %:p
+command! Fprettier :w | :! prettier --write %:p
+command! Fjsx :w | :! prettier --write %:p
+command! Ftsx :w | :! prettier --write %:p
 
 " xmlformat
 vnoremap <F5> :! xmllint --format -

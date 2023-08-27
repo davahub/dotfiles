@@ -55,11 +55,13 @@ keymap("i", "<A-o>", "<esc><C-^>a", opts)
 
 -- SELECT ALL
 keymap("n", "<C-a>", "ggVG", opts)
+keymap("i", "<C-a>", "<esc>ggVG", opts)
 
 
 -- ---------------------------------------------
 -- -- WINDOW
 -- ---------------------------------------------
+
 
 -- SPLIT WINDOWS
 keymap("n", '<A-">', "<C-w>v", opts)
@@ -144,7 +146,7 @@ keymap("n", "<C-up>", "v$:m '>-2<CR>gv=gv<Esc>", opts)
 keymap("n", "mm", "zz", opts)
 
 -- SCROLL DOWN
-keymap("i", "<C-j>", "<Esc>6<C-e>", opts)
+keymap("i", "<C-j>", "<Esc>6<C-e>i", opts)
 keymap("v", "<C-j>", "6<C-e>", opts)
 keymap("n", "<C-j>", "6<C-e>", opts)
 
@@ -154,7 +156,7 @@ keymap("i", "<C-A-j>", "<Esc><C-d>M", opts)
 keymap("v", "<C-A-j>", "<C-d>M", opts)
 
 -- SCROLL UP
-keymap("i", "<C-k>", "<Esc>6<C-y>", opts)
+keymap("i", "<C-k>", "<Esc>6<C-y>i", opts)
 keymap("v", "<C-k>", "6<C-y>", opts)
 keymap("n", "<C-k>", "6<C-y>", opts)
 
@@ -216,8 +218,8 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 -- keymap("n", "<space>", "i", opts)
 
 -- DELETE BACKWARD
-keymap("n", "<C-;>", "bdw", opts)
-keymap("i", "<C-;>", "<Esc>dbxi", opts)
+keymap("n", "<C-;>", "ciw", opts)
+keymap("i", "<C-;>", "<Esc>ciw", opts)
 
 -- BLOCK VISUAL
 keymap("n", "<C-A-v>", "<C-v>", opts)

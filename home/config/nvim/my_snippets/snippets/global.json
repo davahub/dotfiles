@@ -8,6 +8,22 @@
         ],
         "description": ""
     },
+    "lua use packer": {
+        "prefix": ["luse", "luause"],
+        "body": [
+            "use {'$0'}"
+        ],
+        "description": ""
+    },
+    "javascript block comment": {
+        "prefix": ["jsb"],
+        "body": [
+            "// ---------------------------------------------",
+            "// -- $0 ",
+            "// ---------------------------------------------"
+        ],
+        "description": ""
+    },
     "tsx block comment": {
         "prefix": ["tsxb"],
         "body": [

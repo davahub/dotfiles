@@ -19,13 +19,12 @@ return require('packer').startup(function(use)
   use {
     'AckslD/nvim-FeMaco.lua',
     config = 'require("femaco").setup()',
-    commit = 'c06f8befe4b9438aa4f4b763e70d77cabf5093f1'
+    commit = '9b1d7cc4a5e773b7fec6318d4981d63bcd5eaf56'
   }
-  -- tab bar
-  -- use 'romgrk/barbar.nvim'
   -- bufferline
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-
+  -- dressing
+  use {'stevearc/dressing.nvim'}
 
   -- ---------------------------------------------
   -- -- Themes
@@ -49,13 +48,16 @@ return require('packer').startup(function(use)
   -- -- Init plugins
   -- --------------------------------------------- 
   use 'tpope/vim-commentary'
-  use( {'nvim-treesitter/nvim-treesitter' , commit = "cb74c1c5aefd8b903f1b547d08d4df42be07aa2a" , run = ':TSUpdate' })
+  -- use( {'nvim-treesitter/nvim-treesitter' , commit = "cb74c1c5aefd8b903f1b547d08d4df42be07aa2a" , run = ':TSUpdate' })
+  use( {'nvim-treesitter/nvim-treesitter' , commit = "bae2c1824fb9297b044fbb58fc3b81ba79ed8b75" , run = ':TSUpdate' })
   use { 'nvim-treesitter/playground', commit = '429f3e76cbb1c59fe000b690f7a5bea617b890c0'}
   use('ThePrimeagen/harpoon')
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  -- spectre
+  use {'nvim-pack/nvim-spectre'}
 
 
   -- ---------------------------------------------
