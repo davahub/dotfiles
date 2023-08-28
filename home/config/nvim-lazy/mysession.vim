@@ -13,22 +13,16 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +38 workspace/dans/src/components/mycarditems.tsx
-badd +3541 workspace/.work/winconfig/reference-md/linux.md
-badd +61 .1homepc/home/config/nvim/lua/plugins.lua
-badd +30 .1homepc/home/config/nvim/after/plugin/vimshortcuts.vim
-badd +2 .1homepc/home/config/nvim/after/plugin/dressing.lua
-badd +94 workspace/dans/api/account.py
-badd +86 ~/workspace/dans/api/transaction.py
-badd +1 .config/nvim/after/plugin/snippet.lua
-badd +14 ~/.config/nvim/my_snippets/snippets/global.json
-badd +3 .1homepc/home/config/nvim/after/plugin/spectre.lua
+badd +1 workspace/.work/winconfig/reference-md/javascript.md
+badd +47 workspace/dans/api/util/data_util.py
+badd +7 .config/nvim/lua/plugins/vista.lua
+badd +6 .1homepc/home/config/nvim/lua/plugins/telescope.lua
 argglobal
 %argdel
-$argadd ~/.config/nvim/my_snippets/snippets/global.json
-edit .1homepc/home/config/nvim/after/plugin/spectre.lua
+$argadd workspace/.work/winconfig/reference-md/javascript.md
+edit .config/nvim/lua/plugins/vista.lua
 argglobal
-balt workspace/.work/winconfig/reference-md/linux.md
+balt .1homepc/home/config/nvim/lua/plugins/telescope.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -38,12 +32,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
+5,7fold
+8,45fold
+3,46fold
+2,47fold
 let &fdl = &fdl
-let s:l = 3 - ((2 * winheight(0) + 27) / 55)
+let s:l = 7 - ((6 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 3
+keepjumps 7
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
@@ -58,6 +56,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
