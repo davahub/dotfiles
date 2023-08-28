@@ -17,7 +17,6 @@ vim.g.markdown_fenced_languages = {'html', 'python', 'bash=sh', 'lua', 'vim', 't
 -- COMMENT
 -- ---------------------------------------------
 vim.cmd [[
-" COMMENT TOGGLE
 func! MyCommentToggle()
   if getline('.') =~ '^\s*$'
     :normal i tt
@@ -50,9 +49,8 @@ endfunc
 command! -nargs=1 Com :call MyF(<f-args>)
 command! Comsh :call MyF("#")
 command! Comjs :call MyF("//")
-
 ]]
- 
+
 
 -- ---------------------------------------------
 -- EMPTY LINES 
@@ -72,12 +70,6 @@ endfunction
 nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
 nnoremap <silent> <A-J> :call AddEmptyLineBelow()<CR>
 inoremap <silent> <A-J> <esc>:call AddEmptyLineBelow()<CR>i
-
-" tab mapping is mapped to ctrl-i so don't enable
-" indent tab
-" nnoremap <tab> >>w
-" vnoremap <tab> >
-
 ]]
 
 

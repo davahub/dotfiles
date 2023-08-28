@@ -10,7 +10,7 @@ vim.cmd [[ command! Sr :w | :source ~/.config/nvim/init.vim | :noh ]]
 vim.cmd [[ command! Wrap :set wrap! ]]  
 
 -- package manager
-vim.cmd [[ command! Ls :w | :Lazy sync ]]
+vim.cmd [[ command! Ls :w | :so | :Lazy sync ]]
 -- command! Ps :w | :so | :PackerSync
 
 -- nerd tree

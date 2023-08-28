@@ -1,7 +1,7 @@
 
 return {
   {
-    "L3MON4D3/LuaSnip", 
+    "L3MON4D3/LuaSnip",
     commit = "c4d6298347f7707e9757351b2ee03d0c00da5c20",
     config = function()
       local ls = require("luasnip")
