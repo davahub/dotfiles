@@ -35,9 +35,9 @@ func! MyCommentToggle()
   endif
 endfunc
 
-nnoremap <A-e> :call MyCommentToggle()<CR>
-inoremap <A-e> <Esc>:call MyCommentToggle()<CR>
-vnoremap <A-e> :Commentary<CR>
+nnoremap <silent> <A-e> :call MyCommentToggle()<CR>
+inoremap <silent> <A-e> <Esc>:call MyCommentToggle()<CR>
+vnoremap <silent> <A-e> :Commentary<CR>
 
  
 

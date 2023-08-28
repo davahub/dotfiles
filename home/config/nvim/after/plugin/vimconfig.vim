@@ -12,7 +12,7 @@ augroup AutoDeleteNetrwHiddenBuffers
   au FileType netrw setlocal bufhidden=wipe
 augroup end
 
-nnoremap <F8> :Lexplore %:p:h<cr>
+" nnoremap <F8> :Lexplore %:p:h<cr>
 
 
 "-------------------------------------------------------

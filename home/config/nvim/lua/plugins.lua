@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   -- dressing
   use {'stevearc/dressing.nvim'}
+  use {'dstein64/vim-startuptime'}
 
   -- ---------------------------------------------
   -- -- Themes
