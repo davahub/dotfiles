@@ -1,5 +1,5 @@
 {
-  "LazyVim": { "branch": "main", "commit": "566049aa4a26a86219dd1ad1624f9a1bf18831b6" },
+  "LuaSnip": { "branch": "master", "commit": "c4d6298347f7707e9757351b2ee03d0c00da5c20" },
   "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
   "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
   "nerdtree": { "branch": "master", "commit": "c46e12a886b4a6618a9e834c90f6245952567115" },

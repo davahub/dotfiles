@@ -196,6 +196,8 @@ keymap("n", "<A-i>", "A", opts)
 -- keymap("i", "<A-D>", "<Esc>:t.<CR>i", opts)
 -- keymap("v", "<A-D>", ":t.<CR>", opts)
 keymap("n", "<A-D>", ":t.<CR>", opts)
+keymap("v", "<A-D>", "ygvvo<esc>p`[v`]=", opts)
+
 
 -- DELETE LINE
 keymap("i", "<C-d>", "<Esc>dd", opts)

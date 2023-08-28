@@ -14,13 +14,21 @@
         "description": ""
     }, 
     "lua block comment": {
-        "prefix": "luab",
+        "prefix": ["luab", "lub"],
         "body": [
             "-- ---------------------------------------------",
             "-- $0 ",
             "-- ---------------------------------------------"
         ],
         "description": ""
-    } 
+    },
+    "lua vim cmd": {
+        "prefix": ["luacmd", "lucmd", "vcmd"],
+        "body": [
+            "vim.cmd [[ $0 ]]" 
+        ],
+        "description": ""
+    }
+
 }
 
