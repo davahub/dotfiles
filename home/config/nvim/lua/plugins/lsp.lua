@@ -208,13 +208,15 @@ return {
   -- ---------------------------------------------
   {
     "hrsh7th/nvim-cmp",
+    commit = "5dce1b778b85c717f6614e3f4da45e9f19f54435",
     version = false, -- last release is way too old
     event = "InsertEnter",
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "saadparwaiz1/cmp_luasnip"
+      { "hrsh7th/cmp-nvim-lsp",  commit = "44b16d11215dce86f253ce0c30949813c0a90765" },
+      { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
+      { "hrsh7th/cmp-path", commit = "91ff86cd9c29299a64f968ebb45846c485725f23" },
+      "saadparwaiz1/cmp_luasnip",
+      { "hrsh7th/cmp-cmdline", commit = "8ee981b4a91f536f52add291594e89fb6645e451" }
     },
     config = function()
       -- Set up nvim-cmp.
