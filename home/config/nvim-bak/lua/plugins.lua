@@ -16,11 +16,7 @@ return require('packer').startup(function(use)
   use {'luukvbaal/statuscol.nvim', commit = '9f1ff2dcf614544c5022e876d83b4894c1944e87'}
   use {'kevinhwang91/nvim-ufo', commit = '8b01594c29bd01e7b49b647a663c819ed909714f',
     requires = 'kevinhwang91/promise-async' }
-  use {
-    'AckslD/nvim-FeMaco.lua',
-    config = 'require("femaco").setup()',
-    commit = '9b1d7cc4a5e773b7fec6318d4981d63bcd5eaf56'
-  }
+
   -- bufferline
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   -- dressing
