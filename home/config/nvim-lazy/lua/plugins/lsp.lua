@@ -210,7 +210,7 @@ return {
     "hrsh7th/nvim-cmp",
     commit = "5dce1b778b85c717f6614e3f4da45e9f19f54435",
     version = false, -- last release is way too old
-    event = "InsertEnter",
+    -- event = "InsertEnter",
     dependencies = {
       { "hrsh7th/cmp-nvim-lsp",  commit = "44b16d11215dce86f253ce0c30949813c0a90765" },
       { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" },

@@ -1,5 +1,4 @@
 {
-  "LazyVim": { "branch": "main", "commit": "566049aa4a26a86219dd1ad1624f9a1bf18831b6" },
   "LuaSnip": { "branch": "master", "commit": "c4d6298347f7707e9757351b2ee03d0c00da5c20" },
   "bufferline.nvim": { "branch": "main", "commit": "417b303328118b6d836ae330142e88771c48a8a3" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
@@ -9,6 +8,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
   "dressing.nvim": { "branch": "master", "commit": "c7b035de7f91bb6b62b4308f105c56d1a968b8c5" },
   "fsread.nvim": { "branch": "main", "commit": "a637bf048f733def7c5c46f5bf482f93a8311b29" },
+  "fzf": { "branch": "master", "commit": "8befa5918a17f700c2a544f5204e9547145d228e" },
   "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
   "lazy.nvim": { "branch": "main", "commit": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "2997f467881ac4faa6f8c5e7065e3a672297c8ad" },

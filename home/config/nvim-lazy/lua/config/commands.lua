@@ -7,7 +7,7 @@
 vim.cmd [[ command! Sr :w | :source ~/.config/nvim/init.vim | :noh ]]
 
 -- wrap toggle
-vim.cmd [[ command! Wrap :set wrap! ]]  
+vim.cmd [[ command! Wrap :set wrap! ]]
 
 -- package manager
 vim.cmd [[ command! Ls :w | :so | :Lazy sync ]]

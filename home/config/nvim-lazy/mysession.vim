@@ -13,16 +13,20 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 workspace/.work/winconfig/reference-md/javascript.md
-badd +47 workspace/dans/api/util/data_util.py
-badd +7 .config/nvim/lua/plugins/vista.lua
-badd +6 .1homepc/home/config/nvim/lua/plugins/telescope.lua
+badd +23 workspace/dans/src/components/mycarditems.tsx
+badd +14 NERD_tree_1
+badd +23 workspace/dans/src/components/mydropdown.tsx
+badd +1837 workspace/.work/winconfig/reference-md/reference.md
+badd +1 .config/nvim/lua/config/autocmd.lua
+badd +28 .config/nvim/lua/config/commands.lua
+badd +13 .config/nvim/lua/config/options.lua
+badd +19 .config/nvim/lua/plugins/treesitter.lua
 argglobal
 %argdel
-$argadd workspace/.work/winconfig/reference-md/javascript.md
-edit .config/nvim/lua/plugins/vista.lua
+$argadd workspace/.work/winconfig/reference-md/reference.md
+edit .config/nvim/lua/config/options.lua
 argglobal
-balt .1homepc/home/config/nvim/lua/plugins/telescope.lua
+balt .config/nvim/lua/plugins/treesitter.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -32,16 +36,19 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-5,7fold
-8,45fold
-3,46fold
-2,47fold
+40,49fold
+39,50fold
+61,64fold
+59,66fold
+80,87fold
+110,149fold
+151,153fold
 let &fdl = &fdl
-let s:l = 7 - ((6 * winheight(0) + 27) / 55)
+let s:l = 13 - ((12 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 7
+keepjumps 13
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
@@ -56,7 +63,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

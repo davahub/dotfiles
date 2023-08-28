@@ -11,7 +11,7 @@ vim.cmd [[filetype plugin indent on]]
 -- highlight syntax
 vim.cmd [[syntax on]]
 vim.cmd [[:au FocusLost * :wa]]
-vim.cmd [[:au BufLeave * :wa]]
+-- vim.cmd [[:au BufLeave * :wa]]
 
 
 -- ---------------------------------------------
@@ -21,3 +21,4 @@ vim.cmd [[:au BufLeave * :wa]]
 vim.cmd [[autocmd BufNewFile,BufRead *.aliases set filetype=bash]]
 -- vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]
 -- vim.cmd [[autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc]]
+
