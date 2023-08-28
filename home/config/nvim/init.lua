@@ -16,8 +16,6 @@ vim.g.mapleader = ","
 
 require('config/keymaps')
 
-require('config/options')
-
 require('config/commands')
 
 require('config/autocmd')
@@ -29,4 +27,4 @@ require("lazy").setup({
   change_detection = { enabled = false }
 })
 
-
+require('config/options')
