@@ -13,20 +13,18 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +23 workspace/dans/src/components/mycarditems.tsx
-badd +14 NERD_tree_1
-badd +23 workspace/dans/src/components/mydropdown.tsx
-badd +1837 workspace/.work/winconfig/reference-md/reference.md
-badd +1 .config/nvim/lua/config/autocmd.lua
-badd +28 .config/nvim/lua/config/commands.lua
-badd +13 .config/nvim/lua/config/options.lua
-badd +19 .config/nvim/lua/plugins/treesitter.lua
+badd +114 workspace/dans/src/components/mytable.tsx
+badd +24 workspace/dans/src/components/mydropdown.tsx
+badd +16 .config/nvim/lua/config/commands.lua
+badd +40 ~/.1homepc/home/config/nvim/lazy-lock.json
+badd +71 .config/nvim/lua/config/options.lua
+badd +33 .config/nvim/lua/config/autocmd.lua
 argglobal
 %argdel
-$argadd workspace/.work/winconfig/reference-md/reference.md
-edit .config/nvim/lua/config/options.lua
+$argadd ~/.1homepc/home/config/nvim/lazy-lock.json
+edit .config/nvim/lua/config/autocmd.lua
 argglobal
-balt .config/nvim/lua/plugins/treesitter.lua
+balt .config/nvim/lua/config/options.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -36,20 +34,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-40,49fold
-39,50fold
-61,64fold
-59,66fold
-80,87fold
-110,149fold
-151,153fold
 let &fdl = &fdl
-let s:l = 13 - ((12 * winheight(0) + 27) / 55)
+let s:l = 33 - ((32 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 13
-normal! 0
+keepjumps 33
+normal! 011|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

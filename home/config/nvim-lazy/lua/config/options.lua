@@ -68,6 +68,7 @@ endfunc
 command! -nargs=1 Com :call MyF(<f-args>)
 command! Comsh :call MyF("#")
 command! Comjs :call MyF("//")
+command! Comjsx :set commentstring={\/*%s*\/}
 ]]
 
 

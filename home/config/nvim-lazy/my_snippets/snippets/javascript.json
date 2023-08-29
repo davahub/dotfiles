@@ -1,0 +1,24 @@
+{
+    "jsx comment": {
+        "prefix": ["jsc", "jcomment"],
+        "body": [ 
+            "{/* $0 */}" 
+        ],
+        "description": ""
+    },
+    "js function": {
+    "prefix": ["jsf", "jfunc"],
+    "body": [ 
+            "const $1 = ($2) => {",
+            "   return (",
+            "       <>",
+            "       $3",
+            "       </>",
+            "   )",
+            "};"
+    ],
+    "description": ""
+}
+
+}
+
