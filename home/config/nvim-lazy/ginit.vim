@@ -8,6 +8,11 @@ if exists("g:neovide")
     let g:neovide_refresh_rate = 60
 endif
 
+
+" ---------------------------------------------
+" -- NVIM-QT 
+" ---------------------------------------------
+
 " Set Editor Font
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors

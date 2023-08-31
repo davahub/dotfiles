@@ -12,6 +12,25 @@ return {
       local opts = { noremap = true, silent = true }
       local keymap = vim.keymap.set
 
+      -- ---------------------------------------------
+      -- Setup 
+      -- ---------------------------------------------
+      local actions = require("telescope.actions")
+      -- https://github.com/nvim-telescope/telescope.nvim/blob/1dfa66b845673effc8771f9ebe511bb36a09f560/lua/telescope/mappings.lua#L240
+      require("telescope").setup({
+        defaults = {
+          mappings = {
+            i = {
+              -- ["<A-j>"] = actions.close,
+              ["J"] = actions.move_selection_next,
+              ["K"] = actions.move_selection_previous,
+            },
+            n = {
+              ["<A-j>"] = actions.close,
+            }
+          },
+        },
+      })
 
       -- ---------------------------------------------
       -- -- KEYMAP 
@@ -31,18 +50,17 @@ return {
       keymap('n', '<leader>lg', builtin.git_files, opts)
 
       -- buffer
-      keymap('n', '<leader>b', builtin.buffers, opts)
+      -- keymap('n', '<leader>b', builtin.buffers, opts)
+      keymap('n', '<leader>.', builtin.buffers, opts)
 
       keymap('n', '<A-R>', function()
         builtin.live_grep({ cwd = "~/workspace/dans"});
       end)
 
-
       vim.api.nvim_create_user_command('Wrip',
         function()
           builtin.live_grep({ cwd = "~/workspace/dans"});
-        end,
-        { nargs = 0 })
+        end, { nargs = 0 })
 
     end,
   }
