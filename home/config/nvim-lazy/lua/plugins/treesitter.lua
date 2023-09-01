@@ -14,6 +14,7 @@ return {
           "c",
           "lua",
           "vim",
+          "java",
           "vimdoc",
           "query",
           "tsx",

@@ -13,20 +13,18 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +32 workspace/dans/src/components/mytable.tsx
-badd +120 workspace/dans/src/components/mydropdown.tsx
-badd +6 .1homepc/home/config/nvim-lazy/lua/config/options.lua
 badd +1 workspace/dans/src/components/mycarditems.tsx
-badd +406 workspace/.work/winconfig/reference-md/linux.md
-badd +1 workspace/.work/winconfig/reference-md/reference.md
-badd +5 .config/nvim/init.lua
-badd +25 .config/nvim/lua/config/keymaps.lua
+badd +28 .config/nvim/lua/config/options.lua
+badd +6 .config/nvim/lua/plugins/nerdtree.lua
+badd +1 .config/nvim/lua/config/autocmd.lua
+badd +49 .config/nvim/lua/plugins/telescope.lua
+badd +20 .config/nvim/ginit.vim
+badd +21 .config/nvim/init.lua
 argglobal
 %argdel
-$argadd workspace/.work/winconfig/reference-md/reference.md
-edit .1homepc/home/config/nvim-lazy/lua/config/options.lua
+edit .config/nvim/init.lua
 argglobal
-balt workspace/dans/src/components/mydropdown.tsx
+balt .config/nvim/lua/plugins/telescope.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -36,20 +34,18 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-40,49fold
-39,50fold
-61,64fold
-59,66fold
-81,88fold
-111,150fold
-152,154fold
+10,17fold
+9,18fold
+22,31fold
+32,34fold
+21,35fold
 let &fdl = &fdl
-let s:l = 6 - ((5 * winheight(0) + 27) / 55)
+let s:l = 21 - ((20 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 6
-normal! 054|
+keepjumps 21
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -63,6 +59,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

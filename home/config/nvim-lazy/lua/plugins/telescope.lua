@@ -46,6 +46,10 @@ return {
         builtin.find_files({ cwd = "~/.config/nvim" });
       end)
 
+      keymap('n', '<leader>pc', function()
+        builtin.grep_string({ search = vim.fn.input("pind > "), cwd = "~/.config/nvim"})
+      end)
+
       -- git files
       keymap('n', '<leader>lg', builtin.git_files, opts)
 

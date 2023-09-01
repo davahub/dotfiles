@@ -170,6 +170,11 @@ keymap("v", "<C-A-k>", "<C-u>M", opts)
 -- -- EDIT
 -- ---------------------------------------------
 
+-- 4X 
+keymap("n", "<A-d>", "4x")
+keymap("n", "<leader>d", "4x")
+keymap("n", "<space>d", "4x")
+
 -- JOIN LINES
 keymap("n", "<leader>j", "J", opts)
 
@@ -203,7 +208,7 @@ keymap("v", "<A-D>", "ygvvo<esc>p`[v`]=", opts)
 keymap("i", "<C-d>", "<Esc>dd", opts)
 keymap("v", "<C-d>", "dd", opts)
 keymap("n", "<C-d>", "dd", opts)
-keymap("n", "<A-d>", "dd", opts)
+-- keymap("n", "<A-d>", "dd", opts)
 
 -- vim.keymap.set("i", "<C-d>", "<Esc><C-d>zz")
 -- vim.keymap.set("v", "<C-d>", "<C-d>zz")

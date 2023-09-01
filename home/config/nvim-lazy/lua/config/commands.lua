@@ -17,6 +17,7 @@ vim.cmd [[ command! Ls :w | :so | :Lazy sync ]]
 vim.cmd [[ 
 command! Oconfig :NERDTree ~/.config/nvim 
 command! Oworkspace :NERDTree ~/workspace/dans
+command! Ocamel :NERDTree ~/workspace/workapps/camel-tutor-2
 command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md
 ]]
 
