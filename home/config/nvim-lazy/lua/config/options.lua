@@ -3,7 +3,8 @@
 -- ---------------------------------------------
 -- GLOBAL 
 -- ---------------------------------------------
-
+-- vim.cmd [[ let NERDTreeIgnore = ['__init__.py', '__pycache__', 'node_modules'] ]]
+vim.g.NERDTreeIgnore = { '__init__.py', '__pycache__', 'node_modules' }
 
 
 -- ---------------------------------------------
