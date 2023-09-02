@@ -13,7 +13,7 @@ command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md
 " -- KEYMAP 
 " ---------------------------------------------
 " NERDTREE ----
-nnoremap <F8> :NERDTreeToggle<CR>
+nnoremap <silent><F8> :NERDTreeToggle<CR>
 
 "dir config
 nnoremap <space>dc :NERDTree ~/.config/nvim<CR>
@@ -39,7 +39,8 @@ vnoremap <silent> <A-e> :Commentary<CR>
 " ---------------------------------------------
 " -- COMMANDS 
 " ---------------------------------------------
-command! Bclose call s:Kwbd(1)
+" command! Bclose call s:Kwbd(1)
+" nnoremap <silent> <Leader>bd :Bclose<CR>
 
 " comments ----
 command! -nargs=1 Com :call MyF(<f-args>)
@@ -109,68 +110,56 @@ func! MyCommentToggle()
 endfunc
 
 
-function s:Kwbd(kwbdStage)
-  if(a:kwbdStage == 1)
-    if(&modified)
-      let answer = confirm("This buffer has been modified.  Are you sure you want to delete it?", "&Yes\n&No", 2)
-      if(answer != 1)
-        return
+" Command ':Bclose' executes ':bd' to delete buffer in current window.
+" Command ':Bclose!' is the same, but executes ':bd!' (discard changes).
+function! s:Bclose(bang, buffer)
+  if empty(a:buffer)
+    let btarget = bufnr('%')
+  elseif a:buffer =~ '^\d\+$'
+    let btarget = bufnr(str2nr(a:buffer))
+  else
+    let btarget = bufnr(a:buffer)
+  endif
+  if btarget < 0
+    call s:Warn('No matching buffer for '.a:buffer)
+    return
+  endif
+  if empty(a:bang) && getbufvar(btarget, '&modified')
+    call s:Warn('No write since last change for buffer '.btarget.' (use :Bclose!)')
+    return
+  endif
+  " Numbers of windows that view target buffer which we will delete.
+  let wnums = filter(range(1, winnr('$')), 'winbufnr(v:val) == btarget')
+  if !g:bclose_multiple && len(wnums) > 1
+    call s:Warn('Buffer is in multiple windows (use ":let bclose_multiple=1")')
+    return
+  endif
+  let wcurrent = winnr()
+  for w in wnums
+    execute w.'wincmd w'
+    let prevbuf = bufnr('#')
+    if prevbuf > 0 && buflisted(prevbuf) && prevbuf != btarget
+      buffer #
+    else
+      bprevious
+    endif
+    if btarget == bufnr('%')
+      " Numbers of listed buffers which are not the target to be deleted.
+      let blisted = filter(range(1, bufnr('$')), 'buflisted(v:val) && v:val != btarget')
+      " Listed, not target, and not displayed.
+      let bhidden = filter(copy(blisted), 'bufwinnr(v:val) < 0')
+      " Take the first buffer, if any (could be more intelligent).
+      let bjump = (bhidden + blisted + [-1])[0]
+      if bjump > 0
+        execute 'buffer '.bjump
+      else
+        execute 'enew'.a:bang
       endif
     endif
-    if(!buflisted(winbufnr(0)))
-      bd!
-      return
-    endif
-    let s:kwbdBufNum = bufnr("%")
-    let s:kwbdWinNum = winnr()
-    windo call s:Kwbd(2)
-    execute s:kwbdWinNum . 'wincmd w'
-    let s:buflistedLeft = 0
-    let s:bufFinalJump = 0
-    let l:nBufs = bufnr("$")
-    let l:i = 1
-    while(l:i <= l:nBufs)
-      if(l:i != s:kwbdBufNum)
-        if(buflisted(l:i))
-          let s:buflistedLeft = s:buflistedLeft + 1
-        else
-          if(bufexists(l:i) && !strlen(bufname(l:i)) && !s:bufFinalJump)
-            let s:bufFinalJump = l:i
-          endif
-        endif
-      endif
-      let l:i = l:i + 1
-    endwhile
-    if(!s:buflistedLeft)
-      if(s:bufFinalJump)
-        windo if(buflisted(winbufnr(0))) | execute "b! " . s:bufFinalJump | endif
-    else
-      enew
-      let l:newBuf = bufnr("%")
-      windo if(buflisted(winbufnr(0))) | execute "b! " . l:newBuf | endif
-  endif
-  execute s:kwbdWinNum . 'wincmd w'
-endif
-if(buflisted(s:kwbdBufNum) || s:kwbdBufNum == bufnr("%"))
-  execute "bd! " . s:kwbdBufNum
-endif
-if(!s:buflistedLeft)
-  set buflisted
-  set bufhidden=delete
-  set buftype=
-  setlocal noswapfile
-endif
-else
-  if(bufnr("%") == s:kwbdBufNum)
-    let prevbufvar = bufnr("#")
-    if(prevbufvar > 0 && buflisted(prevbufvar) && prevbufvar != s:kwbdBufNum)
-      b #
-    else
-      bn
-    endif
-  endif
-endif
+  endfor
+  execute 'bdelete'.a:bang.' '.btarget
+  execute wcurrent.'wincmd w'
 endfunction
 
-
+command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-args>)
 
