@@ -34,64 +34,11 @@ vim.g.vim_markdown_no_default_key_mappings = 1
 
 
 -- ---------------------------------------------
--- COMMENT
+-- SOURCE VIM
 -- ---------------------------------------------
-vim.cmd [[
-func! MyCommentToggle()
-  if getline('.') =~ '^\s*$'
-    :normal i tt
-    :normal 0x
-    Commentary
-    :normal wdw==
-    :startinsert!
-    echo 'commenting empty line!'
-  else
-    Commentary
-    endif
-endfunc
-
-nnoremap <silent> <A-e> :call MyCommentToggle()<CR>
-inoremap <silent> <A-e> <Esc>:call MyCommentToggle()<CR>
-vnoremap <silent> <A-e> :Commentary<CR>
-
-]]
-
-vim.cmd [[
-func! MyF(comment)
-  let str_comment = a:comment
-  if str_comment == '"'
-    exe ':set commentstring=\' . a:comment . '%s'
-    return
-  endif
-  exe ':set commentstring=' . a:comment . '%s'
-endfunc
-
-command! -nargs=1 Com :call MyF(<f-args>)
-command! Comsh :call MyF("#")
-command! Comjs :call MyF("//")
-command! Comjsx :set commentstring={\/*%s*\/}
-]]
+vim.cmd [[ source $HOME/.config/nvim/lua/config/vimscript.vim ]]
 
 
--- ---------------------------------------------
--- EMPTY LINES 
--- ---------------------------------------------
-
-vim.cmd [[
-" empty lines below
-function! AddEmptyLineBelow()
-  call append(line("."), "")
-  call append(line("."), "")
-  call append(line("."), "")
-  call append(line("."), "")
-  call append(line("."), "")
-  call append(line("."), "")
-endfunction
-" nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
-nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
-nnoremap <silent> <A-J> :call AddEmptyLineBelow()<CR>
-inoremap <silent> <A-J> <esc>:call AddEmptyLineBelow()<CR>i
-]]
 
 
 -- ---------------------------------------------

@@ -28,7 +28,15 @@
             "vim.cmd [[ $0 ]]" 
         ],
         "description": ""
+    },
+    "keymap": {
+        "prefix": ["luakey", "lkey"],
+        "body": [
+            "keymap(\"n\", \"$1\", \"$2\", opts)" 
+        ],
+        "description": ""
     }
+
 
 }
 

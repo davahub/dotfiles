@@ -57,6 +57,13 @@ keymap("i", "<A-o>", "<esc><C-^>a", opts)
 keymap("n", "<C-a>", "ggVG", opts)
 keymap("i", "<C-a>", "<esc>ggVG", opts)
 
+-- NAV BACK FORTH
+keymap("n", "<A-left>", "<C-o>", opts)
+keymap("n", "<A-right>", "<C-i>", opts)
+
+-- TAB
+-- keymap("i", "<tab>", "<esc><tab>", opts)
+
 
 -- ---------------------------------------------
 -- -- WINDOW
@@ -70,16 +77,21 @@ keymap("n", "<A-!>", "<C-w>s", opts)
 -- MOVE SPLIT WINDOWS
 -- left
 keymap("n", "<A-h>", "<C-w>h", opts)
-keymap("n", "<A-left>", "<C-w>h", opts)
+-- keymap("n", "<A-left>", "<C-w>h", opts)
+keymap("n", "<A-H>", "<C-w>h", opts)
 -- right
 keymap("n", "<A-l>", "<C-w>l", opts)
-keymap("n", "<A-right>", "<C-w>l", opts)
-keymap("i", "<A-h>", "<esc><C-w>h", opts)
-keymap("i", "<A-l>", "<esc><C-w>l", opts)
+-- keymap("i", "<A-l>", "<esc><C-w>l", opts)
+-- keymap("n", "<A-right>", "<C-w>l", opts)
+-- keymap("i", "<A-h>", "<esc><C-w>h", opts)
+keymap("n", "<A-L>", "<C-w>l", opts)
+keymap("i", "<A-L>", "<esc><C-w>l", opts)
 -- down
-keymap("n", "<A-down>", "<C-w>k", opts)
+-- keymap("n", "<A-down>", "<C-w>k", opts)
+keymap("n", "<A-K>", "<C-w>k", opts)
 -- up
-keymap("n", "<A-up>", "<C-w>j", opts)
+-- keymap("n", "<A-up>", "<C-w>j", opts)
+keymap("n", "<A-J>", "<C-w>j", opts)
 
 keymap("n", "<A-b>", ":vertical resize +20<cr>", opts)
 keymap("n", "<A-s>", ":vertical resize -20<cr>", opts)
@@ -173,6 +185,7 @@ keymap("v", "<C-A-k>", "<C-u>M", opts)
 -- 4X 
 keymap("n", "<A-d>", "4x")
 keymap("n", "<leader>d", "4x")
+keymap("n", "<leader>x", "4x")
 keymap("n", "<space>d", "4x")
 
 -- JOIN LINES
@@ -189,8 +202,6 @@ keymap("v", "<C-v>", 'c<ESC>"*p`[v`]=', opts)
 keymap("i", "<C-v>", '<esc>"*p`[v`]==', opts)
 -- to buffers, other windows
 keymap("n", "<A-V>", "<C-r>+", opts)
-keymap("i", "<A-V>", "<C-r>+", opts)
-
 
 -- INSERT END OF LINE
 keymap("i", "<A-i>", "A", opts)
@@ -235,3 +246,22 @@ keymap("n", "<leader>v", "<C-v>", opts)
 keymap("i", "<leader>v", "<C-v>", opts)
 
 
+-- ---------------------------------------------
+-- EMPTY LINES 
+-- ---------------------------------------------
+
+vim.cmd [[
+" empty lines below
+function! AddEmptyLineBelow()
+call append(line("."), "")
+call append(line("."), "")
+call append(line("."), "")
+call append(line("."), "")
+call append(line("."), "")
+call append(line("."), "")
+endfunction
+" nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
+" nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
+nnoremap <silent> <leader>j :call AddEmptyLineBelow()<CR>
+inoremap <silent> <leader>j <esc>:call AddEmptyLineBelow()<CR>i
+]]

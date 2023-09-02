@@ -105,6 +105,8 @@ return {
       -- vim.keymap.set({"i"}, "<leader><space>", function() ls.expand() end, {silent = true})
       vim.keymap.set({"i"}, "<A-k>", function() ls.expand() end, {silent = true})
       vim.keymap.set({"i", "s"}, "<A-l>", function() ls.jump( 1) end, {silent = true})
+      vim.keymap.set({"i", "s"}, "<A-n>", function() ls.jump( 1) end, {silent = true})
+      vim.keymap.set({"i", "s"}, "<tab>", function() ls.jump( 1) end, {silent = true})
       vim.keymap.set({"i", "s"}, "<C-P>", function() ls.jump(-1) end, {silent = true})
     end,
   }
