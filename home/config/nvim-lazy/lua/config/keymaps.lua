@@ -182,6 +182,10 @@ keymap("v", "<C-A-k>", "<C-u>M", opts)
 -- -- EDIT
 -- ---------------------------------------------
 
+-- new file in tab
+keymap("n", "<C-t>", ":enew<cr>", opts)
+keymap("i", "<C-t>", "<esc>:enew<cr>", opts)
+
 -- 4X 
 keymap("n", "<A-d>", "4x")
 keymap("n", "<leader>d", "4x")
