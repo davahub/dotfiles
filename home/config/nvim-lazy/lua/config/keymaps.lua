@@ -7,6 +7,7 @@ local keymap = vim.keymap.set
 -- -- MAIN
 -- ---------------------------------------------
 
+
 -- RELAY MACRO
 keymap("n", "\\", "@", opts)
 -- nnoremap <\> @
@@ -16,6 +17,8 @@ keymap("n", "<C-f>", "/", opts)
 -- nnoremap <C-f> /
 
 keymap("n", "<F3>", ":set hlsearch!<cr>", opts)
+keymap("n", "<leader>h", ":set hlsearch!<cr>", opts)
+-- keymap("n", "<cr>", ":set hlsearch!<cr>", opts)
 
 -- VISTA
 keymap("n", "<A-r>", ":Vista finder<CR>", opts)
@@ -64,10 +67,16 @@ keymap("n", "<A-right>", "<C-i>", opts)
 -- TAB
 -- keymap("i", "<tab>", "<esc><tab>", opts)
 
+-- SEARCH SELECTED TEXT
+keymap("v", "//", 'y/<C-R>=escape(@",\'/\\\')<CR><CR>', opts)
+
 
 -- ---------------------------------------------
 -- -- WINDOW
 -- ---------------------------------------------
+
+-- GOTO OTHER window 
+keymap("n", "<C-A-o>", "<C-w>w", opts)
 
 
 -- SPLIT WINDOWS

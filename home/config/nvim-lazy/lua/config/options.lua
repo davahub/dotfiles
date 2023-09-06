@@ -54,7 +54,7 @@ vim.cmd [[ source $HOME/.config/nvim/lua/config/vimscript.vim ]]
 -- set autoindent              " indent a new line the same amount as the line just typed
 -- set wildmode=longest,list   " get bash-like tab completions
 -- set cc=100                  " set an 80 column border for good coding style
--- set spell                 " enable spell check (may need to download language package)
+-- set spell                   " enable spell check (may need to download language package)
 
 local options = {
   compatible = false,
@@ -69,7 +69,7 @@ local options = {
   ignorecase = true,                       -- ignore case in search patterns
   mouse = "a",                             -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
-  showmode = true,                        -- we don't need to see things like -- INSERT -- anymore
+  -- showmode = true,                         -- we don't need to see things like -- INSERT -- anymore
   showtabline = 2,                         -- always show tabs
   smartcase = true,                        -- smart case
   smartindent = true,                      -- make indenting smarter again
@@ -84,17 +84,19 @@ local options = {
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
-  cursorline = false,                       -- highlight the current line
+  cursorline = false,                      -- highlight the current line
   number = true,                           -- set numbered lines
   relativenumber = false,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
-  signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
+  -- signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = true,                             -- display lines as one long line
   linebreak = true,                        -- companion to wrap, don't split words
   -- scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
-  ttyfast = true,                           -- Speed up scrolling in Vim
+  ttyfast = true,                          -- Speed up scrolling in Vim
+  confirm = true,                          -- Confirm when quit
+  colorcolumn = "100",
 }
 
 for k, v in pairs(options) do

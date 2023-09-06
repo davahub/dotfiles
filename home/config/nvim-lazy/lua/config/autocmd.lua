@@ -22,15 +22,5 @@ vim.cmd [[autocmd BufNewFile,BufRead *.aliases set filetype=bash]]
 -- vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]
 -- vim.cmd [[autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc]]
 
--- ---------------------------------------------
--- AUTO SAVE FOLD 
--- ---------------------------------------------
-vim.cmd [[ 
-augroup remember_folds
-  autocmd!
-  autocmd BufWritePost *.tsx mkview
-  autocmd BufEnter *.tsx silent! loadview
-augroup END
-]]
 
 
