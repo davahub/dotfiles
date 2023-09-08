@@ -7,31 +7,6 @@
 vim.g.NERDTreeIgnore = { '__init__.py', '__pycache__', 'node_modules' }
 
 
--- ---------------------------------------------
--- MARKDOWN 
--- ---------------------------------------------
-vim.g.markdown_fenced_languages = {'html', 'python', 'bash=sh', 'lua', 'vim', 'typescript', 'javascript' }
-
--- disable header folding
-vim.g.vim_markdown_folding_disabled = 1
-
--- do not use conceal feature, the implementation is not so good
-vim.g.vim_markdown_conceal = 0
-
-vim.g.markdown_minlines = 100
-
--- disable math tex conceal feature
-vim.g.tex_conceal = ""
-vim.g.vim_markdown_math = 1
-
--- support front matter of various format
-vim.g.vim_markdown_frontmatter = 1
--- vim.g.vim_markdown_toml_frontmatter = 1  
--- vim.g.vim_markdown_json_frontmatter = 1  
-
--- disable default keybindings
-vim.g.vim_markdown_no_default_key_mappings = 1
-
 
 -- ---------------------------------------------
 -- SOURCE VIM
@@ -96,7 +71,7 @@ local options = {
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
   ttyfast = true,                          -- Speed up scrolling in Vim
   confirm = true,                          -- Confirm when quit
-  colorcolumn = "100",
+  -- colorcolumn = "100",
 }
 
 for k, v in pairs(options) do

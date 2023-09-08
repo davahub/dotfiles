@@ -47,9 +47,9 @@ keymap("v", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 --  ESC
-keymap("n", "<A-j>", "<Esc>", opts)
-keymap("v", "<A-j>", "<Esc>", opts)
-keymap("i", "<A-j>", "<Esc>", opts)
+keymap("n", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
+keymap("v", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
+keymap("i", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 
 -- SWITCH RECENT BUFFERS
 keymap("n", "<A-o>", "<C-^>", opts)
@@ -67,8 +67,8 @@ keymap("n", "<A-right>", "<C-i>", opts)
 -- TAB
 -- keymap("i", "<tab>", "<esc><tab>", opts)
 
--- SEARCH SELECTED TEXT
-keymap("v", "//", 'y/<C-R>=escape(@",\'/\\\')<CR><CR>', opts)
+-- SEARCH
+keymap("v", "//", 'y/<C-R>=escape(@",\'/\\\')<CR><CR>:set hlsearch<cr>', opts)
 
 
 -- ---------------------------------------------

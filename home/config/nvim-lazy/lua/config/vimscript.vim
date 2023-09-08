@@ -7,14 +7,6 @@ highlight Cursor gui=reverse guifg=Green guibg=Green
 set guicursor=i-ci:ver30-Cursor,n-v-c:block-Cursor,r-cr-o:hor20
 
 
-" ---------------------------------------------
-" -- NERD DIR 
-" ---------------------------------------------
-command! Oconfig :NERDTree ~/.config/nvim 
-command! Oworkspace :NERDTree ~/workspace/dans
-command! Ocamel :NERDTree ~/workspace/workapps/camel-tutor-2
-command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md
-
 
 
 " ---------------------------------------------
