@@ -10,7 +10,7 @@
   "fsread.nvim": { "branch": "main", "commit": "a637bf048f733def7c5c46f5bf482f93a8311b29" },
   "fzf": { "branch": "master", "commit": "8befa5918a17f700c2a544f5204e9547145d228e" },
   "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
-  "lazy.nvim": { "branch": "main", "commit": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01" },
+  "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "2997f467881ac4faa6f8c5e7065e3a672297c8ad" },
   "mason.nvim": { "branch": "main", "commit": "34b3d0d01dfeba0b869bedf32ae846ef63ad4bd1" },
   "mini.pairs": { "branch": "main", "commit": "dfa9f6e2576bb8853be277d96b735af59d9be7c2" },
