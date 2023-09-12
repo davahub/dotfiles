@@ -19,6 +19,7 @@ vim.cmd [[:au FocusLost * :wa]]
 -- ---------------------------------------------
 
 vim.cmd [[autocmd BufNewFile,BufRead *.aliases set filetype=bash]]
+vim.cmd [[autocmd BufNewFile,BufRead conky.conf set filetype=lua ]]
 
 vim.cmd [[ autocmd Filetype markdown setlocal com=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,b:- | set formatoptions=tcroqln ]]
 -- vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]

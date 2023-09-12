@@ -45,6 +45,7 @@ return {
       lspconfig.jsonls.setup {}
       lspconfig.vale_ls.setup {}
       lspconfig.lua_ls.setup {
+        autostart = false,
         settings = {
           Lua = {
             runtime = {
