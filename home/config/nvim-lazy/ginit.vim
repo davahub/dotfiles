@@ -4,8 +4,22 @@
 " -------------------------------------------------------
 if exists("g:neovide")
     " Put anything you want to happen only in Neovide here
-    set guifont=Inconsolata:h17
+    set guifont=Inconsolata:h18
     let g:neovide_refresh_rate = 60
+    
+    " antialiasing
+    let g:neovide_cursor_antialiasing = v:true
+
+    " animation length
+    let g:neovide_cursor_animation_length = 0
+    " vim.g.neovide_cursor_animation_length = 0.13
+
+    " trail size
+    let g:neovide_cursor_trail_size = 0.2
+    " vim.g.neovide_cursor_trail_size = 0.8
+
+
+
 endif
 
 

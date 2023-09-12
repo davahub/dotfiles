@@ -69,6 +69,7 @@ keymap("n", "<A-right>", "<C-i>", opts)
 
 -- SEARCH
 keymap("v", "//", 'y/<C-R>=escape(@",\'/\\\')<CR><CR>:set hlsearch<cr>', opts)
+keymap("n", "/", ':set hlsearch<cr>/', opts)
 
 
 -- ---------------------------------------------

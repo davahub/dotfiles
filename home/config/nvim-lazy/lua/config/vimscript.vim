@@ -1,10 +1,10 @@
 
-highlight Cursor gui=reverse guifg=Green guibg=Green
+" highlight Cursor gui=reverse guifg=Green guibg=Green
 " highlight nCursor gui=NONE guifg=green guibg=green
 " highlight Cursor gui=NONE guifg=green guibg=green
 " highlight iCursor gui=NONE guifg=green guibg=green
 " " set guicursor=i-ci:ver30-Cursor,n-v-c:blinkwait200-blinkoff1000-blinkon800-Cursor,r-cr-o:hor20
-set guicursor=i-ci:ver30-Cursor,n-v-c:block-Cursor,r-cr-o:hor20
+" set guicursor=i-ci:ver30-Cursor,n-v-c:block-Cursor,r-cr-o:hor20
 
 
 
@@ -115,12 +115,10 @@ endfunc
 
 func! MyCommentToggle()
   if getline('.') =~ '^\s*$'
-    :normal i tt
-    :normal 0x
+    :normal itext
     Commentary
-    :normal wdw==
+    :normal ==$dbx
     :startinsert!
-    echo 'commenting empty line!'
   else
     Commentary
   endif
