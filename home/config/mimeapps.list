@@ -61,5 +61,7 @@ image/gif=viewnior.desktop;
 
 [Removed Associations]
 text/plain=nvim.desktop;nvim-qt.desktop;neovide.desktop;vim.desktop;libreoffice-writer.desktop;sublime_merge.desktop;diffmerge.desktop;
-application/x-executable=nvim.desktop;
-application/x-shellscript=nvim.desktop;vim.desktop;nvim-qt.desktop;
+application/x-executable=nvim.desktop;neovide.desktop;
+application/x-shellscript=nvim.desktop;vim.desktop;nvim-qt.desktop;neovide.desktop;
+
+
