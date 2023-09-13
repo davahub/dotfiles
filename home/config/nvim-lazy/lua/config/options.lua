@@ -77,6 +77,7 @@ local options = {
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
   ttyfast = true,                          -- Speed up scrolling in Vim
   confirm = true,                          -- Confirm when quit
+  guifont = "Hack Nerd Font Mono:h14", 
   -- colorcolumn = "100",
 }
 

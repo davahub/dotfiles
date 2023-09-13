@@ -18,6 +18,7 @@ if exists("g:neovide")
     let g:neovide_cursor_trail_size = 0.2
     " vim.g.neovide_cursor_trail_size = 0.8
 
+
 endif
 
 
@@ -25,29 +26,20 @@ endif
 " -- NVIM-QT 
 " ---------------------------------------------
 
-" Set Editor Font
-if exists(':GuiFont')
-  " Use GuiFont! to ignore font errors
-  GuiFont! Hack:h20
-endif
+" set color of cc ruler
+hi ColorColumn ctermbg=0 guibg=Grey23
 
-" " Set Editor Font
+" Set Editor Font
 " if exists(':GuiFont')
-"     " Use GuiFont! to ignore font errors
-"     " GuiFont Inconsolata:h17
-"     set GuiFont Hack Nerd Font Mono:h20
-"     " GuiFont Inconsolata Nerd Font Mono:h16
-"     " GuiFont Inconsolata LGC Nerd Font Mono:h16
-"     " GuiFont RobotoMono Nerd:h16
-"     " GuiFont FiraCode Nerd Font Mono:h14
+" Use GuiFont! to ignore font errors
+" GuiFont Inconsolata:h17
+" GuiFont Hack Nerd Font Mono:h25
+" GuiFont Inconsolata Nerd Font Mono:h16
+" GuiFont Inconsolata LGC Nerd Font Mono:h16
+" GuiFont RobotoMono Nerd:h16
+" GuiFont FiraCode Nerd Font Mono:h14
 " endif
 
-" Right Click Context Menu (Copy-Cut-Paste)
-" nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>
-" inoremap <silent><RightMouse> <Esc>:call GuiShowContextMenu()<CR>
-" xnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>gv
-" snoremap <silent><RightMouse> <C-G>:call GuiShowContextMenu()<CR>gv
-
-" " set color of cc ruler
-" hi ColorColumn ctermbg=0 guibg=Grey23
+" set color of cc ruler
+hi ColorColumn ctermbg=0 guibg=Grey23
 
