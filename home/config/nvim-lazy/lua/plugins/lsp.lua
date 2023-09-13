@@ -6,7 +6,7 @@ return {
   -- ---------------------------------------------
   {
     "williamboman/mason.nvim",
-    commit = "34b3d0d01dfeba0b869bedf32ae846ef63ad4bd1",
+    commit = "d66c60e17dd6fd8165194b1d14d21f7eb2c1697a",
     config = function()
       require("mason").setup()
     end

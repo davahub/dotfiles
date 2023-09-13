@@ -20,7 +20,11 @@ pythonLocal='/home/dava/.local/bin'
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails:$pythonLocal
 :$myfileChrome:$myfileSublime:$myfileNeovim"
 anki_dir='/home/dava/.3installed/anki-2.1.62-linux-qt6'
-export PATH="${PATH}:$anki_dir"
+
+mynpm='/home/dava/.nvm/versions/node/v18.17.1/bin'
+export PATH="${PATH}:$anki_dir:$mynpm"
+
+
 
 #---------------------------------------------
 #-- Applications
@@ -42,5 +46,6 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
 fi
 
 # NODE
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="/home/dava/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

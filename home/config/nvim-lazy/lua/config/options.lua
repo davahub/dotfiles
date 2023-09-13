@@ -32,6 +32,12 @@ vim.cmd [[ source $HOME/.config/nvim/lua/config/vimscript.vim ]]
 -- set spell                   " enable spell check (may need to download language package)
 
 local options = {
+  title = true,
+  -- titlestring = "Neo: %<%F%=%l/%L-%P",
+  -- titlestring = "Neo: %t%(%M%)%((%{expand('%:~:.:h')})%)%(%a%)",
+  titlestring = "Neo: %t%(%M%)",
+  titlelen = 70,
+  -- titlestring = 'Neo>> %t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)',
   compatible = false,
   backup = false,                          -- creates a backup file
   backupdir="~/.cache/vim",

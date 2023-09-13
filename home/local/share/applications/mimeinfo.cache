@@ -4,5 +4,5 @@ application/winhlp=wine-extension-hlp.desktop;
 application/x-wine-extension-msp=wine-extension-msp.desktop;
 audio/mpeg=userapp-pcopen-NV7RC1.desktop;
 inode/directory=userapp-pcopen-NV7RC2.desktop;
-text/plain=userapp-pcopen-NV7RC3.desktop;
+text/plain=mynvim-qt-NV7RC3.desktop;userapp-pcopen-NV7RC3.desktop;
 text/vbscript=wine-extension-vbs.desktop;
