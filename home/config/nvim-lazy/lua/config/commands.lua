@@ -18,6 +18,9 @@ command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md
 -- Format 
 -- ---------------------------------------------
 
+-- lua
+vim.cmd [[ command! Flua :w | :! stylua %:p ]]
+
 -- python 
 vim.cmd [[ command! Fpython :w | :! black %:p ]]
 

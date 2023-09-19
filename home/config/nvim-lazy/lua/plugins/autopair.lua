@@ -1,15 +1,11 @@
 
 return {
-{
-
-
-
-
-    'windwp/nvim-autopairs',
-    event = "VeryLazy",
-    opts = {
-      disable_filetype = { "TelescopePrompt" , "vim" },
-    }  
-  }
+	{
+		"windwp/nvim-autopairs",
+		event = "VeryLazy",
+		opts = {
+			disable_filetype = { "TelescopePrompt", "vim", "markdown" },
+		},
+	},
 }
 
