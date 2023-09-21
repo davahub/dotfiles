@@ -464,6 +464,9 @@ bindsym $mod+n exec --no-startup-id notes
 # xkill
 bindsym --release $mod+x exec --no-startup-id xkill
 
+# menu
+bindsym $mod+m exec --no-startup-id i3menu
+
 
 
 
