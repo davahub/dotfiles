@@ -481,10 +481,10 @@ exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-
 # exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'"
 # exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-4.json'"
 
-
 exec --no-startup-id xrandr --output HDMI-0 --auto --output DVI-I-1 --auto --right-of HDMI-0 &
 
-exec --no-startup-id xcompmgr -C -t-5 -l-5 -r4.2 -o.55
+# exec --no-startup-id xcompmgr -C -t-5 -l-5 -r4.2 -o.55
+exec --no-startup-id picom -b
 
 exec --no-startup-id fc-cache -fv
 
