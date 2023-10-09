@@ -11,6 +11,9 @@ command! Oworkspace :NERDTree ~/workspace/dans
 " command! Ocamel :NERDTree ~/workspace/workapps/camel-tutor-2
 command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md
 
+command! Opersonal :NERDTree ~/workspace/personalsite
+command! -nargs=+ Nt :NERDTree <args>
+
 ]]
 
 
