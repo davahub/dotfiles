@@ -47,7 +47,7 @@ keymap("v", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 --  ESC
-keymap("n", "<A-j>", "<Esc>:set nohlsearch<cr>:<esc>", opts)
+keymap("n", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 keymap("v", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 keymap("i", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 
