@@ -13,6 +13,11 @@ vim.cmd [[syntax on]]
 vim.cmd [[:au FocusLost * :wa]]
 -- vim.cmd [[:au BufLeave * :wa]]
 
+vim.cmd [[
+autocmd FileType vimwiki         nnoremap <buffer> <expr> k (v:count == 0 ? 'gk' : 'k') 
+autocmd FileType vimwiki         nnoremap <buffer> <expr> j (v:count == 0 ? 'gj' : 'j')
+]]
+
 
 -- ---------------------------------------------
 -- -- FILE TYPES 
@@ -20,6 +25,7 @@ vim.cmd [[:au FocusLost * :wa]]
 
 vim.cmd [[autocmd BufNewFile,BufRead *.aliases set filetype=bash]]
 vim.cmd [[autocmd BufNewFile,BufRead conky.conf set filetype=lua ]]
+vim.cmd [[autocmd BufNewFile,BufRead *.wiki set filetype=vimwiki ]]
 
 vim.cmd [[ autocmd Filetype markdown setlocal com=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,b:- | set formatoptions=tcroqln ]]
 -- vim.cmd [[autocmd BufNewFile,BufRead *. set filetype=bash]]
