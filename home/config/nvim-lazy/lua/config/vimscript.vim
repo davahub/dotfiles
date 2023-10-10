@@ -31,6 +31,8 @@
 
 " NERDTREE ----
 nnoremap <silent><F8> :NERDTreeToggle<CR>
+vnoremap <silent><F8> :NERDTreeToggle<CR>
+inoremap <silent><F8> <esc>:NERDTreeToggle<CR>
 
 "dir config
 nnoremap <space>dc :NERDTree ~/.config/nvim<CR>

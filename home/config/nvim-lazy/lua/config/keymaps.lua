@@ -47,7 +47,7 @@ keymap("v", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 --  ESC
-keymap("n", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
+keymap("n", "<A-j>", "<Esc>:set nohlsearch<cr>:<esc>", opts)
 keymap("v", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 keymap("i", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 
@@ -219,7 +219,7 @@ keymap("i", "<C-v>", '<esc>"*p`[v`]==', opts)
 keymap("n", "<A-V>", "<C-r>+", opts)
 
 -- INSERT END OF LINE
-keymap("i", "<A-i>", "A", opts)
+keymap("i", "<A-i>", "<esc>A", opts)
 keymap("v", "<A-i>", "A", opts)
 keymap("n", "<A-i>", "A", opts)
 
