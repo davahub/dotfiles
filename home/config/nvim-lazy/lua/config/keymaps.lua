@@ -59,6 +59,8 @@ keymap("i", "<A-o>", "<esc><C-^>a", opts)
 -- SELECT ALL
 keymap("n", "<C-a>", "ggVG", opts)
 keymap("i", "<C-a>", "<esc>ggVG", opts)
+-- select all, deselect and return
+keymap("n", "<A-a>", 'ggVG"*ygv"+y<c-o>zz', opts)
 
 -- NAV BACK FORTH
 keymap("n", "<A-left>", "<C-o>", opts)
@@ -215,6 +217,8 @@ keymap("v", "<C-x>", '"+ygv"*d', opts)
 keymap("n", "<C-v>", 'i<esc>"*p`[v`]=', opts)
 keymap("v", "<C-v>", 'c<ESC>"*p`[v`]=', opts)
 keymap("i", "<C-v>", '<esc>"*p`[v`]==', opts)
+-- paste without format
+keymap("n", "<A-v>", 'i<esc>"*p`[v`]<esc>', opts)
 -- to buffers, other windows
 keymap("n", "<A-V>", "<C-r>+", opts)
 
