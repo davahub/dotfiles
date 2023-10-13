@@ -14,6 +14,7 @@ command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md
 command! Opersonal :NERDTree ~/workspace/personalsite
 command! -nargs=+ Nt :NERDTree <args>
 
+command! Slua :luafile %
 ]]
 
 

@@ -1,0 +1,70 @@
+{
+  "header 1": {
+    "prefix": "mwh1",
+    "body": ["= ${0} ="],
+    "description": "Add header level 1"
+  },
+  "header 2": {
+    "prefix": "mwh2",
+    "body": ["== ${0} =="],
+    "description": "Add header level 2"
+  },
+  "header 3": {
+    "prefix": "mwh3",
+    "body": ["=== ${0} ==="],
+    "description": "Add header level 3"
+  },
+  "header 4": {
+    "prefix": "mwh4",
+    "body": ["==== ${0} ===="],
+    "description": "Add header level 4"
+  },
+  "header 5": {
+    "prefix": "mwh5",
+    "body": ["===== ${0} ====="],
+    "description": "Add header level 5"
+  },
+  "header 6": {
+    "prefix": "mwh6",
+    "body": ["====== ${0} ======"],
+    "description": "Add header level 6"
+  },
+  "comment insert": {
+    "prefix": "mwc",
+    "body": ["# ${0}"],
+    "description": ""
+  },
+  "Open shell": {
+    "prefix": "mwsh",
+    "body": [
+      "<syntaxhighlight lang='shell' line='line'>",
+      "${0}",
+      "</syntaxhighlight>"
+    ],
+    "description": "shell insert"
+  },
+  "Java": {
+    "prefix": "mwjava",
+    "body": [
+      "<syntaxhighlight lang='java' line='line'>",
+      "${0}",
+      "</syntaxhighlight>"
+    ],
+    "description": "shell insert"
+  },
+  "Bold": {
+    "prefix": "mwb",
+    "body": [
+      "<b>${0}</b>"
+    ],
+    "description": "bold text"
+  },
+  "mdh": {
+    "prefix": "mdh",
+    "body": [
+      "`${0}`"
+    ],
+    "description": "inline code"
+  }
+}
+

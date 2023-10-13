@@ -5,7 +5,9 @@
 -- ---------------------------------------------
 -- vim.cmd [[ let NERDTreeIgnore = ['__init__.py', '__pycache__', 'node_modules'] ]]
 vim.g.NERDTreeIgnore = { '__init__.py', '__pycache__', 'node_modules' }
-
+-- vim.g.vimwiki_list = {{ path_html='~/.cache/nvim' }}
+-- vim.g.custom_wiki2html = {{ output_dir='~/.cache/nvim' }}
+-- vim.g.vimwiki_custom_wiki2html='/home/dava/.config/nvim/scripts/customwiki2html.sh'
 
 
 -- ---------------------------------------------

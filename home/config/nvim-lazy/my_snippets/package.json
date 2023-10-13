@@ -1,37 +1,44 @@
 {
-    "name": "friendly-snippets",
-    "engines": {
-        "vscode": "^1.11.0"
-    },
-    "contributes": {
-        "snippets": [
-            {
-                "language": [
-                    "plaintext",
-                    "markdown",
-                    "tex",
-                    "html",
-                    "global",
-                    "typescriptreact",
-                    "all"
-                ],
-                "path": "./snippets/global.json"
-            },
-            {
-                "language": [
-                    "markdown",
-                    "rmd"
-                ],
-                "path": "./snippets/markdown.json"
-            },
-            {
-                "language": "lua",
-                "path": "./snippets/lua.json"
-            },
-            {
-                "language": "typescriptreact",
-                "path": "./snippets/javascript.json"
-            }
-        ]
-    }
+  "name": "friendly-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "plaintext",
+          "markdown",
+          "tex",
+          "html",
+          "global",
+          "typescriptreact",
+          "all"
+        ],
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": [
+          "markdown",
+          "rmd"
+        ],
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": [
+          "vimwiki"
+        ],
+        "path": "./snippets/vimwiki.json"
+      },
+
+      {
+        "language": "lua",
+        "path": "./snippets/lua.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/javascript.json"
+      }
+    ]
+  }
 }

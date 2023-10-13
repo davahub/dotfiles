@@ -24,9 +24,11 @@ return {
               -- ["<A-j>"] = actions.close,
               ["J"] = actions.move_selection_next,
               ["K"] = actions.move_selection_previous,
+              ["<A-d>"] = actions.delete_buffer,
             },
             n = {
               ["<A-j>"] = actions.close,
+              ["d"] = actions.delete_buffer,
             }
           },
         },
