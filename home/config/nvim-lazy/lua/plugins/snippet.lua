@@ -101,9 +101,8 @@ return {
       -- You can also use lazy loading so you only get in memory snippets of languages you use
       require("luasnip.loaders.from_vscode").lazy_load()
 
-      -- vim.keymap.set({"i"}, "<leader>,", function() ls.expand() end, {silent = true})
-      -- vim.keymap.set({"i"}, "<leader><space>", function() ls.expand() end, {silent = true})
       vim.keymap.set({"i"}, "<A-k>", function() ls.expand() end, {silent = true})
+      -- tab completion is define in lsp.lua cmp
       vim.keymap.set({"i", "s"}, "<A-l>", function() ls.jump( 1) end, {silent = true})
       vim.keymap.set({"i", "s"}, "<A-n>", function() ls.jump( 1) end, {silent = true})
       -- vim.keymap.set({"i", "s"}, "<tab>", function() ls.jump( 1) end, {silent = true})

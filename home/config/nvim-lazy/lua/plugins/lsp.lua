@@ -223,13 +223,27 @@ return {
     config = function()
       -- Set up nvim-cmp.
       local cmp = require'cmp'
+      local luasnip = require("luasnip")
+
+      local function check_backspace()
+        local col = vim.fn.col(".") - 1
+        if col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
+          return true
+        else
+          return false
+        end
+      end
+
+      local function T(str)
+        return vim.api.nvim_replace_termcodes(str, true, true, true)
+      end
 
       cmp.setup({
         snippet = {
           -- REQUIRED - you must specify a snippet engine
           expand = function(args)
             -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+            luasnip.lsp_expand(args.body) -- For `luasnip` users.
             -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
             -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
           end,
@@ -239,6 +253,35 @@ return {
           -- documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
+          -- ["<Tab>"] = cmp.mapping(function(fallback)
+          --   if luasnip.expand_or_jumpable() then
+          --     luasnip.expand_or_jump()
+          --   elseif has_words_before() then
+          --     cmp.complete()
+          --   else
+          --     fallback()
+          --   end
+          -- end, { "i", "s" }),
+          ['<Tab>'] = function(core, fallback)
+            if vim.fn.pumvisible() == 1 then
+              vim.fn.feedkeys(T('<C-n>'), 'n')
+            elseif luasnip.expand_or_jumpable() then
+              vim.fn.feedkeys(T('<Plug>luasnip-expand-or-jump'), '')
+            elseif not check_backspace() then
+              cmp.mapping.complete()(core, fallback)
+            else
+              vim.cmd(':>')
+            end
+          end,
+          ['<S-Tab>'] = function(core, fallback)
+            if vim.fn.pumvisible() == 1 then
+              vim.fn.feedkeys(T('<C-p>'), 'n')
+            elseif luasnip.jumpable(-1) then
+              vim.fn.feedkeys(T('<Plug>luasnip-jump-prev'), '')
+            else
+              vim.cmd(':<')
+            end
+          end,
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
           ['<C-Space>'] = cmp.mapping.complete(),

@@ -29,6 +29,7 @@ return {
             n = {
               ["<A-j>"] = actions.close,
               ["d"] = actions.delete_buffer,
+              ["x"] = actions.delete_buffer,
             }
           },
         },
