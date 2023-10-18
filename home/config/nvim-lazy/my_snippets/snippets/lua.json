@@ -1,42 +1,51 @@
 {
-    "whole keymap": {
-        "prefix": ["key", ""],
-        "body": [
-            "keymap(\"n\", \"$1\", \"$2\", opts)"
-        ],
-        "description": ""
-    },
-    "command keymap": {
-        "prefix": ["keyc", "kc"],
-        "body": [
-            "<C-$0>"
-        ],
-        "description": ""
-    }, 
-    "lua block comment": {
-        "prefix": ["luab", "lub"],
-        "body": [
-            "-- ---------------------------------------------",
-            "-- $0 ",
-            "-- ---------------------------------------------"
-        ],
-        "description": ""
-    },
-    "lua vim cmd": {
-        "prefix": ["luacmd", "lucmd", "vcmd"],
-        "body": [
-            "vim.cmd [[ $0 ]]" 
-        ],
-        "description": ""
-    },
-    "keymap": {
-        "prefix": ["luakey", "lkey"],
-        "body": [
-            "keymap(\"n\", \"$1\", \"$2\", opts)" 
-        ],
-        "description": ""
-    }
-
-
+  "whole keymap": {
+    "prefix": ["key", ""],
+    "body": [
+      "keymap(\"n\", \"$1\", \"$2\", opts)"
+    ],
+    "description": ""
+  },
+  "command keymap": {
+    "prefix": ["keyc", "kc"],
+    "body": [
+      "<C-$0>"
+    ],
+    "description": ""
+  }, 
+  "lua block comment": {
+    "prefix": ["luab", "lub"],
+    "body": [
+      "-- ---------------------------------------------",
+      "-- $0 ",
+      "-- ---------------------------------------------"
+    ],
+    "description": ""
+  },
+  "lua plugin snippet": {
+    "prefix": ["lplug"],
+    "body": [
+      "return {",
+      "  {",
+      "    \"$0\"",
+      "  }",
+      "}"
+    ],
+    "description": ""
+  },
+  "lua vim cmd": {
+    "prefix": ["luacmd", "lucmd", "vcmd"],
+    "body": [
+      "vim.cmd [[ $0 ]]" 
+    ],
+    "description": ""
+  },
+  "keymap": {
+    "prefix": ["luakey", "lkey"],
+    "body": [
+      "keymap(\"n\", \"$1\", \"$2\", opts)" 
+    ],
+    "description": ""
+  }
 }
 

@@ -37,7 +37,10 @@ local options = {
   title = true,
   -- titlestring = "Neo: %<%F%=%l/%L-%P",
   -- titlestring = "Neo: %t%(%M%)%((%{expand('%:~:.:h')})%)%(%a%)",
-  titlestring = "Neo: %t%(%M%)",
+  -- ---------------------------------------------
+  -- Title format list:  https://vimhelp.org/options.txt.html#%27statusline%27 
+  -- ---------------------------------------------
+  titlestring = "Neo%y: %t%(%M%) -- %p",
   titlelen = 70,
   -- titlestring = 'Neo>> %t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)',
   compatible = false,

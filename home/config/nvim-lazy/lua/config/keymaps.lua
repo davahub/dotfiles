@@ -166,6 +166,9 @@ keymap("n", "<C-down>", "v$:m '>+1<CR>gv=gv<Esc>", opts)
 -- SWITCH LINES UP
 keymap("v", "<C-up>", ":m '<-2<CR>gv=gv", opts)
 keymap("n", "<C-up>", "v$:m '>-2<CR>gv=gv<Esc>", opts)
+-- vimwiki
+keymap("n", "<C-A-up", "<Plug>VimwikiDiaryPrevDay", opts)
+keymap("n", "<C-A-down", "<Plug>VimwikiDiaryNextDay", opts)
 
 -- CENTER MIDDLE
 keymap("n", "mm", "zz", opts)
@@ -280,8 +283,9 @@ call append(line("."), "")
 call append(line("."), "")
 call append(line("."), "")
 endfunction
-" nnoremap <C-A-j> :call AddEmptyLineBelow()<CR>
+nnoremap <A-J> :call AddEmptyLineBelow()<CR>
 " nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
 nnoremap <silent> <leader>E :call AddEmptyLineBelow()<CR>
 inoremap <silent> <leader>E <esc>:call AddEmptyLineBelow()<CR>i
 ]]
+
