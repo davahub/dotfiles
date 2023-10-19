@@ -284,6 +284,7 @@ call append(line("."), "")
 call append(line("."), "")
 endfunction
 nnoremap <A-J> :call AddEmptyLineBelow()<CR>
+inoremap <A-J> <esc>:call AddEmptyLineBelow()<CR>i
 " nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
 nnoremap <silent> <leader>E :call AddEmptyLineBelow()<CR>
 inoremap <silent> <leader>E <esc>:call AddEmptyLineBelow()<CR>i
