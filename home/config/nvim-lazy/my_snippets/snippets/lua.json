@@ -1,6 +1,6 @@
 {
   "whole keymap": {
-    "prefix": ["key", ""],
+    "prefix": ["key"],
     "body": [
       "keymap(\"n\", \"$1\", \"$2\", opts)"
     ],

@@ -217,13 +217,13 @@ keymap("v", "<C-x>", '"+ygv"*d', opts)
 
 -- PASTE
 -- keymap("n", "<C-v>", ':set paste<cr>i<c-r>+<esc>:set nopaste<cr>`[v`]=', opts)
-keymap("n", "<C-v>", 'i<esc>"*p`[v`]=', opts)
+keymap("n", "<C-v>", 'i<esc>"*p`[v`]', opts)
 keymap("v", "<C-v>", 'c<ESC>"*p`[v`]=', opts)
-keymap("i", "<C-v>", '<esc>"*p`[v`]==', opts)
+keymap("i", "<C-v>", '<esc>"*p`[v`]', opts)
 -- paste without format
-keymap("n", "<A-v>", 'i<esc>"*p`[v`]<esc>', opts)
+-- keymap("n", "<A-v>", 'i<esc>"*p`[v`]<esc>', opts)
 -- to buffers, other windows
-keymap("n", "<A-V>", "<C-r>+", opts)
+keymap("n", "<A-v>", "<C-r>+", opts)
 
 -- INSERT END OF LINE
 keymap("i", "<A-i>", "<esc>A", opts)

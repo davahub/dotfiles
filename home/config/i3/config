@@ -164,6 +164,7 @@ bar {
 #  ___) | | | | (_) | |  | || (__| |_| | |_\__ \
 # |____/|_| |_|\___/|_|   \__\___|\__,_|\__|___/
 
+# Shortcuts
 # bindsym --whole-window -> whole window for mouse
 # button2 - scroll click, button1 - left click, button3 - right click
 
@@ -171,14 +172,19 @@ bar {
 # for example `(keysym 0xffb1, KP_1) KP_1 is num key 1` 
 # xev 
 
+# $mod - win, Mod1 - alt, Control - control, Shift - shift
+
 #-----------------------------------------------
 #-- SYSTEM
 #-----------------------------------------------
 
+# change display monitor mode
+bindsym $mod+F5 exec --no-startup-id laptop-mode
+bindsym $mod+F6 exec --no-startup-id desktop-mode
+
 # change brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
-
 
 # change language
 bindsym $mod+space exec --no-startup-id toggleKeyboard
@@ -198,7 +204,7 @@ bindsym $mod+Shift+w layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
 # logout i3
-bindsym $mod+F12 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
+bindsym $mod+F12 exec "i3-nagbar -t warning -m 'You pressed the exit Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
 # bindsym $mod+F9 exec "killall conky"
 bindsym $mod+F9 reload
 # bindsym $mod+F12 exec "i3-nagbar"
@@ -455,7 +461,6 @@ bindsym Mod1+F1 exec --no-startup-id google-chrome-stable
 # chrome
 bindsym $mod+e exec --no-startup-id pcmanfm
 
-# shortcuts
 bindsym $mod+s exec --no-startup-id shortcuts
 
 # task manager
@@ -490,7 +495,7 @@ bindsym $mod+m exec --no-startup-id i3menu
 # exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'"
 # exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-4.json'"
 
-exec --no-startup-id xrandr --output HDMI-0 --auto --output DVI-I-1 --auto --right-of HDMI-0 &
+# exec --no-startup-id xrandr --output HDMI-0 --auto --output DVI-I-1 --auto --right-of HDMI-0 &
 
 # exec --no-startup-id xcompmgr -C -t-5 -l-5 -r4.2 -o.55
 exec --no-startup-id picom -b
@@ -560,7 +565,7 @@ exec --no-startup-id myconky
 
 # mode "bla" {
 #   # exec killall conky
-#   bindsym F11 exec "killall conky && i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
+#   bindsym F11 exec "killall conky && i3-nagbar -t warning -m 'You pressed the exit. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'No' 'myconky && killall i3-nagbar'"
 #   bindsym F12 exec "killall i3-nagbar"
 #     # back to normal: Enter or Escape or $mod+r
 #     bindsym Return mode "default"
@@ -568,7 +573,7 @@ exec --no-startup-id myconky
 #     bindsym $mod+d mode "default"
 # }
 # exit i3 (logs you out of your X session)
-# bindsym $mod+F12 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+F12 exec "i3-nagbar -t warning -m 'You pressed the exit. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # bindsym $mod+F12 mode "bla"
 
 # start dmenu (a program launcher)
