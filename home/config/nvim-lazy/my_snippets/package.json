@@ -30,7 +30,10 @@
         ],
         "path": "./snippets/vimwiki.json"
       },
-
+      {
+        "language": "html",
+        "path": "./snippets/htmlsnip.json"
+      },
       {
         "language": "lua",
         "path": "./snippets/lua.json"

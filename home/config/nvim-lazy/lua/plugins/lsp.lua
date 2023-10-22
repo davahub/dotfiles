@@ -245,13 +245,14 @@ return {
 
       local tab_complete = function(core, fallback)
         if vim.fn.pumvisible() == 1 then
-          vim.fn.feedkeys(T('<C-n>'), 'n')
+          vim.fn.feedkeys('<C-n>', 'n')
         elseif luasnip.expand_or_jumpable() then
           vim.fn.feedkeys(T('<Plug>luasnip-expand-or-jump'), '')
         elseif not check_backspace() then
           cmp.mapping.complete()(core, fallback)
         else
-          vim.cmd(':>')
+          vim.fn.feedkeys(T("<tab>"), "n")
+        -- fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
         end
       end
 
@@ -261,7 +262,7 @@ return {
         elseif luasnip.jumpable(-1) then
           vim.fn.feedkeys(T('<Plug>luasnip-jump-prev'), '')
         else
-          vim.cmd(':<')
+          vim.fn.feedkeys(T("<S-tab>"), "n")
         end
       end 
 
@@ -284,7 +285,8 @@ return {
           ['<S-Tab>'] = s_tab_complete,
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<C-Space>'] = cmp.mapping.complete(),
+          -- ['<C-Space>'] = cmp.mapping.complete(),
+          ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
           ['<C-e>'] = cmp.mapping.abort(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         }),

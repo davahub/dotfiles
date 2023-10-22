@@ -34,7 +34,6 @@ keymap("n", "<leader>t", ":Format<CR>", opts)
 
 -- EXPLORER
 keymap("n", "<leader>ee", ":Ex<CR>", opts)
-keymap("i", "<leader>ee", "<Esc>:Ex<CR>", opts)
 keymap("v", "<leader>ee", ":Ex<CR>", opts)
 
 -- SOURCE
@@ -172,6 +171,7 @@ keymap("n", "<C-A-down", "<Plug>VimwikiDiaryNextDay", opts)
 
 -- CENTER MIDDLE
 keymap("n", "mm", "zz", opts)
+keymap("i", "<C-m>", "<esc>zza", opts)
 
 -- SCROLL DOWN
 keymap("i", "<C-j>", "<Esc>6<C-e>i", opts)
@@ -217,13 +217,17 @@ keymap("v", "<C-x>", '"+ygv"*d', opts)
 
 -- PASTE
 -- keymap("n", "<C-v>", ':set paste<cr>i<c-r>+<esc>:set nopaste<cr>`[v`]=', opts)
-keymap("n", "<C-v>", 'i<esc>"*p`[v`]', opts)
+keymap("n", "<C-v>", 'i<esc>"*p', opts)
 keymap("v", "<C-v>", 'c<ESC>"*p`[v`]=', opts)
-keymap("i", "<C-v>", '<esc>"*p`[v`]', opts)
+keymap("i", "<C-v>", '<esc>"*p', opts)
 -- paste without format
 -- keymap("n", "<A-v>", 'i<esc>"*p`[v`]<esc>', opts)
 -- to buffers, other windows
-keymap("n", "<A-v>", "<C-r>+", opts)
+keymap("n", "<A-v>", 'i<esc>"*p`[v`]=', opts)
+keymap("v", "<A-v>", 'c<ESC>"*p`[v`]=', opts)
+keymap("i", "<A-v>", '<esc>"*p`[v`]==', opts)
+-- keymap("n", "<A-V>", "<C-r>+", opts)
+-- keymap("i", "<A-V>", "<esc><C-r>+", opts)
 
 -- INSERT END OF LINE
 keymap("i", "<A-i>", "<esc>A", opts)
@@ -235,7 +239,8 @@ keymap("n", "<A-i>", "A", opts)
 -- keymap("v", "<A-D>", ":t.<CR>", opts)
 keymap("n", "<A-D>", ":t.<CR>", opts)
 keymap("i", "<A-D>", "<esc>:t.<CR>a", opts)
-keymap("v", "<A-D>", "ygvvo<esc>p`[v`]=", opts)
+-- keymap("v", "<A-D>", "ygvvo<esc>p`[v`]=", opts)
+keymap("v", "<A-D>", '"*ygv"+yki<esc>"*p', opts)
 
 
 -- DELETE LINE
@@ -266,7 +271,6 @@ keymap("i", "<C-;>", "<Esc>ciw", opts)
 keymap("n", "<C-A-v>", "<C-v>", opts)
 keymap("i", "<C-A-v>", "<C-v>", opts)
 keymap("n", "<leader>v", "<C-v>", opts)
-keymap("i", "<leader>v", "<C-v>", opts)
 
 
 -- ---------------------------------------------
@@ -287,6 +291,5 @@ nnoremap <A-J> :call AddEmptyLineBelow()<CR>
 inoremap <A-J> <esc>:call AddEmptyLineBelow()<CR>i
 " nnoremap <leader>ie :call AddEmptyLineBelow()<CR>
 nnoremap <silent> <leader>E :call AddEmptyLineBelow()<CR>
-inoremap <silent> <leader>E <esc>:call AddEmptyLineBelow()<CR>i
 ]]
 
