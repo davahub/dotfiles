@@ -60,6 +60,9 @@ return {
       -- keymap('n', '<leader>b', builtin.buffers, opts)
       keymap('n', '<leader>.', builtin.buffers, opts)
 
+      -- marks
+      keymap('n', '<leader>m', builtin.marks, opts)
+
       keymap('n', '<A-R>', function()
         builtin.live_grep({ cwd = "~/workspace/dans"});
       end)

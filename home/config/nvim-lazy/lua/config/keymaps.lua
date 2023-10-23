@@ -165,9 +165,6 @@ keymap("n", "<C-down>", "v$:m '>+1<CR>gv=gv<Esc>", opts)
 -- SWITCH LINES UP
 keymap("v", "<C-up>", ":m '<-2<CR>gv=gv", opts)
 keymap("n", "<C-up>", "v$:m '>-2<CR>gv=gv<Esc>", opts)
--- vimwiki
-keymap("n", "<C-A-up", "<Plug>VimwikiDiaryPrevDay", opts)
-keymap("n", "<C-A-down", "<Plug>VimwikiDiaryNextDay", opts)
 
 -- CENTER MIDDLE
 keymap("n", "mm", "zz", opts)
@@ -271,6 +268,19 @@ keymap("i", "<C-;>", "<Esc>ciw", opts)
 keymap("n", "<C-A-v>", "<C-v>", opts)
 keymap("i", "<C-A-v>", "<C-v>", opts)
 keymap("n", "<leader>v", "<C-v>", opts)
+
+
+-- ---------------------------------------------
+-- VIM VIKI 
+-- ---------------------------------------------
+keymap("n", "<C-A-up>", "<Plug>VimwikiDiaryPrevDay", opts)
+
+keymap("n", "<C-A-down>", "<Plug>VimwikiDiaryNextDay", opts)
+
+keymap("n", "<leader>nl", "<Plug>VimwikiNextLink", opts)
+
+keymap("n", "<leader>pl", "<Plug>VimwikiPrevLink", opts)
+
 
 
 -- ---------------------------------------------

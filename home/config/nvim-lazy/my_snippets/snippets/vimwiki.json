@@ -41,12 +41,21 @@
     ],
     "description": "insert link"
   },
-  "Open shell": {
-    "prefix": "mdsh",
+  "Shell for mediawiki": {
+    "prefix": "mdmediash",
     "body": [
       "<syntaxhighlight lang='shell' line='line'>",
       "${0}",
       "</syntaxhighlight>"
+    ],
+    "description": "shell insert"
+  },
+  "Shell for markdown": {
+    "prefix": "mdsh",
+    "body": [
+      "```sh",
+      "${0}",
+      "```"
     ],
     "description": "shell insert"
   },
