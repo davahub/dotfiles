@@ -36,6 +36,15 @@ return {
       })
 
       -- ---------------------------------------------
+      -- GREP 
+      -- ---------------------------------------------
+      vim.api.nvim_create_user_command('Gpersonal',
+        function()
+          builtin.live_grep({ cwd = "~/workspace/personalsite"});
+        end, { nargs = 0 })
+
+
+      -- ---------------------------------------------
       -- -- KEYMAP 
       -- ---------------------------------------------
 
@@ -72,7 +81,7 @@ return {
           builtin.live_grep({ cwd = "~/workspace/dans"});
         end, { nargs = 0 })
 
-    end,
+    end
   }
 }
 

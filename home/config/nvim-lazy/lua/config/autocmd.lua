@@ -15,10 +15,10 @@ vim.cmd [[:au FocusLost * :wa]]
 vim.cmd [[au FocusGained,BufEnter * :checktime]]
 -- vim.cmd [[:au BufLeave * :wa]]
 
-vim.cmd [[
-autocmd FileType vimwiki         nnoremap <buffer> <expr> k (v:count == 0 ? 'gk' : 'k') 
-autocmd FileType vimwiki         nnoremap <buffer> <expr> j (v:count == 0 ? 'gj' : 'j')
-]]
+-- vim.cmd [[
+-- autocmd FileType vimwiki         nnoremap <buffer> <expr> k (v:count == 0 ? 'gk' : 'k') 
+-- autocmd FileType vimwiki         nnoremap <buffer> <expr> j (v:count == 0 ? 'gj' : 'j')
+-- ]]
 
 
 -- ---------------------------------------------

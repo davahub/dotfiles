@@ -5,6 +5,12 @@
 -- ---------------------------------------------
 vim.cmd [[ 
 command! Cmarks :delm! | delm A-Z0-9 | delm []<> 
+
+command! Vtoc :VimwikiTOC 
+
+command! Chrome :! google-chrome-stable %
+
+
 ]]
 
 
@@ -22,6 +28,9 @@ command! Opersonal :NERDTree ~/workspace/personalsite
 command! -nargs=+ Nt :NERDTree <args>
 
 command! Slua :luafile %
+
+command! Focus :NERDTreeFind 
+
 ]]
 
 

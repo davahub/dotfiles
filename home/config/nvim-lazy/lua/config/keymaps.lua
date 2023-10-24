@@ -7,6 +7,8 @@ local keymap = vim.keymap.set
 -- -- MAIN
 -- ---------------------------------------------
 
+-- DEPLOY
+keymap("n", "<F5>", ":! deploy<cr><esc>", opts)
 
 -- RELAY MACRO
 keymap("n", "\\", "@", opts)

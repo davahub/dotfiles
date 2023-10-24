@@ -26,8 +26,10 @@
 " -- KEYMAP 
 " ---------------------------------------------
 
-" vnoremap // y/<C-R>=escape(@",'/\')<CR><CR>
-
+nnoremap <expr> k (&wrap && v:count == 0 ? 'gk' : 'k')
+vnoremap <expr> k (&wrap && v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (&wrap && v:count == 0 ? 'gj' : 'j')
+vnoremap <expr> j (&wrap && v:count == 0 ? 'gj' : 'j')
 
 " NERDTREE ----
 nnoremap <silent><F8> :NERDTreeToggle<CR>
