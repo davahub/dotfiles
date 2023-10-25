@@ -1,3 +1,5 @@
+
+-- shows indent lines
 return {
   {
     'echasnovski/mini.indentscope',

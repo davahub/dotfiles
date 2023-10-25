@@ -18,6 +18,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require('config/options')
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -34,8 +36,6 @@ require("lazy").setup({
     notify = false,
   },
 })
-
-require('config/options')
 
 require('config/autocmd')
 

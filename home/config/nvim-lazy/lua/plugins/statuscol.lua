@@ -1,4 +1,5 @@
 
+-- to show fold status
 return {
   {
     "luukvbaal/statuscol.nvim",

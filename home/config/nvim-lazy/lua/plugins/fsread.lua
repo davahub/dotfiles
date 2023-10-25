@@ -1,4 +1,5 @@
 
+-- Bionic reading plugin
 return {
   {
     "nullchilly/fsread.nvim",
