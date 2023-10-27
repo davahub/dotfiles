@@ -263,8 +263,8 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 -- keymap("n", "<space>", "i", opts)
 
 -- DELETE BACKWARD
-keymap("n", "<C-;>", "ciw", opts)
-keymap("i", "<C-;>", "<Esc>ciw", opts)
+keymap("n", "<C-;>", "bciw", opts)
+keymap("i", "<C-;>", "<Esc>bciw", opts)
 
 -- BLOCK VISUAL
 keymap("n", "<C-A-v>", "<C-v>", opts)

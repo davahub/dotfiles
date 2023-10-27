@@ -524,7 +524,7 @@ exec --no-startup-id myconky
 
 # exec --no-startup-id launch-default-apps
 
-# exec --no-startup-id mylightscreen
+exec --no-startup-id mylightscreen
 
 
 
