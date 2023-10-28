@@ -234,45 +234,17 @@ return {
         end
       end
 
-      local function T(str)
-        return vim.api.nvim_replace_termcodes(str, true, true, true)
-      end
-
       local has_words_before = function()
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
 
-      local tab_complete = function(fallback)
-        if vim.fn.pumvisible() == 1 then
-          vim.fn.feedkeys('<C-n>', 'n')
-        elseif luasnip.expand_or_jumpable() then
-          vim.fn.feedkeys(T('<Plug>luasnip-expand-or-jump'), '')
-        elseif check_backspace() then
-          cmp.mapping.complete()(core, fallback)
-        else
-          vim.fn.feedkeys(T("<tab>"), "n")
-
-        -- fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-        end
-      end
-
-      local s_tab_complete = function(core, fallback)
-        if vim.fn.pumvisible() == 1 then
-          vim.fn.feedkeys(T('<C-p>'), 'n')
-        elseif luasnip.jumpable(-1) then
-          vim.fn.feedkeys(T('<Plug>luasnip-jump-prev'), '')
-        else
-          vim.fn.feedkeys(T("<S-tab>"), "n")
-        end
-      end 
-
       local function tab(fallback)
-        if luasnip.expandable() then
-          luasnip.expand()
-        elseif cmp.visible() then
-          cmp.select_next_item()
-        elseif luasnip.expand_or_jumpable() then
+        -- if luasnip.expandable() then
+        --   luasnip.expand()
+        -- elseif cmp.visible() then
+        --   cmp.select_next_item()
+        if luasnip.expand_or_jumpable() then
           luasnip.expand_or_jump()
         elseif has_words_before() then
           cmp.complete()
@@ -368,6 +340,10 @@ return {
             { name = 'cmdline' }
           })
       })
+      -- 
+      local opts = { noremap = true, silent = true }
+      local keymap = vim.keymap.set
+      keymap("v", "<Tab>", "=", opts)
     end
   }
 

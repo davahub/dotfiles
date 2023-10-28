@@ -69,7 +69,8 @@ keymap("n", "<A-right>", "<C-i>", opts)
 
 -- TAB
 keymap("n", "<tab>", "==", opts)
-keymap("v", "<tab>", "=", opts)
+-- below doesn't work actual keymap is in lsp plugin
+keymap("v", "<Tab>", "=", opts)
 keymap("n", "<leader><tab>", 'A<space><esc>8i<C-i><esc>A', opts)
 -- keymap("i", "<leader><tab>", ">ab>", opts)
 -- keymap("i", "<tab>", "<esc><tab>", opts)
