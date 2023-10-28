@@ -68,6 +68,10 @@ keymap("n", "<A-left>", "<C-o>", opts)
 keymap("n", "<A-right>", "<C-i>", opts)
 
 -- TAB
+keymap("n", "<tab>", "==", opts)
+keymap("v", "<tab>", "=", opts)
+keymap("n", "<leader><tab>", 'A<space><esc>8i<C-i><esc>A', opts)
+-- keymap("i", "<leader><tab>", ">ab>", opts)
 -- keymap("i", "<tab>", "<esc><tab>", opts)
 
 -- SEARCH
@@ -219,6 +223,8 @@ keymap("v", "<C-x>", '"+ygv"*d', opts)
 keymap("n", "<C-v>", 'i<esc>"*p', opts)
 keymap("v", "<C-v>", 'c<ESC>"*p`[v`]=', opts)
 keymap("i", "<C-v>", '<esc>"*p', opts)
+-- go to last pasted text
+keymap("n", "gp", "`[v`]", opts)
 -- paste without format
 -- keymap("n", "<A-v>", 'i<esc>"*p`[v`]<esc>', opts)
 -- to buffers, other windows

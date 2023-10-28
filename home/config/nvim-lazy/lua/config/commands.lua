@@ -6,10 +6,13 @@
 vim.cmd [[ 
 command! Cmarks :delm! | delm A-Z0-9 | delm []<> 
 
+command! Ctoc :1d | g/.*- \[.*\](#.*)/d 
 command! Vtoc :VimwikiTOC 
+" command! Vtoc :1d | g/.*- \[.*\](#.*)/d | :w | call timer_start(1000, { tid -> execute(':VimwikiTOC')}) 
 
-command! Chrome :! google-chrome-stable %
+command! Chrome :! google-chrome-stable "%"
 
+command! Copyfilepath let @+ = expand('%:p')
 
 ]]
 
