@@ -14,6 +14,8 @@ command! Chrome :! google-chrome-stable "%"
 
 command! Copyfilepath let @+ = expand('%:p')
 
+command! Python :! python "%"
+
 ]]
 
 
@@ -23,6 +25,7 @@ command! Copyfilepath let @+ = expand('%:p')
 vim.cmd [[ 
 
 command! Oconfig :NERDTree ~/.config/nvim 
+command! Ocoding :NERDTree ~/workspace/coding
 command! Oworkspace :NERDTree ~/workspace/dans
 " command! Ocamel :NERDTree ~/workspace/workapps/camel-tutor-2
 command! Oref :NERDTree ~/workspace/.work/winconfig/reference-md

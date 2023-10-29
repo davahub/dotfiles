@@ -25,7 +25,6 @@
 " ---------------------------------------------
 " -- KEYMAP 
 " ---------------------------------------------
-
 nnoremap <expr> k (&wrap && v:count == 0 ? 'gk' : 'k')
 vnoremap <expr> k (&wrap && v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (&wrap && v:count == 0 ? 'gj' : 'j')

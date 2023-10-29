@@ -7,8 +7,10 @@ local keymap = vim.keymap.set
 -- -- MAIN
 -- ---------------------------------------------
 
--- DEPLOY
-keymap("n", "<F5>", ":! deploy<cr><esc>", opts)
+-- RUN
+keymap("n", "<F5>", ':w | :! python "%"<cr>', opts)
+keymap("i", "<F5>", '<esc>:w | :! python "%"<cr>', opts)
+-- keymap("n", "<F5>", ":! deploy<cr><esc>", opts)
 
 -- RELAY MACRO
 keymap("n", "\\", "@", opts)
@@ -22,9 +24,6 @@ keymap("n", "<F3>", ":set hlsearch!<cr>", opts)
 keymap("n", "<leader>h", ":set hlsearch!<cr>", opts)
 -- keymap("n", "<cr>", ":set hlsearch!<cr>", opts)
 
--- VISTA
-keymap("n", "<A-r>", ":Vista finder<CR>", opts)
-keymap("n", "<F9>", ":Vista!!<CR>", opts)
 
 -- FOLD CODE
 keymap("n", "<A-f>", "za", opts)
@@ -47,8 +46,8 @@ keymap("i", "<C-s>", "<Esc>:w<CR>", opts)
 keymap("v", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 
---  ESC
-keymap("n", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
+-- ESC
+keymap('n', "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 keymap("v", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 keymap("i", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 
@@ -280,6 +279,25 @@ keymap("n", "<leader>v", "<C-v>", opts)
 
 
 -- ---------------------------------------------
+-- Vista 
+-- ---------------------------------------------
+keymap("n", "<A-r>", ":Vista finder<CR>", opts)
+keymap("n", "<F9>", ":Vista!!<CR>", opts)
+function _G.toggle_term()
+  local function t(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+  end
+  local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
+  if filetype == 'fzf' then
+    return t"<Esc>"
+  else
+    return "<Esc>:set nohlsearch<cr>"
+  end
+end
+vim.api.nvim_set_keymap('t', '<A-j>', 'v:lua.toggle_term()', { expr = true, silent = true, noremap = true })
+
+
+-- ---------------------------------------------
 -- VIM VIKI 
 -- ---------------------------------------------
 keymap("n", "<C-A-up>", "<Plug>VimwikiDiaryPrevDay", opts)
@@ -290,6 +308,8 @@ keymap("n", "<leader>nl", "<Plug>VimwikiNextLink", opts)
 
 keymap("n", "<leader>pl", "<Plug>VimwikiPrevLink", opts)
 
+-- surround with bold
+keymap("n", "<leader>bo", "I**<esc>A**  <esc>", opts)
 
 
 -- ---------------------------------------------
