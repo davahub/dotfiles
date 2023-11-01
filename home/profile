@@ -24,6 +24,8 @@ anki_dir='/home/dava/.3installed/anki-2.1.62-linux-qt6'
 mynpm='/home/dava/.nvm/versions/node/v18.17.1/bin'
 export PATH="${PATH}:$anki_dir:$mynpm"
 
+# yarn
+export PATH="${PATH}:$(yarn global bin)"
 
 
 #---------------------------------------------

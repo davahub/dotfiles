@@ -292,7 +292,7 @@ return {
           ["<Tab>"] = cmp.mapping(tab, { "i", "s" }),
           ["<S-tab>"] = cmp.mapping(shift_tab, { "i", "s" }),
           ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
-          ['<C-e>'] = cmp.mapping.abort(),
+          -- ['<C-e>'] = cmp.mapping.abort(),
           -- `select` to `false` to only confirm explicitly selected items.
           ['<CR>'] = cmp.mapping.confirm({ select = true }), 
           ["<C-p>"] = cmp.mapping.select_prev_item(),

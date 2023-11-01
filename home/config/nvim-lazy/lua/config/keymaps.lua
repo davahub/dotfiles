@@ -17,7 +17,7 @@ keymap("n", "\\", "@", opts)
 -- nnoremap <\> @
 
 -- FIND
-keymap("n", "<C-f>", "/", opts)
+-- keymap("n", "<C-f>", "/", opts)
 -- nnoremap <C-f> /
 
 keymap("n", "<F3>", ":set hlsearch!<cr>", opts)
@@ -48,6 +48,11 @@ keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- ESC
 keymap('n', "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
+-- down
+-- keymap("n", "<A-j>", "<C-d>M", opts)
+-- up
+-- keymap("n", "<A-k>", "<C-u>M", opts)
+
 keymap("v", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 keymap("i", "<A-j>", "<Esc>:set nohlsearch<cr>", opts)
 
@@ -158,9 +163,11 @@ keymap("n", 'T', "H", opts)
 keymap("n", "B", "L", opts)
 
 -- MOVE TO END OF LINE
-keymap("i", "<C-e>", "<esc>$a", opts)
+keymap("i", "<C-e>", "<esc><esc>A", opts)
 keymap("v", "<C-e>", "$", opts)
-keymap("n", "<C-e>", "$a", opts)
+keymap("n", "<C-e>", "A", opts)
+keymap("n", "<C-A-e>", "<C-e>", opts)
+
 keymap("v", "L", "$", opts)
 keymap("n", "L", "$", opts)
 
@@ -182,19 +189,26 @@ keymap("v", "<C-j>", "6<C-e>", opts)
 keymap("n", "<C-j>", "6<C-e>", opts)
 
 -- HALF DOWN
-keymap("n", "<C-A-j>", "<C-d>M", opts)
-keymap("i", "<C-A-j>", "<Esc><C-d>M", opts)
-keymap("v", "<C-A-j>", "<C-d>M", opts)
+-- keymap("n", "<C-d>", "<C-d>M", opts)
+-- keymap("i", "<C-d>", "<esc><C-d>M", opts)
+-- keymap("n", "<C-A-j>", "<C-d>M", opts)
+-- keymap("n", "<space-j>", "<C-d>M", opts)
+-- keymap("i", "<C-A-j>", "<Esc><C-d>M", opts)
+-- keymap("v", "<C-A-j>", "<C-d>M", opts)
+
+-- HALF UP
+-- keymap("n", "<C-u>", "<C-u>M", opts)
+-- keymap("i", "<C-u>", "<esc><C-u>M", opts)
+-- keymap("n", "<C-A-k>", "<C-u>M", opts)
+-- keymap("n", "<space-k>", "<C-u>M", opts)
+-- keymap("i", "<C-A-k>", "<Esc><C-u>M", opts)
+-- keymap("v", "<C-A-k>", "<C-u>M", opts)
 
 -- SCROLL UP
 keymap("i", "<C-k>", "<Esc>6<C-y>i", opts)
 keymap("v", "<C-k>", "6<C-y>", opts)
 keymap("n", "<C-k>", "6<C-y>", opts)
 
--- HALF UP
-keymap("n", "<C-A-k>", "<C-u>M", opts)
-keymap("i", "<C-A-k>", "<Esc><C-u>M", opts)
-keymap("v", "<C-A-k>", "<C-u>M", opts)
 
 
 -- ---------------------------------------------
@@ -209,7 +223,7 @@ keymap("i", "<C-t>", "<esc>:enew<cr>", opts)
 keymap("n", "<A-d>", "4x")
 keymap("n", "<leader>d", "4x")
 keymap("n", "<leader>x", "4x")
-keymap("n", "<space>d", "4x")
+-- keymap("n", "<space>d", "4x")
 
 -- JOIN LINES
 keymap("n", "<leader>j", "J", opts)
@@ -249,9 +263,9 @@ keymap("v", "<A-D>", '"*ygv"+yki<esc>"*p', opts)
 
 
 -- DELETE LINE
-keymap("i", "<C-d>", "<Esc>dd", opts)
-keymap("v", "<C-d>", "dd", opts)
-keymap("n", "<C-d>", "dd", opts)
+-- keymap("i", "<C-d>", "<Esc>dd", opts)
+-- keymap("v", "<C-d>", "dd", opts)
+-- keymap("n", "<C-d>", "dd", opts)
 -- keymap("n", "<A-d>", "dd", opts)
 
 -- vim.keymap.set("i", "<C-d>", "<Esc><C-d>zz")
@@ -281,7 +295,7 @@ keymap("n", "<leader>v", "<C-v>", opts)
 -- ---------------------------------------------
 -- Vista 
 -- ---------------------------------------------
-keymap("n", "<A-r>", ":Vista finder<CR>", opts)
+keymap("n", "<A-r>", ":Vista finder ctags<CR>", opts)
 keymap("n", "<F9>", ":Vista!!<CR>", opts)
 function _G.toggle_term()
   local function t(str)
@@ -310,6 +324,21 @@ keymap("n", "<leader>pl", "<Plug>VimwikiPrevLink", opts)
 
 -- surround with bold
 keymap("n", "<leader>bo", "I**<esc>A**  <esc>", opts)
+
+
+-- ---------------------------------------------
+-- Mark 
+-- ---------------------------------------------
+keymap("n", "'A", "'Azz", opts)
+keymap("n", "'B", "'Bzz", opts)
+keymap("n", "'C", "'Czz", opts)
+keymap("n", "'D", "'Dzz", opts)
+
+keymap("n", "'a", "'azz", opts)
+keymap("n", "'b", "'bzz", opts)
+keymap("n", "'c", "'czz", opts)
+keymap("n", "'d", "'dzz", opts)
+
 
 
 -- ---------------------------------------------
