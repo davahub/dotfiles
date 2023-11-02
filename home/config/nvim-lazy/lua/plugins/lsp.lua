@@ -343,6 +343,9 @@ return {
       -- 
       local opts = { noremap = true, silent = true }
       local keymap = vim.keymap.set
+      keymap("n", "<C-i>", "<C-i>", opts)
+      keymap("v", "<C-i>", "<C-i>", opts)
+      keymap("n", "<tab>", "==", opts)
       keymap("v", "<Tab>", "=", opts)
     end
   }

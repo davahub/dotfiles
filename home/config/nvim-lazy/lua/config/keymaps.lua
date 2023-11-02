@@ -72,9 +72,10 @@ keymap("n", "<A-left>", "<C-o>", opts)
 keymap("n", "<A-right>", "<C-i>", opts)
 
 -- TAB
-keymap("n", "<tab>", "==", opts)
+keymap("n", "<C-i>", "<C-i>", opts)
+keymap("n", "<tab>", "=", opts)
 -- below doesn't work actual keymap is in lsp plugin
-keymap("v", "<Tab>", "=", opts)
+keymap("v", "<tab>", "=", opts)
 keymap("n", "<leader><tab>", 'A<space><esc>8i<C-i><esc>A', opts)
 -- keymap("i", "<leader><tab>", ">ab>", opts)
 -- keymap("i", "<tab>", "<esc><tab>", opts)
@@ -128,6 +129,15 @@ keymap("n", "<C-A-s>", ":vertical resize -20<cr>", opts)
 -- -- MOVEMENT
 -- ---------------------------------------------
 
+-- 8x word forward and backward
+keymap("n", "<leader>w", "8w", opts)
+keymap("n", "<leader>b", "8b", opts)
+
+-- 8x word-end forward and backward
+keymap("n", "<leader>e", "8e", opts)
+keymap("v", "<leader>e", "8e", opts)
+
+
 -- BUFFER SWITCH
 keymap("n", '<A-1>', ":bprevious<CR>", opts)
 keymap("i", '<A-1>', "<esc>:bprevious<CR>", opts)
@@ -148,7 +158,8 @@ keymap("v", '<A-2>', ":bnext<CR>", opts)
 
 -- JUMP UP 6
 keymap("n", 'K', "6k", opts)
-keymap("v", "K", "6k", opts)
+keymap("v", 'K', "6k", opts)
+
 
 -- JUMP DOWN 6
 keymap("n", 'J', "6j", opts)
@@ -173,11 +184,15 @@ keymap("n", "L", "$", opts)
 
 -- SWITCH LINES DOWN
 keymap("v", "<C-down>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<C-A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("n", "<C-down>", "v$:m '>+1<CR>gv=gv<Esc>", opts)
+keymap("n", "<C-A-j>", "v$:m '>+1<CR>gv=gv<Esc>", opts)
 
 -- SWITCH LINES UP
 keymap("v", "<C-up>", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "<C-A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap("n", "<C-up>", "v$:m '>-2<CR>gv=gv<Esc>", opts)
+keymap("n", "<C-A-k>", "v$:m '>-2<CR>gv=gv<Esc>", opts)
 
 -- CENTER MIDDLE
 keymap("n", "mm", "zz", opts)
@@ -289,7 +304,8 @@ keymap("i", "<C-;>", "<Esc>bciw", opts)
 -- BLOCK VISUAL
 keymap("n", "<C-A-v>", "<C-v>", opts)
 keymap("i", "<C-A-v>", "<C-v>", opts)
-keymap("n", "<leader>v", "<C-v>", opts)
+keymap("n", "<leader>v", "V", opts)
+keymap("v", "<leader>v", "V", opts)
 
 
 -- ---------------------------------------------

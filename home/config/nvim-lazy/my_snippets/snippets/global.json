@@ -1,4 +1,11 @@
 {
+    "js expand JavaScript": {
+        "prefix": ["js"],
+        "body": [
+            "JavaScript"
+        ],
+        "description": ""
+    },
     "Vimscript block comment": {
         "prefix": ["vib", "vimb"],
         "body": [

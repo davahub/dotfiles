@@ -49,9 +49,9 @@ return {
       -- ---------------------------------------------
 
       -- open proj dir
-      keymap('n', '<leader>w', function()
-        builtin.find_files({ cwd = "~/workspace/dans" });
-      end)
+      -- keymap('n', '<leader>w', function()
+        -- builtin.find_files({ cwd = "~/workspace/dans" });
+      -- end)
 
       -- open config
       keymap('n', '<leader>c', function()
