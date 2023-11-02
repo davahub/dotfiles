@@ -1,8 +1,31 @@
 
+-- ---------------------------------------------
+-- Lua 
+-- ---------------------------------------------
+-- :h nvim_create_user_command
+vim.api.nvim_create_user_command('Snipmarkdownswitch',
+  function ()
+    os.execute('neo-markdown-switch')
+    vim.cmd[[ :e ~/.config/nvim/my_snippets/snippets/vimwiki.json | :w | :Bclose ]]
+    vim.fn.feedkeys('zz')
+  end, { desc = "switch snippet mediawiki and markdown" })
+
+
+-- vim.api.nvim_create_user_command('SayHello', 'echo "Hello world!"', {'bang': v:true})
+
+-- vim.api.nvim_create_user_command('VG', function (args)
+--   local vimCmd = 'vertical Git'
+--   if (args['args']) then
+--     vimCmd = vimCmd .. ' ' .. args['args']
+--   end
+--   vim.cmd(vimCmd)
+-- end, { desc = "Open Git vertically", nargs = '*' })
+
 
 -- ---------------------------------------------
 -- GENERAL 
 -- ---------------------------------------------
+
 vim.cmd [[ 
 command! Cmarks :delm! | delm A-Z0-9 | delm []<> 
 

@@ -130,8 +130,9 @@ focus_follows_mouse no
 #-----------------------------------------------
 
 # gaps top 41px
-
-gaps inner 4px
+# padding all around
+# gaps inner 4px
+gaps inner 8px
 
 bar {
     # status_command i3status
