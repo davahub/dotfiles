@@ -12,13 +12,14 @@ myfile='/home/dava/.2shortcuts/file'
 myfileChrome='/home/dava/.2shortcuts/file/chrome'
 myfileSublime='/home/dava/.2shortcuts/file/sublime'
 myfileNeovim='/home/dava/.2shortcuts/file/neovim'
+laptop='/home/dava/.2shortcuts/system/laptop'
 execute='/home/dava/.2shortcuts/execute'
 system='/home/dava/.2shortcuts/system'
 launcher='/home/dava/.2shortcuts/launcher'
 rubyRails='/home/dava/.gem/ruby/2.3.0/bin'
 pythonLocal='/home/dava/.local/bin'
 export PATH="${PATH}:/usr/bin/:$directory:$myfile:$execute:$system:$launcher:$rubyRails:$pythonLocal
-:$myfileChrome:$myfileSublime:$myfileNeovim"
+:$myfileChrome:$myfileSublime:$myfileNeovim:$laptop"
 anki_dir='/home/dava/.3installed/anki-2.1.62-linux-qt6'
 
 mynpm='/home/dava/.nvm/versions/node/v18.17.1/bin'
