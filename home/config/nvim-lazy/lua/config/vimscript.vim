@@ -61,7 +61,7 @@ vnoremap <silent> <A-e> :Commentary<CR>
 " ---------------------------------------------
 " command! Bclose call s:Kwbd(1)
 " nnoremap <silent> <Leader>bd :Bclose<CR>
-
+ 
 " comments ----
 command! -nargs=1 Com :call MyF(<f-args>)
 command! Comsh :call MyF("#")
@@ -120,7 +120,11 @@ func! MyCommentToggle()
   if getline('.') =~ '^\s*$'
     :normal itext
     Commentary
-    :normal ==$dbx
+    if &filetype ==# 'vimwiki'
+      :normal $dbx
+    else
+      :normal ==$dbx
+    endif
     :startinsert!
   else
     Commentary
