@@ -73,7 +73,7 @@ keymap("n", "<A-right>", "<C-i>", opts)
 
 -- TAB
 keymap("n", "<C-i>", "<C-i>", opts)
-keymap("n", "<tab>", "=", opts)
+keymap("n", "<tab>", "==", opts)
 -- below doesn't work actual keymap is in lsp plugin
 keymap("v", "<tab>", "=", opts)
 keymap("n", "<leader><tab>", 'A<space><esc>8i<C-i><esc>A', opts)
@@ -204,6 +204,7 @@ keymap("v", "<C-j>", "6<C-e>", opts)
 keymap("n", "<C-j>", "6<C-e>", opts)
 
 -- HALF DOWN
+keymap("n", "<A-m>", "<C-d>M", opts)
 -- keymap("n", "<C-d>", "<C-d>M", opts)
 -- keymap("i", "<C-d>", "<esc><C-d>M", opts)
 -- keymap("n", "<C-A-j>", "<C-d>M", opts)
@@ -212,6 +213,7 @@ keymap("n", "<C-j>", "6<C-e>", opts)
 -- keymap("v", "<C-A-j>", "<C-d>M", opts)
 
 -- HALF UP
+keymap("n", "<A-,>", "<C-u>M", opts)
 -- keymap("n", "<C-u>", "<C-u>M", opts)
 -- keymap("i", "<C-u>", "<esc><C-u>M", opts)
 -- keymap("n", "<C-A-k>", "<C-u>M", opts)

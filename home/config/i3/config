@@ -249,11 +249,11 @@ bindsym $mod+Up exec vol -d up -i 10 && $refresh_i3status
 bindsym $mod+Down exec vol -d down -i 10 && $refresh_i3status
 
 # skip tracks
-bindsym $mod+XF86AudioNext exec --no-startup-id playerctl next
-bindsym $mod+XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
-bindsym $mod+Right exec --no-startup-id playerctl next
-bindsym $mod+Left exec --no-startup-id playerctl previous
+bindsym $mod+Shift+Right exec --no-startup-id playerctl next
+bindsym $mod+Shift+Left exec --no-startup-id playerctl previous
 
 
 #-----------------------------------------------
@@ -401,9 +401,8 @@ bindsym $mod+Control+Up move up
 bindsym $mod+Control+Right move right
 bindsym $mod+Control+l move right
 
-
-bindsym $mod+Shift+Right focus right
-bindsym $mod+Shift+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Left focus left
 
 # move windows using h and l
 # bindsym Control+Mod1+h workspace prev

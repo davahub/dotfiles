@@ -9,6 +9,14 @@
 -- vim.g.vimwiki_custom_wiki2html='/home/dava/.config/nvim/scripts/customwiki2html.sh'
 
 
+-- scrollbar.vim
+-- vim.g.scrollbar_max_size = 3
+-- vim.g.scrollbar_min_size = 1
+-- vim.g.scrollbar_right_offset = 0
+-- vim.g.scrollbar_winblend = 30
+-- vim.g.scrollbar_excluded_filetypes = {{'nerdtree', 'tagbar'}}
+
+
 -- ---------------------------------------------
 -- Vimwiki 
 -- ---------------------------------------------
