@@ -26,9 +26,9 @@ Happy configuring!
 
 ## Configs
 
-| Shell                       | WM / DE                 | Editor                      | Terminal                                                      | Multiplexer                                   | Mail                            | IRC                         |
-| -----------                 | -----------             | -----------                 | -----------                                                   | -----------                                   | -----------                     | -----------                 |
-| [Zsh](https://www.zsh.org/) | [i3](https://i3wm.org/) | [Neovim](https://neovim.io) | [rxvt-unicode](https://wiki.archlinux.org/title/rxvt-unicode) | [tmux](https://wiki.archlinux.org/title/tmux) | [neomutt](https://neomutt.org/) | [irssi](https://irssi.org/) |
+| Shell                       | WM / DE                       | Editor                      | Terminal                                                      | Multiplexer                                   | Mail                            | IRC                         |
+| -----------                 | -----------                   | -----------                 | -----------                                                   | -----------                                   | -----------                     | -----------                 |
+| [Zsh](https://www.zsh.org/) | [i3](./home/config/i3/config) | [Neovim](https://neovim.io) | [rxvt-unicode](https://wiki.archlinux.org/title/rxvt-unicode) | [tmux](https://wiki.archlinux.org/title/tmux) | [neomutt](https://neomutt.org/) | [irssi](https://irssi.org/) |
 
 
 ## How to setup the repository
