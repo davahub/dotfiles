@@ -2,7 +2,7 @@
 
 ## Dava's Dotfiles
 
-Hello there, welcome to my dotfiles! Here I maintain my custom configuration for my Arch Linux setup.
+Welcome to my dotfiles! Here I maintain my custom configuration for my Arch Linux setup.
 
 Here you'll find:  
 
