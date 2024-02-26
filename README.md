@@ -2,16 +2,15 @@
 
 ## Dava's Dotfiles
 
-Welcome to my dotfiles! Here I maintain my custom configuration for my Arch Linux setup.
+Welcome to my dotfiles! Here I maintain my custom configuration for my Arch
+Linux setup. I tend to stick with the defaults with minimal changes. It's
+pretty basic, but that's exactly how I like it clean and straightforward.
 
-Here you'll find:  
 
-* **Basic, Yet Efficient Setups:** I tend to stick with most of the configuration as-is, with
-  minimal changes. It's pretty basic, but that's exactly how I like it. Clean, straightforward, and
-  efficient.
-* **Perfect for Beginners:** If you're just starting with Arch Linux, you might find my
-  configurations super helpful. They're easy to understand and implement, making your journey into
-  the world of Arch a bit smoother.
+If you're just starting with Arch Linux, you might find my configurations
+helpful. They're easy to understand and implement, making your journey into the
+world of Arch a bit smoother.
+
 
 Feel free to explore, use, and modify anything you find here.
 
@@ -20,7 +19,6 @@ Happy configuring!
 
 ## Screenshots
 
-![screenshot 1](./asset/screenshot-1.png)
 ![screenshot 2](./asset/screenshot-2.png)
 
 
